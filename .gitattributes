@@ -1,0 +1,6 @@
+* text=auto eol=lf
+firmware/Drivers/** -whitespace
+firmware/Middlewares/** -whitespace
+firmware/Core/Src/system_stm32f4xx.c -whitespace
+firmware/startup_stm32f411xe.s -whitespace
+firmware/Package_license.md -whitespace
