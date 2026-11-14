@@ -10,9 +10,9 @@ MSI GS75. Независимый проект; [основной проект к
 
 | Статус | Результат |
 |---|---|
-| Implemented | USB CDC, все команды, два мультиплексора 5×8, ADC, ARM, FAULT и независимое отключение SysTick, Python-консоль |
+| Implemented | FW 0.1.1: USB CDC, все команды, ADCSTATUS, одиночный ADC около 1 кГц с обработкой OVR/тайм-аута, ARM/FAULT и отключение SysTick, Python-консоль |
 | Build verified | ARM GCC 14.3.1, CubeF4 1.28.3, CMake/Ninja; ELF/BIN/HEX собраны; host-тесты MSVC и проверка соединений EasyEDA |
-| Hardware verified | Нет: плата, USB enumeration, точность ADC и физическая коммутация не испытывались |
+| Hardware verified | По сообщению оператора для FW 0.1.0 работают USB DFU/CDC, PING/INFO/STATUS, EN=0 в DISARMED. Исправление ADC в FW 0.1.1, точность тока и физическая коммутация ещё не проверены |
 
 `.ioc` содержит конфигурацию для CubeMX; открытие и регенерация в GUI ещё не
 проверены. Проверяемый исходный проект — CMake с включёнными в репозиторий
@@ -56,7 +56,11 @@ python -m pip install -r tools/requirements.txt
 python tools/serial_console.py --port COM7
 ```
 
-Начать с `PING`, `INFO`, `SELFTEST`, `STATUS`. Только после проверки приборами
+Начать с `PING`, `INFO`, `ADCSTATUS`, `CURRENT`, `SELFTEST`, `STATUS`.
+В DISARMED счётчик SAMPLES должен увеличиваться примерно на 1000 в секунду,
+AGE_MS оставаться малым, ERRORS/OVR_COUNT/TIMEOUTS не расти, VALID=1.
+Причина и проверка исправления описаны в [docs/adc.md](docs/adc.md).
+Только после проверки приборами
 и установки контрольного резистора 1 кОм между проверенными KP12/KP34:
 
 ```text

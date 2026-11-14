@@ -1,5 +1,5 @@
 #pragma once
-#define FW_VERSION "0.1.0"
+#define FW_VERSION "0.1.1"
 #define BOARD_NAME "GS75_RGB_Research"
 #define FPC_PINS 40u
 #define PULSE_MIN_MS 10u
@@ -11,5 +11,7 @@
 /* U13 MUST be open. 5.25 V / (2700 + 100) < 1875 uA. */
 #define CURRENT_TRIP_UA 2000u
 #define ADC_STALE_MS 5u
+#define ADC_SAMPLE_PERIOD_MS 1u
+#define ADC_CONVERSION_TIMEOUT_MS 2u
 #define ADC_AVERAGE_COUNT 8u
 #define MUX_SETTLE_US 10u

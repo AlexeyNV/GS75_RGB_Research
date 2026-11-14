@@ -20,6 +20,7 @@ OFF/DISARM сбрасывают накопленную очередь и исп�
 | OFF | немедленно выключить, снять ARM, `OK DISARMED`; FAULT сохраняется |
 | DISARM | как OFF |
 | CURRENT | последний корректный RAW/MV/CURRENT_UA, AVG_RAW/AVG_MV/AVG_UA до 8 отсчётов, AGE_MS, VALID=0/1 |
+| ADCSTATUS | режим ADC, текущие EOC/OVR, счётчики запусков/выборок/ошибок, возраст данных; без изменения ADC или выходов |
 | DUMP | GPIOA_IDR/GPIOC_IDR, выбранные BANK/CH, raw ADC и FAULT |
 | SELFTEST | пассивная проверка банков off, MODER/OTYPER, PA0 analog, свежести ADC; при ACTIVE — BUSY, при FAULT — FAULT_LATCHED |
 | CLEARFAULT | выходы off, свежий допустимый ADC, GPIO; переход в DISARMED, требуется новый ARM |
@@ -52,3 +53,33 @@ RX callback принимает строки, работа команд идёт 
 доступных слотов по 512 байт, память пакета не меняется до TransmitCplt.
 Заполненный TX не блокирует SysTick: выходы выключаются и защёлкивается FAULT.
 Python-консоль выводит отдельные метки ACK/DONE/ERR, не запускает сканирование.
+
+## ADCSTATUS (FW 0.1.1)
+
+Одна строка `OK ADCSTATUS MODE=SINGLE_SW …`. Поля:
+
+| Поле | Значение |
+|---|---|
+| PERIOD_MS | заданный период запуска, сейчас 1 мс; реальная частота зависит от обслуживания main |
+| EOC / OVR | текущие биты SR при снимке; EOC=1 до чтения результата допустим |
+| PENDING | есть запущенное и ещё не обработанное преобразование |
+| STARTS | успешно запущенные преобразования |
+| SAMPLES / VALID_SAMPLES | прочитанные завершения / допустимые raw, включая сбор в DISARMED/FAULT |
+| ERRORS | сумма событий OVR, timeout, start error, stop error и invalid raw |
+| OVR_COUNT / TIMEOUTS | обнаруженные overrun / отсутствие своевременного результата |
+| START_ERRORS / STOP_ERRORS / INVALID_SAMPLES | ошибки HAL/включения ADC, остановки при восстановлении и недопустимые raw |
+| HAS_SAMPLE | получен хотя бы один допустимый отсчёт после старта прошивки |
+| AGE_MS | возраст последнего допустимого отсчёта от момента его запуска; при HAS_SAMPLE=0 поле 0 не означает свежие данные |
+| VALID | данные допустимы и AGE_MS≤5; это не разрешение выходов и не отсутствие FAULT |
+| SR / LAST_SR / CR2 / HAL_ERROR | текущий SR, SR последнего ADC_Poll, CR2 и текущий HAL ErrorCode, hex |
+
+Счётчики uint32 действуют с запуска прошивки, имеют переполнение и не
+сбрасываются CLEARFAULT. LAST_SR не является защёлкнутым снимком аварии;
+после восстановления текущий OVR может быть нулём, OVR_COUNT сохраняется.
+HAL_ERROR может быть нулём после восстановления: polling не вызывает
+HAL_ADC_IRQHandler, а HAL_Start очищает HAL ErrorCode. История — в счётчиках.
+SAMPLES включает недопустимый raw; OVR/просроченный EOC отбрасываются без
+чтения DR. OVR+EOC считается одним overrun, не успешным измерением.
+OVERCURRENT отражается в STATUS/DONE FAULT; допустимый raw с высоким током
+считается измерением, а не ошибкой чтения ADC. Потеря обслуживания main может
+вызвать stale FAULT из SysTick до изменения счётчиков ADCSTATUS.
