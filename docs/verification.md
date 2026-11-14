@@ -82,17 +82,18 @@ Drivers, Middlewares, system-файл и startup — официальные за
 
 ## Git и публикация
 
-Локальный репозиторий main создан. GitHub CLI отсутствует в PATH, публикация
-не выполнялась. После установки CLI и авторизации из корня проекта:
+Создан существующий удалённый репозиторий
+`https://github.com/AlexeyNV/GS75_RGB_Research.git`, remote `origin`, ветка
+`main`. При подготовке переноса проверено: origin/main содержит initial
+commit `237e026`; исправление ADC `506074b` ещё требовало push.
+Для отправки последующих commit GitHub CLI не требуется:
 
 ```powershell
-gh auth login
-gh repo create AlexeyNV/GS75_RGB_Research --private --source . --remote origin --push
+git push origin main
 ```
 
-Перед командой убедиться, что репозитория ещё нет; если он уже создан,
-использовать его origin и обычный push. Видимость private выбрана для
-первоначальной публикации; при необходимости пользователь может выбрать public.
+Повторно создавать репозиторий не нужно. Инструкции клонирования и полный
+контекст для нового компьютера находятся в [PROJECT_CONTEXT.md](../PROJECT_CONTEXT.md).
 Существующий GS75_Keyboard не изменялся. Из-за разного владельца каталога
 в sandbox Git запускался с разовым `-c safe.directory=<точный путь>`, без
 изменения глобальных настроек. Автор initial commit взят из существующего
