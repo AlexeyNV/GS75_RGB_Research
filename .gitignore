@@ -18,3 +18,7 @@ Release/
 .pytest_cache/
 *.autosave.json
 data/
+logs/
+results/vision/
+gs75_rgb_vision_project.json
+*.vision-project.json

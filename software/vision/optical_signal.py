@@ -26,30 +26,39 @@ def signal_maps(off, on, delta, common, threshold, color_threshold):
     return strength, signal, color, bright
 
 
-def measure(delta, on, signal, selection):
+def measure(delta, on, signal, selection, dominance_ratio=.45, mixed_ratio=.70):
     area = int(np.count_nonzero(selection))
     if not area:
-        return dict(color='UNDEFINED', area_px=0, brightness=0., chroma=0., mean_rgb_delta=[0.,0.,0.], ambiguity_flags=['NO_COLOR_EVIDENCE'])
-    pixels = on[selection]
-    # Subtract neutral brightness, leaving the colored halo. Clipped white
-    # contributes zero chroma, never a spurious MIXED vote.
-    spectral = pixels.astype(float) - pixels.min(axis=1, keepdims=True)
+        return dict(color='UNDEFINED', area_px=0, brightness=0., chroma=0., mean_rgb_delta=[0.,0.,0.],
+                    ambiguity_flags=['NO_COLOR_EVIDENCE'],color_confidence=0.,color_reason='NO_COLOR_EVIDENCE',
+                    secondary_primary_ratio=None,color_evidence_rgb=[0.,0.,0.])
+    # Vote on compensated new light, not the pre-existing ON color cast.
+    changes = delta[selection].astype(float)
+    spectral = changes - changes.min(axis=1, keepdims=True)
     means = spectral.mean(axis=0)
-    active = np.flatnonzero(means >= max(10, means.max()*.35))
+    order = np.argsort(means)[::-1]
+    primary, secondary = int(order[0]), int(order[1])
+    peak = float(means[primary])
+    ratio = float(means[secondary]/peak) if peak > 0 else 1.
     names = ['BLUE','GREEN','RED']
     flags = []
-    if not len(active):
-        color='UNDEFINED'; flags.append('LOW_CHROMA_SIGNAL')
-    elif len(active) == 1:
-        color=names[active[0]]
+    if peak < 10:
+        color='UNDEFINED'; reason='LOW_CHROMA_SIGNAL'; flags.append(reason)
+    elif ratio <= dominance_ratio:
+        color=names[primary]; reason='DOMINANT_NEW_COLOR_CHANNEL'
+    elif ratio >= mixed_ratio:
+        color='MIXED'; reason='COMPARABLE_NEW_COLOR_CHANNELS'; flags.append('MULTICHANNEL_LIGHT')
     else:
-        color='MIXED'; flags.append('MULTICHANNEL_LIGHT')
-    return dict(color=color, area_px=area, brightness=float(delta[selection].max(axis=1).mean()),
-                chroma=float(signal[selection].mean()), mean_rgb_delta=delta[selection].mean(axis=0)[::-1].tolist(),
-                ambiguity_flags=flags)
+        color='UNDEFINED'; reason='AMBIGUOUS_SECONDARY_CHANNEL'; flags.append(reason)
+    confidence = float(1-ratio) if color in names else (ratio if color=='MIXED' else 0.)
+    return dict(color=color, area_px=area, brightness=float(changes.max(axis=1).mean()),
+                chroma=float(signal[selection].mean()), mean_rgb_delta=changes.mean(axis=0)[::-1].tolist(),
+                ambiguity_flags=flags,color_confidence=confidence,color_reason=reason,
+                secondary_primary_ratio=ratio,color_evidence_rgb=means[::-1].tolist())
 
 
-def evaluate(calibration, off, on, delta, common, mode, threshold, color_threshold, roi_radius, min_area):
+
+def evaluate(calibration, off, on, delta, common, mode, threshold, color_threshold, roi_radius, min_area, dominance_ratio=.45, mixed_ratio=.70):
     strength, signal, color_mask, bright = signal_maps(off,on,delta,common,threshold,color_threshold)
     known=[]; candidates=[]; accepted=[]
     roi_overlay=on.copy(); accepted_overlay=on.copy(); rejected_overlay=on.copy(); candidate_overlay=on.copy()
@@ -61,10 +70,10 @@ def evaluate(calibration, off, on, delta, common, mode, threshold, color_thresho
         selected=local & (color_mask[y:y+hh,x:x+ww]>0)
         ys,xs=np.nonzero(selected if selected.any() else local)
         px=float(x+xs.mean()); py=float(y+ys.mean())
-        m=measure(delta[y:y+hh,x:x+ww],on[y:y+hh,x:x+ww],signal[y:y+hh,x:x+ww],selected)
+        m=measure(delta[y:y+hh,x:x+ww],on[y:y+hh,x:x+ww],signal[y:y+hh,x:x+ww],selected,dominance_ratio,mixed_ratio)
         reasons=[]
         if m['area_px']<min_area: reasons.append('INSUFFICIENT_COLOR_AREA')
-        if m['color']=='UNDEFINED': reasons.append('NO_CHROMATIC_CHANGE')
+        if m['color']=='UNDEFINED': reasons.append(m.get('color_reason','NO_CHROMATIC_CHANGE'))
         if area>w*h*.02: reasons.append('LARGE_REGION_POSSIBLE_REFLECTION')
         record=dict(led_id=None,key_name=None,x_ref_px=px,y_ref_px=py,**m,
                     status='REJECTED' if reasons else 'CANDIDATE',rejection_reasons=reasons,
@@ -84,7 +93,7 @@ def evaluate(calibration, off, on, delta, common, mode, threshold, color_thresho
         valid=disk & (common[y0:y1,x0:x1]>0)
         coverage=min(1.,float(valid.sum()/full_area))
         selected=valid & (color_mask[y0:y1,x0:x1]>0)
-        m=measure(delta[y0:y1,x0:x1],on[y0:y1,x0:x1],signal[y0:y1,x0:x1],selected)
+        m=measure(delta[y0:y1,x0:x1],on[y0:y1,x0:x1],signal[y0:y1,x0:x1],selected,dominance_ratio,mixed_ratio)
         reasons=[]; state='OFF'
         if coverage<.9:
             state='UNCERTAIN'; reasons.append('ROI_NOT_GEOMETRICALLY_COVERED')
@@ -99,6 +108,8 @@ def evaluate(calibration, off, on, delta, common, mode, threshold, color_thresho
             m['ambiguity_flags'].append('SATURATED_WHITE' if np.any(np.all(on[y0:y1,x0:x1][valid]>=250,axis=1)) else 'ACHROMATIC_CHANGE')
         else: reasons.append('NO_NEW_LOCAL_LIGHT')
         # Overlapping mapped ROIs cannot establish which LED emitted the light.
+        if state=='ON' and m['color']=='UNDEFINED':
+            state='UNCERTAIN'; reasons.append(m.get('color_reason','NO_COLOR_EVIDENCE'))
         if state=='ON' and any(other['led_id']!=led['led_id'] and np.hypot(other['x_ref_px']-px,other['y_ref_px']-py)<2*roi_radius for other in calibration['leds']):
             state='UNCERTAIN'; reasons.append('OVERLAPPING_LED_ROIS')
         roi=on[y0:y1,x0:x1]

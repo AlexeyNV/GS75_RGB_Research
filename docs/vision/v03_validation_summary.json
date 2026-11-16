@@ -1,0 +1,375 @@
+{
+  "application": "GS75 RGB Vision",
+  "version": "0.3",
+  "real": true,
+  "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+  "settings": {
+    "mode": "KNOWN_LEDS",
+    "threshold": 30,
+    "color_threshold": 25,
+    "roi_radius": 40,
+    "min_area": 6,
+    "registration_error": 3.0,
+    "dominance_ratio": 0.45,
+    "mixed_ratio": 0.7
+  },
+  "baseline_blue": [
+    {
+      "led_id": "LED49",
+      "key_name": null,
+      "x_ref_px": 578.1096013233087,
+      "y_ref_px": 1379.292979042749,
+      "color": "MIXED",
+      "area_px": 4040,
+      "brightness": 134.47450495049506,
+      "chroma": 117.72400665283203,
+      "mean_rgb_delta": [
+        6.162128712871287,
+        37.19603960396039,
+        134.47450495049506
+      ],
+      "ambiguity_flags": [
+        "MULTICHANNEL_LIGHT",
+        "COLOR_FROM_HALO_AROUND_CLIPPED_CORE"
+      ],
+      "status": "ON",
+      "rejection_reasons": [],
+      "roi_radius_px": 40,
+      "roi_coverage": 0.9423962067828853,
+      "saturated_white_fraction": 0.07156428119062698,
+      "candidate_led_ids": [
+        "LED49"
+      ],
+      "signal_x_ref_px": 577.5707920792079,
+      "signal_y_ref_px": 1376.7982673267327,
+      "registration_status": "REGISTERED",
+      "reprojection_error_px": 1.2619952289812724,
+      "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+      "experiment_id": "",
+      "analyzed_utc": "2026-11-16T13:48:51.796058+00:00",
+      "x_on_px": 1676.8196018201604,
+      "y_on_px": 3159.246297761403,
+      "x_off_px": 1691.4545338795963,
+      "y_off_px": 3136.1356341822498,
+      "image_off": "off.jpg",
+      "image_on": "blue.jpg"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "e1a1c8d9aef6438aae847b455d4334f9",
+      "name": "Опыт 2026-11-16T14:20:42.307431+00:00",
+      "created_utc": "2026-11-16T14:20:42.307431+00:00",
+      "off_id": "3b8b3a08b1614c84b67da3df05f70f48",
+      "on_ids": [
+        "742904492dab4df38ee38ff1f9bf6a59",
+        "45e4a78461cc47a096c48d84d270e75b",
+        "4e0fd326f3d746349a99a06824c80484"
+      ],
+      "settings": {
+        "mode": "KNOWN_LEDS",
+        "threshold": 30,
+        "color_threshold": 25,
+        "roi_radius": 40,
+        "min_area": 6,
+        "registration_error": 3.0,
+        "dominance_ratio": 0.45,
+        "mixed_ratio": 0.7
+      },
+      "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+      "items": [
+        {
+          "media_id": "742904492dab4df38ee38ff1f9bf6a59",
+          "name": "red.jpg",
+          "report": "results/vision/sessions/e1a1c8d9aef6438aae847b455d4334f9/001_742904492dab4df38ee38ff1f9bf6a59",
+          "state": "ANALYZED",
+          "registration": "REGISTERED",
+          "records": [
+            {
+              "led_id": "LED49",
+              "key_name": null,
+              "x_ref_px": 578.1096013233087,
+              "y_ref_px": 1379.292979042749,
+              "color": "RED",
+              "area_px": 4344,
+              "brightness": 90.57596685082873,
+              "chroma": 89.48158264160156,
+              "mean_rgb_delta": [
+                90.57527624309392,
+                15.202117863720074,
+                5.641574585635359
+              ],
+              "ambiguity_flags": [
+                "COLOR_FROM_HALO_AROUND_CLIPPED_CORE"
+              ],
+              "color_confidence": 0.8873077600574518,
+              "color_reason": "DOMINANT_NEW_COLOR_CHANNEL",
+              "secondary_primary_ratio": 0.1126922399425482,
+              "color_evidence_rgb": [
+                84.94590239410681,
+                9.572744014732965,
+                0.01220073664825046
+              ],
+              "status": "ON",
+              "rejection_reasons": [],
+              "roi_radius_px": 40,
+              "roi_coverage": 0.9423962067828853,
+              "saturated_white_fraction": 0.025121384842727464,
+              "candidate_led_ids": [
+                "LED49"
+              ],
+              "signal_x_ref_px": 577.7914364640884,
+              "signal_y_ref_px": 1376.9578729281768,
+              "registration_status": "REGISTERED",
+              "reprojection_error_px": 1.2619952289812724,
+              "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+              "experiment_id": "e1a1c8d9aef6438aae847b455d4334f9",
+              "analyzed_utc": "2026-11-16T14:20:44.372727+00:00",
+              "x_on_px": 1680.2345700512496,
+              "y_on_px": 3180.234912640895,
+              "x_off_px": 1691.4545338795963,
+              "y_off_px": 3136.1356341822498,
+              "image_off": "off.jpg",
+              "image_on": "red.jpg"
+            }
+          ],
+          "warnings": [
+            "Optical evidence requires manual review; colored reflections can resemble emitted light"
+          ]
+        },
+        {
+          "media_id": "45e4a78461cc47a096c48d84d270e75b",
+          "name": "green.jpg",
+          "report": "results/vision/sessions/e1a1c8d9aef6438aae847b455d4334f9/002_45e4a78461cc47a096c48d84d270e75b",
+          "state": "ANALYZED",
+          "registration": "REGISTERED",
+          "records": [
+            {
+              "led_id": "LED49",
+              "key_name": null,
+              "x_ref_px": 578.1096013233087,
+              "y_ref_px": 1379.292979042749,
+              "color": "GREEN",
+              "area_px": 3660,
+              "brightness": 122.08989071038252,
+              "chroma": 116.8304672241211,
+              "mean_rgb_delta": [
+                11.192349726775957,
+                122.07267759562842,
+                26.944535519125683
+              ],
+              "ambiguity_flags": [
+                "COLOR_FROM_HALO_AROUND_CLIPPED_CORE"
+              ],
+              "color_confidence": 0.8579352524012991,
+              "color_reason": "DOMINANT_NEW_COLOR_CHANNEL",
+              "secondary_primary_ratio": 0.1420647475987009,
+              "color_evidence_rgb": [
+                0.0,
+                110.88032786885246,
+                15.752185792349726
+              ],
+              "status": "ON",
+              "rejection_reasons": [],
+              "roi_radius_px": 40,
+              "roi_coverage": 0.9390141642421824,
+              "saturated_white_fraction": 0.1483050847457627,
+              "candidate_led_ids": [
+                "LED49"
+              ],
+              "signal_x_ref_px": 578.3013661202186,
+              "signal_y_ref_px": 1377.3718579234974,
+              "registration_status": "REGISTERED",
+              "reprojection_error_px": 1.2619952289812724,
+              "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+              "experiment_id": "e1a1c8d9aef6438aae847b455d4334f9",
+              "analyzed_utc": "2026-11-16T14:20:54.547170+00:00",
+              "x_on_px": 1686.857835106952,
+              "y_on_px": 3144.7447583106095,
+              "x_off_px": 1691.4545338795963,
+              "y_off_px": 3136.1356341822498,
+              "image_off": "off.jpg",
+              "image_on": "green.jpg"
+            }
+          ],
+          "warnings": [
+            "Optical evidence requires manual review; colored reflections can resemble emitted light"
+          ]
+        },
+        {
+          "media_id": "4e0fd326f3d746349a99a06824c80484",
+          "name": "blue.jpg",
+          "report": "results/vision/sessions/e1a1c8d9aef6438aae847b455d4334f9/003_4e0fd326f3d746349a99a06824c80484",
+          "state": "ANALYZED",
+          "registration": "REGISTERED",
+          "records": [
+            {
+              "led_id": "LED49",
+              "key_name": null,
+              "x_ref_px": 578.1096013233087,
+              "y_ref_px": 1379.292979042749,
+              "color": "BLUE",
+              "area_px": 4040,
+              "brightness": 134.47450495049506,
+              "chroma": 117.72400665283203,
+              "mean_rgb_delta": [
+                6.162128712871287,
+                37.19603960396039,
+                134.47450495049506
+              ],
+              "ambiguity_flags": [
+                "COLOR_FROM_HALO_AROUND_CLIPPED_CORE"
+              ],
+              "color_confidence": 0.758137821143481,
+              "color_reason": "DOMINANT_NEW_COLOR_CHANNEL",
+              "secondary_primary_ratio": 0.24186217885651895,
+              "color_evidence_rgb": [
+                0.0,
+                31.03391089108911,
+                128.31237623762377
+              ],
+              "status": "ON",
+              "rejection_reasons": [],
+              "roi_radius_px": 40,
+              "roi_coverage": 0.9423962067828853,
+              "saturated_white_fraction": 0.07156428119062698,
+              "candidate_led_ids": [
+                "LED49"
+              ],
+              "signal_x_ref_px": 577.5707920792079,
+              "signal_y_ref_px": 1376.7982673267327,
+              "registration_status": "REGISTERED",
+              "reprojection_error_px": 1.2619952289812724,
+              "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+              "experiment_id": "e1a1c8d9aef6438aae847b455d4334f9",
+              "analyzed_utc": "2026-11-16T14:21:06.035623+00:00",
+              "x_on_px": 1676.8196018201604,
+              "y_on_px": 3159.246297761403,
+              "x_off_px": 1691.4545338795963,
+              "y_off_px": 3136.1356341822498,
+              "image_off": "off.jpg",
+              "image_on": "blue.jpg"
+            }
+          ],
+          "warnings": [
+            "Optical evidence requires manual review; colored reflections can resemble emitted light"
+          ]
+        }
+      ],
+      "state": "COMPLETED",
+      "report": "results/vision/sessions/e1a1c8d9aef6438aae847b455d4334f9"
+    },
+    {
+      "id": "8472291e678249b79fe88ce3ceb8705b",
+      "name": "Опыт 2026-11-16T14:21:44.267110+00:00",
+      "created_utc": "2026-11-16T14:21:44.267110+00:00",
+      "off_id": "3b8b3a08b1614c84b67da3df05f70f48",
+      "on_ids": [
+        "3b8b3a08b1614c84b67da3df05f70f48"
+      ],
+      "settings": {
+        "mode": "KNOWN_LEDS",
+        "threshold": 30,
+        "color_threshold": 25,
+        "roi_radius": 40,
+        "min_area": 6,
+        "registration_error": 3.0,
+        "dominance_ratio": 0.45,
+        "mixed_ratio": 0.7
+      },
+      "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+      "items": [
+        {
+          "media_id": "3b8b3a08b1614c84b67da3df05f70f48",
+          "name": "off.jpg",
+          "report": "results/vision/sessions/8472291e678249b79fe88ce3ceb8705b/001_3b8b3a08b1614c84b67da3df05f70f48",
+          "state": "ANALYZED",
+          "registration": "REGISTERED",
+          "records": [
+            {
+              "led_id": "LED49",
+              "key_name": null,
+              "x_ref_px": 578.1096013233087,
+              "y_ref_px": 1379.292979042749,
+              "color": "UNDEFINED",
+              "area_px": 0,
+              "brightness": 0.0,
+              "chroma": 0.0,
+              "mean_rgb_delta": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "ambiguity_flags": [
+                "NO_COLOR_EVIDENCE"
+              ],
+              "color_confidence": 0.0,
+              "color_reason": "NO_COLOR_EVIDENCE",
+              "secondary_primary_ratio": null,
+              "color_evidence_rgb": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "status": "OFF",
+              "rejection_reasons": [
+                "NO_NEW_LOCAL_LIGHT"
+              ],
+              "roi_radius_px": 40,
+              "roi_coverage": 0.9423962067828853,
+              "saturated_white_fraction": 0.0,
+              "candidate_led_ids": [
+                "LED49"
+              ],
+              "registration_status": "REGISTERED",
+              "reprojection_error_px": 1.2619952289812724,
+              "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+              "experiment_id": "8472291e678249b79fe88ce3ceb8705b",
+              "analyzed_utc": "2026-11-16T14:21:46.144685+00:00",
+              "x_on_px": 1691.4545338795963,
+              "y_on_px": 3136.1356341822498,
+              "x_off_px": 1691.4545338795963,
+              "y_off_px": 3136.1356341822498,
+              "image_off": "off.jpg",
+              "image_on": "off.jpg"
+            }
+          ],
+          "warnings": [
+            "Optical evidence requires manual review; colored reflections can resemble emitted light"
+          ]
+        }
+      ],
+      "state": "COMPLETED",
+      "report": "results/vision/sessions/8472291e678249b79fe88ce3ceb8705b"
+    }
+  ],
+  "native": {
+    "platform": "windows",
+    "errors": [],
+    "frame": {
+      "frame_index": 6,
+      "requested_index": 6,
+      "timestamp_ms": 600.0000000000001,
+      "timestamp_source": "decoder_reported",
+      "estimated_ms": 600.0,
+      "timing_warning": "Декодер может выполнять keyframe seek; время не является подтверждённым аппаратным timestamp"
+    },
+    "video": "D:\\VScode\\Nozdrin_GitHub\\GS75_RGB_Research\\build\\vision_v03\\demo_blue.mp4",
+    "elapsed_s": 1.0779999999977008
+  },
+  "input_sha256": {
+    "data\\blue.jpg": "8da18dee1ddf7f421877d261381c95adf289c7bbaa8722430158fbd3309b5202",
+    "data\\green.jpg": "fe5dfd9d2d9ea781cfb859cf1f981b6d24126a084bf786f8d7e1a3e95d256859",
+    "data\\off.jpg": "bf2b1a1973fc9c3cfdd3f0a84134e60d1bb0f9d0b976698b9774bd5dfbd5f7b9",
+    "data\\red.jpg": "2a428ec7677e1cde41582165e537ec3b3238e8b2e48dff13f79baf4b3ca6bad8",
+    "data\\reference\\gs75_rgb_off.jpg": "86b18ba8d09c9c25b88b1b231af988cec042bb5eda4baae4893e9cc634b3d44a",
+    "config\\gs75_board_calibration.json": "7f7e47221ab33e58a92f71a2c4b89e1540f5281fa53313079ba67252a5730f76"
+  },
+  "software_checks": {
+    "full_suite_passed": 70,
+    "additional_autosave_test_passed": true,
+    "ctest_passed": 2,
+    "native_platform": "windows",
+    "launcher": "BAT/pythonw checked"
+  }
+}

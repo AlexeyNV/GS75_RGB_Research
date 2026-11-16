@@ -39,13 +39,19 @@ def lighting_difference(off,on,mask):
     return delta,parameters,extreme
 
 
-def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min_area=6,mode='KNOWN_LEDS',roi_radius=40,color_threshold=25):
+def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min_area=6,mode='KNOWN_LEDS',roi_radius=40,color_threshold=25,registration_error=3.,dominance_ratio=.45,mixed_ratio=.70,cancel_check=lambda:None):
     validate(calibration)
     if not 1<=threshold<=255 or not 1<=match_radius<=1000 or not 1<=min_area<=100000:
         raise ValueError('Invalid detection threshold, radius or area')
     if mode not in ('KNOWN_LEDS','DISCOVER') or not 5<=roi_radius<=500 or not 1<=color_threshold<=255:
         raise ValueError('Invalid mode, ROI radius or color threshold')
-    off_registration=register(off,calibration); on_registration=register(on,calibration)
+    if not .5<=registration_error<=10 or not 0<dominance_ratio<mixed_ratio<=1:
+        raise ValueError('Invalid registration or color confidence thresholds')
+    cancel_check()
+    off_registration=register(off,calibration,max_error_px=registration_error)
+    cancel_check()
+    on_registration=register(on,calibration,max_error_px=registration_error)
+    cancel_check()
     images={'Original OFF':off,'Original ON':on}
     on_markers=on.copy()
     for key,corners in on_registration.detected.items():
@@ -59,11 +65,14 @@ def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min
                 analysis_status='FAILED' if status=='FAILED' else 'ANALYZED',
                 registrations=dict(off=off_registration.summary(),on=on_registration.summary()),
                 parameters=dict(threshold=threshold,match_radius_px=match_radius,min_area_px=min_area,
-                                mode=mode,roi_radius_px=roi_radius,color_threshold=color_threshold),
+                                mode=mode,roi_radius_px=roi_radius,color_threshold=color_threshold,
+                                registration_error=registration_error,dominance_ratio=dominance_ratio,mixed_ratio=mixed_ratio),
                 detections=[],candidates=[],known_leds=[],warnings=[])
     result['known_leds']=[dict(led_id=led['led_id'],key_name=led['key_name'],
         x_ref_px=led['x_ref_px'],y_ref_px=led['y_ref_px'],status='UNCERTAIN',color='UNDEFINED',
-        brightness=0.,chroma=0.,area_px=0,ambiguity_flags=[],rejection_reasons=['ANALYSIS_UNAVAILABLE']) for led in calibration['leds']]
+        brightness=0.,chroma=0.,area_px=0,ambiguity_flags=[],rejection_reasons=['ANALYSIS_UNAVAILABLE'],
+        color_confidence=0.,color_reason='ANALYSIS_UNAVAILABLE',secondary_primary_ratio=None,
+        color_evidence_rgb=[0.,0.,0.]) for led in calibration['leds']]
     if status=='FAILED':
         result['warnings'].append('Registration failed; no LED identities or light results produced')
         return Analysis(result,images)
@@ -85,8 +94,9 @@ def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min
         result['analysis_status']='FAILED'
         result['warnings'].append('Lighting change exceeds supported small affine compensation; analysis refused')
         return Analysis(result,images)
+    cancel_check()
     known,candidates,detections,diagnostics,strength=evaluate(
-        calibration,off_warped,on_warped,delta,common,mode,threshold,color_threshold,roi_radius,min_area)
+        calibration,off_warped,on_warped,delta,common,mode,threshold,color_threshold,roi_radius,min_area,dominance_ratio,mixed_ratio)
     result.update(known_leds=known,candidates=candidates,detections=detections,
                   effective_threshold=threshold,
                   legacy_global_threshold=max(float(threshold),float(np.quantile(strength[background>0],.995))+10))
@@ -113,7 +123,9 @@ def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min
 
 
 def analyze_paths(calibration,off_path,on_path,experiment_id='',**options):
-    off=read_image(off_path,calibration.get('camera_model')); on=read_image(on_path,calibration.get('camera_model'))
+    check=options.get('cancel_check',lambda:None)
+    check();off=read_image(off_path,calibration.get('camera_model'));check()
+    on=read_image(on_path,calibration.get('camera_model'));check()
     analysis=analyze(calibration,off,on,experiment_id,**options)
     analysis.result.update(image_off=Path(off_path).name,image_on=Path(on_path).name)
     for record in analysis.result['known_leds']+analysis.result['candidates']:

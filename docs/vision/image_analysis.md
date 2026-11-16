@@ -1,5 +1,13 @@
 # RGB Vision v0.2 — актуальные правила анализа
 
+**v0.3:** обычная работа — через [единое приложение](gui_guide.md), batch
+и историю. BLUE→MIXED исправлено по компенсированному приросту: отношение
+второго компонента к первому ≤0,45 — один цвет, ≥0,70 — MIXED, между ними —
+UNCERTAIN. Advanced открывает эти границы. JSON добавляет color_confidence,
+color_reason, color_evidence_rgb, secondary_primary_ratio. Confidence —
+эвристика, не вероятность. [Реальная RGB-приёмка](v03_validation.md).
+Геометрические ограничения сохранены; исходники и карта read-only.
+
 Этот раздел заменяет алгоритмические описания v0.1 ниже. Реальные OFF/RED:
 LED49 ON/RED; OFF/OFF: OFF. GREEN/BLUE ещё не проверены.
 Подробный отчёт: [real_validation.md](real_validation.md).
