@@ -14,3 +14,7 @@ __pycache__/
 .idea/
 Debug/
 Release/
+.venv/
+.pytest_cache/
+*.autosave.json
+data/

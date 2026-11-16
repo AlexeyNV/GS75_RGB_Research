@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "calibration_version": "synthetic-v0.1",
+  "dictionary": "DICT_4X4_50",
+  "reference": {
+    "path": "examples/vision/synthetic/reference.png",
+    "width": 1200,
+    "height": 700,
+    "sha256": "fd15a04a0fea0172c96dafab2a46b206154595f0882aa228109e2a592e53caa3",
+    "source_width": 1200,
+    "source_height": 700,
+    "source_exif_orientation": 1
+  },
+  "markers": {
+    "2": [
+      [
+        1019.5577392578125,
+        539.5577392578125
+      ],
+      [
+        1139.4422607421875,
+        539.5577392578125
+      ],
+      [
+        1139.4422607421875,
+        659.4422607421875
+      ],
+      [
+        1019.5577392578125,
+        659.4422607421875
+      ]
+    ],
+    "3": [
+      [
+        79.55772399902344,
+        539.5577392578125
+      ],
+      [
+        199.44227600097656,
+        539.5577392578125
+      ],
+      [
+        199.44227600097656,
+        659.4422607421875
+      ],
+      [
+        79.55772399902344,
+        659.4422607421875
+      ]
+    ],
+    "1": [
+      [
+        1019.5577392578125,
+        69.55772399902344
+      ],
+      [
+        1139.4422607421875,
+        69.55772399902344
+      ],
+      [
+        1139.4422607421875,
+        189.44227600097656
+      ],
+      [
+        1019.5577392578125,
+        189.44227600097656
+      ]
+    ],
+    "0": [
+      [
+        79.55772399902344,
+        69.55772399902344
+      ],
+      [
+        199.44227600097656,
+        69.55772399902344
+      ],
+      [
+        199.44227600097656,
+        189.44227600097656
+      ],
+      [
+        79.55772399902344,
+        189.44227600097656
+      ]
+    ]
+  },
+  "expected_marker_ids": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "sticker_sizes_mm": {
+    "0": 10,
+    "1": 10,
+    "2": 10,
+    "3": 10
+  },
+  "coordinate_system": {
+    "kind": "reference_px",
+    "origin": "top_left",
+    "x_axis": "right",
+    "y_axis": "down",
+    "orientation": "EXIF_NORMALIZED",
+    "physical_mm_calibrated": false
+  },
+  "camera_model": null,
+  "leds": [
+    {
+      "led_id": "LED49",
+      "key_name": null,
+      "x_ref_px": 490.0,
+      "y_ref_px": 350.0,
+      "note": "Synthetic position only; physical key unknown"
+    },
+    {
+      "led_id": "LED50",
+      "key_name": "SyntheticKey",
+      "x_ref_px": 570.0,
+      "y_ref_px": 350.0,
+      "note": "Synthetic second LED, not a physical mapping"
+    }
+  ],
+  "metadata": {
+    "comment": "Generated demonstration; no actual PCB coordinates or optical hardware validation",
+    "synthetic": true
+  }
+}

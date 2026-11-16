@@ -9,6 +9,43 @@ MSI GS75. Независимый проект; [основной проект к
 
 **Первый запуск — без оригинальной RGB-платы и с разомкнутой U13.**
 
+## RGB Vision v0.1 — ArUco и графический калибратор
+
+Реализованы печатные ArUco 10/12/15 мм, Qt-калибратор с zoom/pan,
+редактированием LED ID/клавиш, Undo/Redo и autosave, а также независимое
+совмещение OFF/ON-фотографий и поиск оптических кандидатов. Без видео,
+камерного захвата и синхронизации со STM32; прошивка FW 0.1.1 не изменена.
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-vision.txt -r tools/requirements.txt
+.\.venv\Scripts\python.exe tools/generate_markers.py --size-mm 10 --count 10 --output build/markers
+.\.venv\Scripts\python.exe tools/board_calibrator.py
+```
+
+Печатный лист: `build/markers/aruco_A4.pdf` и `.svg`, масштаб печати 100%.
+В калибраторе Open Photo → Add LED → щелчок по центру → явно задать
+LED ID и при необходимости Key Name → Save в config/gs75_board_calibration.json.
+LED49 не имеет известного названия клавиши: его можно оставить пустым.
+Координаты — пиксели оригинального эталона, а не окна или физически точные мм.
+
+Для демонстрации без настоящих снимков:
+
+```powershell
+.\.venv\Scripts\python.exe tools/board_calibrator.py --calibration examples/vision/synthetic/calibration.json
+.\.venv\Scripts\python.exe tools/analyze_images.py --calibration examples/vision/synthetic/calibration.json --off examples/vision/synthetic/off.png --on examples/vision/synthetic/red.png --output build/vision/demo_red
+```
+
+![Синтетический пример реализованного калибратора](docs/vision/screenshots/calibrator.png)
+
+[Печать и размещение меток](docs/vision/marker_printing.md) ·
+[Работа с калибратором](docs/vision/calibration_guide.md) ·
+[Анализ OFF/ON и экспорт](docs/vision/image_analysis.md) ·
+[Архитектура, проверки и ограничения](docs/vision/architecture.md).
+Генерация, GUI и анализ проверены программно; оптическая проверка настоящих
+снимков LED49 OFF/RED/GREEN/BLUE с ArUco ещё не выполнялась. Большие
+пользовательские фотографии автоматически в Git не включаются.
+
 ## Статус
 
 Новое подтверждение на настоящей RGB-плате: LED49 имеет A=KP14,
@@ -45,7 +82,7 @@ python tools/rgb_probe.py --port COM19 --source 14 --pins 1-40 --confirm-scan --
 
 | Статус | Результат |
 |---|---|
-| Implemented | FW 0.1.1: USB CDC, ADCSTATUS, ADC около 1 кГц, ARM/FAULT, SysTick; Python-консоль и полуавтоматический rgb_probe с симулятором |
+| Implemented | FW 0.1.1, Python-консоль, rgb_probe; RGB Vision v0.1: генератор ArUco, Qt-калибратор и фотоанализ |
 | Build verified | ARM GCC 14.3.1, CubeF4 1.28.3, CMake/Ninja; ELF/BIN/HEX собраны; host-тесты MSVC и проверка соединений EasyEDA |
 | Hardware verified | FW 0.1.1 записана через USB DFU; подтверждены USB CDC, ADC, SELFTEST, KP35↔KP27 на 1 кОм, OFF по USB CDC и три цвета только LED49. Остальные каналы, физические фронты EN и точность тока ещё не проверены |
 
@@ -130,7 +167,7 @@ ADC. При отсутствии выборок передаётся `MEASUREMEN
 ## Проверки
 
 ```powershell
-python -m unittest discover -s tests -p 'test_*.py' -v
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p 'test_*.py' -v
 cmake -S tests -B build/host -G 'Visual Studio 17 2022' -A x64
 cmake --build build/host --config Debug
 ctest --test-dir build/host -C Debug --output-on-failure
@@ -154,4 +191,5 @@ OFF/Reset/авариях, остальные каналы, точность из
 току и отдельным визуальным наблюдениям. Контекст и измерения:
 [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md). Порядок проверок: [docs/bringup.md](docs/bringup.md),
 текущие результаты: [docs/hardware_validation.md](docs/hardware_validation.md).
-Камера, GUI, PWM и массовое сканирование не реализованы.
+GUI фото-калибровки и фотоанализ реализованы отдельно от rgb_probe.
+Видео, захват камеры, PWM и синхронизация со STM32 не реализованы.
