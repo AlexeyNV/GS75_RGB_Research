@@ -64,12 +64,19 @@ static void execute(char *line,uint32_t now) {
     } else if (!strcmp(cmd,"PAIR")) {
         if(n!=4||!number(tokens[1],&a)||!number(tokens[2],&b)||!number(tokens[3],&c)) err="SYNTAX";
         else { err=Safety_Pair(a,b,c,now); if(!err) reply("ACK ID=%lu SRC=%u SNK=%u DURATION_MS=%u\r\n",(unsigned long)safety.id,a,b,c); }
+    } else if (!strcmp(cmd,"PHOTO")) {
+        if(n!=4||!number(tokens[3],&c)) err="SYNTAX";
+        else {
+            err=Safety_Photo(tokens[1],tokens[2],c,now);
+            if(!err) reply("ACK ID=%lu MODE=PHOTO LED=49 COLOR=%s SRC=14 SNK=%lu DURATION_MS=%u\r\n",
+                (unsigned long)safety.id,safety.color,(unsigned long)safety.sink,c);
+        }
     } else if(n!=1) err="SYNTAX";
     else if(!strcmp(cmd,"OFF")||!strcmp(cmd,"DISARM")) { Safety_Stop("OFF",true); CLI_Send("OK DISARMED\r\n"); }
     else if(!strcmp(cmd,"PING")) CLI_Send("PONG\r\n");
-    else if(!strcmp(cmd,"HELP")) CLI_Send("OK COMMANDS=PING,INFO,HELP,STATUS,OFF,ARM_s,DISARM,PAIR_src_snk_ms,CURRENT,ADCSTATUS,DUMP,SELFTEST,CLEARFAULT\r\n");
-    else if(!strcmp(cmd,"INFO")) reply("FW: %s\r\nMCU: STM32F411RET6\r\nBOARD: %s\r\nINTERFACE: USB_CDC\r\nFPC_PINS: %u\r\nMUX_SOURCE: 5x74HCT4051\r\nMUX_SINK: 5x74HCT4051\r\nADC: PA0\r\nSHUNT_OHM: %u\r\nCURRENT_LIMIT_RESISTOR_OHM: %u\r\nSTATE: %s\r\nEND INFO\r\n",FW_VERSION,BOARD_NAME,FPC_PINS,SHUNT_OHM,LIMIT_RESISTOR_OHM,Safety_State());
-    else if(!strcmp(cmd,"STATUS")) reply("OK STATE=%s SRC=%lu SNK=%lu SRC_EN=%lu SNK_EN=%lu REMAIN_MS=%lu FAULT=%s\r\n",Safety_State(),(unsigned long)safety.source,(unsigned long)safety.sink,(unsigned long)((Board_GpioA()>>10)&1),(unsigned long)((Board_GpioC()>>12)&1),(unsigned long)(safety.state==ACTIVE?safety.pulse_until-now:0),safety.fault);
+    else if(!strcmp(cmd,"HELP")) CLI_Send("OK COMMANDS=PING,INFO,HELP,STATUS,OFF,ARM_s,DISARM,PAIR_src_snk_ms,PHOTO_LED49_color_ms,CURRENT,ADCSTATUS,DUMP,SELFTEST,CLEARFAULT\r\n");
+    else if(!strcmp(cmd,"INFO")) reply("FW: %s\r\nMCU: STM32F411RET6\r\nBOARD: %s\r\nINTERFACE: USB_CDC\r\nFPC_PINS: %u\r\nMUX_SOURCE: 5x74HCT4051\r\nMUX_SINK: 5x74HCT4051\r\nADC: PA0\r\nSHUNT_OHM: %u\r\nCURRENT_LIMIT_RESISTOR_OHM: %u\r\nSTATE: %s\r\nCAPABILITIES: PHOTO_LED49\r\nEND INFO\r\n",FW_VERSION,BOARD_NAME,FPC_PINS,SHUNT_OHM,LIMIT_RESISTOR_OHM,Safety_State());
+    else if(!strcmp(cmd,"STATUS")) reply("OK STATE=%s SRC=%lu SNK=%lu SRC_EN=%lu SNK_EN=%lu REMAIN_MS=%lu FAULT=%s MODE=%s\r\n",Safety_State(),(unsigned long)safety.source,(unsigned long)safety.sink,(unsigned long)((Board_GpioA()>>10)&1),(unsigned long)((Board_GpioC()>>12)&1),(unsigned long)(safety.state==ACTIVE?safety.pulse_until-now:0),safety.fault,safety.state==ACTIVE?(safety.photo?"PHOTO":"PAIR"):"NONE");
     else if(!strcmp(cmd,"CURRENT")) {
         if(!safety.current.valid) err="ADC_INVALID";
         else reply("OK RAW=%lu MV=%lu CURRENT_UA=%lu AVG_RAW=%lu AVG_MV=%lu AVG_UA=%lu AGE_MS=%lu VALID=%u\r\n",(unsigned long)safety.current.raw,(unsigned long)safety.current.mv,(unsigned long)safety.current.ua,(unsigned long)safety.current.mean_raw,(unsigned long)safety.current.mean_mv,(unsigned long)safety.current.mean_ua,(unsigned long)(now-safety.current.at),now-safety.current.at<=ADC_STALE_MS);
@@ -100,8 +107,10 @@ void CLI_Poll(uint32_t now) {
     Safety_Tick(now);
     if(safety.done) {
         CurrentSense *c=&safety.current;
-        if(c->count) reply("DONE ID=%lu STATE=OFF CURRENT_AVG_UA=%lu CURRENT_MAX_UA=%lu SAMPLES=%lu FAULT=%s REASON=%s\r\n",(unsigned long)safety.id,(unsigned long)c->avg_ua,(unsigned long)c->max_ua,(unsigned long)c->count,safety.fault,safety.reason);
-        else reply("DONE ID=%lu STATE=OFF MEASUREMENT=UNAVAILABLE FAULT=%s REASON=%s\r\n",(unsigned long)safety.id,safety.fault,safety.reason);
+        char extra[128]="";
+        if(safety.photo) snprintf(extra,sizeof extra," MODE=PHOTO LED=49 COLOR=%s ELAPSED_MS=%lu",safety.color,(unsigned long)safety.elapsed_ms);
+        if(c->count) reply("DONE ID=%lu STATE=OFF CURRENT_AVG_UA=%lu CURRENT_MAX_UA=%lu SAMPLES=%lu FAULT=%s REASON=%s%s\r\n",(unsigned long)safety.id,(unsigned long)c->avg_ua,(unsigned long)c->max_ua,(unsigned long)c->count,safety.fault,safety.reason,extra);
+        else reply("DONE ID=%lu STATE=OFF MEASUREMENT=UNAVAILABLE FAULT=%s REASON=%s%s\r\n",(unsigned long)safety.id,safety.fault,safety.reason,extra);
         safety.done=false;
     }
     if(stop_requested) { CLI_Send("OK DISARMED\r\n"); stop_requested=false; }

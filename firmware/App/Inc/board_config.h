@@ -1,9 +1,11 @@
 #pragma once
-#define FW_VERSION "0.1.1"
+#define FW_VERSION "0.1.2"
 #define BOARD_NAME "GS75_RGB_Research"
 #define FPC_PINS 40u
 #define PULSE_MIN_MS 10u
 #define PULSE_MAX_MS 300u
+#define PHOTO_MIN_MS 100u
+#define PHOTO_MAX_MS 10000u
 #define ARM_MAX_S 60u
 #define VREF_MV 3300u
 #define SHUNT_OHM 100u

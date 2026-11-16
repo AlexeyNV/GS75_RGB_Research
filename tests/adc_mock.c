@@ -18,6 +18,7 @@ void Mock_Complete(uint32_t raw) {
 }
 void HAL_GPIO_Init(void *port,GPIO_InitTypeDef *g) { (void)port; assert(g->Pin==GPIO_PIN_0 && g->Mode==GPIO_MODE_ANALOG); }
 uint32_t HAL_GetTick(void) { return mock_now; }
+uint32_t Board_Millis(void) { return mock_now; }
 HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *a) {
     assert(a->Init.ContinuousConvMode==DISABLE && a->Init.ScanConvMode==DISABLE);
     assert(a->Init.ExternalTrigConvEdge==0 && a->Init.NbrOfConversion==1 && a->Init.DMAContinuousRequests==DISABLE);

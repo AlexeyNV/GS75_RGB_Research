@@ -1,4 +1,4 @@
-# USB CDC протокол v0.1
+# USB CDC протокол — FW 0.1.2 (совместим с v0.1)
 
 ASCII, регистр команд верхний. Одна команда на строку, LF или CRLF.
 Максимум 95 принятых байтов до LF (94 символа команды при CRLF).
@@ -17,6 +17,7 @@ OFF/DISARM сбрасывают накопленную очередь и исп�
 | STATUS | `OK STATE=… SRC=… SNK=… SRC_EN=… SNK_EN=… REMAIN_MS=… FAULT=…` |
 | ARM s | 1…60 с, `OK ARM_TIMEOUT_S=s`; DISARMED→IDLE; запрещена при ACTIVE/FAULT |
 | PAIR src snk ms | KP 1…40, разные, 10…300 мс, только IDLE после ARM |
+| PHOTO LED49 color ms | RED/GREEN/BLUE, 100…10000 мс, только после ARM; [PHOTO](photo_mode.md) |
 | OFF | немедленно выключить, снять ARM, `OK DISARMED`; FAULT сохраняется |
 | DISARM | как OFF |
 | CURRENT | последний корректный RAW/MV/CURRENT_UA, AVG_RAW/AVG_MV/AVG_UA до 8 отсчётов, AGE_MS, VALID=0/1 |
@@ -83,3 +84,21 @@ SAMPLES включает недопустимый raw; OVR/просроченн�
 OVERCURRENT отражается в STATUS/DONE FAULT; допустимый raw с высоким током
 считается измерением, а не ошибкой чтения ADC. Потеря обслуживания main может
 вызвать stale FAULT из SysTick до изменения счётчиков ADCSTATUS.
+
+## PHOTO (FW 0.1.2)
+
+INFO добавляет `CAPABILITIES: PHOTO_LED49`, STATUS — `MODE=PHOTO|PAIR|NONE`.
+PAIR сохраняет прежние диапазон и ACK/DONE. PHOTO имеет общий ID-счётчик
+и машину ACTIVE; ответы:
+
+```text
+ACK ID=1 MODE=PHOTO LED=49 COLOR=RED SRC=14 SNK=32 DURATION_MS=5000
+DONE ID=1 STATE=OFF CURRENT_AVG_UA=... CURRENT_MAX_UA=... SAMPLES=... FAULT=NONE REASON=TIMEOUT MODE=PHOTO LED=49 COLOR=RED ELAPSED_MS=...
+```
+
+Числа измерений здесь не подставлены. ELAPSED_MS фиксируется при снятии EN,
+не при поздней отправке DONE; uint32-разность поддерживает wraparound.
+Без измерений — MEASUREMENT=UNAVAILABLE. Дополнительные ошибки INVALID_LED,
+INVALID_COLOR, INVALID_DURATION. Произвольных пар в длительном режиме нет.
+OFF, ARM_EXPIRED, USB_LOST и FAULT прекращают PHOTO. Срок в SysTick
+действует без опроса CDC. Полная инструкция: [photo_mode.md](photo_mode.md).

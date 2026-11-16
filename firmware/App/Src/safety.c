@@ -14,7 +14,10 @@ void Safety_Init(void) {
 }
 void Safety_Stop(const char *reason, bool disarm) {
     Mux_AllOff();
-    if (safety.state==ACTIVE) { safety.done=true; safety.reason=reason; }
+    if (safety.state==ACTIVE) {
+        safety.elapsed_ms=Board_Millis()-safety.started_at;
+        safety.done=true; safety.reason=reason;
+    }
     if (safety.state!=FAULT) safety.state=disarm?DISARMED:(safety.state==DISARMED?DISARMED:IDLE);
 }
 void Safety_Fault(const char *code) {
@@ -44,20 +47,34 @@ const char *Safety_Arm(unsigned seconds,uint32_t now) {
     if (!Board_Check()) { Safety_Fault("GPIO_INVALID"); return "GPIO_INVALID"; }
     safety.arm_until=now+seconds*1000u; safety.state=IDLE; return 0;
 }
-const char *Safety_Pair(unsigned src,unsigned snk,unsigned ms,uint32_t now) {
+static const char *start(unsigned src,unsigned snk,unsigned ms,uint32_t now,bool photo,const char *color) {
     Safety_Tick(now);
     if (safety.state==FAULT) return "FAULT_LATCHED";
     if (src<1 || src>FPC_PINS || snk<1 || snk>FPC_PINS) return "INVALID_PIN";
     if (src==snk) return "SAME_PIN";
-    if (ms<PULSE_MIN_MS || ms>PULSE_MAX_MS) return "INVALID_DURATION";
+    if (ms<(photo?PHOTO_MIN_MS:PULSE_MIN_MS) || ms>(photo?PHOTO_MAX_MS:PULSE_MAX_MS)) return "INVALID_DURATION";
     if (safety.state==ACTIVE || safety.done) return "BUSY";
     if (safety.state!=IDLE) return "NOT_ARMED";
     if (!safety.current.valid || now-safety.current.at>ADC_STALE_MS) return "ADC_INVALID";
     if (!Board_Check()) { Safety_Fault("GPIO_INVALID"); return "GPIO_INVALID"; }
     safety.source=src; safety.sink=snk; safety.id++; safety.pulse_until=now+ms;
+    safety.photo=photo; safety.color=color; safety.started_at=now; safety.elapsed_ms=0;
     Current_ResetPulse(&safety.current);
     if (!Mux_Select(src,snk)) { Safety_Fault("GPIO_INVALID"); return "GPIO_INVALID"; }
     safety.state=ACTIVE; return 0;
+}
+const char *Safety_Pair(unsigned src,unsigned snk,unsigned ms,uint32_t now) {
+    return start(src,snk,ms,now,false,"NONE");
+}
+const char *Safety_Photo(const char *led,const char *color,unsigned ms,uint32_t now) {
+    /* The only long-duration routes: physically identified LED49 channels. */
+    if (strcmp(led,"LED49")) return "INVALID_LED";
+    unsigned sink;
+    if (!strcmp(color,"RED")) sink=32;
+    else if (!strcmp(color,"GREEN")) sink=33;
+    else if (!strcmp(color,"BLUE")) sink=34;
+    else return "INVALID_COLOR";
+    return start(14,sink,ms,now,true,sink==32?"RED":sink==33?"GREEN":"BLUE");
 }
 const char *Safety_Clear(uint32_t now) {
     if (safety.state==ACTIVE) { Safety_Stop("CLEARFAULT",true); return "BUSY"; }

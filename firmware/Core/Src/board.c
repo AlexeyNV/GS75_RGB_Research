@@ -10,6 +10,7 @@ void Board_Off(void) {
 }
 uint32_t Board_GpioA(void) { return GPIOA->IDR; }
 uint32_t Board_GpioC(void) { return GPIOC->IDR; }
+uint32_t Board_Millis(void) { return HAL_GetTick(); }
 void Board_Init(void) {
     __HAL_RCC_GPIOA_CLK_ENABLE(); __HAL_RCC_GPIOC_CLK_ENABLE();
     Board_Off(); /* preload output latches BEFORE changing MODER */

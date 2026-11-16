@@ -194,5 +194,25 @@ class ProbeTests(unittest.TestCase):
             self.assertIn('--arm-seconds', process.stderr)
 
 
+    def test_pair_protocol_supports_new_photo_firmware(self):
+        for version in ('0.1.1','0.1.2','0.1.3'):
+            clock=probe.VirtualClock()
+            io=probe.Simulator(clock)
+            original=io.send
+            def send(command):
+                original(command)
+                if command=='INFO':
+                    io.queue=[(t,line.replace('FW: 0.1.1','FW: '+version)) for t,line in io.queue]
+            io.send=send
+            result=probe.Results(Path(self.temp.name)/version, {'simulation':True})
+            runner=probe.Probe(io,clock,result)
+            if version=='0.1.3':
+                with self.assertRaises(probe.ProbeError): runner.verify_version()
+            else:
+                runner.verify_version()
+            # No ARM/PAIR is sent during version detection.
+            self.assertEqual(io.commands,['INFO'])
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -305,8 +305,8 @@ class Probe:
                 continue
             self.consume(line)
             if line == 'END INFO':
-                if version != '0.1.1':
-                    raise ProbeError('ERROR_VERSION', f'Expected FW 0.1.1, got {version}')
+                if version not in ('0.1.1', '0.1.2'):
+                    raise ProbeError('ERROR_VERSION', f'Expected FW 0.1.1/0.1.2, got {version}')
                 return
             if line.startswith('FW: '):
                 version = line[4:]
@@ -465,7 +465,7 @@ def main(argv=None):
         parser.error('Plan contains no distinct pairs')
     prefix = args.output or Path('results') / ('rgb_probe_' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'))
     print(f"{'SIMULATION' if args.simulate else 'HARDWARE'}: {len(pairs)} pairs, {args.duration_ms} ms, pause {args.pause_ms} ms, one ARM {arm} s")
-    metadata = dict(simulation=args.simulate, firmware_expected='0.1.1', plan=pairs, duration_ms=args.duration_ms,
+    metadata = dict(simulation=args.simulate, firmware_expected=['0.1.1','0.1.2'], plan=pairs, duration_ms=args.duration_ms,
                     pause_ms=args.pause_ms, arm_seconds=arm, threshold_ua=args.threshold_ua,
                     current_limit_ua=args.current_limit_ua, response_timeout=args.response_timeout,
                     operator_confirmed=args.confirm_scan, port=args.port,

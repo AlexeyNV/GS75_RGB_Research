@@ -3,6 +3,7 @@
 #include "board_config.h"
 #include "board.h"
 #include "cli.h"
+#include "adc_mock.h"
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
@@ -20,8 +21,8 @@ uint32_t Board_GpioC(void) { return enabled?1u<<12:0; }
 uint32_t Board_Lock(void) { return 0; }
 void Board_Unlock(uint32_t key) { (void)key; }
 void USB_Queue(const char *s) { assert(strlen(output)+strlen(s)<sizeof output); strcat(output,s); }
-static void reset(void) { Safety_Init(); CLI_Reset(); output[0]=0; gpio_ok=true; Safety_Sample(0,0); }
-static void feed(const char *s,uint32_t now) { output[0]=0; CLI_Receive((const uint8_t*)s,(uint32_t)strlen(s)); CLI_Poll(now); }
+static void reset(void) { Mock_Reset(); Safety_Init(); CLI_Reset(); output[0]=0; gpio_ok=true; Safety_Sample(0,0); }
+static void feed(const char *s,uint32_t now) { mock_now=now; output[0]=0; CLI_Receive((const uint8_t*)s,(uint32_t)strlen(s)); CLI_Poll(now); }
 static void expect(const char *s) { if(!strstr(output,s)) { fprintf(stderr,"Expected %s; got %s\n",s,output); assert(0); } }
 int main(void) {
     CurrentSense sense={0}; uint32_t previous=0;
@@ -83,6 +84,57 @@ int main(void) {
     CLI_Poll(0); assert(!enabled && safety.state==DISARMED); expect("ERR RX_OVERFLOW");
     reset(); Safety_Sample(0,UINT32_MAX-10); assert(!Safety_Arm(1,UINT32_MAX-10));
     assert(!Safety_Pair(1,2,10,UINT32_MAX-10)); Safety_Sample(0,UINT32_MAX); Safety_Tick(UINT32_MAX); assert(!enabled);
-    puts("PASS: 40 mappings, 1560 directed pairs, parser errors, asynchronous deadlines, OFF priority, ADC faults, ARM expiry, wraparound, break-before-make");
+    const unsigned durations[]={100,5000,10000};
+    const char *colors[]={"RED","GREEN","BLUE"};
+    for(unsigned i=0;i<3;i++) {
+        reset(); feed("ARM 60\n",0);
+        char cmd[80]; snprintf(cmd,sizeof cmd,"PHOTO LED49 %s %u\n",colors[i],durations[i]);
+        feed(cmd,0); expect("ACK ID=1 MODE=PHOTO LED=49"); assert(enabled && safety.source==14 && safety.sink==32+i);
+        feed("STATUS\n",0); expect("MODE=PHOTO");
+        feed("PAIR 1 2 100\n",0); expect("ERR BUSY");
+        feed("PHOTO LED49 RED 100\n",0); expect("ERR BUSY");
+        feed("ARM 60\n",0); expect("ERR BUSY");
+        /* No CLI polling throughout continuous operation. */
+        for(unsigned t=1;t<=durations[i];t++) {
+            mock_now=t; Safety_Sample(100,t); Safety_Tick(t);
+            assert(enabled==(t<durations[i]));
+        }
+        assert(!Board_GpioA() && !Board_GpioC() && safety.current.count==durations[i]);
+        feed("STATUS\n",durations[i]); expect("REASON=TIMEOUT"); expect("MODE=PHOTO LED=49");
+        assert(safety.elapsed_ms==durations[i] && safety.state==IDLE);
+    }
+    const char *badphoto[]={"PHOTO LED49 RED 99\n","PHOTO LED49 RED 10001\n","PHOTO LED50 RED 100\n",
+        "PHOTO 14 32 100\n","PHOTO LED49 WHITE 100\n","PHOTO LED49 RED+GREEN 100\n","PHOTO LED49 RED -1\n",
+        "PHOTO LED49 RED 42949672960\n","PHOTO LED49 RED 100 extra\n"};
+    reset(); feed("PHOTO LED49 RED 100\n",0); expect("ERR NOT_ARMED"); feed("ARM 60\n",0);
+    for(unsigned i=0;i<sizeof badphoto/sizeof badphoto[0];i++) { feed(badphoto[i],0); expect("ERR "); assert(!enabled); }
+    feed("PAIR 14 32 301\n",0); expect("ERR INVALID_DURATION");
+    feed("PAIR 14 32 300\n",0); feed("PHOTO LED49 RED 100\n",0); expect("ERR BUSY");
+    for(unsigned failure=0;failure<7;failure++) {
+        reset(); feed("ARM 1\n",0); feed("PHOTO LED49 RED 5000\n",0);
+        if(failure==0) { mock_now=50; CLI_Receive((const uint8_t*)"PING\nPING\nPING\nOFF\n",19); }
+        if(failure==1) { mock_now=1000; Safety_Sample(100,1000); Safety_Tick(1000); }
+        if(failure==2) { mock_now=6; Safety_Tick(6); }
+        if(failure==3) { mock_now=1; Safety_Sample(4095,1); }
+        if(failure==4) { mock_now=1; Safety_Sample(300,1); }
+        if(failure==5) { mock_now=3; Safety_Stop("USB_LOST",true); CLI_Reset(); }
+        if(failure==6) { mock_now=4; Safety_Fault("TX_OVERFLOW"); }
+        assert(!enabled && !Board_GpioA() && !Board_GpioC() && safety.done);
+        unsigned previous_enables=enables; Safety_Sample(0,mock_now); CLI_Poll(mock_now);
+        Safety_Tick(mock_now+1); assert(enables==previous_enables && !enabled);
+        if(safety.state==FAULT) { feed("OFF\n",mock_now); feed("PHOTO LED49 RED 100\n",mock_now); expect("FAULT_LATCHED"); }
+        if(failure==0) { expect("REASON=OFF"); assert(safety.elapsed_ms==50); }
+        if(failure==1) { expect("REASON=ARM_EXPIRED"); assert(safety.elapsed_ms==1000); }
+        if(failure==5) expect("REASON=USB_LOST");
+    }
+    for(unsigned expiry=0;expiry<2;expiry++) {
+        reset(); uint32_t start=UINT32_MAX-200;
+        mock_now=start; Safety_Sample(0,start); assert(!Safety_Arm(expiry?1:20,start));
+        assert(!Safety_Photo("LED49","RED",5000,start));
+        unsigned end=expiry?1000:5000;
+        for(unsigned t=1;t<=end;t++) { mock_now=start+t; Safety_Sample(100,mock_now); Safety_Tick(mock_now); assert(enabled==(t<end)); }
+        assert(safety.elapsed_ms==end); Safety_Init(); assert(!enabled && safety.state==DISARMED);
+    }
+    puts("PASS: PAIR regressions and PHOTO routes, bounds, deadlines, faults, OFF, USB loss, ARM expiry and wraparound");
     return 0;
 }

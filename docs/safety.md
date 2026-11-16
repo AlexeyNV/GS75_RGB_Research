@@ -36,3 +36,10 @@ raw×VREF_mV×1000/(4095×R_shunt). Нет калибровки VREF, смеще
 аналоговая цепь должна установиться; первые отсчёты входят в статистику.
 SELFTEST проверяет программную конфигурацию и доступные IDR, а не проводимость
 каждого 4051, ESD-защиту, допустимое обратное напряжение LED или ориентацию шлейфа.
+
+
+## PHOTO FW 0.1.2
+
+PHOTO LED49 RED/GREEN/BLUE: 100..10000 ms; PAIR: 10..300 ms.
+ARM/ADC_STALE_MS=5/CURRENT_TRIP_UA=2000/OFF/USB loss unchanged.
+No IWDG; see [PHOTO safety and operator procedure](photo_mode.md).
