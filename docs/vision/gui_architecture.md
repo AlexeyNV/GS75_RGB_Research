@@ -1,5 +1,12 @@
 # RGB Vision v0.3 — устройство приложения
 
+Дополнение v0.4-perf: восьмая вкладка performance_pane.py; профилировщик
+frame_profile.py, последовательный PyAV reader pts_video.py, медианный
+off_background.py, cached/hybrid video_engine.py и video_benchmark.py.
+Старые пути GUI/фото сохранены. [Устройство и фактические результаты](video_performance.md).
+Профиль потоковый только как офлайн-прототип; основная история v0.3
+по-прежнему работает с выбранными фото/кадрами.
+
 Единое QMainWindow — software/gui/vision_window.py, вход tools/rgb_vision.py.
 Start_RGB_Vision.bat запускает существующий pythonw без консоли.
 Прошивка, serial/ARM/PHOTO/OFF не используются. Будущая служба аппаратного

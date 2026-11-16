@@ -15,6 +15,7 @@ from .board_calibrator import Calibrator
 from .image_viewer import ImageViewer
 from .jobs import Job
 from .result_pane import ResultPane
+from .performance_pane import PerformancePane
 from . import ensure_fonts
 from software.vision import calibration
 from software.vision.project_storage import ROOT,read_image,image_hash,write_image
@@ -59,7 +60,7 @@ class EmbeddedCalibrator(Calibrator):
 
 class VisionWindow(QMainWindow):
     def __init__(self,remember=True):
-        ensure_fonts();super().__init__();self.setWindowTitle('GS75 RGB Vision v0.3');self.resize(1500,980)
+        ensure_fonts();super().__init__();self.setWindowTitle('GS75 RGB Vision v0.4-perf');self.resize(1500,980)
         self.project=None;self.active_job=None;self.job_callback=None;self.pool=QThreadPool(self);self.pool.setMaxThreadCount(1)
         self.remember=remember;self.preferences=QSettings('GS75_RGB_Research','RGBVision')
         self.decoder=VideoReader();self.video_path=None;self.video_image=None;self.frame_info=None
@@ -119,8 +120,10 @@ class VisionWindow(QMainWindow):
         button(form,'Применить настройки',self.apply_settings)
         self.profile.currentIndexChanged.connect(self.profile_changed);self.profile_changed(0)
         self.log_view=QPlainTextEdit();self.log_view.setReadOnly(True)
+        self.performance=PerformancePane(self)
         for widget,title in [(self.project_page,'Проект'),(self.calibrator,'Калибровка'),(self.photos_page,'Фотографии'),
             (self.video_page,'Видео'),(self.results_page,'Результаты'),(self.settings_page,'Настройки'),(self.log_view,'Журнал')]:self.tabs.addTab(widget,title)
+        self.tabs.addTab(self.performance,'Производительность видео')
         bar=self.addToolBar('Проект')
         for name,callback in [('Создать',self.new_dialog),('Открыть',self.open_dialog),('Сохранить',self.save_project)]:
             action=QAction(name,self);action.triggered.connect(callback);bar.addAction(action)
@@ -159,10 +162,11 @@ class VisionWindow(QMainWindow):
             logging.exception('Result delivery failed');self.error(str(exc))
 
     def job_progress(self,current,total,value):
+        self.performance.progress_update(current,total,value)
         self.progress.setRange(0,max(1,total));self.progress.setValue(current);self.statusBar().showMessage(f'{current} / {total}')
         if isinstance(value,dict) and 'name' in value:
             self.log(value['name']+': '+value.get('state',''))
-            for rec in value.get('records',[]) or [{}]:
+            for rec in (value.get('records') or [{}]) if 'records' in value else []:
                 row=self.batch_table.rowCount();self.batch_table.insertRow(row);self.report_rows.append(value.get('report'))
                 for col,text in enumerate([value['name'],rec.get('led_id') or 'UNKNOWN',rec.get('status',value.get('state','')),rec.get('color',''),value.get('error') or value.get('registration','')]):
                     self.batch_table.setItem(row,col,QTableWidgetItem(str(text)))

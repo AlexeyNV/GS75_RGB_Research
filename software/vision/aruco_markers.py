@@ -5,6 +5,8 @@ import cv2
 import numpy as np
 from .project_storage import write_image
 
+from .frame_profile import timed
+
 DICTIONARY = 'DICT_4X4_50'
 
 
@@ -12,6 +14,7 @@ def dictionary():
     return cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
 
 
+@timed('ARUCO_DETECT')
 def detect(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if image.ndim == 3 else image
     parameters = cv2.aruco.DetectorParameters()

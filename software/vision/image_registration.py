@@ -3,6 +3,7 @@ from dataclasses import dataclass,field
 import cv2
 import numpy as np
 from .aruco_markers import detect
+from .frame_profile import timed,ACTIVE
 
 
 def transform_points(points,matrix):
@@ -29,7 +30,8 @@ class Registration:
                     anchor_coverage=self.coverage,matrix=self.matrix.tolist() if self.matrix is not None else None)
 
 
-def register(image,calibration,detected=None,max_error_px=3.0):
+@timed('HOMOGRAPHY')
+def register(image,calibration,detected=None,max_error_px=3.0,rectify=True):
     result=Registration()
     try: result.detected=detect(image) if detected is None else detected
     except ValueError as exc: result.reason=str(exc); return result
@@ -69,14 +71,25 @@ def register(image,calibration,detected=None,max_error_px=3.0):
     area=cv2.contourArea(polygon,oriented=True)
     if not np.isfinite(polygon).all() or not cv2.isContourConvex(polygon) or not .02*w*h<area<30*w*h:
         result.reason='Mirrored, folded or extreme geometry'; return result
-    mask=cv2.warpPerspective(np.full(image.shape[:2],255,np.uint8),matrix,(w,h),flags=cv2.INTER_NEAREST)
-    mask=cv2.erode(mask,np.ones((5,5),np.uint8))
-    anchor_mask=np.zeros((h,w),np.uint8); cv2.fillConvexPoly(anchor_mask,hull.astype(np.int32),255)
-    mask=cv2.bitwise_and(mask,anchor_mask)
-    if np.count_nonzero(mask)<w*h*.02:
-        result.reason='Insufficient visible reference area'; return result
-    result.matrix=matrix; result.valid_mask=mask
-    result.warped=cv2.warpPerspective(image,matrix,(w,h),flags=cv2.INTER_LINEAR)
+    result.matrix=matrix
+    if not rectify:
+        # Convex intersection verifies visibility without allocating a full-resolution mask.
+        intersection,_=cv2.intersectConvexConvex(polygon,hull.reshape(-1,2))
+        if intersection<w*h*.02:
+            result.matrix=None;result.reason='Insufficient visible reference area';return result
+        result.anchor_hull=hull
+    else:
+        profile=ACTIVE.get()
+        from contextlib import nullcontext
+        with profile.stage('IMAGE_RECTIFICATION') if profile else nullcontext():
+            mask=cv2.warpPerspective(np.full(image.shape[:2],255,np.uint8),matrix,(w,h),flags=cv2.INTER_NEAREST)
+            mask=cv2.erode(mask,np.ones((5,5),np.uint8))
+            anchor_mask=np.zeros((h,w),np.uint8); cv2.fillConvexPoly(anchor_mask,hull.astype(np.int32),255)
+            mask=cv2.bitwise_and(mask,anchor_mask)
+            if np.count_nonzero(mask)<w*h*.02:
+                result.reason='Insufficient visible reference area'; return result
+            result.valid_mask=mask
+            result.warped=cv2.warpPerspective(image,matrix,(w,h),flags=cv2.INTER_LINEAR)
     result.status='REGISTERED' if len(result.inlier_ids)>=3 else 'DEGRADED'
     result.reason='Robust marker registration' if result.status=='REGISTERED' else 'Only two markers support registration; manual review required'
     return result

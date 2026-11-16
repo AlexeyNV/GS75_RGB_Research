@@ -6,6 +6,7 @@ import csv
 import cv2
 import numpy as np
 from .calibration import validate
+from .frame_profile import timed,diagnostic
 from .image_registration import register,transform_points
 from .optical_signal import evaluate
 from .project_storage import read_image,write_image,atomic_json
@@ -17,9 +18,10 @@ class Analysis:
     images: dict
 
 
-def lighting_difference(off,on,mask):
+@timed('BACKGROUND_COMPENSATION')
+def lighting_difference(off,on,mask,max_samples=50000):
     # Deterministic subsampling; no full-size float RGB copies for 48 MP images.
-    stride=max(1,int(np.sqrt(off.shape[0]*off.shape[1]/50000)))
+    stride=max(1,int(np.sqrt(off.shape[0]*off.shape[1]/max_samples)))
     sampled=mask[::stride,::stride]>0
     a=off[::stride,::stride][sampled].astype(float); b=on[::stride,::stride][sampled].astype(float)
     if len(a)<100: raise ValueError('Insufficient common background for lighting compensation')
@@ -39,7 +41,7 @@ def lighting_difference(off,on,mask):
     return delta,parameters,extreme
 
 
-def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min_area=6,mode='KNOWN_LEDS',roi_radius=40,color_threshold=25,registration_error=3.,dominance_ratio=.45,mixed_ratio=.70,cancel_check=lambda:None):
+def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min_area=6,mode='KNOWN_LEDS',roi_radius=40,color_threshold=25,registration_error=3.,dominance_ratio=.45,mixed_ratio=.70,cancel_check=lambda:None,prepared_off=None,diagnostics=True,trusted_off_mask=None):
     validate(calibration)
     if not 1<=threshold<=255 or not 1<=match_radius<=1000 or not 1<=min_area<=100000:
         raise ValueError('Invalid detection threshold, radius or area')
@@ -48,16 +50,17 @@ def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min
     if not .5<=registration_error<=10 or not 0<dominance_ratio<mixed_ratio<=1:
         raise ValueError('Invalid registration or color confidence thresholds')
     cancel_check()
-    off_registration=register(off,calibration,max_error_px=registration_error)
+    off_registration=prepared_off if prepared_off is not None else register(off,calibration,max_error_px=registration_error)
     cancel_check()
     on_registration=register(on,calibration,max_error_px=registration_error)
     cancel_check()
     images={'Original OFF':off,'Original ON':on}
-    on_markers=on.copy()
-    for key,corners in on_registration.detected.items():
-        points=np.asarray(corners,np.int32); cv2.polylines(on_markers,[points],True,(0,220,255),2)
-        cv2.putText(on_markers,f'ID {key}',tuple(points[0]),cv2.FONT_HERSHEY_SIMPLEX,.6,(0,220,255),2)
-    images['ON markers']=on_markers
+    if diagnostics:
+        on_markers=diagnostic(on.copy)
+        for key,corners in on_registration.detected.items():
+            points=np.asarray(corners,np.int32); diagnostic(cv2.polylines,on_markers,[points],True,(0,220,255),2)
+            diagnostic(cv2.putText,on_markers,f'ID {key}',tuple(points[0]),cv2.FONT_HERSHEY_SIMPLEX,.6,(0,220,255),2)
+        images['ON markers']=on_markers
     status='FAILED' if 'FAILED' in [off_registration.status,on_registration.status] else ('DEGRADED' if 'DEGRADED' in [off_registration.status,on_registration.status] else 'REGISTERED')
     result=dict(schema_version=2,calibration_version=calibration['calibration_version'],
                 experiment_id=experiment_id,analyzed_utc=datetime.now(timezone.utc).isoformat(),
@@ -79,6 +82,7 @@ def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min
     off_warped,on_warped=off_registration.warped,on_registration.warped
     images.update({'Registered OFF':off_warped,'Registered ON':on_warped})
     common=cv2.bitwise_and(off_registration.valid_mask,on_registration.valid_mask)
+    if trusted_off_mask is not None:common=cv2.bitwise_and(common,trusted_off_mask)
     # Remove marker code AND quiet zone; highlights on stickers are not LED observations.
     for corners in calibration['markers'].values():
         points=np.asarray(corners,float); expanded=points.mean(axis=0)+(points-points.mean(axis=0))*1.55
@@ -96,7 +100,7 @@ def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min
         return Analysis(result,images)
     cancel_check()
     known,candidates,detections,diagnostics,strength=evaluate(
-        calibration,off_warped,on_warped,delta,common,mode,threshold,color_threshold,roi_radius,min_area,dominance_ratio,mixed_ratio)
+        calibration,off_warped,on_warped,delta,common,mode,threshold,color_threshold,roi_radius,min_area,dominance_ratio,mixed_ratio,diagnostics=diagnostics)
     result.update(known_leds=known,candidates=candidates,detections=detections,
                   effective_threshold=threshold,
                   legacy_global_threshold=max(float(threshold),float(np.quantile(strength[background>0],.995))+10))
@@ -106,7 +110,8 @@ def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min
                           calibration_version=calibration['calibration_version'],experiment_id=experiment_id,analyzed_utc=result['analyzed_utc'])
             if status=='DEGRADED': record['ambiguity_flags'].append('DEGRADED_REGISTRATION')
     result['visible_led_ids']=[r['led_id'] for r in known if r['roi_coverage']>=.9]
-    original=on.copy()
+    if not diagnostics:return Analysis(result,{})
+    original=diagnostic(on.copy)
     for record in known if mode=='KNOWN_LEDS' else detections:
         p=np.array([[record['x_ref_px'],record['y_ref_px']]],float)
         native=transform_points(p,np.linalg.inv(on_registration.matrix))[0]
@@ -115,8 +120,8 @@ def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min
         record['x_off_px'],record['y_off_px']=map(float,native_off)
         circle=np.array([[p[0,0]+roi_radius*np.cos(t),p[0,1]+roi_radius*np.sin(t)] for t in np.linspace(0,2*np.pi,60)])
         projected=transform_points(circle,np.linalg.inv(on_registration.matrix)).astype(np.int32)
-        cv2.polylines(original,[projected],True,(255,0,255),2)
-        cv2.putText(original,f"{record['led_id'] or 'CANDIDATE'} {record['status']} {record['color']}",tuple(native.astype(int)),cv2.FONT_HERSHEY_SIMPLEX,.6,(255,0,255),2)
+        diagnostic(cv2.polylines,original,[projected],True,(255,0,255),2)
+        diagnostic(cv2.putText,original,f"{record['led_id'] or 'CANDIDATE'} {record['status']} {record['color']}",tuple(native.astype(int)),cv2.FONT_HERSHEY_SIMPLEX,.6,(255,0,255),2)
     result['warnings'].append('Optical evidence requires manual review; colored reflections can resemble emitted light')
     images.update({'Difference':delta,'Valid overlap':common,'Original ON annotated':original,**diagnostics})
     return Analysis(result,images)

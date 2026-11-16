@@ -1,5 +1,10 @@
 # RGB Vision v0.1 — архитектура и проверка
 
+Новый измеряемый видео-прототип v0.4-perf:
+[video_performance.md](video_performance.md),
+[таблицы/стадии/качество](perf_v04/report.md). Исходный фото-pipeline ниже
+сохранён; добавлены необязательные профилирование, cache OFF и diagnostics=False.
+
 Актуальное приложение v0.3: [gui_architecture.md](gui_architecture.md),
 единый GUI, проекты, фоновые задания, batch и видеокадры. Ниже — история
 v0.1/v0.2. [Новые реальные RGB](v03_validation.md).

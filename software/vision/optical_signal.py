@@ -1,4 +1,5 @@
 """Local chromatic evidence, separate from geometric registration and LED identity."""
+from .frame_profile import timed,diagnostic
 import cv2
 import numpy as np
 
@@ -26,6 +27,7 @@ def signal_maps(off, on, delta, common, threshold, color_threshold):
     return strength, signal, color, bright
 
 
+@timed('COLOR_CLASSIFICATION')
 def measure(delta, on, signal, selection, dominance_ratio=.45, mixed_ratio=.70):
     area = int(np.count_nonzero(selection))
     if not area:
@@ -58,13 +60,16 @@ def measure(delta, on, signal, selection, dominance_ratio=.45, mixed_ratio=.70):
 
 
 
-def evaluate(calibration, off, on, delta, common, mode, threshold, color_threshold, roi_radius, min_area, dominance_ratio=.45, mixed_ratio=.70):
+@timed('LED_DETECTION')
+def evaluate(calibration, off, on, delta, common, mode, threshold, color_threshold, roi_radius, min_area, dominance_ratio=.45, mixed_ratio=.70,diagnostics=True,find_candidates=True):
     strength, signal, color_mask, bright = signal_maps(off,on,delta,common,threshold,color_threshold)
     known=[]; candidates=[]; accepted=[]
-    roi_overlay=on.copy(); accepted_overlay=on.copy(); rejected_overlay=on.copy(); candidate_overlay=on.copy()
+    if diagnostics:
+        roi_overlay=diagnostic(on.copy); accepted_overlay=diagnostic(on.copy); rejected_overlay=diagnostic(on.copy); candidate_overlay=diagnostic(on.copy)
     h,w=common.shape
     # Candidates are proposals, NEVER automatic LED identities in DISCOVER.
-    count,labels,stats,_=cv2.connectedComponentsWithStats(cv2.bitwise_or(color_mask,bright))
+    count=1
+    if find_candidates:count,labels,stats,_=cv2.connectedComponentsWithStats(cv2.bitwise_or(color_mask,bright))
     for i in range(1,count):
         x,y,ww,hh,area=map(int,stats[i]); local=labels[y:y+hh,x:x+ww]==i
         selected=local & (color_mask[y:y+hh,x:x+ww]>0)
@@ -79,9 +84,9 @@ def evaluate(calibration, off, on, delta, common, mode, threshold, color_thresho
                     status='REJECTED' if reasons else 'CANDIDATE',rejection_reasons=reasons,
                     component_area_px=area,bbox_ref_px=[x,y,ww,hh],candidate_led_ids=[])
         candidates.append(record)
-        cv2.rectangle(candidate_overlay,(x,y),(x+ww,y+hh),(0,200,255),1)
+        if diagnostics:diagnostic(cv2.rectangle,candidate_overlay,(x,y),(x+ww,y+hh),(0,200,255),1)
         if reasons:
-            cv2.rectangle(rejected_overlay,(x,y),(x+ww,y+hh),(0,0,255),1)
+            if diagnostics:diagnostic(cv2.rectangle,rejected_overlay,(x,y),(x+ww,y+hh),(0,0,255),1)
         elif mode=='DISCOVER':
             record['ambiguity_flags'].append('UNKNOWN_LED_ADD_TO_CALIBRATION')
             accepted.append(record)
@@ -124,12 +129,13 @@ def evaluate(calibration, off, on, delta, common, mode, threshold, color_thresho
         if state!='ON': record['color']='UNDEFINED'
         known.append(record)
         if mode=='KNOWN_LEDS' and state in ('ON','UNCERTAIN'): accepted.append(record)
-        cv2.circle(roi_overlay,(cx,cy),r,(255,0,255),2)
-        cv2.putText(roi_overlay,f"{led['led_id']} {state} {record['color']}",(cx+8,cy-8),cv2.FONT_HERSHEY_SIMPLEX,.6,(255,0,255),2)
+        if diagnostics:diagnostic(cv2.circle,roi_overlay,(cx,cy),r,(255,0,255),2)
+        if diagnostics:diagnostic(cv2.putText,roi_overlay,f"{led['led_id']} {state} {record['color']}",(cx+8,cy-8),cv2.FONT_HERSHEY_SIMPLEX,.6,(255,0,255),2)
+    if not diagnostics:return known,candidates,accepted,{},strength
     for rec in accepted:
         point=(round(rec['x_ref_px']),round(rec['y_ref_px']))
-        cv2.circle(accepted_overlay,point,round(roi_radius),(0,220,0) if rec['status'] in ('ON','CANDIDATE') else (0,180,255),2)
-        cv2.putText(accepted_overlay,f"{rec['led_id'] or 'CANDIDATE'} {rec['status']} {rec['color']}",(point[0]+8,point[1]-8),cv2.FONT_HERSHEY_SIMPLEX,.6,(0,220,0),2)
+        diagnostic(cv2.circle,accepted_overlay,point,round(roi_radius),(0,220,0) if rec['status'] in ('ON','CANDIDATE') else (0,180,255),2)
+        diagnostic(cv2.putText,accepted_overlay,f"{rec['led_id'] or 'CANDIDATE'} {rec['status']} {rec['color']}",(point[0]+8,point[1]-8),cv2.FONT_HERSHEY_SIMPLEX,.6,(0,220,0),2)
     return known,candidates,accepted,{
         'Color mask':color_mask,'Color signal':np.clip(signal,0,255).astype(np.uint8),
         'Candidates':candidate_overlay,'Accepted':accepted_overlay,'Rejected':rejected_overlay,

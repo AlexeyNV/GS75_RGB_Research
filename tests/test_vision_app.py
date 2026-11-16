@@ -26,7 +26,9 @@ APP=QApplication.instance() or QApplication([])
 def wait_idle(window,timeout=45):
     end=time.monotonic()+timeout;stable=0
     while time.monotonic()<end:
-        APP.processEvents();QTest.qWait(10)
+        # QTest.qWait can retain the Python GIL while sleeping, starving a
+        # Python QRunnable. Yield it explicitly, as QApplication.exec does.
+        APP.processEvents();time.sleep(.005)
         if window.active_job is None and not window.pending_result and window.pool.activeThreadCount()==0:
             stable+=1
             if stable>=3:return
