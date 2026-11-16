@@ -1,0 +1,108 @@
+{
+  "timestamp_utc": "2026-11-16T07:23:04.360864+00:00",
+  "firmware_expected": "0.1.1",
+  "pair": [
+    27,
+    35
+  ],
+  "load_ohm_nominal": 1000,
+  "duration_ms": 300,
+  "delay_after_ack_ms_requested": 50,
+  "u13_open_operator_confirmed": true,
+  "hardware_en_waveforms_measured": false,
+  "port": "COM19",
+  "result": "PASS_PROTOCOL",
+  "done": "DONE ID=1 STATE=OFF CURRENT_AVG_UA=1254 CURRENT_MAX_UA=1265 SAMPLES=67 FAULT=NONE REASON=OFF",
+  "events": [
+    {
+      "t_ms": 0.0,
+      "direction": "TX",
+      "line": "OFF"
+    },
+    {
+      "t_ms": 32.0,
+      "direction": "RX",
+      "line": "OK DISARMED"
+    },
+    {
+      "t_ms": 32.0,
+      "direction": "TX",
+      "line": "STATUS"
+    },
+    {
+      "t_ms": 47.0,
+      "direction": "RX",
+      "line": "OK STATE=DISARMED SRC=0 SNK=0 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE"
+    },
+    {
+      "t_ms": 47.0,
+      "direction": "TX",
+      "line": "ADCSTATUS"
+    },
+    {
+      "t_ms": 63.0,
+      "direction": "RX",
+      "line": "OK ADCSTATUS MODE=SINGLE_SW PERIOD_MS=1 EOC=0 OVR=0 PENDING=0 STARTS=97488 SAMPLES=97488 VALID_SAMPLES=97488 ERRORS=0 OVR_COUNT=0 TIMEOUTS=0 START_ERRORS=0 STOP_ERRORS=0 INVALID_SAMPLES=0 HAS_SAMPLE=1 AGE_MS=0 VALID=1 SR=0x10 LAST_SR=0x10 CR2=0x401 HAL_ERROR=0x0"
+    },
+    {
+      "t_ms": 63.0,
+      "direction": "TX",
+      "line": "SELFTEST"
+    },
+    {
+      "t_ms": 79.0,
+      "direction": "RX",
+      "line": "OK SELFTEST=PASS STATE=DISARMED FAULT=NONE PHYSICAL_MUX=UNTESTED"
+    },
+    {
+      "t_ms": 79.0,
+      "direction": "TX",
+      "line": "ARM 60"
+    },
+    {
+      "t_ms": 94.0,
+      "direction": "RX",
+      "line": "OK ARM_TIMEOUT_S=60"
+    },
+    {
+      "t_ms": 94.0,
+      "direction": "TX",
+      "line": "PAIR 27 35 300"
+    },
+    {
+      "t_ms": 110.0,
+      "direction": "RX",
+      "line": "ACK ID=1 SRC=27 SNK=35 DURATION_MS=300"
+    },
+    {
+      "t_ms": 157.0,
+      "direction": "TX",
+      "line": "OFF"
+    },
+    {
+      "t_ms": 172.0,
+      "direction": "RX",
+      "line": "DONE ID=1 STATE=OFF CURRENT_AVG_UA=1254 CURRENT_MAX_UA=1265 SAMPLES=67 FAULT=NONE REASON=OFF"
+    },
+    {
+      "t_ms": 172.0,
+      "direction": "RX",
+      "line": "OK DISARMED"
+    },
+    {
+      "t_ms": 172.0,
+      "direction": "TX",
+      "line": "STATUS"
+    },
+    {
+      "t_ms": 188.0,
+      "direction": "RX",
+      "line": "OK STATE=DISARMED SRC=27 SNK=35 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE"
+    },
+    {
+      "t_ms": 188.0,
+      "direction": "TX",
+      "line": "OFF"
+    }
+  ]
+}
