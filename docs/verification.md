@@ -105,3 +105,17 @@ git push origin main
 в sandbox Git запускался с разовым `-c safe.directory=<точный путь>`, без
 изменения глобальных настроек. Автор initial commit взят из существующего
 GS75_Keyboard; настройки Git других проектов не меняются.
+## Проверки PHOTO / Vision v0.2, 16.11.2026
+
+52 Python-теста прошли, включая реальные OFF/RED, OFF/OFF, GUI, фиктивный
+CDC PHOTO и совместимость rgb_probe с FW 0.1.1/0.1.2.
+Обе C-регрессии firmware_logic и adc_acquisition прошли. PHOTO проверен
+на 100/5000/10000 мс, ограничения, ARM expiry, OFF, stale/invalid ADC,
+перегрузку, USB_LOST, FAULT и wraparound. USB_LOST в host-модели вызывает
+тот же Safety_Stop, что аппаратный callback; реальный USB suspend новой FW
+и физические GPIO ещё предстоит испытать оператору.
+
+Чистая ARM-сборка: build/firmware-photo, ARM GCC 14.3.1, без предупреждений.
+FLASH 23668 байт, RAM 12496 байт, ELF/BIN/HEX готовы. IWDG не включён.
+Физический MCU не прошивался и выходы не включались.
+Реальный фотоотчёт: docs/vision/real_validation.md.

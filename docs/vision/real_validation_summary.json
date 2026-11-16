@@ -1,0 +1,415 @@
+{
+  "input_sha256": {
+    "config\\gs75_board_calibration.json": "7f7e47221ab33e58a92f71a2c4b89e1540f5281fa53313079ba67252a5730f76",
+    "data\\off.jpg": "b409838f3ee84bd952a88d2224ff603391e5ef14c8d92edf08560e001e9c7f73",
+    "data\\red.jpg": "6ad4369da29cf33cf9d761b0e846864d28e58b5fcf215d4a06b8c9d3028fa708",
+    "D:\\VScode\\Nozdrin_GitHub\\GS75_RGB_Research\\data\\reference\\gs75_rgb_off.jpg": "86b18ba8d09c9c25b88b1b231af988cec042bb5eda4baae4893e9cc634b3d44a"
+  },
+  "off_shape": [
+    4000,
+    2256,
+    3
+  ],
+  "on_shape": [
+    4000,
+    2256,
+    3
+  ],
+  "raw_red_off": [],
+  "raw_red_on": [
+    {
+      "area_px": 5458,
+      "center": [
+        1798.83162330524,
+        3369.228838402345
+      ]
+    }
+  ],
+  "parameters": {
+    "threshold": 30,
+    "match_radius_px": 20,
+    "min_area_px": 6,
+    "mode": "KNOWN_LEDS",
+    "roi_radius_px": 40,
+    "color_threshold": 25
+  },
+  "registrations": {
+    "off": {
+      "status": "REGISTERED",
+      "reason": "Robust marker registration",
+      "reprojection_rmse_px": 1.5339234047270585,
+      "max_inlier_error_px": 2.9168380092163697,
+      "common_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "inlier_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9"
+      ],
+      "anchor_coverage": 0.3947606962872735,
+      "matrix": [
+        [
+          0.061633615646751266,
+          -0.9876215661316027,
+          3955.108603645219
+        ],
+        [
+          1.1065490882694813,
+          0.137289936128775,
+          -659.9419076111952
+        ],
+        [
+          -2.793462584885658e-06,
+          8.704373363578668e-05,
+          1.0
+        ]
+      ]
+    },
+    "on": {
+      "status": "REGISTERED",
+      "reason": "Robust marker registration",
+      "reprojection_rmse_px": 1.5590698137990144,
+      "max_inlier_error_px": 2.6778965633612604,
+      "common_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "inlier_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "5",
+        "7",
+        "8",
+        "9"
+      ],
+      "anchor_coverage": 0.3338728891181385,
+      "matrix": [
+        [
+          0.06260298885271187,
+          -0.9893150500934643,
+          3965.04781145583
+        ],
+        [
+          1.1066193850308976,
+          0.13557990464437164,
+          -663.6183356045915
+        ],
+        [
+          -2.697499063460095e-06,
+          8.702814226878354e-05,
+          1.0
+        ]
+      ]
+    }
+  },
+  "known_leds": [
+    {
+      "led_id": "LED49",
+      "key_name": null,
+      "x_ref_px": 578.1096013233087,
+      "y_ref_px": 1379.292979042749,
+      "color": "RED",
+      "area_px": 4334,
+      "brightness": 99.67951084448546,
+      "chroma": 87.9218978881836,
+      "mean_rgb_delta": [
+        99.67951084448546,
+        21.68943239501615,
+        8.906783571758192
+      ],
+      "ambiguity_flags": [
+        "COLOR_FROM_HALO_AROUND_CLIPPED_CORE"
+      ],
+      "status": "ON",
+      "rejection_reasons": [],
+      "roi_radius_px": 40,
+      "roi_coverage": 0.9423962067828853,
+      "saturated_white_fraction": 0.010977411864048976,
+      "candidate_led_ids": [
+        "LED49"
+      ],
+      "signal_x_ref_px": 577.9697738809414,
+      "signal_y_ref_px": 1376.7688047992617,
+      "registration_status": "REGISTERED",
+      "reprojection_error_px": 1.5590698137990144,
+      "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+      "experiment_id": "real_validation_report",
+      "analyzed_utc": "2026-11-16T12:25:43.716255+00:00",
+      "x_on_px": 1792.7448266756626,
+      "y_on_px": 3368.482715440165,
+      "x_off_px": 1784.3077002968519,
+      "y_off_px": 3362.28091059284,
+      "image_off": "off.jpg",
+      "image_on": "red.jpg"
+    }
+  ],
+  "archived_run": {
+    "path": "build\\vision\\led49_red",
+    "regions": 44,
+    "parameters": {
+      "threshold": 30,
+      "match_radius_px": 20,
+      "min_area_px": 6
+    },
+    "effective_threshold": 165.0,
+    "reprojection": {
+      "off": {
+        "status": "REGISTERED",
+        "reason": "Robust marker registration",
+        "reprojection_rmse_px": 1.212160283721755,
+        "max_inlier_error_px": 2.917112641447493,
+        "common_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "inlier_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "6",
+          "7"
+        ],
+        "anchor_coverage": 0.2513384135015809,
+        "matrix": [
+          [
+            -0.0712377969858311,
+            -0.985418187613049,
+            3999.6463047649668
+          ],
+          [
+            1.1113782424403527,
+            0.091903019529209,
+            -319.37580161788134
+          ],
+          [
+            -2.238880412618845e-05,
+            0.00014701087835710452,
+            1.0
+          ]
+        ]
+      },
+      "on": {
+        "status": "REGISTERED",
+        "reason": "Robust marker registration",
+        "reprojection_rmse_px": 1.420662306251813,
+        "max_inlier_error_px": 2.649199697222281,
+        "common_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "inlier_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "8",
+          "9"
+        ],
+        "anchor_coverage": 0.3001337456784985,
+        "matrix": [
+          [
+            0.03299602823422309,
+            -1.2182713930486213,
+            4687.968019822584
+          ],
+          [
+            1.3922681437116349,
+            0.19973541503325581,
+            -1017.2847976448255
+          ],
+          [
+            -2.9815357685948024e-05,
+            0.00019122892829121754,
+            1.0
+          ]
+        ]
+      }
+    },
+    "region_areas": [
+      9,
+      15,
+      9,
+      9,
+      9,
+      9,
+      12,
+      9,
+      9,
+      9,
+      24,
+      15,
+      9,
+      24,
+      12,
+      12,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      12,
+      12,
+      25,
+      12,
+      9,
+      12,
+      9,
+      19,
+      12,
+      21,
+      18,
+      12,
+      15,
+      15,
+      9,
+      9,
+      15,
+      12,
+      9,
+      9,
+      12,
+      9
+    ],
+    "colors": [
+      "MIXED"
+    ],
+    "mask_at_leds": {
+      "LED49": 0
+    }
+  },
+  "raw_red_centroid_reference": [
+    577.8106599227126,
+    1384.5477078068652
+  ],
+  "raw_red_distance_to_mapped_leds_px": {
+    "LED49": 5.263225279751978
+  },
+  "off_off_known_leds": [
+    {
+      "led_id": "LED49",
+      "key_name": null,
+      "x_ref_px": 578.1096013233087,
+      "y_ref_px": 1379.292979042749,
+      "color": "UNDEFINED",
+      "area_px": 0,
+      "brightness": 0.0,
+      "chroma": 0.0,
+      "mean_rgb_delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ambiguity_flags": [
+        "NO_COLOR_EVIDENCE"
+      ],
+      "status": "OFF",
+      "rejection_reasons": [
+        "NO_NEW_LOCAL_LIGHT"
+      ],
+      "roi_radius_px": 40,
+      "roi_coverage": 0.9423962067828853,
+      "saturated_white_fraction": 0.0,
+      "candidate_led_ids": [
+        "LED49"
+      ],
+      "registration_status": "REGISTERED",
+      "reprojection_error_px": 1.5339234047270585,
+      "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+      "experiment_id": "real_off_off",
+      "analyzed_utc": "2026-11-16T12:25:51.428021+00:00",
+      "x_on_px": 1784.3077002968519,
+      "y_on_px": 3362.28091059284,
+      "x_off_px": 1784.3077002968519,
+      "y_off_px": 3362.28091059284,
+      "image_off": "off.jpg",
+      "image_on": "off.jpg"
+    }
+  ],
+  "discover_proposals": [
+    {
+      "led_id": null,
+      "key_name": null,
+      "x_ref_px": 574.9894590846047,
+      "y_ref_px": 1374.3457697642164,
+      "color": "RED",
+      "area_px": 7210,
+      "brightness": 75.20887656033287,
+      "chroma": 66.16075134277344,
+      "mean_rgb_delta": [
+        75.20887656033287,
+        16.435228848821083,
+        6.583495145631068
+      ],
+      "ambiguity_flags": [
+        "UNKNOWN_LED_ADD_TO_CALIBRATION"
+      ],
+      "status": "CANDIDATE",
+      "rejection_reasons": [],
+      "component_area_px": 7728,
+      "bbox_ref_px": [
+        506,
+        1326,
+        123,
+        87
+      ],
+      "candidate_led_ids": [],
+      "registration_status": "REGISTERED",
+      "reprojection_error_px": 1.5590698137990144,
+      "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+      "experiment_id": "real_discover",
+      "analyzed_utc": "2026-11-16T12:25:56.802633+00:00",
+      "x_on_px": 1786.9540621723747,
+      "y_on_px": 3371.992805764707,
+      "x_off_px": 1778.5146125993901,
+      "y_off_px": 3365.799747492998,
+      "image_off": "off.jpg",
+      "image_on": "red.jpg"
+    }
+  ],
+  "inputs_unchanged": true,
+  "acceptance_passed": true
+}

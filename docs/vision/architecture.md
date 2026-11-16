@@ -78,3 +78,14 @@ requirements-vision-lock.txt. В offscreen Qt при отсутствии пер
 [ArUco/OpenCV](https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html),
 [гомография/OpenCV](https://docs.opencv.org/4.x/d1/de0/tutorial_py_feature_homography.html),
 [QGraphicsView/Qt](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QGraphicsView.html).
+
+## Актуализация v0.2
+
+Основной pipeline использует optical_signal.py: KNOWN_LEDS и DISCOVER,
+новый цветной ореол, причины отбраковки и один статус на LED. color_detection.py
+сохранён как исторический классификатор. Реальные OFF/RED и наклейки ArUco
+проверены: [результаты](real_validation.md); GREEN/BLUE ещё нужны.
+Метрики v0.1 выше исторические; новая синтетическая ошибка центра 0,0712 px.
+Проверены 52 Python-тестов, включая реальные фото и GUI. При отсутствии
+личных фото два реальных теста явно skip. Печать линейкой в этой работе
+не проверялась. Фотоанализ не доказывает аппаратную безопасность PHOTO.

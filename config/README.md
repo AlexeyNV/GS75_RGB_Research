@@ -1,8 +1,9 @@
-# Карты калибровки RGB Vision v0.1
+# Calibration maps / RGB Vision v0.2
 
-Настоящая карта платы ещё не создана. В GUI сохранить её, например, как
-`config/gs75_board_calibration.json`. Не копировать демонстрационные
-координаты LED49 из examples как фактические координаты платы.
+A real LED49 map exists locally as config/gs75_board_calibration.json.
+It is operator data and is not automatically tracked. Transfer it with
+its reference photo, preserving relative paths and SHA-256. Never replace
+real coordinates with synthetic examples. See PROJECT_CONTEXT.md.
 
 Файл schema_version=1 содержит относительный путь эталонной фотографии,
 SHA-256 её исходных байтов, исходные и EXIF-нормализованные размеры,

@@ -9,12 +9,40 @@ MSI GS75. Независимый проект; [основной проект к
 
 **Первый запуск — без оригинальной RGB-платы и с разомкнутой U13.**
 
-## RGB Vision v0.1 — ArUco и графический калибратор
+## FW 0.1.2 PHOTO и RGB Vision v0.2
+
+Добавлена команда `PHOTO LED49 RED|GREEN|BLUE 100…10000` с прежними
+защитами ADC/тока/ARM/OFF. PAIR остаётся 10–300 мс. Новая FW собрана и
+проверена программно; аппаратно подтверждённой остаётся **FW 0.1.1**.
+[DFU, ограничения watchdog и первые испытания](docs/photo_mode.md).
+
+```powershell
+.\.venv\Scripts\python.exe tools/photo_led49.py --port COM19 --color red --duration-s 5
+```
+
+Запускает оператор после подготовки платы и обновления прошивки; перед ARM
+нужно подтверждение PHOTO. Полный TX/RX сохраняется в новый JSONL.
+
+На реальных OFF/RED: **LED49 ON/RED**, один кандидат DISCOVER, OFF/OFF без
+нового свечения. Известные LED анализируются по ROI; цвет определяется по
+ореолу вокруг белого ядра. DISCOVER не назначает ID автоматически.
+[Фактический отчёт и причина прежних 44/0](docs/vision/real_validation.md).
+
+```powershell
+.\.venv\Scripts\python.exe tools/analyze_images.py --mode KNOWN_LEDS --calibration config/gs75_board_calibration.json --off data/off.jpg --on data/red.jpg --output build/vision/new_red_run
+.\.venv\Scripts\python.exe tools/validate_real_images.py --output build/vision/new_validation_run
+```
+
+Реальные фото и карта остаются локальными: перенести их отдельно с сохранением
+путей и SHA-256. При их отсутствии реальные тесты явно пропускаются;
+синтетические данные их не заменяют. Настоящие GREEN/BLUE пока не проверены.
+
+## ArUco и графический калибратор
 
 Реализованы печатные ArUco 10/12/15 мм, Qt-калибратор с zoom/pan,
 редактированием LED ID/клавиш, Undo/Redo и autosave, а также независимое
 совмещение OFF/ON-фотографий и поиск оптических кандидатов. Без видео,
-камерного захвата и синхронизации со STM32; прошивка FW 0.1.1 не изменена.
+камерного захвата и автоматической синхронизации со STM32; PHOTO запускается отдельно.
 
 ```powershell
 python -m venv .venv
@@ -42,8 +70,8 @@ LED49 не имеет известного названия клавиши: ег
 [Работа с калибратором](docs/vision/calibration_guide.md) ·
 [Анализ OFF/ON и экспорт](docs/vision/image_analysis.md) ·
 [Архитектура, проверки и ограничения](docs/vision/architecture.md).
-Генерация, GUI и анализ проверены программно; оптическая проверка настоящих
-снимков LED49 OFF/RED/GREEN/BLUE с ArUco ещё не выполнялась. Большие
+Генерация, GUI и анализ проверены программно; настоящие OFF/RED проверены,
+настоящие GREEN/BLUE ещё не проверены. Большие
 пользовательские фотографии автоматически в Git не включаются.
 
 ## Статус
@@ -82,7 +110,7 @@ python tools/rgb_probe.py --port COM19 --source 14 --pins 1-40 --confirm-scan --
 
 | Статус | Результат |
 |---|---|
-| Implemented | FW 0.1.1, Python-консоль, rgb_probe; RGB Vision v0.1: генератор ArUco, Qt-калибратор и фотоанализ |
+| Implemented | FW 0.1.2 PHOTO, photo_led49, rgb_probe; RGB Vision v0.2 KNOWN_LEDS/DISCOVER, ArUco и Qt-калибратор |
 | Build verified | ARM GCC 14.3.1, CubeF4 1.28.3, CMake/Ninja; ELF/BIN/HEX собраны; host-тесты MSVC и проверка соединений EasyEDA |
 | Hardware verified | FW 0.1.1 записана через USB DFU; подтверждены USB CDC, ADC, SELFTEST, KP35↔KP27 на 1 кОм, OFF по USB CDC и три цвета только LED49. Остальные каналы, физические фронты EN и точность тока ещё не проверены |
 
@@ -179,7 +207,7 @@ Host-тесты компилируют настоящий прикладной C
 
 ## Ограничения и дальнейшие шаги
 
-Импульсы 10–300 мс, ARM максимум 60 с, аварийный предел 2000 мкА.
+PAIR 10–300 мс; PHOTO только LED49 100–10000 мс. ARM максимум 60 с, аварийный предел 2000 мкА.
 Пределы задаются только при компиляции в `board_config.h`.
 Первые три цвета LED49 оригинальной RGB-платы подтверждены. Точность ADC не калибрована;
 нулевой ADC не доказывает исправность цепи. Программная защита не заменяет R1.

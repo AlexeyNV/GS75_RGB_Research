@@ -6,8 +6,8 @@ import csv
 import cv2
 import numpy as np
 from .calibration import validate
-from .image_registration import register
-from .color_detection import classify
+from .image_registration import register,transform_points
+from .optical_signal import evaluate
 from .project_storage import read_image,write_image,atomic_json
 
 
@@ -39,10 +39,12 @@ def lighting_difference(off,on,mask):
     return delta,parameters,extreme
 
 
-def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min_area=6):
+def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min_area=6,mode='KNOWN_LEDS',roi_radius=40,color_threshold=25):
     validate(calibration)
     if not 1<=threshold<=255 or not 1<=match_radius<=1000 or not 1<=min_area<=100000:
         raise ValueError('Invalid detection threshold, radius or area')
+    if mode not in ('KNOWN_LEDS','DISCOVER') or not 5<=roi_radius<=500 or not 1<=color_threshold<=255:
+        raise ValueError('Invalid mode, ROI radius or color threshold')
     off_registration=register(off,calibration); on_registration=register(on,calibration)
     images={'Original OFF':off,'Original ON':on}
     on_markers=on.copy()
@@ -51,13 +53,17 @@ def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min
         cv2.putText(on_markers,f'ID {key}',tuple(points[0]),cv2.FONT_HERSHEY_SIMPLEX,.6,(0,220,255),2)
     images['ON markers']=on_markers
     status='FAILED' if 'FAILED' in [off_registration.status,on_registration.status] else ('DEGRADED' if 'DEGRADED' in [off_registration.status,on_registration.status] else 'REGISTERED')
-    result=dict(schema_version=1,calibration_version=calibration['calibration_version'],
+    result=dict(schema_version=2,calibration_version=calibration['calibration_version'],
                 experiment_id=experiment_id,analyzed_utc=datetime.now(timezone.utc).isoformat(),
                 coordinate_system=calibration['coordinate_system'],registration_status=status,
                 analysis_status='FAILED' if status=='FAILED' else 'ANALYZED',
                 registrations=dict(off=off_registration.summary(),on=on_registration.summary()),
-                parameters=dict(threshold=threshold,match_radius_px=match_radius,min_area_px=min_area),
-                detections=[],warnings=[])
+                parameters=dict(threshold=threshold,match_radius_px=match_radius,min_area_px=min_area,
+                                mode=mode,roi_radius_px=roi_radius,color_threshold=color_threshold),
+                detections=[],candidates=[],known_leds=[],warnings=[])
+    result['known_leds']=[dict(led_id=led['led_id'],key_name=led['key_name'],
+        x_ref_px=led['x_ref_px'],y_ref_px=led['y_ref_px'],status='UNCERTAIN',color='UNDEFINED',
+        brightness=0.,chroma=0.,area_px=0,ambiguity_flags=[],rejection_reasons=['ANALYSIS_UNAVAILABLE']) for led in calibration['leds']]
     if status=='FAILED':
         result['warnings'].append('Registration failed; no LED identities or light results produced')
         return Analysis(result,images)
@@ -70,7 +76,7 @@ def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min
         cv2.fillConvexPoly(common,expanded.astype(np.int32),0)
     background=common.copy()
     for led in calibration['leds']:
-        cv2.circle(background,(round(led['x_ref_px']),round(led['y_ref_px'])),round(match_radius*1.5),0,-1)
+        cv2.circle(background,(round(led['x_ref_px']),round(led['y_ref_px'])),round(roi_radius*1.5),0,-1)
     try: delta,lighting,extreme=lighting_difference(off_warped,on_warped,background)
     except ValueError as exc:
         result['analysis_status']='FAILED'; result['warnings'].append(str(exc)); return Analysis(result,images)
@@ -79,49 +85,30 @@ def analyze(calibration,off,on,experiment_id='',threshold=30,match_radius=20,min
         result['analysis_status']='FAILED'
         result['warnings'].append('Lighting change exceeds supported small affine compensation; analysis refused')
         return Analysis(result,images)
-    strength=delta.max(axis=2)
-    samples=strength[background>0]
-    adaptive=max(float(threshold),float(np.quantile(samples,.995))+10)
-    binary=np.where((strength>adaptive)&(common>0),255,0).astype(np.uint8)
-    binary=cv2.morphologyEx(binary,cv2.MORPH_OPEN,np.ones((3,3),np.uint8))
-    result['effective_threshold']=adaptive
-    count,labels,stats,centroids=cv2.connectedComponentsWithStats(binary,connectivity=8)
-    overlay=on_warped.copy()
-    for key,corners in calibration['markers'].items():
-        cv2.polylines(overlay,[np.asarray(corners,np.int32)],True,(0,200,255),1)
-    for index in range(1,count):
-        x,y,w,h,area=map(int,stats[index])
-        if area<min_area: continue
-        local=labels[y:y+h,x:x+w]==index
-        weights=strength[y:y+h,x:x+w][local].astype(float)
-        ys,xs=np.nonzero(local); total=weights.sum()
-        px=float(x+np.dot(xs,weights)/total); py=float(y+np.dot(ys,weights)/total)
-        distances=sorted([(float(np.hypot(px-led['x_ref_px'],py-led['y_ref_px'])),led) for led in calibration['leds']],key=lambda v:v[0])
-        matched=distances[0][1] if distances and distances[0][0]<=match_radius else None
-        flags=['DEGRADED_REGISTRATION'] if status=='DEGRADED' else []
-        candidates=[led['led_id'] for distance,led in distances if distance<=match_radius]
-        if len(distances)>1 and distances[1][0]<=match_radius and distances[1][0]-distances[0][0]<max(3,match_radius*.2):
-            matched=None; flags.append('AMBIGUOUS_LED_MATCH')
-        if not matched: flags.append('UNKNOWN_LED_ADD_TO_CALIBRATION')
-        if area>on_warped.shape[0]*on_warped.shape[1]*.02: flags.append('LARGE_REGION_POSSIBLE_REFLECTION')
-        color,color_flags,rgb=classify(delta[y:y+h,x:x+w][local],on_warped[y:y+h,x:x+w][local]); flags+=color_flags
-        record=dict(led_id=matched['led_id'] if matched else None,key_name=matched['key_name'] if matched else None,
-                    x_ref_px=px,y_ref_px=py,color=color,mean_rgb_delta=rgb,brightness=float(weights.mean()),
-                    area_px=area,registration_status=status,
-                    reprojection_error_px=max(off_registration.error_px,on_registration.error_px),
-                    ambiguity_flags=flags,candidate_led_ids=candidates,
-                    calibration_version=calibration['calibration_version'],experiment_id=experiment_id,
-                    analyzed_utc=result['analyzed_utc'])
-        result['detections'].append(record)
-        cv2.circle(overlay,(round(px),round(py)),round(match_radius),(255,0,255),2)
-        cv2.putText(overlay,f"{record['led_id'] or 'UNKNOWN'} {color}",(round(px)+8,round(py)-8),cv2.FONT_HERSHEY_SIMPLEX,.55,(255,0,255),2)
-    assigned=[r['led_id'] for r in result['detections'] if r['led_id']]
-    for record in result['detections']:
-        if record['led_id'] and assigned.count(record['led_id'])>1:
-            record['ambiguity_flags'].append('MULTIPLE_REGIONS_SAME_LED')
-    result['visible_led_ids']=[led['led_id'] for led in calibration['leds'] if common[min(common.shape[0]-1,round(led['y_ref_px'])),min(common.shape[1]-1,round(led['x_ref_px']))]>0]
-    result['warnings'].append('Optical candidates require manual review; reflections can resemble light')
-    images.update({'Difference':delta,'Valid overlap':common,'Detected LEDs':overlay})
+    known,candidates,detections,diagnostics,strength=evaluate(
+        calibration,off_warped,on_warped,delta,common,mode,threshold,color_threshold,roi_radius,min_area)
+    result.update(known_leds=known,candidates=candidates,detections=detections,
+                  effective_threshold=threshold,
+                  legacy_global_threshold=max(float(threshold),float(np.quantile(strength[background>0],.995))+10))
+    for records in (known,candidates):
+        for record in records:
+            record.update(registration_status=status,reprojection_error_px=max(off_registration.error_px,on_registration.error_px),
+                          calibration_version=calibration['calibration_version'],experiment_id=experiment_id,analyzed_utc=result['analyzed_utc'])
+            if status=='DEGRADED': record['ambiguity_flags'].append('DEGRADED_REGISTRATION')
+    result['visible_led_ids']=[r['led_id'] for r in known if r['roi_coverage']>=.9]
+    original=on.copy()
+    for record in known if mode=='KNOWN_LEDS' else detections:
+        p=np.array([[record['x_ref_px'],record['y_ref_px']]],float)
+        native=transform_points(p,np.linalg.inv(on_registration.matrix))[0]
+        record['x_on_px'],record['y_on_px']=map(float,native)
+        native_off=transform_points(p,np.linalg.inv(off_registration.matrix))[0]
+        record['x_off_px'],record['y_off_px']=map(float,native_off)
+        circle=np.array([[p[0,0]+roi_radius*np.cos(t),p[0,1]+roi_radius*np.sin(t)] for t in np.linspace(0,2*np.pi,60)])
+        projected=transform_points(circle,np.linalg.inv(on_registration.matrix)).astype(np.int32)
+        cv2.polylines(original,[projected],True,(255,0,255),2)
+        cv2.putText(original,f"{record['led_id'] or 'CANDIDATE'} {record['status']} {record['color']}",tuple(native.astype(int)),cv2.FONT_HERSHEY_SIMPLEX,.6,(255,0,255),2)
+    result['warnings'].append('Optical evidence requires manual review; colored reflections can resemble emitted light')
+    images.update({'Difference':delta,'Valid overlap':common,'Original ON annotated':original,**diagnostics})
     return Analysis(result,images)
 
 
@@ -129,7 +116,7 @@ def analyze_paths(calibration,off_path,on_path,experiment_id='',**options):
     off=read_image(off_path,calibration.get('camera_model')); on=read_image(on_path,calibration.get('camera_model'))
     analysis=analyze(calibration,off,on,experiment_id,**options)
     analysis.result.update(image_off=Path(off_path).name,image_on=Path(on_path).name)
-    for record in analysis.result['detections']:
+    for record in analysis.result['known_leds']+analysis.result['candidates']:
         record.update(image_off=Path(off_path).name,image_on=Path(on_path).name)
     return analysis
 
@@ -140,13 +127,17 @@ def export(analysis,output,overwrite=False):
     output.mkdir(parents=True,exist_ok=True)
     atomic_json(output/'results.json',analysis.result)
     columns=['image_on','image_off','experiment_id','analyzed_utc','led_id','key_name','x_ref_px','y_ref_px','color',
-             'brightness','area_px','registration_status','reprojection_error_px','ambiguity_flags','calibration_version']
+             'status','brightness','chroma','area_px','rejection_reasons','registration_status','reprojection_error_px','ambiguity_flags','calibration_version']
     with (output/'results.csv').open('w',encoding='utf-8',newline='') as stream:
         writer=csv.DictWriter(stream,fieldnames=columns); writer.writeheader()
-        for detection in analysis.result['detections']:
-            row={key:detection.get(key) for key in columns}; row['ambiguity_flags']=';'.join(detection['ambiguity_flags']); writer.writerow(row)
+        records=analysis.result['known_leds'] if analysis.result['parameters']['mode']=='KNOWN_LEDS' else analysis.result['candidates']
+        for detection in records:
+            row={key:detection.get(key) for key in columns}; row['ambiguity_flags']=';'.join(detection['ambiguity_flags']); row['rejection_reasons']=';'.join(detection.get('rejection_reasons',[])); writer.writerow(row)
     names={'ON markers':'on_markers.png','Registered OFF':'registered_off.png','Registered ON':'registered_on.png',
-           'Difference':'difference.png','Valid overlap':'valid_overlap.png','Detected LEDs':'annotated.png'}
+           'Difference':'difference.png','Valid overlap':'valid_overlap.png','Detected LEDs':'annotated.png',
+           'Original ON annotated':'original_on_annotated.png','Color mask':'color_mask.png',
+           'Color signal':'color_signal.png','Candidates':'candidates.png','Accepted':'accepted.png',
+           'Rejected':'rejected_candidates.png','LED ROIs':'led_rois.png'}
     for key,name in names.items():
         if key in analysis.images: write_image(output/name,analysis.images[key])
         elif overwrite: (output/name).unlink(missing_ok=True)

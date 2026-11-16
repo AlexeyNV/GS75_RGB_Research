@@ -1,3 +1,51 @@
+# RGB Vision v0.2 — актуальные правила анализа
+
+Этот раздел заменяет алгоритмические описания v0.1 ниже. Реальные OFF/RED:
+LED49 ON/RED; OFF/OFF: OFF. GREEN/BLUE ещё не проверены.
+Подробный отчёт: [real_validation.md](real_validation.md).
+
+CLI: --mode KNOWN_LEDS (по умолчанию) или DISCOVER; --threshold 30,
+--color-threshold 25, --roi-radius 40, --min-area 6. Старый --match-radius
+принимается для совместимости, но автоматического сопоставления больше нет.
+KNOWN агрегирует одну ROI на LED, DISCOVER сохраняет предложения без ID.
+
+Покрытие ROI должно быть ≥90%, центр сигнала — не дальше 0,75 радиуса.
+Яркость без достаточной цветности, недоступная геометрия или пересекающиеся
+ROI дают UNCERTAIN. Нет нового сигнала — OFF. Цвет определяется по новому
+ореолу относительно OFF с удалённой нейтральной составляющей. Белое ядро
+не голосует за цвет. Closing 5×5 объединяет разрывы, opening 3×3 удаляет шум.
+Глобальный адаптивный порог теперь только диагностическое поле
+legacy_global_threshold; он не подавляет локальный сигнал.
+Маска ArUco и ограничения регистрации сохранены.
+
+GUI предлагает оба режима и пороги. Виды: Original OFF/ON, ON markers,
+Registered OFF/ON, Difference, Valid overlap, Color mask, Color signal,
+LED ROIs, Candidates, Accepted, Rejected, Original ON annotated, Detected LEDs.
+Таблица показывает status, brightness, chroma, причины; клик увеличивает ROI
+и показывает её параметры. Известный LED виден даже при FAILED как UNCERTAIN.
+В DISCOVER отображаются CANDIDATE/REJECTED; вручную добавляется только
+неотклонённый UNKNOWN. Цветные отражения требуют проверки оператором.
+
+Экспорт results.json schema_version=2: known_leds (все известные),
+candidates (включая отклонённые), detections (ON/UNCERTAIN для KNOWN,
+предложения для DISCOVER). Не трактовать все detections как доказанный свет.
+CSV содержит все known_leds либо candidates выбранного режима, включая
+status/chroma/rejection_reasons. JSON также хранит покрытие, пересвет,
+проекции в исходные кадры и центр сигнала отдельно от координат карты.
+При отказе сохраняются строки UNCERTAIN; успешных наблюдений нет.
+Экспорт новых PNG включает color_mask, color_signal, led_rois, candidates,
+accepted, rejected_candidates, original_on_annotated.
+--overwrite удаляет устаревшие известные PNG, сохраняя посторонние файлы.
+
+Воспроизводимый анализ с графиками:
+`tools/validate_real_images.py --output build/vision/new_real_validation`.
+Входы read-only, SHA-256 проверяются; каталог должен быть новым.
+Без настоящих файлов подстановка синтетики не выполняется.
+
+---
+
+## История v0.1 (описания старого алгоритма ниже не действуют)
+
 # Анализ фотографий OFF/ON
 
 Сначала создать реальную карту в [калибраторе](calibration_guide.md).

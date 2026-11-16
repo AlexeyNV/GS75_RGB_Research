@@ -82,7 +82,15 @@ class ViewerTests(unittest.TestCase):
         analysis=analyze(self.window.document.data,board(),illuminate(board(),[(490,350,(0,0,255))]))
         dialog=AnalysisDialog(analysis,self.window); dialog.show(); APP.processEvents()
         self.assertEqual(dialog.table.rowCount(),1); dialog.toggle_overlay(); dialog.show_image('Original ON')
+        self.assertEqual(dialog.table.item(0,2).text(),'ON')
+        for name in ('Color mask','Candidates','Accepted','Rejected','LED ROIs','Original ON annotated'):
+            dialog.show_image(name); APP.processEvents()
+        dialog.center_record(0,0); self.assertIn('roi_coverage',dialog.report.toPlainText())
         dialog.close(); dialog.deleteLater(); APP.processEvents()
+        failed=analyze(self.window.document.data,board(),np.zeros_like(board()))
+        dialog=AnalysisDialog(failed,self.window)
+        self.assertEqual(dialog.table.item(0,2).text(),'UNCERTAIN')
+        dialog.center_record(0,0); dialog.close(); dialog.deleteLater(); APP.processEvents()
 
     def test_drag_and_middle_button_pan(self):
         w=self.window; w.document.add('LED49',None,490,350); w.refresh()
