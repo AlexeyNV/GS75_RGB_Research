@@ -1,0 +1,1522 @@
+{
+  "video": {
+    "path": "data\\VID_20261117_101549.mp4",
+    "width": 1080,
+    "height": 1920,
+    "coded_width": 1920,
+    "coded_height": 1080,
+    "rotation_degrees": -90,
+    "stream_start_pts": 6669,
+    "stream_time_base": "1/90000",
+    "container_duration_s": 30.892333,
+    "stream_start_s": 0.0741,
+    "fps": 29.91735412045034,
+    "frame_count": 922,
+    "duration_s": 30.818233333333332,
+    "backend": "PyAV",
+    "av": "19.0.2",
+    "codec": "h264",
+    "timestamps": "frame.pts * frame.time_base; FPS fallback explicitly estimated",
+    "size_bytes": 78843273,
+    "sha256": "c4299a0a6d59bedf046726f042fc7c5cf518e8239db50791538e3776a231ef9e"
+  },
+  "off": {
+    "wall_s": 9.120010700000421,
+    "bit_exact_to_profiled_model": true,
+    "coverage": {
+      "known_leds": {
+        "LED49": 0.9423962067828853
+      },
+      "analysis_valid_fraction": 0.3416719858156028,
+      "pcb_fraction": 0.7320875467095129,
+      "pcb_method": "dark_silhouette_estimate",
+      "discover_unavailable_fraction": 0.289856941752224
+    },
+    "valid_fraction": 0.3522301640070922,
+    "retained_frames": 5,
+    "candidate_count": 20,
+    "selected": [
+      0,
+      3,
+      12,
+      30,
+      39
+    ],
+    "previous_nanmedian_wall_s": 72.69937200000004
+  },
+  "benchmarks": [
+    {
+      "mode": "KNOWN_LEDS",
+      "count": 120,
+      "coordinates_hidden": false,
+      "end_to_end": {
+        "count": 120,
+        "mean_ms": 52.59024083333334,
+        "p50_ms": 44.6169,
+        "p95_ms": 79.26081,
+        "p99_ms": 81.393285,
+        "max_ms": 84.1166,
+        "fps": 19.014934789311113
+      },
+      "wall_fps": 19.002774009114205,
+      "wall_seconds": 6.3148675,
+      "stages": {
+        "VIDEO_DECODE": {
+          "count": 120,
+          "mean_ms": 5.475536666666667,
+          "p50_ms": 5.163600000000001,
+          "p95_ms": 5.934564999999999,
+          "p99_ms": 6.846062000000001,
+          "max_ms": 40.9207,
+          "fps": 182.63050014580003
+        },
+        "ARUCO_DETECT": {
+          "count": 120,
+          "mean_ms": 21.991047499999997,
+          "p50_ms": 16.419150000000002,
+          "p95_ms": 35.980644999999996,
+          "p99_ms": 37.037128,
+          "max_ms": 38.9734,
+          "fps": 45.4730498854136
+        },
+        "HOMOGRAPHY": {
+          "count": 120,
+          "mean_ms": 2.1902524999999997,
+          "p50_ms": 1.9837,
+          "p95_ms": 3.6196149999999996,
+          "p99_ms": 4.755570000000002,
+          "max_ms": 5.2199,
+          "fps": 456.5683636932272
+        },
+        "IMAGE_RECTIFICATION": {
+          "count": 120,
+          "mean_ms": 4.6655875,
+          "p50_ms": 4.31295,
+          "p95_ms": 8.45664,
+          "p99_ms": 9.037982,
+          "max_ms": 9.0595,
+          "fps": 214.3352793190568
+        },
+        "BACKGROUND_COMPENSATION": {
+          "count": 120,
+          "mean_ms": 15.640348333333334,
+          "p50_ms": 13.8673,
+          "p95_ms": 27.119584999999997,
+          "p99_ms": 29.107993,
+          "max_ms": 29.2196,
+          "fps": 63.93719491967836
+        },
+        "LED_DETECTION": {
+          "count": 120,
+          "mean_ms": 2.0137783333333332,
+          "p50_ms": 1.8188499999999999,
+          "p95_ms": 3.491635,
+          "p99_ms": 3.5953,
+          "max_ms": 4.2818,
+          "fps": 496.57898461184493
+        },
+        "COLOR_CLASSIFICATION": {
+          "count": 120,
+          "mean_ms": 0.12246749999999999,
+          "p50_ms": 0.0084,
+          "p95_ms": 0.661545,
+          "p99_ms": 0.7698650000000001,
+          "max_ms": 1.2919,
+          "fps": 8165.431645130341
+        },
+        "EVENT_AGGREGATION": {
+          "count": 120,
+          "mean_ms": 0.004441666666666667,
+          "p50_ms": 0.0037,
+          "p95_ms": 0.0083,
+          "p99_ms": 0.010253000000000003,
+          "max_ms": 0.0108,
+          "fps": 225140.712945591
+        },
+        "FRAME_TOTAL": {
+          "count": 120,
+          "mean_ms": 52.59024083333334,
+          "p50_ms": 44.6169,
+          "p95_ms": 79.26081,
+          "p99_ms": 81.393285,
+          "max_ms": 84.1166,
+          "fps": 19.014934789311113
+        },
+        "DIAGNOSTIC_CREATION": {
+          "count": 120,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "DIAGNOSTIC_PNG": {
+          "count": 120,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "GUI_UPDATE": {
+          "count": 120,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "RESULT_WRITE": {
+          "count": 120,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        }
+      },
+      "registered": 120,
+      "invalid": 0,
+      "reasons": {},
+      "cpu_machine_percent": 21.495650938044225,
+      "rss_bytes": 292933632,
+      "fallback_frames": 51,
+      "quality": {
+        "C_HYBRID": {
+          "reference_variant": "C_HYBRID",
+          "signature_mismatches": [],
+          "marker_id_losses": 0,
+          "uncompared_frames": [],
+          "max_reprojection_rmse_px": 1.8703546816503303,
+          "same_measured_frame_count": true,
+          "max_signal_centroid_delta_px": 0.0,
+          "max_local_geometry_delta_px": 1.2710574864626038e-12,
+          "verdict": "UNCOMPARED_SINGLE_VARIANT",
+          "note": "Self comparison is not independent RGB/geometry validation; inspect real observations separately"
+        }
+      }
+    },
+    {
+      "mode": "KNOWN_LEDS",
+      "count": 922,
+      "coordinates_hidden": false,
+      "end_to_end": {
+        "count": 922,
+        "mean_ms": 47.00166616052061,
+        "p50_ms": 40.15915,
+        "p95_ms": 74.94297999999998,
+        "p99_ms": 79.55003799999999,
+        "max_ms": 81.6001,
+        "fps": 21.275841511336832
+      },
+      "wall_fps": 21.26278337504663,
+      "wall_seconds": 43.3621499,
+      "stages": {
+        "VIDEO_DECODE": {
+          "count": 922,
+          "mean_ms": 4.999132971800434,
+          "p50_ms": 4.91505,
+          "p95_ms": 5.4963500000000005,
+          "p99_ms": 6.164539999999998,
+          "max_ms": 38.7298,
+          "fps": 200.03468714292885
+        },
+        "ARUCO_DETECT": {
+          "count": 922,
+          "mean_ms": 19.66581637744035,
+          "p50_ms": 14.39955,
+          "p95_ms": 33.432204999999996,
+          "p99_ms": 35.16195,
+          "max_ms": 42.158,
+          "fps": 50.849656114309624
+        },
+        "HOMOGRAPHY": {
+          "count": 922,
+          "mean_ms": 2.1878890455531455,
+          "p50_ms": 1.8721999999999999,
+          "p95_ms": 3.7801149999999977,
+          "p99_ms": 4.166258999999999,
+          "max_ms": 5.7016,
+          "fps": 457.0615690189986
+        },
+        "IMAGE_RECTIFICATION": {
+          "count": 922,
+          "mean_ms": 3.5131284164859005,
+          "p50_ms": 3.24915,
+          "p95_ms": 6.47834,
+          "p99_ms": 6.875806999999997,
+          "max_ms": 7.61,
+          "fps": 284.6465831728054
+        },
+        "BACKGROUND_COMPENSATION": {
+          "count": 922,
+          "mean_ms": 14.304950216919742,
+          "p50_ms": 13.38475,
+          "p95_ms": 26.385014999999996,
+          "p99_ms": 27.704715999999998,
+          "max_ms": 39.6918,
+          "fps": 69.90587068364702
+        },
+        "LED_DETECTION": {
+          "count": 922,
+          "mean_ms": 1.7750191973969631,
+          "p50_ms": 1.6803,
+          "p95_ms": 3.062639999999998,
+          "p99_ms": 3.407624999999999,
+          "max_ms": 3.6928,
+          "fps": 563.3741885532753
+        },
+        "COLOR_CLASSIFICATION": {
+          "count": 922,
+          "mean_ms": 0.29294859002169193,
+          "p50_ms": 0.0096,
+          "p95_ms": 0.6731349999999999,
+          "p99_ms": 1.1855559999999998,
+          "max_ms": 1.5658,
+          "fps": 3413.5682302685022
+        },
+        "EVENT_AGGREGATION": {
+          "count": 922,
+          "mean_ms": 0.0055676789587852495,
+          "p50_ms": 0.0044,
+          "p95_ms": 0.0083,
+          "p99_ms": 0.009478999999999996,
+          "max_ms": 0.0147,
+          "fps": 179608.0570382203
+        },
+        "FRAME_TOTAL": {
+          "count": 922,
+          "mean_ms": 47.00166616052061,
+          "p50_ms": 40.15915,
+          "p95_ms": 74.94297999999998,
+          "p99_ms": 79.55003799999999,
+          "max_ms": 81.6001,
+          "fps": 21.275841511336832
+        },
+        "DIAGNOSTIC_CREATION": {
+          "count": 922,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "DIAGNOSTIC_PNG": {
+          "count": 922,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "GUI_UPDATE": {
+          "count": 922,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "RESULT_WRITE": {
+          "count": 922,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        }
+      },
+      "registered": 910,
+      "invalid": 12,
+      "reasons": {
+        "Insufficient robust inlier support": 12
+      },
+      "cpu_machine_percent": 21.942289437775315,
+      "rss_bytes": 357433344,
+      "fallback_frames": 350,
+      "quality": {
+        "C_HYBRID": {
+          "reference_variant": "C_HYBRID",
+          "signature_mismatches": [],
+          "marker_id_losses": 0,
+          "uncompared_frames": [],
+          "max_reprojection_rmse_px": 1.8703546816503303,
+          "same_measured_frame_count": true,
+          "max_signal_centroid_delta_px": 0.0,
+          "max_local_geometry_delta_px": 1.4380373887290168e-12,
+          "verdict": "UNCOMPARED_SINGLE_VARIANT",
+          "note": "Self comparison is not independent RGB/geometry validation; inspect real observations separately"
+        }
+      },
+      "observations": {
+        "('OFF', 'UNDEFINED')": 19,
+        "('UNCERTAIN', 'UNDEFINED')": 485,
+        "('ON', 'RED')": 133,
+        "('ON', 'GREEN')": 142,
+        "('ON', 'BLUE')": 131
+      },
+      "events": [
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 3382.711111111111,
+          "end_ms": 3382.711111111111,
+          "start_frame": 99,
+          "end_frame": 99,
+          "frames": 1,
+          "confirmed": false
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 3450.4444444444443,
+          "end_ms": 3450.4444444444443,
+          "start_frame": 101,
+          "end_frame": 101,
+          "frames": 1,
+          "confirmed": false
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 3516.9555555555557,
+          "end_ms": 3984.6666666666665,
+          "start_frame": 103,
+          "end_frame": 117,
+          "frames": 15,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 4051.222222222222,
+          "end_ms": 4085.066666666667,
+          "start_frame": 119,
+          "end_frame": 120,
+          "frames": 2,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 4152.188888888889,
+          "end_ms": 4285.522222222222,
+          "start_frame": 122,
+          "end_frame": 126,
+          "frames": 5,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 4352.188888888889,
+          "end_ms": 4854.022222222223,
+          "start_frame": 128,
+          "end_frame": 143,
+          "frames": 16,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 4920.688888888889,
+          "end_ms": 5355.011111111111,
+          "start_frame": 145,
+          "end_frame": 158,
+          "frames": 14,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 5422.066666666667,
+          "end_ms": 5455.777777777777,
+          "start_frame": 160,
+          "end_frame": 161,
+          "frames": 2,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 5522.599999999999,
+          "end_ms": 5923.511111111111,
+          "start_frame": 163,
+          "end_frame": 175,
+          "frames": 13,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 5990.0,
+          "end_ms": 6090.544444444445,
+          "start_frame": 177,
+          "end_frame": 180,
+          "frames": 4,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 6157.666666666667,
+          "end_ms": 6691.911111111111,
+          "start_frame": 182,
+          "end_frame": 198,
+          "frames": 17,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 6759.044444444444,
+          "end_ms": 6759.044444444444,
+          "start_frame": 200,
+          "end_frame": 200,
+          "frames": 1,
+          "confirmed": false
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 6826.166666666666,
+          "end_ms": 7327.022222222222,
+          "start_frame": 202,
+          "end_frame": 217,
+          "frames": 16,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 7393.799999999999,
+          "end_ms": 7628.0,
+          "start_frame": 219,
+          "end_frame": 226,
+          "frames": 8,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 7694.666666666667,
+          "end_ms": 7795.644444444444,
+          "start_frame": 228,
+          "end_frame": 231,
+          "frames": 4,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 7862.177777777778,
+          "end_ms": 7928.977777777778,
+          "start_frame": 233,
+          "end_frame": 235,
+          "frames": 3,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 7995.511111111111,
+          "end_ms": 8263.111111111111,
+          "start_frame": 237,
+          "end_frame": 245,
+          "frames": 9,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "RED",
+          "start_ms": 8329.822222222223,
+          "end_ms": 8363.244444444445,
+          "start_frame": 247,
+          "end_frame": 248,
+          "frames": 2,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "GREEN",
+          "start_ms": 11772.755555555555,
+          "end_ms": 12207.4,
+          "start_frame": 350,
+          "end_frame": 363,
+          "frames": 14,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "GREEN",
+          "start_ms": 12274.2,
+          "end_ms": 12608.311111111112,
+          "start_frame": 365,
+          "end_frame": 375,
+          "frames": 11,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "GREEN",
+          "start_ms": 12675.111111111111,
+          "end_ms": 12741.644444444444,
+          "start_frame": 377,
+          "end_frame": 379,
+          "frames": 3,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "GREEN",
+          "start_ms": 12809.355555555556,
+          "end_ms": 12875.888888888889,
+          "start_frame": 381,
+          "end_frame": 383,
+          "frames": 3,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "GREEN",
+          "start_ms": 12942.666666666666,
+          "end_ms": 13143.533333333335,
+          "start_frame": 385,
+          "end_frame": 391,
+          "frames": 7,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "GREEN",
+          "start_ms": 13210.2,
+          "end_ms": 13677.777777777777,
+          "start_frame": 393,
+          "end_frame": 407,
+          "frames": 15,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "GREEN",
+          "start_ms": 13744.444444444443,
+          "end_ms": 14078.622222222222,
+          "start_frame": 409,
+          "end_frame": 419,
+          "frames": 11,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "GREEN",
+          "start_ms": 14146.355555555556,
+          "end_ms": 15984.18888888889,
+          "start_frame": 421,
+          "end_frame": 476,
+          "frames": 56,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "GREEN",
+          "start_ms": 16050.855555555554,
+          "end_ms": 16752.766666666666,
+          "start_frame": 478,
+          "end_frame": 499,
+          "frames": 22,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 20128.977777777778,
+          "end_ms": 20262.766666666666,
+          "start_frame": 600,
+          "end_frame": 604,
+          "frames": 5,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 20329.433333333334,
+          "end_ms": 21097.977777777778,
+          "start_frame": 606,
+          "end_frame": 629,
+          "frames": 24,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 21165.422222222223,
+          "end_ms": 21332.155555555557,
+          "start_frame": 631,
+          "end_frame": 636,
+          "frames": 6,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 21398.82222222222,
+          "end_ms": 21533.077777777777,
+          "start_frame": 638,
+          "end_frame": 642,
+          "frames": 5,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 21633.155555555553,
+          "end_ms": 22301.666666666664,
+          "start_frame": 645,
+          "end_frame": 665,
+          "frames": 21,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 22368.155555555557,
+          "end_ms": 22870.077777777777,
+          "start_frame": 667,
+          "end_frame": 682,
+          "frames": 16,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 22936.744444444445,
+          "end_ms": 23070.07777777778,
+          "start_frame": 684,
+          "end_frame": 688,
+          "frames": 5,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 23137.2,
+          "end_ms": 23137.2,
+          "start_frame": 690,
+          "end_frame": 690,
+          "frames": 1,
+          "confirmed": false
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 23204.32222222222,
+          "end_ms": 23371.06666666667,
+          "start_frame": 692,
+          "end_frame": 697,
+          "frames": 6,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 23437.57777777778,
+          "end_ms": 23471.444444444445,
+          "start_frame": 699,
+          "end_frame": 700,
+          "frames": 2,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 23538.56666666667,
+          "end_ms": 23805.67777777778,
+          "start_frame": 702,
+          "end_frame": 710,
+          "frames": 9,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 23906.199999999997,
+          "end_ms": 23972.733333333334,
+          "start_frame": 713,
+          "end_frame": 715,
+          "frames": 3,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 24039.533333333336,
+          "end_ms": 24139.92222222222,
+          "start_frame": 717,
+          "end_frame": 720,
+          "frames": 4,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 24207.044444444444,
+          "end_ms": 24240.31111111111,
+          "start_frame": 722,
+          "end_frame": 723,
+          "frames": 2,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 24307.111111111113,
+          "end_ms": 24340.37777777778,
+          "start_frame": 725,
+          "end_frame": 726,
+          "frames": 2,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 24407.044444444444,
+          "end_ms": 24507.91111111111,
+          "start_frame": 728,
+          "end_frame": 731,
+          "frames": 4,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 24574.68888888889,
+          "end_ms": 24741.3,
+          "start_frame": 733,
+          "end_frame": 738,
+          "frames": 6,
+          "confirmed": true
+        },
+        {
+          "led_id": "LED49",
+          "color": "BLUE",
+          "start_ms": 24808.422222222223,
+          "end_ms": 25108.933333333334,
+          "start_frame": 740,
+          "end_frame": 749,
+          "frames": 10,
+          "confirmed": true
+        }
+      ]
+    },
+    {
+      "mode": "DISCOVER",
+      "count": 120,
+      "coordinates_hidden": true,
+      "end_to_end": {
+        "count": 120,
+        "mean_ms": 80.74447166666667,
+        "p50_ms": 76.48395,
+        "p95_ms": 99.23740000000001,
+        "p99_ms": 104.27312900000001,
+        "max_ms": 112.6596,
+        "fps": 12.384748817581587
+      },
+      "wall_fps": 12.376941996348348,
+      "wall_seconds": 9.6954482,
+      "stages": {
+        "VIDEO_DECODE": {
+          "count": 120,
+          "mean_ms": 5.647269166666666,
+          "p50_ms": 5.2406,
+          "p95_ms": 6.166654999999999,
+          "p99_ms": 7.976492000000002,
+          "max_ms": 42.1511,
+          "fps": 177.07673753228516
+        },
+        "ARUCO_DETECT": {
+          "count": 120,
+          "mean_ms": 19.6214075,
+          "p50_ms": 15.285,
+          "p95_ms": 35.272009999999995,
+          "p99_ms": 36.434629,
+          "max_ms": 37.0006,
+          "fps": 50.96474348234192
+        },
+        "HOMOGRAPHY": {
+          "count": 120,
+          "mean_ms": 1.9960291666666667,
+          "p50_ms": 1.7166000000000001,
+          "p95_ms": 3.549805,
+          "p99_ms": 3.8137480000000004,
+          "max_ms": 3.8622,
+          "fps": 500.9946831939246
+        },
+        "IMAGE_RECTIFICATION": {
+          "count": 120,
+          "mean_ms": 2.7756416666666666,
+          "p50_ms": 2.6473,
+          "p95_ms": 3.5551099999999995,
+          "p99_ms": 3.867417,
+          "max_ms": 4.4231,
+          "fps": 360.2770530537984
+        },
+        "BACKGROUND_COMPENSATION": {
+          "count": 120,
+          "mean_ms": 14.158225,
+          "p50_ms": 13.9827,
+          "p95_ms": 16.038405,
+          "p99_ms": 16.693272,
+          "max_ms": 17.8345,
+          "fps": 70.63032265697147
+        },
+        "LED_DETECTION": {
+          "count": 120,
+          "mean_ms": 36.007063333333335,
+          "p50_ms": 35.6566,
+          "p95_ms": 38.534614999999995,
+          "p99_ms": 44.939082000000006,
+          "max_ms": 51.9772,
+          "fps": 27.772328744017724
+        },
+        "COLOR_CLASSIFICATION": {
+          "count": 120,
+          "mean_ms": 0.10536833333333333,
+          "p50_ms": 0.0,
+          "p95_ms": 0.653205,
+          "p99_ms": 0.7305060000000001,
+          "max_ms": 0.9426,
+          "fps": 9490.51739137312
+        },
+        "EVENT_AGGREGATION": {
+          "count": 120,
+          "mean_ms": 0.0049633333333333335,
+          "p50_ms": 0.0052,
+          "p95_ms": 0.006205,
+          "p99_ms": 0.007329000000000002,
+          "max_ms": 0.0084,
+          "fps": 201477.50167897917
+        },
+        "FRAME_TOTAL": {
+          "count": 120,
+          "mean_ms": 80.74447166666667,
+          "p50_ms": 76.48395,
+          "p95_ms": 99.23740000000001,
+          "p99_ms": 104.27312900000001,
+          "max_ms": 112.6596,
+          "fps": 12.384748817581587
+        },
+        "DIAGNOSTIC_CREATION": {
+          "count": 120,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "DIAGNOSTIC_PNG": {
+          "count": 120,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "GUI_UPDATE": {
+          "count": 120,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "RESULT_WRITE": {
+          "count": 120,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        }
+      },
+      "registered": 120,
+      "invalid": 0,
+      "reasons": {},
+      "cpu_machine_percent": 16.90145562326866,
+      "rss_bytes": 296734720,
+      "fallback_frames": 36,
+      "quality": {
+        "C_HYBRID": {
+          "reference_variant": "C_HYBRID",
+          "signature_mismatches": [],
+          "marker_id_losses": 0,
+          "uncompared_frames": [],
+          "max_reprojection_rmse_px": 1.748190760676879,
+          "same_measured_frame_count": true,
+          "max_signal_centroid_delta_px": 0.0,
+          "max_local_geometry_delta_px": 1.048140854583481e-12,
+          "verdict": "UNCOMPARED_SINGLE_VARIANT",
+          "note": "Self comparison is not independent RGB/geometry validation; inspect real observations separately"
+        }
+      }
+    },
+    {
+      "mode": "DISCOVER",
+      "count": 922,
+      "coordinates_hidden": true,
+      "end_to_end": {
+        "count": 922,
+        "mean_ms": 77.86529370932755,
+        "p50_ms": 74.4199,
+        "p95_ms": 95.60463,
+        "p99_ms": 100.785394,
+        "max_ms": 131.2517,
+        "fps": 12.842692197797607
+      },
+      "wall_fps": 12.835697391985509,
+      "wall_seconds": 71.8309237,
+      "stages": {
+        "VIDEO_DECODE": {
+          "count": 922,
+          "mean_ms": 5.04872852494577,
+          "p50_ms": 4.9678,
+          "p95_ms": 5.589095,
+          "p99_ms": 6.490485999999995,
+          "max_ms": 37.6463,
+          "fps": 198.06967141508986
+        },
+        "ARUCO_DETECT": {
+          "count": 922,
+          "mean_ms": 18.39469403470716,
+          "p50_ms": 14.0997,
+          "p95_ms": 33.51575,
+          "p99_ms": 35.349892,
+          "max_ms": 37.9377,
+          "fps": 54.363502764068656
+        },
+        "HOMOGRAPHY": {
+          "count": 922,
+          "mean_ms": 2.081240563991323,
+          "p50_ms": 1.7888,
+          "p95_ms": 3.6933849999999984,
+          "p99_ms": 4.268224,
+          "max_ms": 5.2406,
+          "fps": 480.4826589013999
+        },
+        "IMAGE_RECTIFICATION": {
+          "count": 922,
+          "mean_ms": 3.1242785249457703,
+          "p50_ms": 3.2661499999999997,
+          "p95_ms": 4.874739999999998,
+          "p99_ms": 5.626387999999996,
+          "max_ms": 6.5844,
+          "fps": 320.0738961060962
+        },
+        "BACKGROUND_COMPENSATION": {
+          "count": 922,
+          "mean_ms": 13.309761171366594,
+          "p50_ms": 13.318950000000001,
+          "p95_ms": 14.489975,
+          "p99_ms": 16.377901999999988,
+          "max_ms": 51.2242,
+          "fps": 75.13282823972145
+        },
+        "LED_DETECTION": {
+          "count": 922,
+          "mean_ms": 35.341080260303684,
+          "p50_ms": 35.570049999999995,
+          "p95_ms": 39.040395,
+          "p99_ms": 41.70826699999999,
+          "max_ms": 53.0172,
+          "fps": 28.295682888992907
+        },
+        "COLOR_CLASSIFICATION": {
+          "count": 922,
+          "mean_ms": 0.30626984815618225,
+          "p50_ms": 0.0,
+          "p95_ms": 0.82918,
+          "p99_ms": 0.9942269999999996,
+          "max_ms": 1.2176,
+          "fps": 3265.0945106749464
+        },
+        "EVENT_AGGREGATION": {
+          "count": 922,
+          "mean_ms": 0.0045783080260303685,
+          "p50_ms": 0.0049,
+          "p95_ms": 0.006,
+          "p99_ms": 0.007957999999999993,
+          "max_ms": 0.0152,
+          "fps": 218421.30199943145
+        },
+        "FRAME_TOTAL": {
+          "count": 922,
+          "mean_ms": 77.86529370932755,
+          "p50_ms": 74.4199,
+          "p95_ms": 95.60463,
+          "p99_ms": 100.785394,
+          "max_ms": 131.2517,
+          "fps": 12.842692197797607
+        },
+        "DIAGNOSTIC_CREATION": {
+          "count": 922,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "DIAGNOSTIC_PNG": {
+          "count": 922,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "GUI_UPDATE": {
+          "count": 922,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        },
+        "RESULT_WRITE": {
+          "count": 922,
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0,
+          "p99_ms": 0.0,
+          "max_ms": 0.0,
+          "fps": null
+        }
+      },
+      "registered": 911,
+      "invalid": 11,
+      "reasons": {
+        "Insufficient robust inlier support": 11
+      },
+      "cpu_machine_percent": 15.84531473524682,
+      "rss_bytes": 373420032,
+      "fallback_frames": 279,
+      "quality": {
+        "C_HYBRID": {
+          "reference_variant": "C_HYBRID",
+          "signature_mismatches": [],
+          "marker_id_losses": 0,
+          "uncompared_frames": [],
+          "max_reprojection_rmse_px": 1.8069599872568949,
+          "same_measured_frame_count": true,
+          "max_signal_centroid_delta_px": 0.0,
+          "max_local_geometry_delta_px": 1.4380373887290168e-12,
+          "verdict": "UNCOMPARED_SINGLE_VARIANT",
+          "note": "Self comparison is not independent RGB/geometry validation; inspect real observations separately"
+        }
+      },
+      "near_led49_candidates": {
+        "RED": 130,
+        "GREEN": 143,
+        "BLUE": 130
+      },
+      "other_unidentified_candidates": 68
+    }
+  ],
+  "original_failure_frames": [
+    {
+      "frame": 13,
+      "info": {
+        "frame_index": 13,
+        "pts": 45794,
+        "time_base": "1/90000",
+        "timestamp_ms": 508.8222222222222,
+        "timestamp_source": "pts",
+        "estimated_ms": 434.53040491684743
+      },
+      "registration": {
+        "status": "REGISTERED",
+        "reason": "Robust marker registration",
+        "reprojection_rmse_px": 1.599222032568934,
+        "max_inlier_error_px": 2.8317933810305056,
+        "common_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "inlier_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "9"
+        ],
+        "anchor_coverage": 0.3950519592538839,
+        "matrix": [
+          [
+            -2.2671510937541823,
+            0.024238532042839236,
+            4021.0755705367164
+          ],
+          [
+            0.15612376436405784,
+            -2.3694422936220287,
+            2106.326968293378
+          ],
+          [
+            0.0001450234833216538,
+            6.530544623726857e-05,
+            1.0
+          ]
+        ]
+      },
+      "blur_laplacian_var": 301.7496337890625,
+      "lighting": [
+        {
+          "gain": 0.9914638755114954,
+          "offset": 0.7686417260057634
+        },
+        {
+          "gain": 0.9959834129935211,
+          "offset": 0.37475920480468133
+        },
+        {
+          "gain": 0.9913139649554695,
+          "offset": -0.2233796471069942
+        }
+      ],
+      "extreme": false,
+      "changed_fraction": 0.024400575505941297,
+      "edge_changed_fraction": 0.08854083850108656,
+      "changed_pixels_near_edges": 1.0,
+      "boundary_changed_fraction": 0.02265799634220687,
+      "changed_pixels_at_boundary": 0.06674648308889554,
+      "relative_H": [
+        [
+          0.9889798870841462,
+          0.0145206539675599,
+          -9.487118372608535
+        ],
+        [
+          0.0007511822093361771,
+          0.9981351198950796,
+          -8.348726291459444
+        ],
+        [
+          5.421835792583581e-07,
+          8.338688637503775e-06,
+          0.9801659985321127
+        ]
+      ]
+    },
+    {
+      "frame": 28,
+      "info": {
+        "frame_index": 28,
+        "pts": 90875,
+        "time_base": "1/90000",
+        "timestamp_ms": 1009.7222222222222,
+        "timestamp_source": "pts",
+        "estimated_ms": 935.9116413593637
+      },
+      "registration": {
+        "status": "REGISTERED",
+        "reason": "Robust marker registration",
+        "reprojection_rmse_px": 1.5695017272458947,
+        "max_inlier_error_px": 2.9348291698837317,
+        "common_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "inlier_ids": [
+          "1",
+          "3",
+          "4",
+          "5",
+          "6",
+          "9"
+        ],
+        "anchor_coverage": 0.3560723990564135,
+        "matrix": [
+          [
+            -2.2767477377988605,
+            0.03655388592534721,
+            4023.2491956345825
+          ],
+          [
+            0.16241628985187245,
+            -2.3827158738659433,
+            2123.9589166096525
+          ],
+          [
+            0.00014833944767117865,
+            6.760553081817212e-05,
+            1.0
+          ]
+        ]
+      },
+      "blur_laplacian_var": 286.54693603515625,
+      "lighting": [
+        {
+          "gain": 0.9835015770768173,
+          "offset": 1.2844135086408712
+        },
+        {
+          "gain": 0.9824548774440928,
+          "offset": 1.033519641842937
+        },
+        {
+          "gain": 0.9992964479095605,
+          "offset": 0.005791291338201121
+        }
+      ],
+      "extreme": false,
+      "changed_fraction": 0.035415228071846404,
+      "edge_changed_fraction": 0.131451802969597,
+      "changed_pixels_near_edges": 1.0,
+      "boundary_changed_fraction": 0.024333591416878665,
+      "changed_pixels_at_boundary": 0.049305244285073956,
+      "relative_H": [
+        [
+          0.9926841804352556,
+          0.009356382759569033,
+          -11.369741274799287
+        ],
+        [
+          -0.0008402871834993933,
+          1.0041061094725148,
+          3.087657894838061
+        ],
+        [
+          -5.635894173469354e-07,
+          7.564856525941035e-06,
+          0.9862753071277433
+        ]
+      ]
+    },
+    {
+      "frame": 43,
+      "info": {
+        "frame_index": 43,
+        "pts": 136044,
+        "time_base": "1/90000",
+        "timestamp_ms": 1511.6000000000001,
+        "timestamp_source": "pts",
+        "estimated_ms": 1437.29287780188
+      },
+      "registration": {
+        "status": "REGISTERED",
+        "reason": "Robust marker registration",
+        "reprojection_rmse_px": 1.5289629318777644,
+        "max_inlier_error_px": 2.9510395352786194,
+        "common_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "inlier_ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7"
+        ],
+        "anchor_coverage": 0.2980921522984176,
+        "matrix": [
+          [
+            -2.2851799474297416,
+            0.02541960118738507,
+            4037.674382278283
+          ],
+          [
+            0.1630541291787259,
+            -2.381340422662246,
+            2147.6909203676496
+          ],
+          [
+            0.00014562038280794437,
+            6.905439848108958e-05,
+            1.0
+          ]
+        ]
+      },
+      "blur_laplacian_var": 292.1708068847656,
+      "lighting": [
+        {
+          "gain": 0.9864213730937567,
+          "offset": 1.4232881998247056
+        },
+        {
+          "gain": 0.9726926562654754,
+          "offset": 1.311121475587774
+        },
+        {
+          "gain": 0.9770582423494251,
+          "offset": 0.7746111316006492
+        }
+      ],
+      "extreme": false,
+      "changed_fraction": 0.020012106449236785,
+      "edge_changed_fraction": 0.07263678958096197,
+      "changed_pixels_near_edges": 1.0,
+      "boundary_changed_fraction": 0.019904539453640704,
+      "changed_pixels_at_boundary": 0.07142857142857142,
+      "relative_H": [
+        [
+          0.9961017537726965,
+          0.013812098682687344,
+          -20.193068889478138
+        ],
+        [
+          0.00014455575136077984,
+          1.0042616551793702,
+          22.507480314927875
+        ],
+        [
+          4.127815066355984e-07,
+          6.887131210910955e-06,
+          0.9837602440351512
+        ]
+      ]
+    }
+  ],
+  "local_residual_flow": [
+    {
+      "frame": 0,
+      "tracked": 303,
+      "median_local_displacement_ref_px": 0.0,
+      "p95_local_displacement_ref_px": 0.0
+    },
+    {
+      "frame": 6,
+      "tracked": 303,
+      "median_local_displacement_ref_px": 1.8041660785675049,
+      "p95_local_displacement_ref_px": 3.867443084716797
+    },
+    {
+      "frame": 13,
+      "tracked": 303,
+      "median_local_displacement_ref_px": 1.9512444734573364,
+      "p95_local_displacement_ref_px": 3.7146472930908203
+    },
+    {
+      "frame": 20,
+      "tracked": 294,
+      "median_local_displacement_ref_px": 2.083120822906494,
+      "p95_local_displacement_ref_px": 4.271207809448242
+    },
+    {
+      "frame": 28,
+      "tracked": 265,
+      "median_local_displacement_ref_px": 2.388791084289551,
+      "p95_local_displacement_ref_px": 6.361855983734131
+    },
+    {
+      "frame": 35,
+      "tracked": 278,
+      "median_local_displacement_ref_px": 2.6505608558654785,
+      "p95_local_displacement_ref_px": 7.024209022521973
+    },
+    {
+      "frame": 43,
+      "tracked": 303,
+      "median_local_displacement_ref_px": 1.7301722764968872,
+      "p95_local_displacement_ref_px": 3.2810308933258057
+    },
+    {
+      "frame": 50,
+      "tracked": 260,
+      "median_local_displacement_ref_px": 2.494217872619629,
+      "p95_local_displacement_ref_px": 4.891571044921875
+    },
+    {
+      "frame": 59,
+      "tracked": 259,
+      "median_local_displacement_ref_px": 2.409719705581665,
+      "p95_local_displacement_ref_px": 6.432413101196289
+    }
+  ],
+  "optical_transitions": [
+    {
+      "color": "RED",
+      "on_bracket_pts_ms": [
+        3349.4555555555557,
+        3382.711111111111
+      ],
+      "off_bracket_pts_ms": [
+        8363.244444444445,
+        8396.5
+      ],
+      "first_frame": 99,
+      "last_frame": 248,
+      "warning": "Optical color evidence bracket, not physical/electrical OFF proof; exposure/rolling shutter add uncertainty"
+    },
+    {
+      "color": "GREEN",
+      "on_bracket_pts_ms": [
+        11739.044444444444,
+        11772.755555555555
+      ],
+      "off_bracket_pts_ms": [
+        16752.766666666666,
+        16786.477777777774
+      ],
+      "first_frame": 350,
+      "last_frame": 499,
+      "warning": "Optical color evidence bracket, not physical/electrical OFF proof; exposure/rolling shutter add uncertainty"
+    },
+    {
+      "color": "BLUE",
+      "on_bracket_pts_ms": [
+        20095.111111111113,
+        20128.977777777778
+      ],
+      "off_bracket_pts_ms": [
+        25108.933333333334,
+        25142.666666666668
+      ],
+      "first_frame": 600,
+      "last_frame": 749,
+      "warning": "Optical color evidence bracket, not physical/electrical OFF proof; exposure/rolling shutter add uncertainty"
+    }
+  ]
+}

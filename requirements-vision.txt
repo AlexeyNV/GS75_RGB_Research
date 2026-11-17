@@ -5,7 +5,7 @@ reportlab>=4.2,<5
 Pillow>=10.4,<14
 
 matplotlib>=3.9,<4
-av>=14,<20
+av>=19,<20
 pyserial>=3.5,<4
 # RGB Vision v0.3 uses the existing PySide6 / OpenCV / Pillow dependencies.
 # MP4/MOV/AVI support depends on codecs available in OpenCV's video backend.

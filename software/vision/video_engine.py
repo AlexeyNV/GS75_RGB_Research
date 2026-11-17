@@ -63,6 +63,9 @@ class VideoEngine:
             a=analyze(self.calibration,self.off.original if self.off.original is not None else self.off.image,image,
                 mode=self.mode,prepared_off=None if self.variant=='A_BASELINE' else self.off.registration,
                 diagnostics=self.variant in ('A_BASELINE','A_CACHED'),trusted_off_mask=self.off.mask)
+            if a.result['registration_status']=='DEGRADED':
+                a.result.update(analysis_status='FAILED',known_leds=[],detections=[])
+                a.result['warnings'].append('Two-marker geometry needs manual review')
             return dict(registration_status=a.result['registration_status'],registrations=a.result['registrations'],
                 records=a.result['known_leds'] if self.mode=='KNOWN_LEDS' else a.result['detections'],
                 analysis_status=a.result['analysis_status'],fallback=False,
@@ -78,6 +81,9 @@ class VideoEngine:
         result=dict(registration_status=r.status,registrations={'on':r.summary()},records=[],
                     analysis_status='FAILED' if r.status=='FAILED' else 'ANALYZED',fallback=fallback,warnings=[])
         if r.status=='FAILED':return result
+        if r.status=='DEGRADED':
+            result.update(analysis_status='FAILED',warnings=['Two-marker geometry needs review; no confirmed video observation'])
+            return result
         coarse,mask=warp_valid(image,r,*self.size,self.S)
         common=cv2.bitwise_and(mask,self.coarse_mask)
         background=cv2.bitwise_and(common,self.coarse_background)
@@ -144,7 +150,7 @@ class EventAggregator:
     @timed('EVENT_AGGREGATION')
     def feed(self,result,timestamp_ms,frame_index):
         keys={}
-        if result['registration_status']!='FAILED' and result['analysis_status']=='ANALYZED':
+        if result['registration_status']=='REGISTERED' and result['analysis_status']=='ANALYZED':
             for record in result['records']:
                 if record.get('led_id') and record['status']=='ON' and record['color']!='UNDEFINED':
                     keys[(record['led_id'],record['color'])]=record

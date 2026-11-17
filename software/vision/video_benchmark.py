@@ -43,7 +43,7 @@ def run_variant(video,calibration,off,variant,cancel,limit=120,warmup=3,mode='KN
             try:image,_=reader.frame(i)
             except StopIteration:break
             engine.process(image);warm_count+=1
-        reader.close();reader.open(video)  # measured pass starts at frame zero, with fresh decoding
+        reader.close();meta=reader.open(video)  # measured pass starts at frame zero, with fresh decoding
         cpu_start=time.process_time_ns();wall_start=time.perf_counter_ns()
         with MemorySampler() as memory:
             index=0
@@ -78,7 +78,9 @@ def run_variant(video,calibration,off,variant,cancel,limit=120,warmup=3,mode='KN
         budgets[str(fps)]=dict(budget_ms=1000/fps,p95_fits=fits,simulated_queue_peak_ms=peak,
             note='Short offline sample, not a realtime guarantee; queue uses fixed target cadence')
     slowest=max((k for k in STAGES if k!='FRAME_TOTAL'),key=lambda k:stage[k]['mean_ms'] or 0)
-    return dict(variant=variant,mode=mode,video=meta,frames=rows,stages=stage,
+    from collections import Counter
+    failures=Counter(r['geometry'].get('reason','Unknown') for r in rows if r['registration']!='REGISTERED')
+    return dict(variant=variant,mode=mode,video=meta,frames=rows,stages=stage,registration_failure_reasons=dict(failures),
         decoded_measured=len(rows),warmup_frames=warm_count,warmup_restarted=True,
         registered_frames=sum(r['registration']=='REGISTERED' for r in rows),
         degraded_frames=sum(r['registration']=='DEGRADED' for r in rows),
@@ -127,6 +129,9 @@ def compare_quality(runs):
             max_signal_centroid_delta_px=max_centroid,max_local_geometry_delta_px=max_geometry_delta,
             verdict='PASS' if not comparisons and not marker_loss and not run['errors'] and run['registered_frames']>0
                 and max_centroid<=3 and max_geometry_delta<=3 and len(run['frames'])==len(reference['frames']) else 'REVIEW_REQUIRED')
+    if len(runs)==1:
+        out[runs[0]['variant']].update(verdict='UNCOMPARED_SINGLE_VARIANT',
+            note='Self comparison is not independent RGB/geometry validation; inspect real observations separately')
     return out
 
 
@@ -137,7 +142,7 @@ def benchmark(video,calibration,output,cancel=None,variants=VideoEngine.VARIANTS
     output.mkdir(parents=True,exist_ok=True)
     setup_start=time.perf_counter_ns()
     with MemorySampler() as setup_memory:
-        if off is None:off=build_off(video,calibration,cancel,start_s,duration_s,notify=notify)
+        if off is None:off=build_off(video,calibration,cancel,start_s,duration_s,notify=notify,diagnostics_dir=output/'off_diagnostics')
         off.save(output/'off_model')
     report=dict(schema_version=1,source=str(Path(video).resolve()),machine=machine_info(),gui_open=gui_open,
         mode=mode,off_setup_ms=(time.perf_counter_ns()-setup_start)/1e6,off_setup_peak_observed_rss_bytes=setup_memory.peak,

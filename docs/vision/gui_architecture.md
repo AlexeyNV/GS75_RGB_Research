@@ -1,5 +1,12 @@
 # RGB Vision v0.3 — устройство приложения
 
+Дополнение v0.4.2: off_diagnostics.py (gates, coverage, карты и OffBuildError),
+off_diagnostics_dialog.py (таблица/слои), адаптивный off_background.py,
+display orientation в pts_video.py. Job пишет полный traceback в logging,
+GUI получает краткое сообщение; callback отменённого задания сохранён,
+но progress не отмечает успех. Видеоэксперимент по логике не менялся.
+[Приёмка](real_video_v042/report.md) · [Инструкция](automatic_off.md).
+
 Дополнение v0.4.1: девятая вкладка experiment_pane.py и один выделенный
 ExperimentWorker QThread для CDC; сценарий/журнал/импорт видео разделены
 в software/hardware/. Общий PHOTO-контроллер взят из CLI. Порт открывается

@@ -1,6 +1,7 @@
 """Qt background jobs. Workers never touch widgets; cancellation is cooperative."""
 import threading
 import traceback
+import logging
 from PySide6.QtCore import QObject, QRunnable, Signal, Slot
 from software.vision.research_project import Cancelled
 
@@ -27,7 +28,8 @@ class Job(QRunnable):
             self.signals.result.emit(value)
         except Cancelled:
             self.signals.cancelled.emit()
-        except Exception:
-            self.signals.error.emit(traceback.format_exc())
+        except Exception as exc:
+            logging.error('Background operation failed\n%s',traceback.format_exc())
+            self.signals.error.emit(str(exc))
         finally:
             self.signals.finished.emit()

@@ -8,6 +8,7 @@ from software.vision.project_storage import ROOT,read_image,atomic_json
 from software.vision.off_background import from_photo
 from software.vision.video_benchmark import benchmark,plot_report,export_report
 from software.vision.perf_fixture import generate_sequence
+from software.vision.video_engine import VideoEngine
 
 
 def main():
@@ -16,9 +17,12 @@ def main():
     p.add_argument('--root',type=Path,default=ROOT);p.add_argument('--output',type=Path,required=True)
     p.add_argument('--frames',type=int,default=120);p.add_argument('--warmup',type=int,default=3)
     p.add_argument('--mode',choices=['KNOWN_LEDS','DISCOVER'],default='KNOWN_LEDS')
+    p.add_argument('--variant',action='append',choices=VideoEngine.VARIANTS,help='Repeat to select architectures; default all four')
+    p.add_argument('--blind-discover',action='store_true',help='Hide known LED coordinates from DISCOVER processing')
     p.add_argument('--synthetic-height',type=int,choices=[1080,1440,2160])
     p.add_argument('--off-photo',type=Path);p.add_argument('--off-start',type=float,default=0.);p.add_argument('--off-duration',type=float,default=2.)
     a=p.parse_args()
+    if a.blind_discover and a.mode!='DISCOVER':p.error('--blind-discover requires --mode DISCOVER')
     if a.frames<0 or a.warmup<0:p.error('Invalid frame count')
     if a.synthetic_height:
         a.output.mkdir(parents=True,exist_ok=False)
@@ -28,8 +32,19 @@ def main():
         if not a.video:p.error('--video or --synthetic-height is required')
         video=a.video;data=load(a.calibration,a.root);output=a.output
     off=from_photo(read_image(a.off_photo),data) if a.off_photo else None
+    if a.blind_discover:
+        # Build/validate coverage with the map, then hide its LED list from the engine.
+        from software.vision.off_background import build_off
+        import threading
+        if not a.synthetic_height and output.exists() and any(output.iterdir()):raise FileExistsError('Choose a new report directory')
+        if off is None:
+            diagnostics=a.output.parent/(a.output.name+'_off_diagnostics')
+            diagnostics.mkdir(parents=True,exist_ok=False)
+            off=build_off(video,data,threading.Event(),a.off_start,a.off_duration,diagnostics_dir=diagnostics)
+        data=dict(data,leds=[])
     report=benchmark(video,data,output,limit=a.frames,warmup=a.warmup,off=off,
-        start_s=a.off_start,duration_s=a.off_duration,mode=a.mode)
+        start_s=a.off_start,duration_s=a.off_duration,mode=a.mode,variants=tuple(a.variant) if a.variant else VideoEngine.VARIANTS)
+    report['known_led_coordinates_used']=not a.blind_discover
     if a.synthetic_height:
         truth={r['frame']:r['expected'] for r in expected}
         for run in report['runs']:

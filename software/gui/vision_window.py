@@ -61,7 +61,7 @@ class EmbeddedCalibrator(Calibrator):
 
 class VisionWindow(QMainWindow):
     def __init__(self,remember=True):
-        ensure_fonts();super().__init__();self.setWindowTitle('GS75 RGB Vision v0.4.1');self.resize(1500,980)
+        ensure_fonts();super().__init__();self.setWindowTitle('GS75 RGB Vision v0.4.2');self.resize(1500,980)
         self.project=None;self.active_job=None;self.job_callback=None;self.pool=QThreadPool(self);self.pool.setMaxThreadCount(1)
         self.remember=remember;self.preferences=QSettings('GS75_RGB_Research','RGBVision')
         self.decoder=VideoReader();self.video_path=None;self.video_image=None;self.frame_info=None
@@ -152,17 +152,27 @@ class VisionWindow(QMainWindow):
             self.error('Дождитесь финального OFF перед обработкой фото/видео.');return False
         if self.active_job:return False
         job=Job(function);self.active_job=job;self.progress.setRange(0,0)
+        self.job_success=False
         self.cancel_button.setEnabled(True);self.calibrator.setEnabled(False)
         self.job_callback=callback
-        job.signals.result.connect(self.deliver_result);job.signals.error.connect(self.error)
+        job.signals.result.connect(self.deliver_result);job.signals.error.connect(self.job_error)
         job.signals.cancelled.connect(self.on_cancelled)
         job.signals.progress.connect(self.job_progress);job.signals.finished.connect(self.job_finished)
         self.pool.start(job);return True
 
-    def on_cancelled(self):self.log('Операция отменена')
+    def on_cancelled(self):
+        self.performance.operation_failed('Операция отменена',cancelled=True)
+        self.log('Операция отменена')
+
+    def job_error(self,message):
+        self.performance.operation_failed(message)
+        self.error(message)
 
     def deliver_result(self,value):
-        try:self.job_callback(value)
+        try:
+            self.job_callback(value)
+            self.job_success=not (self.active_job and self.active_job.cancel.is_set())
+            if not self.job_success:self.on_cancelled()
         except Exception as exc:
             logging.exception('Result delivery failed');self.error(str(exc))
 
@@ -177,7 +187,7 @@ class VisionWindow(QMainWindow):
                     self.batch_table.setItem(row,col,QTableWidgetItem(str(text)))
 
     def job_finished(self):
-        self.active_job=None;self.progress.setRange(0,1);self.progress.setValue(1)
+        self.active_job=None;self.progress.setRange(0,1);self.progress.setValue(1 if self.job_success else 0)
         self.cancel_button.setEnabled(False);self.calibrator.setEnabled(True)
         if self.pending_result:
             path=self.pending_result;self.pending_result=None;QTimer.singleShot(0,lambda:self.result_pane.open(path))

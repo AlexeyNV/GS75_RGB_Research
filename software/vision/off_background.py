@@ -32,13 +32,18 @@ class OffModel:
     def save(self,path):
         path=Path(path);path.mkdir(parents=True,exist_ok=False)
         write_image(path/'off.png',self.image);write_image(path/'valid_mask.png',self.mask)
-        atomic_json(path/'off_model.json',dict(calibration_version=self.calibration_version,**self.metadata))
+        atomic_json(path/'off_model.json',dict(self.metadata,calibration_version=self.calibration_version))
 
 
 def from_photo(image,calibration):
     r=register(image,calibration)
     if r.status=='FAILED':raise ValueError('OFF registration failed: '+r.reason)
-    return OffModel(r.warped,r.valid_mask,r,calibration['calibration_version'],dict(source='explicit_photo'),image)
+    from .off_diagnostics import roi_coverage
+    coverage=roi_coverage(without_markers(r.valid_mask,calibration),calibration)
+    if any(value<.9 for value in coverage.values()):raise ValueError('Known LED outside explicit OFF-photo coverage')
+    metadata=dict(source='explicit_photo',status='READY',retained_frames=1,candidates=[],
+        valid_fraction=float(np.mean(r.valid_mask>0)),coverage=dict(known_leds=coverage))
+    return OffModel(r.warped,r.valid_mask,r,calibration['calibration_version'],metadata,image)
 
 
 def identity_registration(image,mask,metadata):
@@ -48,80 +53,101 @@ def identity_registration(image,mask,metadata):
         matrix=np.eye(3),warped=image,valid_mask=mask)
 
 
-def build_off(video,calibration,cancel,start_s=0.,duration_s=2.,max_frames=5,notify=lambda *args:None):
-    """Decode every interval frame, retain <=5 registered observations, median in row tiles."""
+def build_off(video,calibration,cancel,start_s=0.,duration_s=2.,max_frames=5,notify=lambda *args:None,diagnostics_dir=None):
+    """Bounded adaptive search; retain the best <=5 observations, inspect the full interval."""
+    from .off_diagnostics import (OffBuildError,roi_coverage,pcb_region,quality_maps,glow_regions,
+                                  save_candidate,save_diagnostics,masked_median_tile)
+    import time
+    started=time.perf_counter_ns()
     if not math.isfinite(start_s+duration_s) or start_s<0 or duration_s<=0 or not 3<=max_frames<=9:
         raise ValueError('Invalid OFF interval or frame bound')
     if calibration.get('camera_model'):raise ValueError('Video-specific camera intrinsics are not yet validated; camera_model must be null')
-    reader=SequentialVideoReader();frames=[];masks=[];accepted=[];rejected=[]
-    # Quality is relative to other registered video observations; no reference photo is copied as OFF.
+    reader=SequentialVideoReader();frames=[];masks=[];accepted=[];rejected=[];candidates=[];retained=[]
+    anchor=anchor_mask=pcb=None;unsafe=[];decoded=0
+    diagnostics=dict(status='BUILDING',source='automatic_video_median',start_s=start_s,duration_s=duration_s,
+        candidates=candidates,retained_frames=0,accepted=accepted,rejected=rejected)
+    def fail(reason):
+        diagnostics.update(status='FAILED',failure=reason,retained_frames=len(retained),decoded_frames=decoded,
+                           setup_ms=(time.perf_counter_ns()-started)/1e6)
+        save_diagnostics(diagnostics_dir,diagnostics)
+        raise OffBuildError(diagnostics,diagnostics_dir)
     try:
-        meta=reader.open(video)
-        end_s=start_s+duration_s
-        next_time=start_s;period=duration_s/max(1,max_frames-1);index=0;decoded=0
-        while len(frames)<max_frames:
+        meta=reader.open(video);end_s=start_s+duration_s
+        # At most 24 registrations; retries throughout the interval, not only four fixed samples.
+        next_time=start_s;period=duration_s/23;index=0
+        while True:
             checkpoint(cancel)
-            if reader.count and index>=reader.count:break
             try:image,info=reader.frame(index)
             except StopIteration:break
             decoded+=1;index=info['frame_index']+1
-            seconds=(info['timestamp_ms'] if info['timestamp_ms'] is not None else info['estimated_ms'])
-            if seconds is None:raise ValueError('No usable timestamp for OFF interval')
+            seconds=info['timestamp_ms'] if info['timestamp_ms'] is not None else info['estimated_ms']
+            if seconds is None:fail('No usable timestamp for OFF interval')
             seconds/=1000
             if seconds>=end_s-1e-6:break
-            if seconds+1e-6<next_time:continue
-            next_time+=period
+            if seconds+1e-6<next_time or len(candidates)>=24:continue
+            next_time=seconds+period
             r=register(image,calibration)
-            if r.status!='REGISTERED':
-                rejected.append(dict(frame=info['frame_index'],reason='GEOMETRY: '+r.reason));continue
-            mask=without_markers(r.valid_mask,calibration)
-            # Reject local strongly chromatic compact peaks. This is conservative evidence,
-            # not a proof that a dark/broken LED is electrically off.
-            small=cv2.resize(r.warped,None,fx=.25,fy=.25,interpolation=cv2.INTER_AREA)
-            smask=cv2.resize(mask,(small.shape[1],small.shape[0]),interpolation=cv2.INTER_NEAREST)
-            values=small.astype(np.int16);maximum=values.max(axis=2);minimum=values.min(axis=2)
-            colored=((maximum-minimum>70)&(maximum>160)&(smask>0)).astype(np.uint8)
-            n,_,stats,_=cv2.connectedComponentsWithStats(colored)
-            if any(stats[i,4]>=3 for i in range(1,n)):
-                rejected.append(dict(frame=info['frame_index'],reason='POSSIBLE_LOCAL_GLOW'));continue
-            if frames:
-                common=cv2.bitwise_and(mask,masks[0]);sample=cv2.resize(common,(small.shape[1],small.shape[0]),interpolation=cv2.INTER_NEAREST)
-                anchor=cv2.resize(frames[0],(small.shape[1],small.shape[0]),interpolation=cv2.INTER_AREA)
-                try:delta,lighting,extreme=lighting_difference(anchor,small,sample)
-                except ValueError:
-                    rejected.append(dict(frame=info['frame_index'],reason='INSUFFICIENT_COMMON_BACKGROUND'));continue
-                predicted=np.empty_like(anchor,dtype=np.float32)
-                for ch,p in enumerate(lighting):predicted[:,:,ch]=anchor[:,:,ch].astype(np.float32)*p['gain']+p['offset']
-                residual=np.abs(small.astype(np.float32)-predicted).max(axis=2)[sample>0]
-                changed=float(np.mean(residual>40)) if len(residual) else 1.
-                if extreme or changed>.02:
-                    rejected.append(dict(frame=info['frame_index'],reason='LIGHTING_OR_MOVING_OBJECT',changed_fraction=changed));continue
-            # Retain observed marker pixels in the median for honest A_BASELINE
-            # re-registration; analysis masks remove their code and quiet zones later.
-            frames.append(r.warped);masks.append(r.valid_mask);accepted.append(dict(**info,registration=r.summary()))
-            notify(len(frames),max_frames,dict(name='OFF',state='accepted'))
-        if len(frames)<3:
-            raise ValueError('Automatic OFF needs >=3 reliable unlit frames. Choose another interval. '+str(rejected))
+            gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+            row=dict(**info,registration=r.summary(),reason='ELIGIBLE',selected=False,
+                rmse_px=r.error_px,blur_laplacian_var=float(cv2.Laplacian(gray,cv2.CV_32F).var()))
+            maps={};candidates.append(row)
+            if r.status!='REGISTERED':row['reason']='GEOMETRY: '+r.reason
+            elif row['blur_laplacian_var']<8:row['reason']='MOTION_BLUR'
+            else:
+                mask=without_markers(r.valid_mask,calibration)
+                small=cv2.resize(r.warped,None,fx=.25,fy=.25,interpolation=cv2.INTER_AREA)
+                smask=cv2.resize(mask,small.shape[1::-1],interpolation=cv2.INTER_NEAREST)
+                glow,color=glow_regions(small,smask);row['glow_regions']=int(glow);maps['suspicious_color']=color
+                roi=roi_coverage(mask,calibration);row.update(roi_coverage=roi,roi_min=min(roi.values(),default=1.))
+                if anchor is None:
+                    anchor=small.copy();anchor_mask=smask.copy();pcb,pcb_method=pcb_region(r.warped,calibration)
+                common=cv2.bitwise_and(smask,anchor_mask)
+                try:
+                    metrics,comparison=quality_maps(anchor,small,common);row.update(metrics);maps.update(comparison)
+                    row['changed_fraction_pcb']=float(np.mean((comparison['residual']>40)[(common>0)&(cv2.resize(pcb,small.shape[1::-1],interpolation=cv2.INTER_NEAREST)>0)]))
+                    if metrics['extreme_lighting'] or metrics['stable_changed_fraction']>.02 or metrics['smooth_changed_fraction']>.02:
+                        row['reason']='LIGHTING_OR_MOVING_OBJECT'
+                except ValueError:row['reason']='INSUFFICIENT_COMMON_BACKGROUND'
+                if glow:row['reason']='POSSIBLE_LOCAL_GLOW'
+                if row['reason'] in ('POSSIBLE_LOCAL_GLOW','LIGHTING_OR_MOVING_OBJECT'):unsafe.append(row['reason'])
+                if row['reason']=='ELIGIBLE' and row['roi_min']<.9:row['reason']='KNOWN_LED_NOT_COVERED'
+                if row['reason']=='ELIGIBLE':
+                    row['score']=float(row['roi_min']*4+np.mean(mask>0)-r.error_px*.2+math.log1p(row['blur_laplacian_var'])*.03)
+                    retained.append((row,r.warped,r.valid_mask))
+                    retained.sort(key=lambda item:item[0]['score'],reverse=True)
+                    del retained[max_frames:]
+            if row['reason']!='ELIGIBLE':rejected.append(dict(frame=row['frame_index'],reason=row['reason']))
+            if diagnostics_dir:save_candidate(diagnostics_dir,row,image,r,maps)
+            notify(min(95,round(90*(seconds-start_s)/duration_s)),100,dict(name='OFF',state='searching',candidate=row))
+        if unsafe:fail('Unsafe OFF interval: '+', '.join(sorted(set(unsafe))))
+        if len(retained)<3:fail('Insufficient reliable observations')
+        retained.sort(key=lambda item:item[0]['frame_index'])
+        for row,frame,mask in retained:
+            row['selected']=True;frames.append(frame);masks.append(mask)
+            accepted.append(dict(frame_index=row['frame_index'],timestamp_ms=row['timestamp_ms'],registration=row['registration'],score=row['score']))
         minimum=max(3,math.ceil(len(frames)*.8));height,width=masks[0].shape
         counts=np.zeros((height,width),np.uint8)
         for mask in masks:counts+=(mask>0).astype(np.uint8)
         valid=np.where(counts>=minimum,255,0).astype(np.uint8)
-        if np.count_nonzero(valid)<height*width*.02:raise ValueError('OFF has insufficient trustworthy overlap')
+        if np.count_nonzero(valid)<height*width*.02:fail('OFF has insufficient trustworthy overlap')
+        coverage=roi_coverage(without_markers(valid,calibration),calibration)
+        if any(value<.9 for value in coverage.values()):fail('Known LED ROI outside trusted OFF coverage')
         median=np.zeros_like(frames[0])
         # Only a small row tile is stacked; the video and dozens of full frames are never retained.
-        import warnings
         for y in range(0,height,64):
             checkpoint(cancel)
-            tile=np.stack([f[y:y+64].astype(np.float32) for f in frames])
+            tile=np.stack([f[y:y+64] for f in frames])
             preview=np.median(tile,axis=0).astype(np.uint8)
-            for i,mask in enumerate(masks):tile[i][mask[y:y+64]==0]=np.nan
-            with warnings.catch_warnings():
-                warnings.simplefilter('ignore',RuntimeWarning)
-                median[y:y+64]=np.nan_to_num(np.nanmedian(tile,axis=0)).astype(np.uint8)
+            median[y:y+64]=masked_median_tile(tile,np.stack([mask[y:y+64]>0 for mask in masks]))
             # Untrusted pixels are retained only for display / baseline ArUco decoding.
             # In particular, do not blacken marker quiet zones at the anchor-hull edge.
             outside=valid[y:y+64]==0;median[y:y+64][outside]=preview[outside]
-        metadata=dict(source='automatic_video_median',start_s=start_s,duration_s=duration_s,
+            notify(90+round(9*(y+len(tile[0]))/height),100,dict(name='OFF',state='median'))
+        metadata=dict(status='READY',algorithm_version='0.4.2',median_method='masked_uint16_rank',candidates=candidates,video=meta,coverage=dict(known_leds=coverage,
+            analysis_valid_fraction=float(np.mean(without_markers(valid,calibration)>0)),
+            pcb_fraction=float(np.mean(valid[pcb>0]>0)),pcb_method=pcb_method,
+            discover_unavailable_fraction=float(np.mean(without_markers(valid,calibration)[pcb>0]==0))),
+            setup_ms=(time.perf_counter_ns()-started)/1e6,source='automatic_video_median',start_s=start_s,duration_s=duration_s,
             decoded_frames=decoded,retained_frames=len(frames),minimum_observations=minimum,
             retained_image_bytes=sum(f.nbytes+m.nbytes for f,m in zip(frames,masks)),
             accepted=accepted,rejected=rejected,valid_fraction=float(np.mean(valid>0)),
@@ -129,7 +155,19 @@ def build_off(video,calibration,cancel,start_s=0.,duration_s=2.,max_frames=5,not
             max_error_px=max(a['registration']['max_inlier_error_px'] for a in accepted),
             marker_ids=sorted(set(k for a in accepted for k in a['registration']['inlier_ids'])),
             warning='Operator must guarantee interval OFF; absence of optical evidence is not electrical proof')
+        checkpoint(cancel)
+        save_diagnostics(diagnostics_dir,metadata,median,without_markers(valid,calibration),calibration)
+        notify(100,100,dict(name='OFF',state='READY',diagnostics=metadata))
         return OffModel(median,valid,identity_registration(median,valid,metadata),calibration['calibration_version'],metadata,median)
+    except Exception as exc:
+        if cancel.is_set():
+            diagnostics.update(status='CANCELLED',decoded_frames=decoded,retained_frames=len(retained))
+            save_diagnostics(diagnostics_dir,diagnostics)
+        elif not isinstance(exc,OffBuildError):
+            diagnostics.update(status='FAILED',failure=type(exc).__name__+': '+str(exc),decoded_frames=decoded,
+                               retained_frames=len(retained))
+            save_diagnostics(diagnostics_dir,diagnostics)
+        raise
     finally:reader.close()
 
 
