@@ -1,0 +1,431 @@
+{"utc": "2026-11-17T07:08:00.320428+00:00", "monotonic_ns": 32000000, "direction": "TX", "text": "PING", "relative_ms": 0.0}
+{"utc": "2026-11-17T07:08:00.320428+00:00", "monotonic_ns": 34000000, "direction": "RX", "text": "PONG", "relative_ms": 2.0}
+{"utc": "2026-11-17T07:08:00.321426+00:00", "monotonic_ns": 34000000, "direction": "TX", "text": "INFO", "relative_ms": 2.0}
+{"utc": "2026-11-17T07:08:00.321426+00:00", "monotonic_ns": 36000000, "direction": "RX", "text": "FW: 0.1.2", "relative_ms": 4.0}
+{"utc": "2026-11-17T07:08:00.321426+00:00", "monotonic_ns": 38000000, "direction": "RX", "text": "MCU: STM32F411RET6", "relative_ms": 6.0}
+{"utc": "2026-11-17T07:08:00.321426+00:00", "monotonic_ns": 40000000, "direction": "RX", "text": "CAPABILITIES: PHOTO_LED49", "relative_ms": 8.0}
+{"utc": "2026-11-17T07:08:00.329661+00:00", "monotonic_ns": 42000000, "direction": "RX", "text": "END INFO", "relative_ms": 10.0}
+{"utc": "2026-11-17T07:08:00.329661+00:00", "monotonic_ns": 42000000, "direction": "TX", "text": "STATUS", "relative_ms": 10.0}
+{"utc": "2026-11-17T07:08:00.329661+00:00", "monotonic_ns": 44000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 12.0}
+{"utc": "2026-11-17T07:08:00.330661+00:00", "monotonic_ns": 44000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 12.0}
+{"utc": "2026-11-17T07:08:00.330661+00:00", "monotonic_ns": 46000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 14.0}
+{"utc": "2026-11-17T07:08:00.330661+00:00", "monotonic_ns": 46000000, "direction": "TX", "text": "SELFTEST", "relative_ms": 14.0}
+{"utc": "2026-11-17T07:08:00.330661+00:00", "monotonic_ns": 48000000, "direction": "RX", "text": "OK SELFTEST=PASS STATE=DISARMED FAULT=NONE", "relative_ms": 16.0}
+{"utc": "2026-11-17T07:08:00.334650+00:00", "monotonic_ns": 48000000, "direction": "STAGE", "text": "BEGIN", "index": 1, "color": "OFF", "duration_ms": 5000, "start_ns": 48000000, "start_utc": "2026-11-17T07:08:00.334650+00:00", "status": "RUNNING", "relative_ms": 16.0}
+{"utc": "2026-11-17T07:08:00.334650+00:00", "monotonic_ns": 48000000, "direction": "TX", "text": "OFF", "relative_ms": 16.0}
+{"utc": "2026-11-17T07:08:00.334650+00:00", "monotonic_ns": 50000000, "direction": "RX", "text": "OK DISARMED", "relative_ms": 18.0}
+{"utc": "2026-11-17T07:08:00.335647+00:00", "monotonic_ns": 50000000, "direction": "TX", "text": "STATUS", "relative_ms": 18.0}
+{"utc": "2026-11-17T07:08:00.335647+00:00", "monotonic_ns": 52000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 20.0}
+{"utc": "2026-11-17T07:08:00.335647+00:00", "monotonic_ns": 52000000, "direction": "TX", "text": "STATUS", "relative_ms": 20.0}
+{"utc": "2026-11-17T07:08:00.335647+00:00", "monotonic_ns": 54000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 22.0}
+{"utc": "2026-11-17T07:08:00.335647+00:00", "monotonic_ns": 54000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 22.0}
+{"utc": "2026-11-17T07:08:00.336645+00:00", "monotonic_ns": 56000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 24.0}
+{"utc": "2026-11-17T07:08:00.336645+00:00", "monotonic_ns": 56000000, "direction": "TX", "text": "CURRENT", "relative_ms": 24.0}
+{"utc": "2026-11-17T07:08:00.336645+00:00", "monotonic_ns": 58000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 26.0}
+{"utc": "2026-11-17T07:08:00.336645+00:00", "monotonic_ns": 558000000, "direction": "TX", "text": "STATUS", "relative_ms": 526.0}
+{"utc": "2026-11-17T07:08:00.337642+00:00", "monotonic_ns": 560000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 528.0}
+{"utc": "2026-11-17T07:08:00.337642+00:00", "monotonic_ns": 560000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 528.0}
+{"utc": "2026-11-17T07:08:00.337642+00:00", "monotonic_ns": 562000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 530.0}
+{"utc": "2026-11-17T07:08:00.337642+00:00", "monotonic_ns": 562000000, "direction": "TX", "text": "CURRENT", "relative_ms": 530.0}
+{"utc": "2026-11-17T07:08:00.338639+00:00", "monotonic_ns": 564000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 532.0}
+{"utc": "2026-11-17T07:08:00.338639+00:00", "monotonic_ns": 1064000000, "direction": "TX", "text": "STATUS", "relative_ms": 1032.0}
+{"utc": "2026-11-17T07:08:00.338639+00:00", "monotonic_ns": 1066000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 1034.0}
+{"utc": "2026-11-17T07:08:00.338639+00:00", "monotonic_ns": 1066000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 1034.0}
+{"utc": "2026-11-17T07:08:00.339713+00:00", "monotonic_ns": 1068000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 1036.0}
+{"utc": "2026-11-17T07:08:00.339713+00:00", "monotonic_ns": 1068000000, "direction": "TX", "text": "CURRENT", "relative_ms": 1036.0}
+{"utc": "2026-11-17T07:08:00.339713+00:00", "monotonic_ns": 1070000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 1038.0}
+{"utc": "2026-11-17T07:08:00.340634+00:00", "monotonic_ns": 1570000000, "direction": "TX", "text": "STATUS", "relative_ms": 1538.0}
+{"utc": "2026-11-17T07:08:00.340634+00:00", "monotonic_ns": 1572000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 1540.0}
+{"utc": "2026-11-17T07:08:00.340634+00:00", "monotonic_ns": 1572000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 1540.0}
+{"utc": "2026-11-17T07:08:00.340634+00:00", "monotonic_ns": 1574000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 1542.0}
+{"utc": "2026-11-17T07:08:00.340634+00:00", "monotonic_ns": 1574000000, "direction": "TX", "text": "CURRENT", "relative_ms": 1542.0}
+{"utc": "2026-11-17T07:08:00.341632+00:00", "monotonic_ns": 1576000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 1544.0}
+{"utc": "2026-11-17T07:08:00.341632+00:00", "monotonic_ns": 2076000000, "direction": "TX", "text": "STATUS", "relative_ms": 2044.0}
+{"utc": "2026-11-17T07:08:00.341632+00:00", "monotonic_ns": 2078000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 2046.0}
+{"utc": "2026-11-17T07:08:00.342629+00:00", "monotonic_ns": 2078000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 2046.0}
+{"utc": "2026-11-17T07:08:00.342629+00:00", "monotonic_ns": 2080000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 2048.0}
+{"utc": "2026-11-17T07:08:00.342629+00:00", "monotonic_ns": 2080000000, "direction": "TX", "text": "CURRENT", "relative_ms": 2048.0}
+{"utc": "2026-11-17T07:08:00.342629+00:00", "monotonic_ns": 2082000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 2050.0}
+{"utc": "2026-11-17T07:08:00.343626+00:00", "monotonic_ns": 2582000000, "direction": "TX", "text": "STATUS", "relative_ms": 2550.0}
+{"utc": "2026-11-17T07:08:00.343626+00:00", "monotonic_ns": 2584000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 2552.0}
+{"utc": "2026-11-17T07:08:00.343626+00:00", "monotonic_ns": 2584000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 2552.0}
+{"utc": "2026-11-17T07:08:00.343626+00:00", "monotonic_ns": 2586000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 2554.0}
+{"utc": "2026-11-17T07:08:00.347615+00:00", "monotonic_ns": 2586000000, "direction": "TX", "text": "CURRENT", "relative_ms": 2554.0}
+{"utc": "2026-11-17T07:08:00.349610+00:00", "monotonic_ns": 2588000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 2556.0}
+{"utc": "2026-11-17T07:08:00.355421+00:00", "monotonic_ns": 3088000000, "direction": "TX", "text": "STATUS", "relative_ms": 3056.0}
+{"utc": "2026-11-17T07:08:00.364403+00:00", "monotonic_ns": 3090000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 3058.0}
+{"utc": "2026-11-17T07:08:00.376068+00:00", "monotonic_ns": 3090000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 3058.0}
+{"utc": "2026-11-17T07:08:00.383049+00:00", "monotonic_ns": 3092000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 3060.0}
+{"utc": "2026-11-17T07:08:00.386042+00:00", "monotonic_ns": 3092000000, "direction": "TX", "text": "CURRENT", "relative_ms": 3060.0}
+{"utc": "2026-11-17T07:08:00.388060+00:00", "monotonic_ns": 3094000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 3062.0}
+{"utc": "2026-11-17T07:08:00.398008+00:00", "monotonic_ns": 3594000000, "direction": "TX", "text": "STATUS", "relative_ms": 3562.0}
+{"utc": "2026-11-17T07:08:00.398008+00:00", "monotonic_ns": 3596000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 3564.0}
+{"utc": "2026-11-17T07:08:00.399007+00:00", "monotonic_ns": 3596000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 3564.0}
+{"utc": "2026-11-17T07:08:00.399385+00:00", "monotonic_ns": 3598000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 3566.0}
+{"utc": "2026-11-17T07:08:00.399385+00:00", "monotonic_ns": 3598000000, "direction": "TX", "text": "CURRENT", "relative_ms": 3566.0}
+{"utc": "2026-11-17T07:08:00.400033+00:00", "monotonic_ns": 3600000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 3568.0}
+{"utc": "2026-11-17T07:08:00.400033+00:00", "monotonic_ns": 4100000000, "direction": "TX", "text": "STATUS", "relative_ms": 4068.0}
+{"utc": "2026-11-17T07:08:00.400033+00:00", "monotonic_ns": 4102000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 4070.0}
+{"utc": "2026-11-17T07:08:00.400033+00:00", "monotonic_ns": 4102000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 4070.0}
+{"utc": "2026-11-17T07:08:00.401030+00:00", "monotonic_ns": 4104000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 4072.0}
+{"utc": "2026-11-17T07:08:00.401030+00:00", "monotonic_ns": 4104000000, "direction": "TX", "text": "CURRENT", "relative_ms": 4072.0}
+{"utc": "2026-11-17T07:08:00.401030+00:00", "monotonic_ns": 4106000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 4074.0}
+{"utc": "2026-11-17T07:08:00.401030+00:00", "monotonic_ns": 4606000000, "direction": "TX", "text": "STATUS", "relative_ms": 4574.0}
+{"utc": "2026-11-17T07:08:00.402028+00:00", "monotonic_ns": 4608000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 4576.0}
+{"utc": "2026-11-17T07:08:00.402028+00:00", "monotonic_ns": 4608000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 4576.0}
+{"utc": "2026-11-17T07:08:00.402028+00:00", "monotonic_ns": 4610000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 4578.0}
+{"utc": "2026-11-17T07:08:00.402028+00:00", "monotonic_ns": 4610000000, "direction": "TX", "text": "CURRENT", "relative_ms": 4578.0}
+{"utc": "2026-11-17T07:08:00.403026+00:00", "monotonic_ns": 4612000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 4580.0}
+{"utc": "2026-11-17T07:08:00.404023+00:00", "monotonic_ns": 5052000000, "direction": "STAGE", "text": "END", "index": 1, "color": "OFF", "duration_ms": 5000, "start_ns": 48000000, "start_utc": "2026-11-17T07:08:00.334650+00:00", "status": "COMPLETED", "off_confirmed_ns": 52000000, "end_ns": 5052000000, "end_utc": "2026-11-17T07:08:00.404023+00:00", "host_elapsed_ms": 5004.0, "relative_ms": 5020.0}
+{"utc": "2026-11-17T07:08:00.422942+00:00", "monotonic_ns": 5052000000, "direction": "STAGE", "text": "BEGIN", "index": 2, "color": "RED", "duration_ms": 5000, "start_ns": 5052000000, "start_utc": "2026-11-17T07:08:00.422942+00:00", "status": "RUNNING", "relative_ms": 5020.0}
+{"utc": "2026-11-17T07:08:00.430949+00:00", "monotonic_ns": 5052000000, "direction": "TX", "text": "PING", "relative_ms": 5020.0}
+{"utc": "2026-11-17T07:08:00.433941+00:00", "monotonic_ns": 5054000000, "direction": "RX", "text": "PONG", "relative_ms": 5022.0}
+{"utc": "2026-11-17T07:08:00.450874+00:00", "monotonic_ns": 5054000000, "direction": "TX", "text": "INFO", "relative_ms": 5022.0}
+{"utc": "2026-11-17T07:08:00.450874+00:00", "monotonic_ns": 5056000000, "direction": "RX", "text": "FW: 0.1.2", "relative_ms": 5024.0}
+{"utc": "2026-11-17T07:08:00.453883+00:00", "monotonic_ns": 5058000000, "direction": "RX", "text": "MCU: STM32F411RET6", "relative_ms": 5026.0}
+{"utc": "2026-11-17T07:08:00.461866+00:00", "monotonic_ns": 5060000000, "direction": "RX", "text": "CAPABILITIES: PHOTO_LED49", "relative_ms": 5028.0}
+{"utc": "2026-11-17T07:08:00.465827+00:00", "monotonic_ns": 5062000000, "direction": "RX", "text": "END INFO", "relative_ms": 5030.0}
+{"utc": "2026-11-17T07:08:00.468819+00:00", "monotonic_ns": 5062000000, "direction": "TX", "text": "STATUS", "relative_ms": 5030.0}
+{"utc": "2026-11-17T07:08:00.469817+00:00", "monotonic_ns": 5064000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 5032.0}
+{"utc": "2026-11-17T07:08:00.473806+00:00", "monotonic_ns": 5064000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 5032.0}
+{"utc": "2026-11-17T07:08:00.473806+00:00", "monotonic_ns": 5066000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 5034.0}
+{"utc": "2026-11-17T07:08:00.477795+00:00", "monotonic_ns": 5066000000, "direction": "TX", "text": "SELFTEST", "relative_ms": 5034.0}
+{"utc": "2026-11-17T07:08:00.477795+00:00", "monotonic_ns": 5068000000, "direction": "RX", "text": "OK SELFTEST=PASS STATE=DISARMED FAULT=NONE", "relative_ms": 5036.0}
+{"utc": "2026-11-17T07:08:00.481784+00:00", "monotonic_ns": 5068000000, "direction": "TX", "text": "ARM 10", "relative_ms": 5036.0}
+{"utc": "2026-11-17T07:08:00.481784+00:00", "monotonic_ns": 5070000000, "direction": "RX", "text": "OK ARM_TIMEOUT_S=10", "relative_ms": 5038.0}
+{"utc": "2026-11-17T07:08:00.484778+00:00", "monotonic_ns": 5070000000, "direction": "TX", "text": "PHOTO LED49 RED 5000", "relative_ms": 5038.0}
+{"utc": "2026-11-17T07:08:00.484778+00:00", "monotonic_ns": 5072000000, "direction": "RX", "text": "ACK ID=1 MODE=PHOTO LED=49 COLOR=RED SRC=14 SNK=32 DURATION_MS=5000", "relative_ms": 5040.0}
+{"utc": "2026-11-17T07:08:00.490810+00:00", "monotonic_ns": 5332000000, "direction": "TX", "text": "CURRENT", "relative_ms": 5300.0}
+{"utc": "2026-11-17T07:08:00.490810+00:00", "monotonic_ns": 5334000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=1035 AGE_MS=0 VALID=1", "relative_ms": 5302.0}
+{"utc": "2026-11-17T07:08:00.493753+00:00", "monotonic_ns": 5334000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 5302.0}
+{"utc": "2026-11-17T07:08:00.494750+00:00", "monotonic_ns": 5336000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 5304.0}
+{"utc": "2026-11-17T07:08:00.510707+00:00", "monotonic_ns": 5836000000, "direction": "TX", "text": "CURRENT", "relative_ms": 5804.0}
+{"utc": "2026-11-17T07:08:00.511704+00:00", "monotonic_ns": 5838000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=1035 AGE_MS=0 VALID=1", "relative_ms": 5806.0}
+{"utc": "2026-11-17T07:08:00.514740+00:00", "monotonic_ns": 5838000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 5806.0}
+{"utc": "2026-11-17T07:08:00.514740+00:00", "monotonic_ns": 5840000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 5808.0}
+{"utc": "2026-11-17T07:08:00.517734+00:00", "monotonic_ns": 6340000000, "direction": "TX", "text": "CURRENT", "relative_ms": 6308.0}
+{"utc": "2026-11-17T07:08:00.518731+00:00", "monotonic_ns": 6342000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=1035 AGE_MS=0 VALID=1", "relative_ms": 6310.0}
+{"utc": "2026-11-17T07:08:00.527707+00:00", "monotonic_ns": 6342000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 6310.0}
+{"utc": "2026-11-17T07:08:00.528705+00:00", "monotonic_ns": 6344000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 6312.0}
+{"utc": "2026-11-17T07:08:00.535687+00:00", "monotonic_ns": 6844000000, "direction": "TX", "text": "CURRENT", "relative_ms": 6812.0}
+{"utc": "2026-11-17T07:08:00.536684+00:00", "monotonic_ns": 6846000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=1035 AGE_MS=0 VALID=1", "relative_ms": 6814.0}
+{"utc": "2026-11-17T07:08:00.539674+00:00", "monotonic_ns": 6846000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 6814.0}
+{"utc": "2026-11-17T07:08:00.539674+00:00", "monotonic_ns": 6848000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 6816.0}
+{"utc": "2026-11-17T07:08:00.556374+00:00", "monotonic_ns": 7348000000, "direction": "TX", "text": "CURRENT", "relative_ms": 7316.0}
+{"utc": "2026-11-17T07:08:00.556374+00:00", "monotonic_ns": 7350000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=1035 AGE_MS=0 VALID=1", "relative_ms": 7318.0}
+{"utc": "2026-11-17T07:08:00.559341+00:00", "monotonic_ns": 7350000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 7318.0}
+{"utc": "2026-11-17T07:08:00.560339+00:00", "monotonic_ns": 7352000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 7320.0}
+{"utc": "2026-11-17T07:08:00.576466+00:00", "monotonic_ns": 7852000000, "direction": "TX", "text": "CURRENT", "relative_ms": 7820.0}
+{"utc": "2026-11-17T07:08:00.576466+00:00", "monotonic_ns": 7854000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=1035 AGE_MS=0 VALID=1", "relative_ms": 7822.0}
+{"utc": "2026-11-17T07:08:00.585441+00:00", "monotonic_ns": 7854000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 7822.0}
+{"utc": "2026-11-17T07:08:00.585441+00:00", "monotonic_ns": 7856000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 7824.0}
+{"utc": "2026-11-17T07:08:00.589431+00:00", "monotonic_ns": 8356000000, "direction": "TX", "text": "CURRENT", "relative_ms": 8324.0}
+{"utc": "2026-11-17T07:08:00.589431+00:00", "monotonic_ns": 8358000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=1035 AGE_MS=0 VALID=1", "relative_ms": 8326.0}
+{"utc": "2026-11-17T07:08:00.593421+00:00", "monotonic_ns": 8358000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 8326.0}
+{"utc": "2026-11-17T07:08:00.593421+00:00", "monotonic_ns": 8360000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 8328.0}
+{"utc": "2026-11-17T07:08:00.596440+00:00", "monotonic_ns": 8860000000, "direction": "TX", "text": "CURRENT", "relative_ms": 8828.0}
+{"utc": "2026-11-17T07:08:00.596440+00:00", "monotonic_ns": 8862000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=1035 AGE_MS=0 VALID=1", "relative_ms": 8830.0}
+{"utc": "2026-11-17T07:08:00.600402+00:00", "monotonic_ns": 8862000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 8830.0}
+{"utc": "2026-11-17T07:08:00.600402+00:00", "monotonic_ns": 8864000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 8832.0}
+{"utc": "2026-11-17T07:08:00.621761+00:00", "monotonic_ns": 9364000000, "direction": "TX", "text": "CURRENT", "relative_ms": 9332.0}
+{"utc": "2026-11-17T07:08:00.621761+00:00", "monotonic_ns": 9366000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=1035 AGE_MS=0 VALID=1", "relative_ms": 9334.0}
+{"utc": "2026-11-17T07:08:00.625502+00:00", "monotonic_ns": 9366000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 9334.0}
+{"utc": "2026-11-17T07:08:00.625502+00:00", "monotonic_ns": 9368000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 9336.0}
+{"utc": "2026-11-17T07:08:00.639463+00:00", "monotonic_ns": 9868000000, "direction": "TX", "text": "CURRENT", "relative_ms": 9836.0}
+{"utc": "2026-11-17T07:08:00.639463+00:00", "monotonic_ns": 9870000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=1035 AGE_MS=0 VALID=1", "relative_ms": 9838.0}
+{"utc": "2026-11-17T07:08:00.644450+00:00", "monotonic_ns": 9870000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 9838.0}
+{"utc": "2026-11-17T07:08:00.644450+00:00", "monotonic_ns": 9872000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 9840.0}
+{"utc": "2026-11-17T07:08:00.652429+00:00", "monotonic_ns": 10072000000, "direction": "RX", "text": "DONE ID=1 STATE=OFF CURRENT_AVG_UA=1035 CURRENT_MAX_UA=1085 SAMPLES=4999 FAULT=NONE REASON=TIMEOUT MODE=PHOTO LED=49 COLOR=RED ELAPSED_MS=5000", "relative_ms": 10040.0}
+{"utc": "2026-11-17T07:08:00.664397+00:00", "monotonic_ns": 10072000000, "direction": "TX", "text": "OFF", "relative_ms": 10040.0}
+{"utc": "2026-11-17T07:08:00.664397+00:00", "monotonic_ns": 10074000000, "direction": "RX", "text": "OK DISARMED", "relative_ms": 10042.0}
+{"utc": "2026-11-17T07:08:00.667390+00:00", "monotonic_ns": 10074000000, "direction": "TX", "text": "OFF", "relative_ms": 10042.0}
+{"utc": "2026-11-17T07:08:00.669150+00:00", "monotonic_ns": 10076000000, "direction": "RX", "text": "OK DISARMED", "relative_ms": 10044.0}
+{"utc": "2026-11-17T07:08:00.671378+00:00", "monotonic_ns": 10076000000, "direction": "TX", "text": "STATUS", "relative_ms": 10044.0}
+{"utc": "2026-11-17T07:08:00.672376+00:00", "monotonic_ns": 10078000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 10046.0}
+{"utc": "2026-11-17T07:08:00.676366+00:00", "monotonic_ns": 10078000000, "direction": "STAGE", "text": "END", "index": 2, "color": "RED", "duration_ms": 5000, "start_ns": 5052000000, "start_utc": "2026-11-17T07:08:00.422942+00:00", "status": "COMPLETED", "end_ns": 10078000000, "end_utc": "2026-11-17T07:08:00.676366+00:00", "host_elapsed_ms": 5026.0, "relative_ms": 10046.0}
+{"utc": "2026-11-17T07:08:00.679387+00:00", "monotonic_ns": 10078000000, "direction": "STAGE", "text": "BEGIN", "index": 3, "color": "OFF", "duration_ms": 3000, "start_ns": 10078000000, "start_utc": "2026-11-17T07:08:00.679387+00:00", "status": "RUNNING", "relative_ms": 10046.0}
+{"utc": "2026-11-17T07:08:00.679387+00:00", "monotonic_ns": 10078000000, "direction": "TX", "text": "OFF", "relative_ms": 10046.0}
+{"utc": "2026-11-17T07:08:00.679387+00:00", "monotonic_ns": 10080000000, "direction": "RX", "text": "OK DISARMED", "relative_ms": 10048.0}
+{"utc": "2026-11-17T07:08:00.680355+00:00", "monotonic_ns": 10080000000, "direction": "TX", "text": "STATUS", "relative_ms": 10048.0}
+{"utc": "2026-11-17T07:08:00.680355+00:00", "monotonic_ns": 10082000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 10050.0}
+{"utc": "2026-11-17T07:08:00.680355+00:00", "monotonic_ns": 10082000000, "direction": "TX", "text": "STATUS", "relative_ms": 10050.0}
+{"utc": "2026-11-17T07:08:00.680355+00:00", "monotonic_ns": 10084000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 10052.0}
+{"utc": "2026-11-17T07:08:00.681352+00:00", "monotonic_ns": 10084000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 10052.0}
+{"utc": "2026-11-17T07:08:00.681352+00:00", "monotonic_ns": 10086000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 10054.0}
+{"utc": "2026-11-17T07:08:00.681352+00:00", "monotonic_ns": 10086000000, "direction": "TX", "text": "CURRENT", "relative_ms": 10054.0}
+{"utc": "2026-11-17T07:08:00.681352+00:00", "monotonic_ns": 10088000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 10056.0}
+{"utc": "2026-11-17T07:08:00.682349+00:00", "monotonic_ns": 10588000000, "direction": "TX", "text": "STATUS", "relative_ms": 10556.0}
+{"utc": "2026-11-17T07:08:00.682571+00:00", "monotonic_ns": 10590000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 10558.0}
+{"utc": "2026-11-17T07:08:00.682571+00:00", "monotonic_ns": 10590000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 10558.0}
+{"utc": "2026-11-17T07:08:00.682571+00:00", "monotonic_ns": 10592000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 10560.0}
+{"utc": "2026-11-17T07:08:00.683346+00:00", "monotonic_ns": 10592000000, "direction": "TX", "text": "CURRENT", "relative_ms": 10560.0}
+{"utc": "2026-11-17T07:08:00.683346+00:00", "monotonic_ns": 10594000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 10562.0}
+{"utc": "2026-11-17T07:08:00.683346+00:00", "monotonic_ns": 11094000000, "direction": "TX", "text": "STATUS", "relative_ms": 11062.0}
+{"utc": "2026-11-17T07:08:00.683346+00:00", "monotonic_ns": 11096000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 11064.0}
+{"utc": "2026-11-17T07:08:00.684344+00:00", "monotonic_ns": 11096000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 11064.0}
+{"utc": "2026-11-17T07:08:00.684344+00:00", "monotonic_ns": 11098000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 11066.0}
+{"utc": "2026-11-17T07:08:00.684344+00:00", "monotonic_ns": 11098000000, "direction": "TX", "text": "CURRENT", "relative_ms": 11066.0}
+{"utc": "2026-11-17T07:08:00.684344+00:00", "monotonic_ns": 11100000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 11068.0}
+{"utc": "2026-11-17T07:08:00.685341+00:00", "monotonic_ns": 11600000000, "direction": "TX", "text": "STATUS", "relative_ms": 11568.0}
+{"utc": "2026-11-17T07:08:00.685341+00:00", "monotonic_ns": 11602000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 11570.0}
+{"utc": "2026-11-17T07:08:00.685341+00:00", "monotonic_ns": 11602000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 11570.0}
+{"utc": "2026-11-17T07:08:00.685341+00:00", "monotonic_ns": 11604000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 11572.0}
+{"utc": "2026-11-17T07:08:00.686338+00:00", "monotonic_ns": 11604000000, "direction": "TX", "text": "CURRENT", "relative_ms": 11572.0}
+{"utc": "2026-11-17T07:08:00.702320+00:00", "monotonic_ns": 11606000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 11574.0}
+{"utc": "2026-11-17T07:08:00.715417+00:00", "monotonic_ns": 12106000000, "direction": "TX", "text": "STATUS", "relative_ms": 12074.0}
+{"utc": "2026-11-17T07:08:00.715417+00:00", "monotonic_ns": 12108000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 12076.0}
+{"utc": "2026-11-17T07:08:00.716259+00:00", "monotonic_ns": 12108000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 12076.0}
+{"utc": "2026-11-17T07:08:00.716259+00:00", "monotonic_ns": 12110000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 12078.0}
+{"utc": "2026-11-17T07:08:00.716259+00:00", "monotonic_ns": 12110000000, "direction": "TX", "text": "CURRENT", "relative_ms": 12078.0}
+{"utc": "2026-11-17T07:08:00.716259+00:00", "monotonic_ns": 12112000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 12080.0}
+{"utc": "2026-11-17T07:08:00.717256+00:00", "monotonic_ns": 12612000000, "direction": "TX", "text": "STATUS", "relative_ms": 12580.0}
+{"utc": "2026-11-17T07:08:00.717256+00:00", "monotonic_ns": 12614000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 12582.0}
+{"utc": "2026-11-17T07:08:00.717256+00:00", "monotonic_ns": 12614000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 12582.0}
+{"utc": "2026-11-17T07:08:00.717256+00:00", "monotonic_ns": 12616000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 12584.0}
+{"utc": "2026-11-17T07:08:00.718253+00:00", "monotonic_ns": 12616000000, "direction": "TX", "text": "CURRENT", "relative_ms": 12584.0}
+{"utc": "2026-11-17T07:08:00.718253+00:00", "monotonic_ns": 12618000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 12586.0}
+{"utc": "2026-11-17T07:08:00.718253+00:00", "monotonic_ns": 13082000000, "direction": "STAGE", "text": "END", "index": 3, "color": "OFF", "duration_ms": 3000, "start_ns": 10078000000, "start_utc": "2026-11-17T07:08:00.679387+00:00", "status": "COMPLETED", "off_confirmed_ns": 10082000000, "end_ns": 13082000000, "end_utc": "2026-11-17T07:08:00.718253+00:00", "host_elapsed_ms": 3004.0, "relative_ms": 13050.0}
+{"utc": "2026-11-17T07:08:00.740645+00:00", "monotonic_ns": 13082000000, "direction": "STAGE", "text": "BEGIN", "index": 4, "color": "GREEN", "duration_ms": 5000, "start_ns": 13082000000, "start_utc": "2026-11-17T07:08:00.740194+00:00", "status": "RUNNING", "relative_ms": 13050.0}
+{"utc": "2026-11-17T07:08:00.743186+00:00", "monotonic_ns": 13082000000, "direction": "TX", "text": "PING", "relative_ms": 13050.0}
+{"utc": "2026-11-17T07:08:00.744183+00:00", "monotonic_ns": 13084000000, "direction": "RX", "text": "PONG", "relative_ms": 13052.0}
+{"utc": "2026-11-17T07:08:00.747176+00:00", "monotonic_ns": 13084000000, "direction": "TX", "text": "INFO", "relative_ms": 13052.0}
+{"utc": "2026-11-17T07:08:00.747176+00:00", "monotonic_ns": 13086000000, "direction": "RX", "text": "FW: 0.1.2", "relative_ms": 13054.0}
+{"utc": "2026-11-17T07:08:00.752162+00:00", "monotonic_ns": 13088000000, "direction": "RX", "text": "MCU: STM32F411RET6", "relative_ms": 13056.0}
+{"utc": "2026-11-17T07:08:00.755153+00:00", "monotonic_ns": 13090000000, "direction": "RX", "text": "CAPABILITIES: PHOTO_LED49", "relative_ms": 13058.0}
+{"utc": "2026-11-17T07:08:00.758146+00:00", "monotonic_ns": 13092000000, "direction": "RX", "text": "END INFO", "relative_ms": 13060.0}
+{"utc": "2026-11-17T07:08:00.761140+00:00", "monotonic_ns": 13092000000, "direction": "TX", "text": "STATUS", "relative_ms": 13060.0}
+{"utc": "2026-11-17T07:08:00.763132+00:00", "monotonic_ns": 13094000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 13062.0}
+{"utc": "2026-11-17T07:08:00.766124+00:00", "monotonic_ns": 13094000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 13062.0}
+{"utc": "2026-11-17T07:08:00.767129+00:00", "monotonic_ns": 13096000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 13064.0}
+{"utc": "2026-11-17T07:08:00.770113+00:00", "monotonic_ns": 13096000000, "direction": "TX", "text": "SELFTEST", "relative_ms": 13064.0}
+{"utc": "2026-11-17T07:08:00.770113+00:00", "monotonic_ns": 13098000000, "direction": "RX", "text": "OK SELFTEST=PASS STATE=DISARMED FAULT=NONE", "relative_ms": 13066.0}
+{"utc": "2026-11-17T07:08:00.773106+00:00", "monotonic_ns": 13098000000, "direction": "TX", "text": "ARM 10", "relative_ms": 13066.0}
+{"utc": "2026-11-17T07:08:00.773106+00:00", "monotonic_ns": 13100000000, "direction": "RX", "text": "OK ARM_TIMEOUT_S=10", "relative_ms": 13068.0}
+{"utc": "2026-11-17T07:08:00.776802+00:00", "monotonic_ns": 13100000000, "direction": "TX", "text": "PHOTO LED49 GREEN 5000", "relative_ms": 13068.0}
+{"utc": "2026-11-17T07:08:00.776802+00:00", "monotonic_ns": 13102000000, "direction": "RX", "text": "ACK ID=2 MODE=PHOTO LED=49 COLOR=GREEN SRC=14 SNK=33 DURATION_MS=5000", "relative_ms": 13070.0}
+{"utc": "2026-11-17T07:08:00.782789+00:00", "monotonic_ns": 13362000000, "direction": "TX", "text": "CURRENT", "relative_ms": 13330.0}
+{"utc": "2026-11-17T07:08:00.782789+00:00", "monotonic_ns": 13364000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=886 AGE_MS=0 VALID=1", "relative_ms": 13332.0}
+{"utc": "2026-11-17T07:08:00.790986+00:00", "monotonic_ns": 13364000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 13332.0}
+{"utc": "2026-11-17T07:08:00.790986+00:00", "monotonic_ns": 13366000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 13334.0}
+{"utc": "2026-11-17T07:08:00.794675+00:00", "monotonic_ns": 13866000000, "direction": "TX", "text": "CURRENT", "relative_ms": 13834.0}
+{"utc": "2026-11-17T07:08:00.794675+00:00", "monotonic_ns": 13868000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=886 AGE_MS=0 VALID=1", "relative_ms": 13836.0}
+{"utc": "2026-11-17T07:08:00.802684+00:00", "monotonic_ns": 13868000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 13836.0}
+{"utc": "2026-11-17T07:08:00.803653+00:00", "monotonic_ns": 13870000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 13838.0}
+{"utc": "2026-11-17T07:08:00.806937+00:00", "monotonic_ns": 14370000000, "direction": "TX", "text": "CURRENT", "relative_ms": 14338.0}
+{"utc": "2026-11-17T07:08:00.806937+00:00", "monotonic_ns": 14372000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=886 AGE_MS=0 VALID=1", "relative_ms": 14340.0}
+{"utc": "2026-11-17T07:08:00.820896+00:00", "monotonic_ns": 14372000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 14340.0}
+{"utc": "2026-11-17T07:08:00.821896+00:00", "monotonic_ns": 14374000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 14342.0}
+{"utc": "2026-11-17T07:08:00.824856+00:00", "monotonic_ns": 14874000000, "direction": "TX", "text": "CURRENT", "relative_ms": 14842.0}
+{"utc": "2026-11-17T07:08:00.825854+00:00", "monotonic_ns": 14876000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=886 AGE_MS=0 VALID=1", "relative_ms": 14844.0}
+{"utc": "2026-11-17T07:08:00.828874+00:00", "monotonic_ns": 14876000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 14844.0}
+{"utc": "2026-11-17T07:08:00.828874+00:00", "monotonic_ns": 14878000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 14846.0}
+{"utc": "2026-11-17T07:08:00.832863+00:00", "monotonic_ns": 15378000000, "direction": "TX", "text": "CURRENT", "relative_ms": 15346.0}
+{"utc": "2026-11-17T07:08:00.833545+00:00", "monotonic_ns": 15380000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=886 AGE_MS=0 VALID=1", "relative_ms": 15348.0}
+{"utc": "2026-11-17T07:08:00.835863+00:00", "monotonic_ns": 15380000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 15348.0}
+{"utc": "2026-11-17T07:08:00.836855+00:00", "monotonic_ns": 15382000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 15350.0}
+{"utc": "2026-11-17T07:08:00.856807+00:00", "monotonic_ns": 15882000000, "direction": "TX", "text": "CURRENT", "relative_ms": 15850.0}
+{"utc": "2026-11-17T07:08:00.856807+00:00", "monotonic_ns": 15884000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=886 AGE_MS=0 VALID=1", "relative_ms": 15852.0}
+{"utc": "2026-11-17T07:08:00.871759+00:00", "monotonic_ns": 15884000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 15852.0}
+{"utc": "2026-11-17T07:08:00.871759+00:00", "monotonic_ns": 15886000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 15854.0}
+{"utc": "2026-11-17T07:08:00.875720+00:00", "monotonic_ns": 16386000000, "direction": "TX", "text": "CURRENT", "relative_ms": 16354.0}
+{"utc": "2026-11-17T07:08:00.875720+00:00", "monotonic_ns": 16388000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=886 AGE_MS=0 VALID=1", "relative_ms": 16356.0}
+{"utc": "2026-11-17T07:08:00.883732+00:00", "monotonic_ns": 16388000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 16356.0}
+{"utc": "2026-11-17T07:08:00.884724+00:00", "monotonic_ns": 16390000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 16358.0}
+{"utc": "2026-11-17T07:08:00.887716+00:00", "monotonic_ns": 16890000000, "direction": "TX", "text": "CURRENT", "relative_ms": 16858.0}
+{"utc": "2026-11-17T07:08:00.888717+00:00", "monotonic_ns": 16892000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=886 AGE_MS=0 VALID=1", "relative_ms": 16860.0}
+{"utc": "2026-11-17T07:08:00.891677+00:00", "monotonic_ns": 16892000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 16860.0}
+{"utc": "2026-11-17T07:08:00.891677+00:00", "monotonic_ns": 16894000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 16862.0}
+{"utc": "2026-11-17T07:08:00.895696+00:00", "monotonic_ns": 17394000000, "direction": "TX", "text": "CURRENT", "relative_ms": 17362.0}
+{"utc": "2026-11-17T07:08:00.895696+00:00", "monotonic_ns": 17396000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=886 AGE_MS=0 VALID=1", "relative_ms": 17364.0}
+{"utc": "2026-11-17T07:08:00.898687+00:00", "monotonic_ns": 17396000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 17364.0}
+{"utc": "2026-11-17T07:08:00.916132+00:00", "monotonic_ns": 17398000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 17366.0}
+{"utc": "2026-11-17T07:08:00.919019+00:00", "monotonic_ns": 17898000000, "direction": "TX", "text": "CURRENT", "relative_ms": 17866.0}
+{"utc": "2026-11-17T07:08:00.920015+00:00", "monotonic_ns": 17900000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=886 AGE_MS=0 VALID=1", "relative_ms": 17868.0}
+{"utc": "2026-11-17T07:08:00.933980+00:00", "monotonic_ns": 17900000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 17868.0}
+{"utc": "2026-11-17T07:08:00.933980+00:00", "monotonic_ns": 17902000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 17870.0}
+{"utc": "2026-11-17T07:08:00.937989+00:00", "monotonic_ns": 18102000000, "direction": "RX", "text": "DONE ID=2 STATE=OFF CURRENT_AVG_UA=886 CURRENT_MAX_UA=936 SAMPLES=4999 FAULT=NONE REASON=TIMEOUT MODE=PHOTO LED=49 COLOR=GREEN ELAPSED_MS=5000", "relative_ms": 18070.0}
+{"utc": "2026-11-17T07:08:00.940960+00:00", "monotonic_ns": 18102000000, "direction": "TX", "text": "OFF", "relative_ms": 18070.0}
+{"utc": "2026-11-17T07:08:00.940960+00:00", "monotonic_ns": 18104000000, "direction": "RX", "text": "OK DISARMED", "relative_ms": 18072.0}
+{"utc": "2026-11-17T07:08:00.955919+00:00", "monotonic_ns": 18104000000, "direction": "TX", "text": "OFF", "relative_ms": 18072.0}
+{"utc": "2026-11-17T07:08:00.955919+00:00", "monotonic_ns": 18106000000, "direction": "RX", "text": "OK DISARMED", "relative_ms": 18074.0}
+{"utc": "2026-11-17T07:08:00.959910+00:00", "monotonic_ns": 18106000000, "direction": "TX", "text": "STATUS", "relative_ms": 18074.0}
+{"utc": "2026-11-17T07:08:00.959910+00:00", "monotonic_ns": 18108000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 18076.0}
+{"utc": "2026-11-17T07:08:00.963901+00:00", "monotonic_ns": 18108000000, "direction": "STAGE", "text": "END", "index": 4, "color": "GREEN", "duration_ms": 5000, "start_ns": 13082000000, "start_utc": "2026-11-17T07:08:00.740194+00:00", "status": "COMPLETED", "end_ns": 18108000000, "end_utc": "2026-11-17T07:08:00.963901+00:00", "host_elapsed_ms": 5026.0, "relative_ms": 18076.0}
+{"utc": "2026-11-17T07:08:00.966891+00:00", "monotonic_ns": 18108000000, "direction": "STAGE", "text": "BEGIN", "index": 5, "color": "OFF", "duration_ms": 3000, "start_ns": 18108000000, "start_utc": "2026-11-17T07:08:00.966891+00:00", "status": "RUNNING", "relative_ms": 18076.0}
+{"utc": "2026-11-17T07:08:00.967916+00:00", "monotonic_ns": 18108000000, "direction": "TX", "text": "OFF", "relative_ms": 18076.0}
+{"utc": "2026-11-17T07:08:00.967916+00:00", "monotonic_ns": 18110000000, "direction": "RX", "text": "OK DISARMED", "relative_ms": 18078.0}
+{"utc": "2026-11-17T07:08:00.967916+00:00", "monotonic_ns": 18110000000, "direction": "TX", "text": "STATUS", "relative_ms": 18078.0}
+{"utc": "2026-11-17T07:08:00.967916+00:00", "monotonic_ns": 18112000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 18080.0}
+{"utc": "2026-11-17T07:08:00.967916+00:00", "monotonic_ns": 18112000000, "direction": "TX", "text": "STATUS", "relative_ms": 18080.0}
+{"utc": "2026-11-17T07:08:00.968919+00:00", "monotonic_ns": 18114000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 18082.0}
+{"utc": "2026-11-17T07:08:00.968919+00:00", "monotonic_ns": 18114000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 18082.0}
+{"utc": "2026-11-17T07:08:00.968919+00:00", "monotonic_ns": 18116000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 18084.0}
+{"utc": "2026-11-17T07:08:00.968919+00:00", "monotonic_ns": 18116000000, "direction": "TX", "text": "CURRENT", "relative_ms": 18084.0}
+{"utc": "2026-11-17T07:08:00.969911+00:00", "monotonic_ns": 18118000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 18086.0}
+{"utc": "2026-11-17T07:08:00.969911+00:00", "monotonic_ns": 18618000000, "direction": "TX", "text": "STATUS", "relative_ms": 18586.0}
+{"utc": "2026-11-17T07:08:00.969911+00:00", "monotonic_ns": 18620000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 18588.0}
+{"utc": "2026-11-17T07:08:00.969911+00:00", "monotonic_ns": 18620000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 18588.0}
+{"utc": "2026-11-17T07:08:00.970922+00:00", "monotonic_ns": 18622000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 18590.0}
+{"utc": "2026-11-17T07:08:00.970922+00:00", "monotonic_ns": 18622000000, "direction": "TX", "text": "CURRENT", "relative_ms": 18590.0}
+{"utc": "2026-11-17T07:08:00.970922+00:00", "monotonic_ns": 18624000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 18592.0}
+{"utc": "2026-11-17T07:08:00.971878+00:00", "monotonic_ns": 19124000000, "direction": "TX", "text": "STATUS", "relative_ms": 19092.0}
+{"utc": "2026-11-17T07:08:00.971878+00:00", "monotonic_ns": 19126000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 19094.0}
+{"utc": "2026-11-17T07:08:00.971878+00:00", "monotonic_ns": 19126000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 19094.0}
+{"utc": "2026-11-17T07:08:00.971878+00:00", "monotonic_ns": 19128000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 19096.0}
+{"utc": "2026-11-17T07:08:00.972874+00:00", "monotonic_ns": 19128000000, "direction": "TX", "text": "CURRENT", "relative_ms": 19096.0}
+{"utc": "2026-11-17T07:08:00.972874+00:00", "monotonic_ns": 19130000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 19098.0}
+{"utc": "2026-11-17T07:08:00.972874+00:00", "monotonic_ns": 19630000000, "direction": "TX", "text": "STATUS", "relative_ms": 19598.0}
+{"utc": "2026-11-17T07:08:00.972874+00:00", "monotonic_ns": 19632000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 19600.0}
+{"utc": "2026-11-17T07:08:00.973871+00:00", "monotonic_ns": 19632000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 19600.0}
+{"utc": "2026-11-17T07:08:00.973871+00:00", "monotonic_ns": 19634000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 19602.0}
+{"utc": "2026-11-17T07:08:00.973871+00:00", "monotonic_ns": 19634000000, "direction": "TX", "text": "CURRENT", "relative_ms": 19602.0}
+{"utc": "2026-11-17T07:08:00.973871+00:00", "monotonic_ns": 19636000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 19604.0}
+{"utc": "2026-11-17T07:08:00.974869+00:00", "monotonic_ns": 20136000000, "direction": "TX", "text": "STATUS", "relative_ms": 20104.0}
+{"utc": "2026-11-17T07:08:00.974869+00:00", "monotonic_ns": 20138000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 20106.0}
+{"utc": "2026-11-17T07:08:00.974869+00:00", "monotonic_ns": 20138000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 20106.0}
+{"utc": "2026-11-17T07:08:00.974869+00:00", "monotonic_ns": 20140000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 20108.0}
+{"utc": "2026-11-17T07:08:00.975867+00:00", "monotonic_ns": 20140000000, "direction": "TX", "text": "CURRENT", "relative_ms": 20108.0}
+{"utc": "2026-11-17T07:08:01.010773+00:00", "monotonic_ns": 20142000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 20110.0}
+{"utc": "2026-11-17T07:08:01.010773+00:00", "monotonic_ns": 20642000000, "direction": "TX", "text": "STATUS", "relative_ms": 20610.0}
+{"utc": "2026-11-17T07:08:01.010773+00:00", "monotonic_ns": 20644000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 20612.0}
+{"utc": "2026-11-17T07:08:01.011769+00:00", "monotonic_ns": 20644000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 20612.0}
+{"utc": "2026-11-17T07:08:01.011769+00:00", "monotonic_ns": 20646000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 20614.0}
+{"utc": "2026-11-17T07:08:01.011769+00:00", "monotonic_ns": 20646000000, "direction": "TX", "text": "CURRENT", "relative_ms": 20614.0}
+{"utc": "2026-11-17T07:08:01.011769+00:00", "monotonic_ns": 20648000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 20616.0}
+{"utc": "2026-11-17T07:08:01.012767+00:00", "monotonic_ns": 21112000000, "direction": "STAGE", "text": "END", "index": 5, "color": "OFF", "duration_ms": 3000, "start_ns": 18108000000, "start_utc": "2026-11-17T07:08:00.966891+00:00", "status": "COMPLETED", "off_confirmed_ns": 18112000000, "end_ns": 21112000000, "end_utc": "2026-11-17T07:08:01.012767+00:00", "host_elapsed_ms": 3004.0, "relative_ms": 21080.0}
+{"utc": "2026-11-17T07:08:01.027850+00:00", "monotonic_ns": 21112000000, "direction": "STAGE", "text": "BEGIN", "index": 6, "color": "BLUE", "duration_ms": 5000, "start_ns": 21112000000, "start_utc": "2026-11-17T07:08:01.027850+00:00", "status": "RUNNING", "relative_ms": 21080.0}
+{"utc": "2026-11-17T07:08:01.030877+00:00", "monotonic_ns": 21112000000, "direction": "TX", "text": "PING", "relative_ms": 21080.0}
+{"utc": "2026-11-17T07:08:01.031594+00:00", "monotonic_ns": 21114000000, "direction": "RX", "text": "PONG", "relative_ms": 21082.0}
+{"utc": "2026-11-17T07:08:01.034832+00:00", "monotonic_ns": 21114000000, "direction": "TX", "text": "INFO", "relative_ms": 21082.0}
+{"utc": "2026-11-17T07:08:01.035829+00:00", "monotonic_ns": 21116000000, "direction": "RX", "text": "FW: 0.1.2", "relative_ms": 21084.0}
+{"utc": "2026-11-17T07:08:01.038822+00:00", "monotonic_ns": 21118000000, "direction": "RX", "text": "MCU: STM32F411RET6", "relative_ms": 21086.0}
+{"utc": "2026-11-17T07:08:01.041813+00:00", "monotonic_ns": 21120000000, "direction": "RX", "text": "CAPABILITIES: PHOTO_LED49", "relative_ms": 21088.0}
+{"utc": "2026-11-17T07:08:01.045818+00:00", "monotonic_ns": 21122000000, "direction": "RX", "text": "END INFO", "relative_ms": 21090.0}
+{"utc": "2026-11-17T07:08:01.049808+00:00", "monotonic_ns": 21122000000, "direction": "TX", "text": "STATUS", "relative_ms": 21090.0}
+{"utc": "2026-11-17T07:08:01.050805+00:00", "monotonic_ns": 21124000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 21092.0}
+{"utc": "2026-11-17T07:08:01.054794+00:00", "monotonic_ns": 21124000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 21092.0}
+{"utc": "2026-11-17T07:08:01.054794+00:00", "monotonic_ns": 21126000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 21094.0}
+{"utc": "2026-11-17T07:08:01.057787+00:00", "monotonic_ns": 21126000000, "direction": "TX", "text": "SELFTEST", "relative_ms": 21094.0}
+{"utc": "2026-11-17T07:08:01.058785+00:00", "monotonic_ns": 21128000000, "direction": "RX", "text": "OK SELFTEST=PASS STATE=DISARMED FAULT=NONE", "relative_ms": 21096.0}
+{"utc": "2026-11-17T07:08:01.061979+00:00", "monotonic_ns": 21128000000, "direction": "TX", "text": "ARM 10", "relative_ms": 21096.0}
+{"utc": "2026-11-17T07:08:01.061979+00:00", "monotonic_ns": 21130000000, "direction": "RX", "text": "OK ARM_TIMEOUT_S=10", "relative_ms": 21098.0}
+{"utc": "2026-11-17T07:08:01.064768+00:00", "monotonic_ns": 21130000000, "direction": "TX", "text": "PHOTO LED49 BLUE 5000", "relative_ms": 21098.0}
+{"utc": "2026-11-17T07:08:01.065765+00:00", "monotonic_ns": 21132000000, "direction": "RX", "text": "ACK ID=3 MODE=PHOTO LED=49 COLOR=BLUE SRC=14 SNK=34 DURATION_MS=5000", "relative_ms": 21100.0}
+{"utc": "2026-11-17T07:08:01.070751+00:00", "monotonic_ns": 21392000000, "direction": "TX", "text": "CURRENT", "relative_ms": 21360.0}
+{"utc": "2026-11-17T07:08:01.070751+00:00", "monotonic_ns": 21394000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=797 AGE_MS=0 VALID=1", "relative_ms": 21362.0}
+{"utc": "2026-11-17T07:08:01.079238+00:00", "monotonic_ns": 21394000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 21362.0}
+{"utc": "2026-11-17T07:08:01.079238+00:00", "monotonic_ns": 21396000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 21364.0}
+{"utc": "2026-11-17T07:08:01.083230+00:00", "monotonic_ns": 21896000000, "direction": "TX", "text": "CURRENT", "relative_ms": 21864.0}
+{"utc": "2026-11-17T07:08:01.083230+00:00", "monotonic_ns": 21898000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=797 AGE_MS=0 VALID=1", "relative_ms": 21866.0}
+{"utc": "2026-11-17T07:08:01.091209+00:00", "monotonic_ns": 21898000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 21866.0}
+{"utc": "2026-11-17T07:08:01.091209+00:00", "monotonic_ns": 21900000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 21868.0}
+{"utc": "2026-11-17T07:08:01.094575+00:00", "monotonic_ns": 22400000000, "direction": "TX", "text": "CURRENT", "relative_ms": 22368.0}
+{"utc": "2026-11-17T07:08:01.095572+00:00", "monotonic_ns": 22402000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=797 AGE_MS=0 VALID=1", "relative_ms": 22370.0}
+{"utc": "2026-11-17T07:08:01.109581+00:00", "monotonic_ns": 22402000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 22370.0}
+{"utc": "2026-11-17T07:08:01.109581+00:00", "monotonic_ns": 22404000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 22372.0}
+{"utc": "2026-11-17T07:08:01.114550+00:00", "monotonic_ns": 22904000000, "direction": "TX", "text": "CURRENT", "relative_ms": 22872.0}
+{"utc": "2026-11-17T07:08:01.114550+00:00", "monotonic_ns": 22906000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=797 AGE_MS=0 VALID=1", "relative_ms": 22874.0}
+{"utc": "2026-11-17T07:08:01.117514+00:00", "monotonic_ns": 22906000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 22874.0}
+{"utc": "2026-11-17T07:08:01.117514+00:00", "monotonic_ns": 22908000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 22876.0}
+{"utc": "2026-11-17T07:08:01.121502+00:00", "monotonic_ns": 23408000000, "direction": "TX", "text": "CURRENT", "relative_ms": 23376.0}
+{"utc": "2026-11-17T07:08:01.122069+00:00", "monotonic_ns": 23410000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=797 AGE_MS=0 VALID=1", "relative_ms": 23378.0}
+{"utc": "2026-11-17T07:08:01.125492+00:00", "monotonic_ns": 23410000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 23378.0}
+{"utc": "2026-11-17T07:08:01.125492+00:00", "monotonic_ns": 23412000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 23380.0}
+{"utc": "2026-11-17T07:08:01.145562+00:00", "monotonic_ns": 23912000000, "direction": "TX", "text": "CURRENT", "relative_ms": 23880.0}
+{"utc": "2026-11-17T07:08:01.145562+00:00", "monotonic_ns": 23914000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=797 AGE_MS=0 VALID=1", "relative_ms": 23882.0}
+{"utc": "2026-11-17T07:08:01.160900+00:00", "monotonic_ns": 23914000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 23882.0}
+{"utc": "2026-11-17T07:08:01.160900+00:00", "monotonic_ns": 23916000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 23884.0}
+{"utc": "2026-11-17T07:08:01.163872+00:00", "monotonic_ns": 24416000000, "direction": "TX", "text": "CURRENT", "relative_ms": 24384.0}
+{"utc": "2026-11-17T07:08:01.164897+00:00", "monotonic_ns": 24418000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=797 AGE_MS=0 VALID=1", "relative_ms": 24386.0}
+{"utc": "2026-11-17T07:08:01.173845+00:00", "monotonic_ns": 24418000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 24386.0}
+{"utc": "2026-11-17T07:08:01.173845+00:00", "monotonic_ns": 24420000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 24388.0}
+{"utc": "2026-11-17T07:08:01.177862+00:00", "monotonic_ns": 24920000000, "direction": "TX", "text": "CURRENT", "relative_ms": 24888.0}
+{"utc": "2026-11-17T07:08:01.178860+00:00", "monotonic_ns": 24922000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=797 AGE_MS=0 VALID=1", "relative_ms": 24890.0}
+{"utc": "2026-11-17T07:08:01.181823+00:00", "monotonic_ns": 24922000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 24890.0}
+{"utc": "2026-11-17T07:08:01.181823+00:00", "monotonic_ns": 24924000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 24892.0}
+{"utc": "2026-11-17T07:08:01.185811+00:00", "monotonic_ns": 25424000000, "direction": "TX", "text": "CURRENT", "relative_ms": 25392.0}
+{"utc": "2026-11-17T07:08:01.185811+00:00", "monotonic_ns": 25426000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=797 AGE_MS=0 VALID=1", "relative_ms": 25394.0}
+{"utc": "2026-11-17T07:08:01.188804+00:00", "monotonic_ns": 25426000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 25394.0}
+{"utc": "2026-11-17T07:08:01.206589+00:00", "monotonic_ns": 25428000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 25396.0}
+{"utc": "2026-11-17T07:08:01.209748+00:00", "monotonic_ns": 25928000000, "direction": "TX", "text": "CURRENT", "relative_ms": 25896.0}
+{"utc": "2026-11-17T07:08:01.210775+00:00", "monotonic_ns": 25930000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=797 AGE_MS=0 VALID=1", "relative_ms": 25898.0}
+{"utc": "2026-11-17T07:08:01.213738+00:00", "monotonic_ns": 25930000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 25898.0}
+{"utc": "2026-11-17T07:08:01.213738+00:00", "monotonic_ns": 25932000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 25900.0}
+{"utc": "2026-11-17T07:08:01.217726+00:00", "monotonic_ns": 26132000000, "direction": "RX", "text": "DONE ID=3 STATE=OFF CURRENT_AVG_UA=797 CURRENT_MAX_UA=847 SAMPLES=4999 FAULT=NONE REASON=TIMEOUT MODE=PHOTO LED=49 COLOR=BLUE ELAPSED_MS=5000", "relative_ms": 26100.0}
+{"utc": "2026-11-17T07:08:01.220718+00:00", "monotonic_ns": 26132000000, "direction": "TX", "text": "OFF", "relative_ms": 26100.0}
+{"utc": "2026-11-17T07:08:01.220718+00:00", "monotonic_ns": 26134000000, "direction": "RX", "text": "OK DISARMED", "relative_ms": 26102.0}
+{"utc": "2026-11-17T07:08:01.234247+00:00", "monotonic_ns": 26134000000, "direction": "TX", "text": "OFF", "relative_ms": 26102.0}
+{"utc": "2026-11-17T07:08:01.234682+00:00", "monotonic_ns": 26136000000, "direction": "RX", "text": "OK DISARMED", "relative_ms": 26104.0}
+{"utc": "2026-11-17T07:08:01.237674+00:00", "monotonic_ns": 26136000000, "direction": "TX", "text": "STATUS", "relative_ms": 26104.0}
+{"utc": "2026-11-17T07:08:01.238671+00:00", "monotonic_ns": 26138000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 26106.0}
+{"utc": "2026-11-17T07:08:01.242660+00:00", "monotonic_ns": 26138000000, "direction": "STAGE", "text": "END", "index": 6, "color": "BLUE", "duration_ms": 5000, "start_ns": 21112000000, "start_utc": "2026-11-17T07:08:01.027850+00:00", "status": "COMPLETED", "end_ns": 26138000000, "end_utc": "2026-11-17T07:08:01.242660+00:00", "host_elapsed_ms": 5026.0, "relative_ms": 26106.0}
+{"utc": "2026-11-17T07:08:01.245652+00:00", "monotonic_ns": 26138000000, "direction": "STAGE", "text": "BEGIN", "index": 7, "color": "OFF", "duration_ms": 5000, "start_ns": 26138000000, "start_utc": "2026-11-17T07:08:01.245652+00:00", "status": "RUNNING", "relative_ms": 26106.0}
+{"utc": "2026-11-17T07:08:01.245652+00:00", "monotonic_ns": 26138000000, "direction": "TX", "text": "OFF", "relative_ms": 26106.0}
+{"utc": "2026-11-17T07:08:01.246649+00:00", "monotonic_ns": 26140000000, "direction": "RX", "text": "OK DISARMED", "relative_ms": 26108.0}
+{"utc": "2026-11-17T07:08:01.246649+00:00", "monotonic_ns": 26140000000, "direction": "TX", "text": "STATUS", "relative_ms": 26108.0}
+{"utc": "2026-11-17T07:08:01.247300+00:00", "monotonic_ns": 26142000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 26110.0}
+{"utc": "2026-11-17T07:08:01.247300+00:00", "monotonic_ns": 26142000000, "direction": "TX", "text": "STATUS", "relative_ms": 26110.0}
+{"utc": "2026-11-17T07:08:01.247676+00:00", "monotonic_ns": 26144000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 26112.0}
+{"utc": "2026-11-17T07:08:01.247676+00:00", "monotonic_ns": 26144000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 26112.0}
+{"utc": "2026-11-17T07:08:01.247676+00:00", "monotonic_ns": 26146000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 26114.0}
+{"utc": "2026-11-17T07:08:01.247676+00:00", "monotonic_ns": 26146000000, "direction": "TX", "text": "CURRENT", "relative_ms": 26114.0}
+{"utc": "2026-11-17T07:08:01.248673+00:00", "monotonic_ns": 26148000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 26116.0}
+{"utc": "2026-11-17T07:08:01.248673+00:00", "monotonic_ns": 26648000000, "direction": "TX", "text": "STATUS", "relative_ms": 26616.0}
+{"utc": "2026-11-17T07:08:01.248673+00:00", "monotonic_ns": 26650000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 26618.0}
+{"utc": "2026-11-17T07:08:01.249675+00:00", "monotonic_ns": 26650000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 26618.0}
+{"utc": "2026-11-17T07:08:01.249675+00:00", "monotonic_ns": 26652000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 26620.0}
+{"utc": "2026-11-17T07:08:01.249675+00:00", "monotonic_ns": 26652000000, "direction": "TX", "text": "CURRENT", "relative_ms": 26620.0}
+{"utc": "2026-11-17T07:08:01.249675+00:00", "monotonic_ns": 26654000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 26622.0}
+{"utc": "2026-11-17T07:08:01.250668+00:00", "monotonic_ns": 27154000000, "direction": "TX", "text": "STATUS", "relative_ms": 27122.0}
+{"utc": "2026-11-17T07:08:01.250668+00:00", "monotonic_ns": 27156000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 27124.0}
+{"utc": "2026-11-17T07:08:01.250668+00:00", "monotonic_ns": 27156000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 27124.0}
+{"utc": "2026-11-17T07:08:01.251663+00:00", "monotonic_ns": 27158000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 27126.0}
+{"utc": "2026-11-17T07:08:01.266595+00:00", "monotonic_ns": 27158000000, "direction": "TX", "text": "CURRENT", "relative_ms": 27126.0}
+{"utc": "2026-11-17T07:08:01.266595+00:00", "monotonic_ns": 27160000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 27128.0}
+{"utc": "2026-11-17T07:08:01.266595+00:00", "monotonic_ns": 27660000000, "direction": "TX", "text": "STATUS", "relative_ms": 27628.0}
+{"utc": "2026-11-17T07:08:01.266595+00:00", "monotonic_ns": 27662000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 27630.0}
+{"utc": "2026-11-17T07:08:01.267592+00:00", "monotonic_ns": 27662000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 27630.0}
+{"utc": "2026-11-17T07:08:01.267592+00:00", "monotonic_ns": 27664000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 27632.0}
+{"utc": "2026-11-17T07:08:01.267592+00:00", "monotonic_ns": 27664000000, "direction": "TX", "text": "CURRENT", "relative_ms": 27632.0}
+{"utc": "2026-11-17T07:08:01.267592+00:00", "monotonic_ns": 27666000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 27634.0}
+{"utc": "2026-11-17T07:08:01.268589+00:00", "monotonic_ns": 28166000000, "direction": "TX", "text": "STATUS", "relative_ms": 28134.0}
+{"utc": "2026-11-17T07:08:01.268589+00:00", "monotonic_ns": 28168000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 28136.0}
+{"utc": "2026-11-17T07:08:01.268589+00:00", "monotonic_ns": 28168000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 28136.0}
+{"utc": "2026-11-17T07:08:01.269587+00:00", "monotonic_ns": 28170000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 28138.0}
+{"utc": "2026-11-17T07:08:01.270584+00:00", "monotonic_ns": 28170000000, "direction": "TX", "text": "CURRENT", "relative_ms": 28138.0}
+{"utc": "2026-11-17T07:08:01.270584+00:00", "monotonic_ns": 28172000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 28140.0}
+{"utc": "2026-11-17T07:08:01.271581+00:00", "monotonic_ns": 28672000000, "direction": "TX", "text": "STATUS", "relative_ms": 28640.0}
+{"utc": "2026-11-17T07:08:01.290561+00:00", "monotonic_ns": 28674000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 28642.0}
+{"utc": "2026-11-17T07:08:01.290561+00:00", "monotonic_ns": 28674000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 28642.0}
+{"utc": "2026-11-17T07:08:01.290561+00:00", "monotonic_ns": 28676000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 28644.0}
+{"utc": "2026-11-17T07:08:01.291529+00:00", "monotonic_ns": 28676000000, "direction": "TX", "text": "CURRENT", "relative_ms": 28644.0}
+{"utc": "2026-11-17T07:08:01.291529+00:00", "monotonic_ns": 28678000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 28646.0}
+{"utc": "2026-11-17T07:08:01.291529+00:00", "monotonic_ns": 29178000000, "direction": "TX", "text": "STATUS", "relative_ms": 29146.0}
+{"utc": "2026-11-17T07:08:01.291529+00:00", "monotonic_ns": 29180000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 29148.0}
+{"utc": "2026-11-17T07:08:01.292539+00:00", "monotonic_ns": 29180000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 29148.0}
+{"utc": "2026-11-17T07:08:01.292539+00:00", "monotonic_ns": 29182000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 29150.0}
+{"utc": "2026-11-17T07:08:01.292539+00:00", "monotonic_ns": 29182000000, "direction": "TX", "text": "CURRENT", "relative_ms": 29150.0}
+{"utc": "2026-11-17T07:08:01.292539+00:00", "monotonic_ns": 29184000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 29152.0}
+{"utc": "2026-11-17T07:08:01.293552+00:00", "monotonic_ns": 29684000000, "direction": "TX", "text": "STATUS", "relative_ms": 29652.0}
+{"utc": "2026-11-17T07:08:01.293552+00:00", "monotonic_ns": 29686000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 29654.0}
+{"utc": "2026-11-17T07:08:01.293552+00:00", "monotonic_ns": 29686000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 29654.0}
+{"utc": "2026-11-17T07:08:01.293552+00:00", "monotonic_ns": 29688000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 29656.0}
+{"utc": "2026-11-17T07:08:01.294548+00:00", "monotonic_ns": 29688000000, "direction": "TX", "text": "CURRENT", "relative_ms": 29656.0}
+{"utc": "2026-11-17T07:08:01.294548+00:00", "monotonic_ns": 29690000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 29658.0}
+{"utc": "2026-11-17T07:08:01.294548+00:00", "monotonic_ns": 30190000000, "direction": "TX", "text": "STATUS", "relative_ms": 30158.0}
+{"utc": "2026-11-17T07:08:01.300533+00:00", "monotonic_ns": 30192000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 30160.0}
+{"utc": "2026-11-17T07:08:01.300533+00:00", "monotonic_ns": 30192000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 30160.0}
+{"utc": "2026-11-17T07:08:01.314467+00:00", "monotonic_ns": 30194000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 30162.0}
+{"utc": "2026-11-17T07:08:01.314467+00:00", "monotonic_ns": 30194000000, "direction": "TX", "text": "CURRENT", "relative_ms": 30162.0}
+{"utc": "2026-11-17T07:08:01.314467+00:00", "monotonic_ns": 30196000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 30164.0}
+{"utc": "2026-11-17T07:08:01.314467+00:00", "monotonic_ns": 30696000000, "direction": "TX", "text": "STATUS", "relative_ms": 30664.0}
+{"utc": "2026-11-17T07:08:01.315465+00:00", "monotonic_ns": 30698000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 30666.0}
+{"utc": "2026-11-17T07:08:01.315465+00:00", "monotonic_ns": 30698000000, "direction": "TX", "text": "ADCSTATUS", "relative_ms": 30666.0}
+{"utc": "2026-11-17T07:08:01.315465+00:00", "monotonic_ns": 30700000000, "direction": "RX", "text": "OK ADCSTATUS VALID=1 HAS_SAMPLE=1 AGE_MS=0 ERRORS=0 OVR_COUNT=0", "relative_ms": 30668.0}
+{"utc": "2026-11-17T07:08:01.315465+00:00", "monotonic_ns": 30700000000, "direction": "TX", "text": "CURRENT", "relative_ms": 30668.0}
+{"utc": "2026-11-17T07:08:01.316490+00:00", "monotonic_ns": 30702000000, "direction": "RX", "text": "OK RAW=100 CURRENT_UA=16 AGE_MS=0 VALID=1", "relative_ms": 30670.0}
+{"utc": "2026-11-17T07:08:01.316490+00:00", "monotonic_ns": 31142000000, "direction": "STAGE", "text": "END", "index": 7, "color": "OFF", "duration_ms": 5000, "start_ns": 26138000000, "start_utc": "2026-11-17T07:08:01.245652+00:00", "status": "COMPLETED", "off_confirmed_ns": 26142000000, "end_ns": 31142000000, "end_utc": "2026-11-17T07:08:01.316490+00:00", "host_elapsed_ms": 5004.0, "relative_ms": 31110.0}
+{"utc": "2026-11-17T07:08:01.343389+00:00", "monotonic_ns": 31142000000, "direction": "TX", "text": "OFF", "relative_ms": 31110.0}
+{"utc": "2026-11-17T07:08:01.343389+00:00", "monotonic_ns": 31144000000, "direction": "RX", "text": "OK DISARMED", "relative_ms": 31112.0}
+{"utc": "2026-11-17T07:08:01.344416+00:00", "monotonic_ns": 31144000000, "direction": "TX", "text": "STATUS", "relative_ms": 31112.0}
+{"utc": "2026-11-17T07:08:01.344416+00:00", "monotonic_ns": 31146000000, "direction": "RX", "text": "OK STATE=DISARMED SRC=14 SNK=32 SRC_EN=0 SNK_EN=0 REMAIN_MS=0 FAULT=NONE MODE=NONE", "relative_ms": 31114.0}

@@ -20,5 +20,6 @@ Release/
 data/
 logs/
 results/vision/
+results/video_experiments/
 gs75_rgb_vision_project.json
 *.vision-project.json

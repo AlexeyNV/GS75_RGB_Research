@@ -48,7 +48,7 @@ class PhotoSession:
                 raise PhotoError('Unexpected DONE ID: ' + line)
             self.done = data
             if (data.get('MODE') != 'PHOTO' or data.get('LED') != '49' or data.get('COLOR') != self.color
-                    or data.get('STATE') != 'OFF' or data.get('REASON') != 'TIMEOUT'
+                    or data.get('STATE') != 'OFF' or data.get('REASON') != 'TIMEOUT' or data.get('FAULT') != 'NONE'
                     or integer(data, 'SAMPLES') == 0 or integer(data, 'CURRENT_MAX_UA') > 2000
                     or integer(data, 'CURRENT_AVG_UA') > integer(data, 'CURRENT_MAX_UA')
                     or not self.duration <= integer(data, 'ELAPSED_MS') <= self.duration + 10):
@@ -72,38 +72,42 @@ class PhotoSession:
         self.send(command)
         return self.wait(lambda line: line.startswith(prefix))
 
+    def preflight(self, require_disarmed=False):
+        if self.query('PING', 'PONG') != 'PONG':
+            raise PhotoError('Invalid PING response')
+        self.send('INFO')
+        info = {}
+        deadline = self.clock() + 1
+        while True:
+            if self.clock() >= deadline:
+                raise PhotoError('INFO timeout')
+            line = self.receive()
+            if line == 'END INFO':
+                break
+            if line and ': ' in line:
+                key, value = line.split(': ', 1)
+                if key in info:
+                    raise PhotoError('Duplicate INFO field')
+                info[key] = value
+        if info.get('FW') != '0.1.2' or 'PHOTO_LED49' not in info.get('CAPABILITIES', '').split(','):
+            raise PhotoError('Requires FW 0.1.2 with PHOTO_LED49; never falls back to PAIR')
+        status = fields(self.query('STATUS', 'OK STATE='))
+        if status.get('STATE') not in (('DISARMED',) if require_disarmed else ('DISARMED', 'IDLE')) or status.get('FAULT') != 'NONE' or any(integer(status,k) for k in ('SRC_EN','SNK_EN')):
+            raise PhotoError('Device not safely idle')
+        adc = fields(self.query('ADCSTATUS', 'OK ADCSTATUS '))
+        if (integer(adc,'VALID') != 1 or integer(adc,'HAS_SAMPLE') != 1
+                or integer(adc,'AGE_MS') > 5 or integer(adc,'ERRORS') != 0 or integer(adc,'OVR_COUNT') != 0):
+            raise PhotoError('ADC preflight failed')
+        if fields(self.query('SELFTEST', 'OK SELFTEST=')).get('SELFTEST') != 'PASS':
+            raise PhotoError('SELFTEST failed')
+        return dict(info=info, status=status, adc=adc, selftest='PASS')
+
     def run(self, color, duration_ms):
         self.color, self.duration = color.upper(), duration_ms
         try:
             if self.color not in ('RED', 'GREEN', 'BLUE') or not 100 <= duration_ms <= 10000:
                 raise ValueError('PHOTO supports RED/GREEN/BLUE and 100..10000 ms')
-            if self.query('PING', 'PONG') != 'PONG':
-                raise PhotoError('Invalid PING response')
-            self.send('INFO')
-            info = {}
-            deadline = self.clock() + 1
-            while True:
-                if self.clock() >= deadline:
-                    raise PhotoError('INFO timeout')
-                line = self.receive()
-                if line == 'END INFO':
-                    break
-                if line and ': ' in line:
-                    key, value = line.split(': ', 1)
-                    if key in info:
-                        raise PhotoError('Duplicate INFO field')
-                    info[key] = value
-            if info.get('FW') != '0.1.2' or 'PHOTO_LED49' not in info.get('CAPABILITIES', '').split(','):
-                raise PhotoError('Requires FW 0.1.2 with PHOTO_LED49; never falls back to PAIR')
-            status = fields(self.query('STATUS', 'OK STATE='))
-            if status.get('STATE') not in ('DISARMED', 'IDLE') or status.get('FAULT') != 'NONE' or any(integer(status,k) for k in ('SRC_EN','SNK_EN')):
-                raise PhotoError('Device not safely idle')
-            adc = fields(self.query('ADCSTATUS', 'OK ADCSTATUS '))
-            if (integer(adc,'VALID') != 1 or integer(adc,'HAS_SAMPLE') != 1
-                    or integer(adc,'AGE_MS') > 5 or integer(adc,'ERRORS') != 0 or integer(adc,'OVR_COUNT') != 0):
-                raise PhotoError('ADC preflight failed')
-            if fields(self.query('SELFTEST', 'OK SELFTEST=')).get('SELFTEST') != 'PASS':
-                raise PhotoError('SELFTEST failed')
+            self.preflight()
             seconds = math.ceil(duration_ms/1000) + 5
             if integer(fields(self.query(f'ARM {seconds}', 'OK ARM_TIMEOUT_S=')), 'ARM_TIMEOUT_S') != seconds:
                 raise PhotoError('ARM response mismatch')
@@ -121,7 +125,11 @@ class PhotoSession:
                     raise PhotoError('Missing DONE')
                 if self.clock() >= next_current:
                     self.progress(f"Remaining approximately {max(0, duration_ms/1000-(self.clock()-started)):.1f} s")
-                    self.send('CURRENT'); next_current = self.clock() + .5
+                    self.query('CURRENT', 'OK RAW='); next_current = self.clock() + .5
+                    adc = fields(self.query('ADCSTATUS', 'OK ADCSTATUS '))
+                    if (integer(adc, 'VALID') != 1 or integer(adc, 'HAS_SAMPLE') != 1
+                            or integer(adc, 'AGE_MS') > 5 or integer(adc, 'ERRORS') != 0 or integer(adc, 'OVR_COUNT') != 0):
+                        raise PhotoError('ADC monitoring failed')
                 self.receive()
             return self.done
         finally:

@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "application": "GS75 RGB Vision",
+  "app_version": "0.4.1",
+  "session_id": "2026-11-17_070800_LED49_RGB_066b1860f48d",
+  "utc_started": "2026-11-17T07:08:00.314444+00:00",
+  "monotonic_origin_ns": 32000000,
+  "port": "SIMULATED — NO HARDWARE",
+  "scenario": "LED49_RGB_VIDEO_TEST",
+  "planned": [
+    {
+      "index": 1,
+      "color": "OFF",
+      "duration_ms": 5000,
+      "planned_start_ms": 0,
+      "planned_end_ms": 5000
+    },
+    {
+      "index": 2,
+      "color": "RED",
+      "duration_ms": 5000,
+      "planned_start_ms": 5000,
+      "planned_end_ms": 10000
+    },
+    {
+      "index": 3,
+      "color": "OFF",
+      "duration_ms": 3000,
+      "planned_start_ms": 10000,
+      "planned_end_ms": 13000
+    },
+    {
+      "index": 4,
+      "color": "GREEN",
+      "duration_ms": 5000,
+      "planned_start_ms": 13000,
+      "planned_end_ms": 18000
+    },
+    {
+      "index": 5,
+      "color": "OFF",
+      "duration_ms": 3000,
+      "planned_start_ms": 18000,
+      "planned_end_ms": 21000
+    },
+    {
+      "index": 6,
+      "color": "BLUE",
+      "duration_ms": 5000,
+      "planned_start_ms": 21000,
+      "planned_end_ms": 26000
+    },
+    {
+      "index": 7,
+      "color": "OFF",
+      "duration_ms": 5000,
+      "planned_start_ms": 26000,
+      "planned_end_ms": 31000
+    }
+  ],
+  "actual": [
+    {
+      "index": 1,
+      "color": "OFF",
+      "duration_ms": 5000,
+      "start_ns": 48000000,
+      "start_utc": "2026-11-17T07:08:00.334650+00:00",
+      "status": "COMPLETED",
+      "off_confirmed_ns": 52000000,
+      "end_ns": 5052000000,
+      "end_utc": "2026-11-17T07:08:00.404023+00:00",
+      "host_elapsed_ms": 5004.0
+    },
+    {
+      "index": 2,
+      "color": "RED",
+      "duration_ms": 5000,
+      "start_ns": 5052000000,
+      "start_utc": "2026-11-17T07:08:00.422942+00:00",
+      "status": "COMPLETED",
+      "end_ns": 10078000000,
+      "end_utc": "2026-11-17T07:08:00.676366+00:00",
+      "host_elapsed_ms": 5026.0
+    },
+    {
+      "index": 3,
+      "color": "OFF",
+      "duration_ms": 3000,
+      "start_ns": 10078000000,
+      "start_utc": "2026-11-17T07:08:00.679387+00:00",
+      "status": "COMPLETED",
+      "off_confirmed_ns": 10082000000,
+      "end_ns": 13082000000,
+      "end_utc": "2026-11-17T07:08:00.718253+00:00",
+      "host_elapsed_ms": 3004.0
+    },
+    {
+      "index": 4,
+      "color": "GREEN",
+      "duration_ms": 5000,
+      "start_ns": 13082000000,
+      "start_utc": "2026-11-17T07:08:00.740194+00:00",
+      "status": "COMPLETED",
+      "end_ns": 18108000000,
+      "end_utc": "2026-11-17T07:08:00.963901+00:00",
+      "host_elapsed_ms": 5026.0
+    },
+    {
+      "index": 5,
+      "color": "OFF",
+      "duration_ms": 3000,
+      "start_ns": 18108000000,
+      "start_utc": "2026-11-17T07:08:00.966891+00:00",
+      "status": "COMPLETED",
+      "off_confirmed_ns": 18112000000,
+      "end_ns": 21112000000,
+      "end_utc": "2026-11-17T07:08:01.012767+00:00",
+      "host_elapsed_ms": 3004.0
+    },
+    {
+      "index": 6,
+      "color": "BLUE",
+      "duration_ms": 5000,
+      "start_ns": 21112000000,
+      "start_utc": "2026-11-17T07:08:01.027850+00:00",
+      "status": "COMPLETED",
+      "end_ns": 26138000000,
+      "end_utc": "2026-11-17T07:08:01.242660+00:00",
+      "host_elapsed_ms": 5026.0
+    },
+    {
+      "index": 7,
+      "color": "OFF",
+      "duration_ms": 5000,
+      "start_ns": 26138000000,
+      "start_utc": "2026-11-17T07:08:01.245652+00:00",
+      "status": "COMPLETED",
+      "off_confirmed_ns": 26142000000,
+      "end_ns": 31142000000,
+      "end_utc": "2026-11-17T07:08:01.316490+00:00",
+      "host_elapsed_ms": 5004.0
+    }
+  ],
+  "measurements": [
+    {
+      "color": "RED",
+      "source": 14,
+      "sink": 32,
+      "duration_ms": 5000,
+      "command": "PHOTO LED49 RED 5000",
+      "status": "COMPLETED",
+      "ack": "ACK ID=1 MODE=PHOTO LED=49 COLOR=RED SRC=14 SNK=32 DURATION_MS=5000",
+      "ack_ns": 5072000000,
+      "id": 1,
+      "done": "DONE ID=1 STATE=OFF CURRENT_AVG_UA=1035 CURRENT_MAX_UA=1085 SAMPLES=4999 FAULT=NONE REASON=TIMEOUT MODE=PHOTO LED=49 COLOR=RED ELAPSED_MS=5000",
+      "done_ns": 10072000000,
+      "current_avg_ua": 1035,
+      "current_max_ua": 1085,
+      "samples": 4999,
+      "elapsed_ms": 5000,
+      "reason": "TIMEOUT",
+      "fault": "NONE",
+      "warning": ""
+    },
+    {
+      "color": "GREEN",
+      "source": 14,
+      "sink": 33,
+      "duration_ms": 5000,
+      "command": "PHOTO LED49 GREEN 5000",
+      "status": "COMPLETED",
+      "ack": "ACK ID=2 MODE=PHOTO LED=49 COLOR=GREEN SRC=14 SNK=33 DURATION_MS=5000",
+      "ack_ns": 13102000000,
+      "id": 2,
+      "done": "DONE ID=2 STATE=OFF CURRENT_AVG_UA=886 CURRENT_MAX_UA=936 SAMPLES=4999 FAULT=NONE REASON=TIMEOUT MODE=PHOTO LED=49 COLOR=GREEN ELAPSED_MS=5000",
+      "done_ns": 18102000000,
+      "current_avg_ua": 886,
+      "current_max_ua": 936,
+      "samples": 4999,
+      "elapsed_ms": 5000,
+      "reason": "TIMEOUT",
+      "fault": "NONE",
+      "warning": ""
+    },
+    {
+      "color": "BLUE",
+      "source": 14,
+      "sink": 34,
+      "duration_ms": 5000,
+      "command": "PHOTO LED49 BLUE 5000",
+      "status": "COMPLETED",
+      "ack": "ACK ID=3 MODE=PHOTO LED=49 COLOR=BLUE SRC=14 SNK=34 DURATION_MS=5000",
+      "ack_ns": 21132000000,
+      "id": 3,
+      "done": "DONE ID=3 STATE=OFF CURRENT_AVG_UA=797 CURRENT_MAX_UA=847 SAMPLES=4999 FAULT=NONE REASON=TIMEOUT MODE=PHOTO LED=49 COLOR=BLUE ELAPSED_MS=5000",
+      "done_ns": 26132000000,
+      "current_avg_ua": 797,
+      "current_max_ua": 847,
+      "samples": 4999,
+      "elapsed_ms": 5000,
+      "reason": "TIMEOUT",
+      "fault": "NONE",
+      "warning": ""
+    }
+  ],
+  "conditions": {
+    "u13_open": true,
+    "r1_2700_ohm": true,
+    "original_rgb_board": true,
+    "power_accessible": true,
+    "operator_present": true
+  },
+  "safety_check": "OPERATOR_CONFIRMED_PHYSICAL_CONDITIONS",
+  "status": "COMPLETED",
+  "off_confirmed": true,
+  "diagnostics": {
+    "info": {
+      "FW": "0.1.2",
+      "MCU": "STM32F411RET6",
+      "CAPABILITIES": "PHOTO_LED49"
+    },
+    "status": {
+      "STATE": "DISARMED",
+      "SRC": "14",
+      "SNK": "32",
+      "SRC_EN": "0",
+      "SNK_EN": "0",
+      "REMAIN_MS": "0",
+      "FAULT": "NONE",
+      "MODE": "NONE"
+    },
+    "adc": {
+      "VALID": "1",
+      "HAS_SAMPLE": "1",
+      "AGE_MS": "0",
+      "ERRORS": "0",
+      "OVR_COUNT": "0"
+    },
+    "selftest": "PASS"
+  },
+  "video": null,
+  "synchronization": {
+    "status": "UNALIGNED",
+    "offset_ms": null,
+    "uncertainty_ms": null,
+    "optical_transitions": [],
+    "anchors": [
+      "RED",
+      "GREEN",
+      "BLUE"
+    ],
+    "warning": "USB TX/ACK/DONE are host observations, not optical edges. PC/phone UTC alone cannot align video."
+  },
+  "limitations": [
+    "IWDG_DISABLED; MCU hang may require physical power removal",
+    "OFF/STATUS confirms reported EN, not measured physical EN",
+    "New GUI has not yet been accepted on real hardware"
+  ],
+  "reason": "All seven stages completed",
+  "utc_finished": "2026-11-17T07:08:01.344416+00:00",
+  "finished_ns": 31146000000
+}

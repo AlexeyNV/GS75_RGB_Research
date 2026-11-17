@@ -1,4 +1,4 @@
-"""Desktop entry point; no serial port, camera or hardware commands."""
+"""Desktop entry point. Hardware starts only through explicit experiment controls."""
 import logging
 from logging.handlers import RotatingFileHandler
 from pathlib import Path

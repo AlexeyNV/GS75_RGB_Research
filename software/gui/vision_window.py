@@ -1,4 +1,4 @@
-"""Unified research application. Hardware control is intentionally a separate future service."""
+"""Unified research application with explicit operator-controlled LED49 experiments."""
 from copy import deepcopy
 import json
 import logging
@@ -16,6 +16,7 @@ from .image_viewer import ImageViewer
 from .jobs import Job
 from .result_pane import ResultPane
 from .performance_pane import PerformancePane
+from .experiment_pane import ExperimentPane
 from . import ensure_fonts
 from software.vision import calibration
 from software.vision.project_storage import ROOT,read_image,image_hash,write_image
@@ -60,7 +61,7 @@ class EmbeddedCalibrator(Calibrator):
 
 class VisionWindow(QMainWindow):
     def __init__(self,remember=True):
-        ensure_fonts();super().__init__();self.setWindowTitle('GS75 RGB Vision v0.4-perf');self.resize(1500,980)
+        ensure_fonts();super().__init__();self.setWindowTitle('GS75 RGB Vision v0.4.1');self.resize(1500,980)
         self.project=None;self.active_job=None;self.job_callback=None;self.pool=QThreadPool(self);self.pool.setMaxThreadCount(1)
         self.remember=remember;self.preferences=QSettings('GS75_RGB_Research','RGBVision')
         self.decoder=VideoReader();self.video_path=None;self.video_image=None;self.frame_info=None
@@ -124,6 +125,8 @@ class VisionWindow(QMainWindow):
         for widget,title in [(self.project_page,'Проект'),(self.calibrator,'Калибровка'),(self.photos_page,'Фотографии'),
             (self.video_page,'Видео'),(self.results_page,'Результаты'),(self.settings_page,'Настройки'),(self.log_view,'Журнал')]:self.tabs.addTab(widget,title)
         self.tabs.addTab(self.performance,'Производительность видео')
+        self.experiment=ExperimentPane(self);self.tabs.addTab(self.experiment,'Видеоэксперимент')
+        self.experiment_close_pending=False;self.experiment_close_warned=False
         bar=self.addToolBar('Проект')
         for name,callback in [('Создать',self.new_dialog),('Открыть',self.open_dialog),('Сохранить',self.save_project)]:
             action=QAction(name,self);action.triggered.connect(callback);bar.addAction(action)
@@ -145,6 +148,8 @@ class VisionWindow(QMainWindow):
         return True
 
     def start_job(self,function,callback):
+        if self.experiment.running or self.experiment.preparing:
+            self.error('Дождитесь финального OFF перед обработкой фото/видео.');return False
         if self.active_job:return False
         job=Job(function);self.active_job=job;self.progress.setRange(0,0)
         self.cancel_button.setEnabled(True);self.calibrator.setEnabled(False)
@@ -519,13 +524,14 @@ class VisionWindow(QMainWindow):
         if path:self.open_video(path)
 
     def open_video(self,path):
-        if not self.guard():return
+        if self.active_job:return
         self.playing=False;self.play_timer.stop()
         self.video_meta=self.frame_info=self.video_image=None
         def work(cancel,progress):
             meta=self.decoder.open(path);checkpoint(cancel);image,info=self.decoder.frame(0);return meta,image,info
         def done(value):
-            self.video_meta,image,info=value;self.video_path=Path(path);self.project.add_media(path);self.save_project();self.refresh_media()
+            self.video_meta,image,info=value;self.video_path=Path(path)
+            if self.project:self.project.add_media(path);self.save_project();self.refresh_media()
             self.video_slider.setRange(0,max(0,self.video_meta['frame_count']-1));self.display_frame((image,info));self.tabs.setCurrentWidget(self.video_page)
         self.start_job(work,done)
 
@@ -571,9 +577,20 @@ class VisionWindow(QMainWindow):
         image=self.video_image.copy();self.start_job(lambda cancel,progress:write_image(path,image),lambda _:self.log('Кадр сохранён: '+path))
 
     def closeEvent(self,event):
+        worker=self.experiment.worker
+        if worker.isRunning():
+            if not self.experiment_close_pending:
+                self.experiment_close_pending=True;self.experiment.ready=False
+                self.experiment.outcome.setText('Закрытие: сценарий прерывается, отправляется OFF.')
+                worker.shutdown()
+            event.ignore();QTimer.singleShot(50,self.close);return
+        if worker.ever_connected and not worker.last_off_confirmed and not self.experiment_close_warned:
+            self.experiment_close_warned=True
+            QMessageBox.warning(self,'OFF не подтверждён','Физическое состояние выходов неизвестно. Снимите питание STM32. IWDG выключен.')
         if self.active_job:
+            self.experiment_close_pending=False
             self.cancel_job();QMessageBox.information(self,'Завершение операции','Отмена запрошена. Дождитесь завершения текущего этапа и закройте окно снова.');event.ignore();return
-        if not self.calibrator.confirm_discard():event.ignore();return
+        if not self.calibrator.confirm_discard():self.experiment_close_pending=False;event.ignore();return
         self.play_timer.stop();self.decoder.close()
         if self.project:self.save_project()
         self.pool.waitForDone();event.accept()

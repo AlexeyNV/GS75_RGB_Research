@@ -1,5 +1,13 @@
 # RGB Vision v0.3 — устройство приложения
 
+Дополнение v0.4.1: девятая вкладка experiment_pane.py и один выделенный
+ExperimentWorker QThread для CDC; сценарий/журнал/импорт видео разделены
+в software/hardware/. Общий PHOTO-контроллер взят из CLI. Порт открывается
+только по запросу, запуск — после отдельной проверки/подтверждения; OFF
+использует Event и не ждёт DONE. Тяжёлый анализ во время эксперимента
+не стартует. [Руководство и архитектура](video_experiment.md).
+Утверждения ниже об отсутствии serial описывают историческую v0.3.
+
 Дополнение v0.4-perf: восьмая вкладка performance_pane.py; профилировщик
 frame_profile.py, последовательный PyAV reader pts_video.py, медианный
 off_background.py, cached/hybrid video_engine.py и video_benchmark.py.
