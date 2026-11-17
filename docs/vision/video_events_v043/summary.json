@@ -1,0 +1,1282 @@
+{
+  "schema_version": 1,
+  "algorithm_version": "0.4.3",
+  "source": "data/VID_20261117_101549.mp4",
+  "source_sha256": "c4299a0a6d59bedf046726f042fc7c5cf518e8239db50791538e3776a231ef9e",
+  "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+  "video": {
+    "path": "data\\VID_20261117_101549.mp4",
+    "width": 1080,
+    "height": 1920,
+    "coded_width": 1920,
+    "coded_height": 1080,
+    "rotation_degrees": -90,
+    "stream_start_pts": 6669,
+    "stream_time_base": "1/90000",
+    "container_duration_s": 30.892333,
+    "stream_start_s": 0.0741,
+    "fps": 29.91735412045034,
+    "frame_count": 922,
+    "duration_s": 30.818233333333332,
+    "backend": "PyAV",
+    "av": "19.0.2",
+    "codec": "h264",
+    "timestamps": "frame.pts * frame.time_base; FPS fallback explicitly estimated"
+  },
+  "analyses": {
+    "known": {
+      "mode": "KNOWN_LEDS",
+      "frames": 922,
+      "confirmed_events": [
+        {
+          "event_id": "EV00001",
+          "entity": "LED49",
+          "led_id": "LED49",
+          "key_name": null,
+          "color": "RED",
+          "start_pts": 3.382711111111111,
+          "end_pts": 8.363244444444444,
+          "duration_s": 4.980533333333333,
+          "start_frame": 99,
+          "end_frame": 248,
+          "status": "CONFIRMED",
+          "confidence": 0.8127483381837369,
+          "confidence_kind": "heuristic_not_probability",
+          "coverage": 0.9417245848895746,
+          "x_ref_px": 577.9525564256103,
+          "y_ref_px": 1377.1680944663117,
+          "observations": 133,
+          "good_observations": 133,
+          "signal_start_interval_s": [
+            3.3494555555555556,
+            3.382711111111111
+          ],
+          "signal_end_interval_s": [
+            8.363244444444444,
+            8.3965
+          ],
+          "physical_start_interval_s": [
+            null,
+            3.382711111111111
+          ],
+          "physical_end_interval_s": [
+            8.363244444444444,
+            null
+          ],
+          "duration_confirmed": false,
+          "duration_interval_s": [
+            null,
+            null
+          ],
+          "duration_semantics": "span_of_positive_observations; continuity through unknown is a hypothesis",
+          "uncertainty_flags": [
+            "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+            "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+            "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+            "UNCERTAIN_COLOR_SIGNAL_LOSS"
+          ],
+          "unknown_gaps": [
+            {
+              "start_s": 3.416577777777778,
+              "end_s": 3.4504444444444444,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 3.4837,
+              "end_s": 3.5169555555555556,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 4.017944444444445,
+              "end_s": 4.051222222222222,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 4.118911111111111,
+              "end_s": 4.1521888888888885,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 4.3188,
+              "end_s": 4.352188888888889,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 4.887355555555556,
+              "end_s": 4.920688888888889,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 5.388355555555555,
+              "end_s": 5.422066666666667,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 5.489188888888889,
+              "end_s": 5.5226,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 5.956755555555556,
+              "end_s": 5.99,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 6.124266666666666,
+              "end_s": 6.157666666666667,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 6.725311111111111,
+              "end_s": 6.759044444444444,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 6.792777777777777,
+              "end_s": 6.8261666666666665,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 7.3604111111111115,
+              "end_s": 7.3938,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 7.6614,
+              "end_s": 7.6946666666666665,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 7.828911111111111,
+              "end_s": 7.862177777777778,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 7.962244444444444,
+              "end_s": 7.995511111111111,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 8.2964,
+              "end_s": 8.329822222222223,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            }
+          ],
+          "end_reason": "UNCERTAIN_COLOR_SIGNAL_LOSS",
+          "decision_source": "ALGORITHM"
+        },
+        {
+          "event_id": "EV00002",
+          "entity": "LED49",
+          "led_id": "LED49",
+          "key_name": null,
+          "color": "GREEN",
+          "start_pts": 11.772755555555555,
+          "end_pts": 16.752766666666666,
+          "duration_s": 4.980011111111111,
+          "start_frame": 350,
+          "end_frame": 499,
+          "status": "CONFIRMED",
+          "confidence": 0.6706252818750141,
+          "confidence_kind": "heuristic_not_probability",
+          "coverage": 0.9422981359552758,
+          "x_ref_px": 578.2446324666266,
+          "y_ref_px": 1378.1895810676751,
+          "observations": 142,
+          "good_observations": 142,
+          "signal_start_interval_s": [
+            11.739044444444444,
+            11.772755555555555
+          ],
+          "signal_end_interval_s": [
+            16.752766666666666,
+            16.786477777777776
+          ],
+          "physical_start_interval_s": [
+            null,
+            11.772755555555555
+          ],
+          "physical_end_interval_s": [
+            16.752766666666666,
+            null
+          ],
+          "duration_confirmed": false,
+          "duration_interval_s": [
+            null,
+            null
+          ],
+          "duration_semantics": "span_of_positive_observations; continuity through unknown is a hypothesis",
+          "uncertainty_flags": [
+            "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+            "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+            "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+            "UNCERTAIN_COLOR_SIGNAL_LOSS"
+          ],
+          "unknown_gaps": [
+            {
+              "start_s": 12.2408,
+              "end_s": 12.2742,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 12.64171111111111,
+              "end_s": 12.67511111111111,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 12.7755,
+              "end_s": 12.809355555555555,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 12.909277777777778,
+              "end_s": 12.942666666666666,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 13.176866666666667,
+              "end_s": 13.2102,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 13.71111111111111,
+              "end_s": 13.744444444444444,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 14.112488888888889,
+              "end_s": 14.146355555555555,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 16.017522222222222,
+              "end_s": 16.050855555555554,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            }
+          ],
+          "end_reason": "UNCERTAIN_COLOR_SIGNAL_LOSS",
+          "decision_source": "ALGORITHM"
+        },
+        {
+          "event_id": "EV00003",
+          "entity": "LED49",
+          "led_id": "LED49",
+          "key_name": null,
+          "color": "BLUE",
+          "start_pts": 20.128977777777777,
+          "end_pts": 25.108933333333333,
+          "duration_s": 4.979955555555556,
+          "start_frame": 600,
+          "end_frame": 749,
+          "status": "CONFIRMED",
+          "confidence": 0.5644011092974629,
+          "confidence_kind": "heuristic_not_probability",
+          "coverage": 0.9422899010002858,
+          "x_ref_px": 577.7968901846452,
+          "y_ref_px": 1377.0923636363636,
+          "observations": 131,
+          "good_observations": 131,
+          "signal_start_interval_s": [
+            20.095111111111112,
+            20.128977777777777
+          ],
+          "signal_end_interval_s": [
+            25.108933333333333,
+            25.142666666666667
+          ],
+          "physical_start_interval_s": [
+            null,
+            20.128977777777777
+          ],
+          "physical_end_interval_s": [
+            25.108933333333333,
+            null
+          ],
+          "duration_confirmed": false,
+          "duration_interval_s": [
+            null,
+            null
+          ],
+          "duration_semantics": "span_of_positive_observations; continuity through unknown is a hypothesis",
+          "uncertainty_flags": [
+            "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+            "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+            "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+            "UNCERTAIN_COLOR_SIGNAL_LOSS"
+          ],
+          "unknown_gaps": [
+            {
+              "start_s": 20.29617777777778,
+              "end_s": 20.329433333333334,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 21.1317,
+              "end_s": 21.165422222222222,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 21.365555555555556,
+              "end_s": 21.398822222222222,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 21.566333333333333,
+              "end_s": 21.633155555555554,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 22.33491111111111,
+              "end_s": 22.368155555555557,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 22.903333333333332,
+              "end_s": 22.936744444444443,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 23.10348888888889,
+              "end_s": 23.1372,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 23.17091111111111,
+              "end_s": 23.20432222222222,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 23.404322222222223,
+              "end_s": 23.43757777777778,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 23.505311111111112,
+              "end_s": 23.538566666666668,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 23.8394,
+              "end_s": 23.9062,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.006133333333334,
+              "end_s": 24.039533333333335,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.17377777777778,
+              "end_s": 24.207044444444445,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.273711111111112,
+              "end_s": 24.307111111111112,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.373644444444444,
+              "end_s": 24.407044444444445,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.5413,
+              "end_s": 24.57468888888889,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.77457777777778,
+              "end_s": 24.808422222222223,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            }
+          ],
+          "end_reason": "UNCERTAIN_COLOR_SIGNAL_LOSS",
+          "decision_source": "ALGORITHM"
+        }
+      ],
+      "event_status_counts": {
+        "CONFIRMED": 3
+      },
+      "state_counts": {
+        "OFF": 19,
+        "UNCERTAIN": 408,
+        "INVALID_GEOMETRY": 89,
+        "ON": 406
+      },
+      "frame_state_counts": {
+        "OFF": 19,
+        "UNCERTAIN": 408,
+        "INVALID_GEOMETRY": 89,
+        "ON": 406
+      },
+      "uncertainty_intervals": 130,
+      "uncertainty_types": {
+        "UNCERTAIN": 52,
+        "INVALID_GEOMETRY": 78
+      },
+      "unknown_tracks": [],
+      "off": {
+        "known_leds": {
+          "LED49": 0.9423962067828853
+        },
+        "analysis_valid_fraction": 0.3416719858156028,
+        "pcb_fraction": 0.7320875467095129,
+        "pcb_method": "dark_silhouette_estimate",
+        "discover_unavailable_fraction": 0.289856941752224
+      },
+      "off_observations": 5,
+      "original_full_pass": {
+        "wall_fps": 21.167502557261596,
+        "processing_wall_s": 43.557335,
+        "rss_bytes": 302690304,
+        "frame_total_ms": {
+          "count": 922,
+          "mean_ms": 47.029442407809114,
+          "p50_ms": 40.2882,
+          "p95_ms": 73.75989,
+          "p99_ms": 78.63391399999999,
+          "max_ms": 81.9058,
+          "fps": 21.263275701392384
+        },
+        "temporal_ms": 47.1626
+      },
+      "final_reaggregation": {
+        "section_ms": 25.1946,
+        "wall_s": 0.0917058,
+        "opencv_rerun": false
+      },
+      "acceptance_errors_ms": [
+        {
+          "color": "RED",
+          "start_error_ms": 32.71111111111091,
+          "end_error_ms": -36.75555555555654,
+          "note": "Approximate independent acceptance intervals, not physical ground truth"
+        },
+        {
+          "color": "GREEN",
+          "start_error_ms": 32.755555555555205,
+          "end_error_ms": -37.23333333333301,
+          "note": "Approximate independent acceptance intervals, not physical ground truth"
+        },
+        {
+          "color": "BLUE",
+          "start_error_ms": 28.97777777777577,
+          "end_error_ms": -31.066666666667686,
+          "note": "Approximate independent acceptance intervals, not physical ground truth"
+        }
+      ],
+      "alignment": {
+        "schema_version": 1,
+        "source_session": "D:\\VScode\\Nozdrin_GitHub\\GS75_RGB_Research\\results\\video_experiments\\2026-11-17_071548_LED49_RGB_0b45fb1482c5\\session.json",
+        "session_id": "2026-11-17_071548_LED49_RGB_0b45fb1482c5",
+        "status": "ESTIMATED_NOT_HARDWARE_SYNC",
+        "offset_s": 2.0862888888888893,
+        "uncertainty_s": 0.04704444444444533,
+        "candidates": [
+          {
+            "entity": "LED49",
+            "pairs": [
+              {
+                "event_id": "EV00001",
+                "command_id": 3,
+                "color": "RED",
+                "offset_interval_s": [
+                  2.0702888888888893,
+                  2.1195444444444447
+                ],
+                "offset_from_ack_s": 2.0862888888888893,
+                "optical_boundary_flags": [
+                  "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+                  "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+                  "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+                  "UNCERTAIN_COLOR_SIGNAL_LOSS"
+                ]
+              },
+              {
+                "event_id": "EV00002",
+                "command_id": 4,
+                "color": "GREEN",
+                "offset_interval_s": [
+                  2.039244444444444,
+                  2.1049555555555557
+                ],
+                "offset_from_ack_s": 2.071244444444444,
+                "optical_boundary_flags": [
+                  "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+                  "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+                  "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+                  "UNCERTAIN_COLOR_SIGNAL_LOSS"
+                ]
+              },
+              {
+                "event_id": "EV00003",
+                "command_id": 5,
+                "color": "BLUE",
+                "offset_interval_s": [
+                  2.058022222222224,
+                  2.1238888888888887
+                ],
+                "offset_from_ack_s": 2.090022222222224,
+                "optical_boundary_flags": [
+                  "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+                  "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+                  "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+                  "UNCERTAIN_COLOR_SIGNAL_LOSS"
+                ]
+              }
+            ]
+          }
+        ],
+        "relation": "host_monotonic_relative_s = video_PTS_s + offset_s",
+        "warning": "Empirical optical/USB association, not hardware synchronization. UTC was not used. Physical onset may be censored; exposure/rolling shutter are additional unknowns.",
+        "uncertainty_kind": "observed_USB/video_bracket_envelope; does_not_bound_all_physical_latency",
+        "residual_offsets_s": [
+          0.0,
+          -0.015044444444445304,
+          0.0037333333333346985
+        ]
+      }
+    },
+    "discover": {
+      "mode": "DISCOVER",
+      "frames": 922,
+      "confirmed_events": [
+        {
+          "event_id": "EV00001",
+          "entity": "TRACK0001",
+          "led_id": null,
+          "key_name": null,
+          "color": "RED",
+          "start_pts": 3.382711111111111,
+          "end_pts": 8.363244444444444,
+          "duration_s": 4.980533333333333,
+          "start_frame": 99,
+          "end_frame": 248,
+          "status": "CONFIRMED",
+          "confidence": 0.8310616213613037,
+          "confidence_kind": "heuristic_not_probability",
+          "coverage": 0.9860888296695843,
+          "x_ref_px": 581.5959106965486,
+          "y_ref_px": 1373.9000175092938,
+          "observations": 130,
+          "good_observations": 130,
+          "signal_start_interval_s": [
+            null,
+            3.382711111111111
+          ],
+          "signal_end_interval_s": [
+            8.363244444444444,
+            8.3965
+          ],
+          "physical_start_interval_s": [
+            null,
+            3.382711111111111
+          ],
+          "physical_end_interval_s": [
+            8.363244444444444,
+            null
+          ],
+          "duration_confirmed": false,
+          "duration_interval_s": [
+            null,
+            null
+          ],
+          "duration_semantics": "span_of_positive_observations; continuity through unknown is a hypothesis",
+          "uncertainty_flags": [
+            "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+            "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+            "LONG_OBSERVABILITY_LOSS",
+            "START_NOT_BOUNDED_BY_CONFIRMED_OFF"
+          ],
+          "unknown_gaps": [
+            {
+              "start_s": 3.416577777777778,
+              "end_s": 3.4504444444444444,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 3.717088888888889,
+              "end_s": 3.7508222222222223,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 4.118911111111111,
+              "end_s": 4.1521888888888885,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 4.4530666666666665,
+              "end_s": 4.4864444444444445,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 4.920688888888889,
+              "end_s": 4.987355555555555,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 5.388355555555555,
+              "end_s": 5.422066666666667,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 5.956755555555556,
+              "end_s": 5.99,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 6.124266666666666,
+              "end_s": 6.157666666666667,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 6.725311111111111,
+              "end_s": 6.759044444444444,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 6.792777777777777,
+              "end_s": 6.859555555555556,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 7.293744444444444,
+              "end_s": 7.327022222222222,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 7.3604111111111115,
+              "end_s": 7.3938,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 7.494666666666666,
+              "end_s": 7.528066666666667,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 7.6614,
+              "end_s": 7.6946666666666665,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 7.795644444444444,
+              "end_s": 7.862177777777778,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 7.962244444444444,
+              "end_s": 7.995511111111111,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 8.2964,
+              "end_s": 8.329822222222223,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            }
+          ],
+          "end_reason": "LONG_OBSERVABILITY_LOSS",
+          "decision_source": "ALGORITHM"
+        },
+        {
+          "event_id": "EV00021",
+          "entity": "TRACK0001",
+          "led_id": null,
+          "key_name": null,
+          "color": "GREEN",
+          "start_pts": 11.772755555555555,
+          "end_pts": 16.752766666666666,
+          "duration_s": 4.980011111111111,
+          "start_frame": 350,
+          "end_frame": 499,
+          "status": "CONFIRMED",
+          "confidence": 0.7287160380828136,
+          "confidence_kind": "heuristic_not_probability",
+          "coverage": 0.9993030198053862,
+          "x_ref_px": 564.3992518703242,
+          "y_ref_px": 1360.7598724552367,
+          "observations": 143,
+          "good_observations": 143,
+          "signal_start_interval_s": [
+            11.739044444444444,
+            11.772755555555555
+          ],
+          "signal_end_interval_s": [
+            16.752766666666666,
+            16.786477777777776
+          ],
+          "physical_start_interval_s": [
+            null,
+            11.772755555555555
+          ],
+          "physical_end_interval_s": [
+            16.752766666666666,
+            null
+          ],
+          "duration_confirmed": false,
+          "duration_interval_s": [
+            null,
+            null
+          ],
+          "duration_semantics": "span_of_positive_observations; continuity through unknown is a hypothesis",
+          "uncertainty_flags": [
+            "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+            "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+            "LONG_OBSERVABILITY_LOSS",
+            "START_NOT_BOUNDED_BY_CONFIRMED_OFF"
+          ],
+          "unknown_gaps": [
+            {
+              "start_s": 12.2408,
+              "end_s": 12.2742,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 12.64171111111111,
+              "end_s": 12.67511111111111,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 12.7755,
+              "end_s": 12.809355555555555,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 12.909277777777778,
+              "end_s": 12.942666666666666,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 13.176866666666667,
+              "end_s": 13.2102,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 14.112488888888889,
+              "end_s": 14.146355555555555,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 16.017522222222222,
+              "end_s": 16.050855555555554,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            }
+          ],
+          "end_reason": "LONG_OBSERVABILITY_LOSS",
+          "decision_source": "ALGORITHM"
+        },
+        {
+          "event_id": "EV00022",
+          "entity": "TRACK0001",
+          "led_id": null,
+          "key_name": null,
+          "color": "BLUE",
+          "start_pts": 20.128977777777777,
+          "end_pts": 25.108933333333333,
+          "duration_s": 4.979955555555556,
+          "start_frame": 600,
+          "end_frame": 749,
+          "status": "CONFIRMED",
+          "confidence": 0.6310189846816089,
+          "confidence_kind": "heuristic_not_probability",
+          "coverage": 0.998243490792626,
+          "x_ref_px": 594.8642728093947,
+          "y_ref_px": 1354.8533791523482,
+          "observations": 133,
+          "good_observations": 133,
+          "signal_start_interval_s": [
+            20.095111111111112,
+            20.128977777777777
+          ],
+          "signal_end_interval_s": [
+            25.108933333333333,
+            25.142666666666667
+          ],
+          "physical_start_interval_s": [
+            null,
+            20.128977777777777
+          ],
+          "physical_end_interval_s": [
+            25.108933333333333,
+            null
+          ],
+          "duration_confirmed": false,
+          "duration_interval_s": [
+            null,
+            null
+          ],
+          "duration_semantics": "span_of_positive_observations; continuity through unknown is a hypothesis",
+          "uncertainty_flags": [
+            "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+            "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+            "LONG_OBSERVABILITY_LOSS",
+            "START_NOT_BOUNDED_BY_CONFIRMED_OFF"
+          ],
+          "unknown_gaps": [
+            {
+              "start_s": 20.29617777777778,
+              "end_s": 20.329433333333334,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 20.530344444444445,
+              "end_s": 20.563755555555556,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 21.198822222222223,
+              "end_s": 21.232222222222223,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 21.365555555555556,
+              "end_s": 21.398822222222222,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 21.566333333333333,
+              "end_s": 21.633155555555554,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 23.10348888888889,
+              "end_s": 23.1372,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 23.17091111111111,
+              "end_s": 23.20432222222222,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 23.404322222222223,
+              "end_s": 23.43757777777778,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 23.505311111111112,
+              "end_s": 23.538566666666668,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 23.8728,
+              "end_s": 23.9062,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.006133333333334,
+              "end_s": 24.039533333333335,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.17377777777778,
+              "end_s": 24.207044444444445,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.273711111111112,
+              "end_s": 24.307111111111112,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.373644444444444,
+              "end_s": 24.407044444444445,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.5413,
+              "end_s": 24.57468888888889,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            },
+            {
+              "start_s": 24.77457777777778,
+              "end_s": 24.808422222222223,
+              "reason": "SHORT_OBSERVABILITY_LOSS"
+            }
+          ],
+          "end_reason": "LONG_OBSERVABILITY_LOSS",
+          "decision_source": "ALGORITHM"
+        }
+      ],
+      "event_status_counts": {
+        "CONFIRMED": 3,
+        "CANDIDATE": 8,
+        "REJECTED": 11
+      },
+      "state_counts": {
+        "UNCERTAIN": 3102,
+        "ON": 465,
+        "INVALID_GEOMETRY": 61
+      },
+      "frame_state_counts": {
+        "UNCERTAIN": 505,
+        "ON": 406,
+        "INVALID_GEOMETRY": 11
+      },
+      "uncertainty_intervals": 187,
+      "uncertainty_types": {
+        "UNCERTAIN": 126,
+        "INVALID_GEOMETRY": 61
+      },
+      "unknown_tracks": [
+        {
+          "track_id": "TRACK0001",
+          "led_id": null,
+          "key_name": null,
+          "x_ref_px": 580.8654942635105,
+          "y_ref_px": 1360.6467834311359,
+          "decision_source": "ALGORITHM",
+          "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+          "status": "CONFIRMED",
+          "observations": 406,
+          "start_pts": 3.382711111111111,
+          "end_pts": 25.108933333333333,
+          "spatial_median_deviation_px": 14.812655350304313,
+          "start_frame": 99,
+          "end_frame": 749,
+          "median_chroma": 78.2838134765625,
+          "median_brightness": 93.94385772588257,
+          "colors": [
+            "BLUE",
+            "GREEN",
+            "RED"
+          ],
+          "event_ids": [
+            "EV00001",
+            "EV00021",
+            "EV00022"
+          ]
+        },
+        {
+          "track_id": "TRACK0002",
+          "led_id": null,
+          "key_name": null,
+          "x_ref_px": 2480.9636363636364,
+          "y_ref_px": 561.6909090909091,
+          "decision_source": "ALGORITHM",
+          "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+          "status": "REJECTED",
+          "observations": 1,
+          "start_pts": 8.86498888888889,
+          "end_pts": 8.86498888888889,
+          "spatial_median_deviation_px": 0.0,
+          "start_frame": 263,
+          "end_frame": 263,
+          "median_chroma": 27.554546356201172,
+          "median_brightness": 44.81818181818182,
+          "colors": [
+            "MIXED"
+          ],
+          "event_ids": []
+        },
+        {
+          "track_id": "TRACK0003",
+          "led_id": null,
+          "key_name": null,
+          "x_ref_px": 722.883530814971,
+          "y_ref_px": 1377.811214235273,
+          "decision_source": "ALGORITHM",
+          "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+          "status": "CANDIDATE",
+          "observations": 46,
+          "start_pts": 11.772755555555555,
+          "end_pts": 16.65268888888889,
+          "spatial_median_deviation_px": 4.7570529078184745,
+          "start_frame": 350,
+          "end_frame": 496,
+          "median_chroma": 31.0267915725708,
+          "median_brightness": 32.070634193515545,
+          "colors": [
+            "GREEN"
+          ],
+          "event_ids": [
+            "EV00002",
+            "EV00003",
+            "EV00004",
+            "EV00006",
+            "EV00007",
+            "EV00011",
+            "EV00013",
+            "EV00015",
+            "EV00017",
+            "EV00018",
+            "EV00020"
+          ]
+        },
+        {
+          "track_id": "TRACK0004",
+          "led_id": null,
+          "key_name": null,
+          "x_ref_px": 747.9375,
+          "y_ref_px": 1379.0748031496064,
+          "decision_source": "ALGORITHM",
+          "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+          "status": "CANDIDATE",
+          "observations": 13,
+          "start_pts": 13.744444444444444,
+          "end_pts": 16.452233333333332,
+          "spatial_median_deviation_px": 2.708357288584305,
+          "start_frame": 409,
+          "end_frame": 490,
+          "median_chroma": 27.94140625,
+          "median_brightness": 31.013698630136986,
+          "colors": [
+            "GREEN"
+          ],
+          "event_ids": [
+            "EV00005",
+            "EV00008",
+            "EV00009",
+            "EV00010",
+            "EV00012",
+            "EV00014",
+            "EV00016",
+            "EV00019"
+          ]
+        },
+        {
+          "track_id": "TRACK0005",
+          "led_id": null,
+          "key_name": null,
+          "x_ref_px": 2294.6304347826085,
+          "y_ref_px": 770.0,
+          "decision_source": "ALGORITHM",
+          "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+          "status": "REJECTED",
+          "observations": 1,
+          "start_pts": 14.212866666666667,
+          "end_pts": 14.212866666666667,
+          "spatial_median_deviation_px": 0.0,
+          "start_frame": 423,
+          "end_frame": 423,
+          "median_chroma": 28.782608032226562,
+          "median_brightness": 45.47826086956522,
+          "colors": [
+            "MIXED"
+          ],
+          "event_ids": []
+        },
+        {
+          "track_id": "TRACK0006",
+          "led_id": null,
+          "key_name": null,
+          "x_ref_px": 1302.5,
+          "y_ref_px": 583.0,
+          "decision_source": "ALGORITHM",
+          "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+          "status": "REJECTED",
+          "observations": 1,
+          "start_pts": 18.925766666666668,
+          "end_pts": 18.925766666666668,
+          "spatial_median_deviation_px": 0.0,
+          "start_frame": 564,
+          "end_frame": 564,
+          "median_chroma": 28.75,
+          "median_brightness": 40.888888888888886,
+          "colors": [
+            "MIXED"
+          ],
+          "event_ids": []
+        },
+        {
+          "track_id": "TRACK0007",
+          "led_id": null,
+          "key_name": null,
+          "x_ref_px": 2094.8260869565215,
+          "y_ref_px": 778.0,
+          "decision_source": "ALGORITHM",
+          "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+          "status": "REJECTED",
+          "observations": 3,
+          "start_pts": 27.381877777777778,
+          "end_pts": 28.08378888888889,
+          "spatial_median_deviation_px": 0.2850241545897916,
+          "start_frame": 817,
+          "end_frame": 838,
+          "median_chroma": 32.314815521240234,
+          "median_brightness": 37.130434782608695,
+          "colors": [
+            "MIXED"
+          ],
+          "event_ids": []
+        }
+      ],
+      "off": {
+        "known_leds": {
+          "LED49": 0.9423962067828853
+        },
+        "analysis_valid_fraction": 0.3416719858156028,
+        "pcb_fraction": 0.7320875467095129,
+        "pcb_method": "dark_silhouette_estimate",
+        "discover_unavailable_fraction": 0.289856941752224
+      },
+      "off_observations": 5,
+      "original_full_pass": {
+        "wall_fps": 12.7136620538081,
+        "processing_wall_s": 72.5204112,
+        "rss_bytes": 370028544,
+        "frame_total_ms": {
+          "count": 922,
+          "mean_ms": 78.32641973969632,
+          "p50_ms": 75.12835000000001,
+          "p95_ms": 95.455725,
+          "p99_ms": 100.48849999999997,
+          "max_ms": 124.4986,
+          "fps": 12.76708425232915
+        },
+        "temporal_ms": 170.0836
+      },
+      "final_reaggregation": {
+        "section_ms": 91.9392,
+        "wall_s": 0.1967449,
+        "opencv_rerun": false
+      },
+      "acceptance_errors_ms": [
+        {
+          "color": "RED",
+          "start_error_ms": 32.71111111111091,
+          "end_error_ms": -36.75555555555654,
+          "note": "Approximate independent acceptance intervals, not physical ground truth"
+        },
+        {
+          "color": "GREEN",
+          "start_error_ms": 32.755555555555205,
+          "end_error_ms": -37.23333333333301,
+          "note": "Approximate independent acceptance intervals, not physical ground truth"
+        },
+        {
+          "color": "BLUE",
+          "start_error_ms": 28.97777777777577,
+          "end_error_ms": -31.066666666667686,
+          "note": "Approximate independent acceptance intervals, not physical ground truth"
+        }
+      ],
+      "alignment": {
+        "schema_version": 1,
+        "source_session": "D:\\VScode\\Nozdrin_GitHub\\GS75_RGB_Research\\results\\video_experiments\\2026-11-17_071548_LED49_RGB_0b45fb1482c5\\session.json",
+        "session_id": "2026-11-17_071548_LED49_RGB_0b45fb1482c5",
+        "status": "ESTIMATED_NOT_HARDWARE_SYNC",
+        "offset_s": 2.0862888888888893,
+        "uncertainty_s": 0.04704444444444533,
+        "candidates": [
+          {
+            "entity": "TRACK0001",
+            "pairs": [
+              {
+                "event_id": "EV00001",
+                "command_id": 3,
+                "color": "RED",
+                "offset_interval_s": [
+                  2.0702888888888893,
+                  null
+                ],
+                "offset_from_ack_s": 2.0862888888888893,
+                "optical_boundary_flags": [
+                  "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+                  "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+                  "LONG_OBSERVABILITY_LOSS",
+                  "START_NOT_BOUNDED_BY_CONFIRMED_OFF"
+                ]
+              },
+              {
+                "event_id": "EV00021",
+                "command_id": 4,
+                "color": "GREEN",
+                "offset_interval_s": [
+                  2.039244444444444,
+                  2.1049555555555557
+                ],
+                "offset_from_ack_s": 2.071244444444444,
+                "optical_boundary_flags": [
+                  "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+                  "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+                  "LONG_OBSERVABILITY_LOSS",
+                  "START_NOT_BOUNDED_BY_CONFIRMED_OFF"
+                ]
+              },
+              {
+                "event_id": "EV00022",
+                "command_id": 5,
+                "color": "BLUE",
+                "offset_interval_s": [
+                  2.058022222222224,
+                  2.1238888888888887
+                ],
+                "offset_from_ack_s": 2.090022222222224,
+                "optical_boundary_flags": [
+                  "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+                  "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+                  "LONG_OBSERVABILITY_LOSS",
+                  "START_NOT_BOUNDED_BY_CONFIRMED_OFF"
+                ]
+              }
+            ]
+          }
+        ],
+        "relation": "host_monotonic_relative_s = video_PTS_s + offset_s",
+        "warning": "Empirical optical/USB association, not hardware synchronization. UTC was not used. Physical onset may be censored; exposure/rolling shutter are additional unknowns.",
+        "uncertainty_kind": "observed_USB/video_bracket_envelope; does_not_bound_all_physical_latency",
+        "residual_offsets_s": [
+          0.0,
+          -0.015044444444445304,
+          0.0037333333333346985
+        ]
+      }
+    }
+  },
+  "tests": {
+    "python": 145,
+    "seconds": 138.969,
+    "c": 2,
+    "preserved_original_files": 643
+  },
+  "temporal_only": {
+    "KNOWN_LEDS": {
+      "repeats": 10,
+      "frames_per_repeat": 922,
+      "section_frame_ms": {
+        "count": 9220,
+        "mean_ms": 0.022619587852494575,
+        "p50_ms": 0.0123,
+        "p95_ms": 0.051,
+        "p99_ms": 0.08859099999999945,
+        "max_ms": 1.1328,
+        "fps": 44209.47041657597
+      },
+      "total_ms": {
+        "count": 10,
+        "mean_ms": 20.85995,
+        "p50_ms": 20.5713,
+        "p95_ms": 22.811975,
+        "p99_ms": 22.984235,
+        "max_ms": 23.0273,
+        "fps": 47.93875344859407
+      },
+      "scope": "production FrameTemporalAnalysis, prepared compact results, no decode/ArUco/LED analysis; OFF ROI preparation excluded"
+    },
+    "DISCOVER": {
+      "repeats": 10,
+      "frames_per_repeat": 922,
+      "section_frame_ms": {
+        "count": 9220,
+        "mean_ms": 0.09016659436008677,
+        "p50_ms": 0.048,
+        "p95_ms": 0.2550049999999999,
+        "p99_ms": 0.34824299999999986,
+        "max_ms": 2.1234,
+        "fps": 11090.581906714013
+      },
+      "total_ms": {
+        "count": 10,
+        "mean_ms": 83.71234999999999,
+        "p50_ms": 86.30625,
+        "p95_ms": 98.56203,
+        "p99_ms": 103.508646,
+        "max_ms": 104.7453,
+        "fps": 11.945668709575113
+      },
+      "scope": "production FrameTemporalAnalysis, prepared compact results, no decode/ArUco/LED analysis; OFF ROI preparation excluded"
+    }
+  }
+}

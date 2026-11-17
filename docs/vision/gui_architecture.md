@@ -1,5 +1,13 @@
 # RGB Vision v0.3 — устройство приложения
 
+Дополнение v0.4.3: video_analysis_controls.py запускает общий C_HYBRID и
+FrameTemporalAnalysis в существующем Qt worker. video_event_results.py и
+event_timeline.py показывают события, UNKNOWN, PTS-плеер, ROI и отдельную
+историю операторских решений. Повторный temporal-профиль использует raw
+без повторного OpenCV; project schema v1 дополнена необязательной историей
+video_analyses. [Руководство](video_analysis.md) ·
+[Приёмка настоящего MP4](video_events_v043/report.md).
+
 Дополнение v0.4.2: off_diagnostics.py (gates, coverage, карты и OffBuildError),
 off_diagnostics_dialog.py (таблица/слои), адаптивный off_background.py,
 display orientation в pts_video.py. Job пишет полный traceback в logging,

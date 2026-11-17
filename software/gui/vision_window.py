@@ -17,6 +17,7 @@ from .jobs import Job
 from .result_pane import ResultPane
 from .performance_pane import PerformancePane
 from .experiment_pane import ExperimentPane
+from .video_analysis_controls import VideoAnalysisControls
 from . import ensure_fonts
 from software.vision import calibration
 from software.vision.project_storage import ROOT,read_image,image_hash,write_image
@@ -61,7 +62,7 @@ class EmbeddedCalibrator(Calibrator):
 
 class VisionWindow(QMainWindow):
     def __init__(self,remember=True):
-        ensure_fonts();super().__init__();self.setWindowTitle('GS75 RGB Vision v0.4.2');self.resize(1500,980)
+        ensure_fonts();super().__init__();self.setWindowTitle('GS75 RGB Vision v0.4.3');self.resize(1500,980)
         self.project=None;self.active_job=None;self.job_callback=None;self.pool=QThreadPool(self);self.pool.setMaxThreadCount(1)
         self.remember=remember;self.preferences=QSettings('GS75_RGB_Research','RGBVision')
         self.decoder=VideoReader();self.video_path=None;self.video_image=None;self.frame_info=None
@@ -92,6 +93,7 @@ class VisionWindow(QMainWindow):
         button(row,'Предыдущий кадр',lambda:self.step_video(-1));button(row,'Следующий кадр',lambda:self.step_video(1))
         button(row,'Кадр как OFF',lambda:self.use_frame('OFF'));button(row,'Кадр как ON',lambda:self.use_frame('ON'))
         button(row,'Сохранить кадр',self.save_frame_dialog);layout.addLayout(row)
+        self.video_events=VideoAnalysisControls(self);layout.addWidget(self.video_events)
         self.video_viewer=ImageViewer();layout.addWidget(self.video_viewer,1)
         self.video_slider=QSlider(Qt.Horizontal);self.video_slider.setRange(0,0);layout.addWidget(self.video_slider)
         self.video_label=QLabel('Откройте MP4 / MOV / AVI. Поддержка зависит от декодера.');layout.addWidget(self.video_label)
@@ -162,22 +164,26 @@ class VisionWindow(QMainWindow):
 
     def on_cancelled(self):
         self.performance.operation_failed('Операция отменена',cancelled=True)
+        self.video_events.operation_failed('CANCELLED: частичные результаты сохраняются')
         self.log('Операция отменена')
 
     def job_error(self,message):
         self.performance.operation_failed(message)
+        self.video_events.operation_failed(message)
         self.error(message)
 
     def deliver_result(self,value):
         try:
             self.job_callback(value)
-            self.job_success=not (self.active_job and self.active_job.cancel.is_set())
-            if not self.job_success:self.on_cancelled()
+            cancelled=self.active_job and self.active_job.cancel.is_set()
+            self.job_success=not cancelled and not (isinstance(value,dict) and value.get('status') in ('FAILED','CANCELLED'))
+            if cancelled:self.on_cancelled()
         except Exception as exc:
             logging.exception('Result delivery failed');self.error(str(exc))
 
     def job_progress(self,current,total,value):
         self.performance.progress_update(current,total,value)
+        self.video_events.progress_update(current,total,value)
         self.progress.setRange(0,max(1,total));self.progress.setValue(current);self.statusBar().showMessage(f'{current} / {total}')
         if isinstance(value,dict) and 'name' in value:
             self.log(value['name']+': '+value.get('state',''))
@@ -282,6 +288,7 @@ class VisionWindow(QMainWindow):
 
     def refresh_project(self):
         self.refresh_info();self.refresh_media();self.refresh_history()
+        self.video_events.refresh_history()
         for key,control in self.setting_controls.items():control.setValue(self.project.data['settings'][key])
         self.analysis_mode.setCurrentText(self.project.data['settings']['mode']);self.report_dir.setText(self.project.data['reports_dir'])
         if any(self.project.data['settings'][k]!=DEFAULTS[k] for k in self.setting_controls):self.profile.setCurrentIndex(1)
@@ -601,6 +608,7 @@ class VisionWindow(QMainWindow):
             self.experiment_close_pending=False
             self.cancel_job();QMessageBox.information(self,'Завершение операции','Отмена запрошена. Дождитесь завершения текущего этапа и закройте окно снова.');event.ignore();return
         if not self.calibrator.confirm_discard():self.experiment_close_pending=False;event.ignore();return
+        self.video_events.close_results()
         self.play_timer.stop();self.decoder.close()
         if self.project:self.save_project()
         self.pool.waitForDone();event.accept()

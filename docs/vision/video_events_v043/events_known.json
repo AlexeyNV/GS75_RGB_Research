@@ -1,0 +1,5350 @@
+{
+  "schema_version": 1,
+  "algorithm_version": "0.4.3",
+  "status": "COMPLETED",
+  "source": "D:\\VScode\\Nozdrin_GitHub\\GS75_RGB_Research\\data\\VID_20261117_101549.mp4",
+  "source_sha256": "c4299a0a6d59bedf046726f042fc7c5cf518e8239db50791538e3776a231ef9e",
+  "calibration_version": "17969abb4acf4b47b16e0c0ba66b739f",
+  "settings": {
+    "profile": "Reliable / Long Pulse",
+    "min_on_s": 0.1,
+    "min_off_s": 0.067,
+    "max_gap_s": 0.12,
+    "min_samples": 3,
+    "min_chroma": 40.0,
+    "min_brightness": 45.0,
+    "min_color_confidence": 0.55,
+    "spatial_radius_px": 40.0
+  },
+  "mode": "KNOWN_LEDS",
+  "processed_frames": 922,
+  "events": [
+    {
+      "event_id": "EV00001",
+      "entity": "LED49",
+      "led_id": "LED49",
+      "key_name": null,
+      "color": "RED",
+      "start_pts": 3.382711111111111,
+      "end_pts": 8.363244444444444,
+      "duration_s": 4.980533333333333,
+      "start_frame": 99,
+      "end_frame": 248,
+      "status": "CONFIRMED",
+      "confidence": 0.8127483381837369,
+      "confidence_kind": "heuristic_not_probability",
+      "coverage": 0.9417245848895746,
+      "x_ref_px": 577.9525564256103,
+      "y_ref_px": 1377.1680944663117,
+      "observations": 133,
+      "good_observations": 133,
+      "signal_start_interval_s": [
+        3.3494555555555556,
+        3.382711111111111
+      ],
+      "signal_end_interval_s": [
+        8.363244444444444,
+        8.3965
+      ],
+      "physical_start_interval_s": [
+        null,
+        3.382711111111111
+      ],
+      "physical_end_interval_s": [
+        8.363244444444444,
+        null
+      ],
+      "duration_confirmed": false,
+      "duration_interval_s": [
+        null,
+        null
+      ],
+      "duration_semantics": "span_of_positive_observations; continuity through unknown is a hypothesis",
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [
+        {
+          "start_s": 3.416577777777778,
+          "end_s": 3.4504444444444444,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 3.4837,
+          "end_s": 3.5169555555555556,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 4.017944444444445,
+          "end_s": 4.051222222222222,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 4.118911111111111,
+          "end_s": 4.1521888888888885,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 4.3188,
+          "end_s": 4.352188888888889,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 4.887355555555556,
+          "end_s": 4.920688888888889,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 5.388355555555555,
+          "end_s": 5.422066666666667,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 5.489188888888889,
+          "end_s": 5.5226,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 5.956755555555556,
+          "end_s": 5.99,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 6.124266666666666,
+          "end_s": 6.157666666666667,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 6.725311111111111,
+          "end_s": 6.759044444444444,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 6.792777777777777,
+          "end_s": 6.8261666666666665,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 7.3604111111111115,
+          "end_s": 7.3938,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 7.6614,
+          "end_s": 7.6946666666666665,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 7.828911111111111,
+          "end_s": 7.862177777777778,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 7.962244444444444,
+          "end_s": 7.995511111111111,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 8.2964,
+          "end_s": 8.329822222222223,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        }
+      ],
+      "end_reason": "UNCERTAIN_COLOR_SIGNAL_LOSS",
+      "decision_source": "ALGORITHM"
+    },
+    {
+      "event_id": "EV00002",
+      "entity": "LED49",
+      "led_id": "LED49",
+      "key_name": null,
+      "color": "GREEN",
+      "start_pts": 11.772755555555555,
+      "end_pts": 16.752766666666666,
+      "duration_s": 4.980011111111111,
+      "start_frame": 350,
+      "end_frame": 499,
+      "status": "CONFIRMED",
+      "confidence": 0.6706252818750141,
+      "confidence_kind": "heuristic_not_probability",
+      "coverage": 0.9422981359552758,
+      "x_ref_px": 578.2446324666266,
+      "y_ref_px": 1378.1895810676751,
+      "observations": 142,
+      "good_observations": 142,
+      "signal_start_interval_s": [
+        11.739044444444444,
+        11.772755555555555
+      ],
+      "signal_end_interval_s": [
+        16.752766666666666,
+        16.786477777777776
+      ],
+      "physical_start_interval_s": [
+        null,
+        11.772755555555555
+      ],
+      "physical_end_interval_s": [
+        16.752766666666666,
+        null
+      ],
+      "duration_confirmed": false,
+      "duration_interval_s": [
+        null,
+        null
+      ],
+      "duration_semantics": "span_of_positive_observations; continuity through unknown is a hypothesis",
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [
+        {
+          "start_s": 12.2408,
+          "end_s": 12.2742,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 12.64171111111111,
+          "end_s": 12.67511111111111,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 12.7755,
+          "end_s": 12.809355555555555,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 12.909277777777778,
+          "end_s": 12.942666666666666,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 13.176866666666667,
+          "end_s": 13.2102,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 13.71111111111111,
+          "end_s": 13.744444444444444,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 14.112488888888889,
+          "end_s": 14.146355555555555,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 16.017522222222222,
+          "end_s": 16.050855555555554,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        }
+      ],
+      "end_reason": "UNCERTAIN_COLOR_SIGNAL_LOSS",
+      "decision_source": "ALGORITHM"
+    },
+    {
+      "event_id": "EV00003",
+      "entity": "LED49",
+      "led_id": "LED49",
+      "key_name": null,
+      "color": "BLUE",
+      "start_pts": 20.128977777777777,
+      "end_pts": 25.108933333333333,
+      "duration_s": 4.979955555555556,
+      "start_frame": 600,
+      "end_frame": 749,
+      "status": "CONFIRMED",
+      "confidence": 0.5644011092974629,
+      "confidence_kind": "heuristic_not_probability",
+      "coverage": 0.9422899010002858,
+      "x_ref_px": 577.7968901846452,
+      "y_ref_px": 1377.0923636363636,
+      "observations": 131,
+      "good_observations": 131,
+      "signal_start_interval_s": [
+        20.095111111111112,
+        20.128977777777777
+      ],
+      "signal_end_interval_s": [
+        25.108933333333333,
+        25.142666666666667
+      ],
+      "physical_start_interval_s": [
+        null,
+        20.128977777777777
+      ],
+      "physical_end_interval_s": [
+        25.108933333333333,
+        null
+      ],
+      "duration_confirmed": false,
+      "duration_interval_s": [
+        null,
+        null
+      ],
+      "duration_semantics": "span_of_positive_observations; continuity through unknown is a hypothesis",
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [
+        {
+          "start_s": 20.29617777777778,
+          "end_s": 20.329433333333334,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 21.1317,
+          "end_s": 21.165422222222222,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 21.365555555555556,
+          "end_s": 21.398822222222222,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 21.566333333333333,
+          "end_s": 21.633155555555554,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 22.33491111111111,
+          "end_s": 22.368155555555557,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 22.903333333333332,
+          "end_s": 22.936744444444443,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 23.10348888888889,
+          "end_s": 23.1372,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 23.17091111111111,
+          "end_s": 23.20432222222222,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 23.404322222222223,
+          "end_s": 23.43757777777778,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 23.505311111111112,
+          "end_s": 23.538566666666668,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 23.8394,
+          "end_s": 23.9062,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 24.006133333333334,
+          "end_s": 24.039533333333335,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 24.17377777777778,
+          "end_s": 24.207044444444445,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 24.273711111111112,
+          "end_s": 24.307111111111112,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 24.373644444444444,
+          "end_s": 24.407044444444445,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 24.5413,
+          "end_s": 24.57468888888889,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        },
+        {
+          "start_s": 24.77457777777778,
+          "end_s": 24.808422222222223,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        }
+      ],
+      "end_reason": "UNCERTAIN_COLOR_SIGNAL_LOSS",
+      "decision_source": "ALGORITHM"
+    }
+  ],
+  "unknown_tracks": [],
+  "uncertainty_intervals": [
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 0.0741,
+      "end_s": 0.14122222222222222,
+      "start_frame": 1,
+      "end_frame": 2,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 0.2078888888888889,
+      "end_s": 0.3078888888888889,
+      "start_frame": 5,
+      "end_frame": 7,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 0.3412222222222222,
+      "end_s": 0.6422,
+      "start_frame": 9,
+      "end_frame": 17,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 0.6755444444444444,
+      "end_s": 0.8097222222222222,
+      "start_frame": 19,
+      "end_frame": 22,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 0.8431333333333333,
+      "end_s": 0.9096444444444445,
+      "start_frame": 24,
+      "end_frame": 25,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 0.9430555555555555,
+      "end_s": 0.9764666666666667,
+      "start_frame": 27,
+      "end_frame": 27,
+      "reasons": [
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE",
+        "ACHROMATIC_CHANGE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 1.0097222222222222,
+      "end_s": 1.1772222222222222,
+      "start_frame": 29,
+      "end_frame": 33,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 1.1772222222222222,
+      "end_s": 1.2106333333333332,
+      "start_frame": 34,
+      "end_frame": 34,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 1.2106333333333332,
+      "end_s": 1.2440444444444445,
+      "start_frame": 35,
+      "end_frame": 35,
+      "reasons": [
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE",
+        "ACHROMATIC_CHANGE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 1.2440444444444445,
+      "end_s": 1.2773,
+      "start_frame": 36,
+      "end_frame": 36,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 1.2773,
+      "end_s": 1.3439555555555556,
+      "start_frame": 37,
+      "end_frame": 38,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 1.3773555555555557,
+      "end_s": 1.4782111111111111,
+      "start_frame": 40,
+      "end_frame": 42,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 1.5116,
+      "end_s": 1.5448777777777778,
+      "start_frame": 44,
+      "end_frame": 44,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 1.5448777777777778,
+      "end_s": 1.8124555555555555,
+      "start_frame": 45,
+      "end_frame": 52,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 1.8457333333333332,
+      "end_s": 1.8791222222222221,
+      "start_frame": 54,
+      "end_frame": 54,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 1.8791222222222221,
+      "end_s": 2.3468,
+      "start_frame": 55,
+      "end_frame": 68,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 2.3468,
+      "end_s": 2.3800444444444446,
+      "start_frame": 69,
+      "end_frame": 69,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 2.4138333333333333,
+      "end_s": 2.4476222222222224,
+      "start_frame": 71,
+      "end_frame": 71,
+      "reasons": [
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE",
+        "ACHROMATIC_CHANGE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 2.4809555555555556,
+      "end_s": 2.514288888888889,
+      "start_frame": 73,
+      "end_frame": 73,
+      "reasons": [
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE",
+        "ACHROMATIC_CHANGE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 2.514288888888889,
+      "end_s": 2.547622222222222,
+      "start_frame": 74,
+      "end_frame": 74,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 2.547622222222222,
+      "end_s": 2.5809555555555557,
+      "start_frame": 75,
+      "end_frame": 75,
+      "reasons": [
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE",
+        "ACHROMATIC_CHANGE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 2.5809555555555557,
+      "end_s": 2.614288888888889,
+      "start_frame": 76,
+      "end_frame": 76,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 2.614288888888889,
+      "end_s": 2.647622222222222,
+      "start_frame": 77,
+      "end_frame": 77,
+      "reasons": [
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE",
+        "ACHROMATIC_CHANGE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 2.647622222222222,
+      "end_s": 2.6809555555555558,
+      "start_frame": 78,
+      "end_frame": 78,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 2.6809555555555558,
+      "end_s": 2.7818666666666667,
+      "start_frame": 79,
+      "end_frame": 81,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 2.815211111111111,
+      "end_s": 3.1828666666666665,
+      "start_frame": 83,
+      "end_frame": 93,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 3.2161222222222223,
+      "end_s": 3.2493777777777777,
+      "start_frame": 95,
+      "end_frame": 95,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 3.2493777777777777,
+      "end_s": 3.3494555555555556,
+      "start_frame": 96,
+      "end_frame": 98,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 3.382711111111111,
+      "end_s": 3.416577777777778,
+      "start_frame": 100,
+      "end_frame": 100,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 3.4504444444444444,
+      "end_s": 3.4837,
+      "start_frame": 102,
+      "end_frame": 102,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 3.9846666666666666,
+      "end_s": 4.017944444444445,
+      "start_frame": 118,
+      "end_frame": 118,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 4.085066666666667,
+      "end_s": 4.118911111111111,
+      "start_frame": 121,
+      "end_frame": 121,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 4.285522222222222,
+      "end_s": 4.3188,
+      "start_frame": 127,
+      "end_frame": 127,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 4.8540222222222225,
+      "end_s": 4.887355555555556,
+      "start_frame": 144,
+      "end_frame": 144,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 5.355011111111111,
+      "end_s": 5.388355555555555,
+      "start_frame": 159,
+      "end_frame": 159,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 5.455777777777778,
+      "end_s": 5.489188888888889,
+      "start_frame": 162,
+      "end_frame": 162,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 5.923511111111111,
+      "end_s": 5.956755555555556,
+      "start_frame": 176,
+      "end_frame": 176,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 6.090544444444444,
+      "end_s": 6.124266666666666,
+      "start_frame": 181,
+      "end_frame": 181,
+      "reasons": [
+        "Insufficient robust inlier support"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 6.691911111111111,
+      "end_s": 6.725311111111111,
+      "start_frame": 199,
+      "end_frame": 199,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 6.759044444444444,
+      "end_s": 6.792777777777777,
+      "start_frame": 201,
+      "end_frame": 201,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 7.327022222222222,
+      "end_s": 7.3604111111111115,
+      "start_frame": 218,
+      "end_frame": 218,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 7.628,
+      "end_s": 7.6614,
+      "start_frame": 227,
+      "end_frame": 227,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 7.795644444444444,
+      "end_s": 7.828911111111111,
+      "start_frame": 232,
+      "end_frame": 232,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 7.928977777777778,
+      "end_s": 7.962244444444444,
+      "start_frame": 236,
+      "end_frame": 236,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 8.263111111111112,
+      "end_s": 8.2964,
+      "start_frame": 246,
+      "end_frame": 246,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 8.363244444444444,
+      "end_s": 8.96498888888889,
+      "start_frame": 249,
+      "end_frame": 266,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 8.998322222222223,
+      "end_s": 10.602866666666667,
+      "start_frame": 268,
+      "end_frame": 315,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 10.602866666666667,
+      "end_s": 10.636188888888888,
+      "start_frame": 316,
+      "end_frame": 316,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 10.636188888888888,
+      "end_s": 10.736155555555555,
+      "start_frame": 317,
+      "end_frame": 319,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 10.736155555555555,
+      "end_s": 10.770011111111112,
+      "start_frame": 320,
+      "end_frame": 320,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 10.770011111111112,
+      "end_s": 11.338111111111111,
+      "start_frame": 321,
+      "end_frame": 337,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 11.338111111111111,
+      "end_s": 11.371377777777777,
+      "start_frame": 338,
+      "end_frame": 338,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 11.371377777777777,
+      "end_s": 11.739044444444444,
+      "start_frame": 339,
+      "end_frame": 349,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 12.2074,
+      "end_s": 12.2408,
+      "start_frame": 364,
+      "end_frame": 364,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 12.608311111111112,
+      "end_s": 12.64171111111111,
+      "start_frame": 376,
+      "end_frame": 376,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 12.741644444444445,
+      "end_s": 12.7755,
+      "start_frame": 380,
+      "end_frame": 380,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 12.87588888888889,
+      "end_s": 12.909277777777778,
+      "start_frame": 384,
+      "end_frame": 384,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 13.143533333333334,
+      "end_s": 13.176866666666667,
+      "start_frame": 392,
+      "end_frame": 392,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 13.677777777777777,
+      "end_s": 13.71111111111111,
+      "start_frame": 408,
+      "end_frame": 408,
+      "reasons": [
+        "Insufficient robust inlier support"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 14.078622222222222,
+      "end_s": 14.112488888888889,
+      "start_frame": 420,
+      "end_frame": 420,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 15.98418888888889,
+      "end_s": 16.017522222222222,
+      "start_frame": 477,
+      "end_frame": 477,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 16.752766666666666,
+      "end_s": 16.887033333333335,
+      "start_frame": 500,
+      "end_frame": 503,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 16.887033333333335,
+      "end_s": 16.920277777777777,
+      "start_frame": 504,
+      "end_frame": 504,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 16.920277777777777,
+      "end_s": 16.953522222222222,
+      "start_frame": 505,
+      "end_frame": 505,
+      "reasons": [
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE",
+        "ACHROMATIC_CHANGE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 16.953522222222222,
+      "end_s": 16.986944444444443,
+      "start_frame": 506,
+      "end_frame": 506,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 16.986944444444443,
+      "end_s": 17.2211,
+      "start_frame": 507,
+      "end_frame": 513,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 17.25452222222222,
+      "end_s": 17.454977777777778,
+      "start_frame": 515,
+      "end_frame": 520,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 17.454977777777778,
+      "end_s": 17.488677777777777,
+      "start_frame": 521,
+      "end_frame": 521,
+      "reasons": [
+        "Insufficient robust inlier support"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 17.488677777777777,
+      "end_s": 17.522111111111112,
+      "start_frame": 522,
+      "end_frame": 522,
+      "reasons": [
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE",
+        "ACHROMATIC_CHANGE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 17.522111111111112,
+      "end_s": 17.58877777777778,
+      "start_frame": 523,
+      "end_frame": 524,
+      "reasons": [
+        "CURRENT_ROI_NOT_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "ROI_NOT_GEOMETRICALLY_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 17.58877777777778,
+      "end_s": 17.62211111111111,
+      "start_frame": 525,
+      "end_frame": 525,
+      "reasons": [
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE",
+        "ACHROMATIC_CHANGE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 17.62211111111111,
+      "end_s": 17.655444444444445,
+      "start_frame": 526,
+      "end_frame": 526,
+      "reasons": [
+        "Insufficient robust inlier support"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 17.655444444444445,
+      "end_s": 17.956355555555554,
+      "start_frame": 527,
+      "end_frame": 535,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 17.956355555555554,
+      "end_s": 17.98968888888889,
+      "start_frame": 536,
+      "end_frame": 536,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 17.98968888888889,
+      "end_s": 18.08968888888889,
+      "start_frame": 537,
+      "end_frame": 539,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 18.08968888888889,
+      "end_s": 18.12347777777778,
+      "start_frame": 540,
+      "end_frame": 540,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 18.12347777777778,
+      "end_s": 18.323933333333333,
+      "start_frame": 541,
+      "end_frame": 546,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 18.323933333333333,
+      "end_s": 18.357266666666668,
+      "start_frame": 547,
+      "end_frame": 547,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 18.357266666666668,
+      "end_s": 19.560866666666666,
+      "start_frame": 548,
+      "end_frame": 583,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 19.560866666666666,
+      "end_s": 19.594266666666666,
+      "start_frame": 584,
+      "end_frame": 584,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 19.594266666666666,
+      "end_s": 20.095111111111112,
+      "start_frame": 585,
+      "end_frame": 599,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 20.262766666666668,
+      "end_s": 20.29617777777778,
+      "start_frame": 605,
+      "end_frame": 605,
+      "reasons": [
+        "Insufficient robust inlier support"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 21.09797777777778,
+      "end_s": 21.1317,
+      "start_frame": 630,
+      "end_frame": 630,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 21.332155555555556,
+      "end_s": 21.365555555555556,
+      "start_frame": 637,
+      "end_frame": 637,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 21.533077777777777,
+      "end_s": 21.599744444444443,
+      "start_frame": 643,
+      "end_frame": 644,
+      "reasons": [
+        "CURRENT_ROI_NOT_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "ROI_NOT_GEOMETRICALLY_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 22.301666666666666,
+      "end_s": 22.33491111111111,
+      "start_frame": 666,
+      "end_frame": 666,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 22.870077777777777,
+      "end_s": 22.903333333333332,
+      "start_frame": 683,
+      "end_frame": 683,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 23.07007777777778,
+      "end_s": 23.10348888888889,
+      "start_frame": 689,
+      "end_frame": 689,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 23.1372,
+      "end_s": 23.17091111111111,
+      "start_frame": 691,
+      "end_frame": 691,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 23.37106666666667,
+      "end_s": 23.404322222222223,
+      "start_frame": 698,
+      "end_frame": 698,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 23.471444444444444,
+      "end_s": 23.505311111111112,
+      "start_frame": 701,
+      "end_frame": 701,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 23.805677777777777,
+      "end_s": 23.8728,
+      "start_frame": 711,
+      "end_frame": 712,
+      "reasons": [
+        "CURRENT_ROI_NOT_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "ROI_NOT_GEOMETRICALLY_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 23.972733333333334,
+      "end_s": 24.006133333333334,
+      "start_frame": 716,
+      "end_frame": 716,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 24.13992222222222,
+      "end_s": 24.17377777777778,
+      "start_frame": 721,
+      "end_frame": 721,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 24.24031111111111,
+      "end_s": 24.273711111111112,
+      "start_frame": 724,
+      "end_frame": 724,
+      "reasons": [
+        "Insufficient robust inlier support"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 24.34037777777778,
+      "end_s": 24.373644444444444,
+      "start_frame": 727,
+      "end_frame": 727,
+      "reasons": [
+        "Insufficient robust inlier support"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 24.50791111111111,
+      "end_s": 24.5413,
+      "start_frame": 732,
+      "end_frame": 732,
+      "reasons": [
+        "Insufficient robust inlier support"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 24.7413,
+      "end_s": 24.77457777777778,
+      "start_frame": 739,
+      "end_frame": 739,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 25.108933333333333,
+      "end_s": 25.51077777777778,
+      "start_frame": 750,
+      "end_frame": 761,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 25.51077777777778,
+      "end_s": 25.544044444444445,
+      "start_frame": 762,
+      "end_frame": 762,
+      "reasons": [
+        "Insufficient robust inlier support"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 25.544044444444445,
+      "end_s": 25.84488888888889,
+      "start_frame": 763,
+      "end_frame": 771,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 25.84488888888889,
+      "end_s": 26.011533333333333,
+      "start_frame": 772,
+      "end_frame": 776,
+      "reasons": [
+        "CURRENT_ROI_NOT_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "ROI_NOT_GEOMETRICALLY_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 26.011533333333333,
+      "end_s": 26.24587777777778,
+      "start_frame": 777,
+      "end_frame": 783,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 26.24587777777778,
+      "end_s": 26.27921111111111,
+      "start_frame": 784,
+      "end_frame": 784,
+      "reasons": [
+        "Insufficient robust inlier support"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 26.27921111111111,
+      "end_s": 26.74678888888889,
+      "start_frame": 785,
+      "end_frame": 798,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 26.78012222222222,
+      "end_s": 27.749544444444446,
+      "start_frame": 800,
+      "end_frame": 828,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 27.749544444444446,
+      "end_s": 27.78281111111111,
+      "start_frame": 829,
+      "end_frame": 829,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 27.78281111111111,
+      "end_s": 27.983855555555557,
+      "start_frame": 830,
+      "end_frame": 835,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 27.983855555555557,
+      "end_s": 28.017122222222223,
+      "start_frame": 836,
+      "end_frame": 836,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 28.017122222222223,
+      "end_s": 28.218033333333334,
+      "start_frame": 837,
+      "end_frame": 842,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 28.251433333333335,
+      "end_s": 28.519011111111112,
+      "start_frame": 844,
+      "end_frame": 851,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 28.519011111111112,
+      "end_s": 28.55228888888889,
+      "start_frame": 852,
+      "end_frame": 852,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 28.55228888888889,
+      "end_s": 28.618955555555555,
+      "start_frame": 853,
+      "end_frame": 854,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 28.618955555555555,
+      "end_s": 28.68562222222222,
+      "start_frame": 855,
+      "end_frame": 856,
+      "reasons": [
+        "CURRENT_ROI_NOT_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "ROI_NOT_GEOMETRICALLY_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 28.68562222222222,
+      "end_s": 28.785677777777778,
+      "start_frame": 857,
+      "end_frame": 859,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 28.785677777777778,
+      "end_s": 28.853144444444446,
+      "start_frame": 860,
+      "end_frame": 861,
+      "reasons": [
+        "CURRENT_ROI_NOT_COVERED",
+        "Insufficient robust inlier support",
+        "NO_COLOR_EVIDENCE",
+        "ROI_NOT_GEOMETRICALLY_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 28.853144444444446,
+      "end_s": 29.48788888888889,
+      "start_frame": 862,
+      "end_frame": 880,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 29.48788888888889,
+      "end_s": 29.52161111111111,
+      "start_frame": 881,
+      "end_frame": 881,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 29.52161111111111,
+      "end_s": 29.55501111111111,
+      "start_frame": 882,
+      "end_frame": 882,
+      "reasons": [
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE",
+        "ACHROMATIC_CHANGE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 29.55501111111111,
+      "end_s": 29.58841111111111,
+      "start_frame": 883,
+      "end_frame": 883,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 29.58841111111111,
+      "end_s": 29.889266666666668,
+      "start_frame": 884,
+      "end_frame": 892,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 29.889266666666668,
+      "end_s": 29.922522222222224,
+      "start_frame": 893,
+      "end_frame": 893,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 29.922522222222224,
+      "end_s": 30.0226,
+      "start_frame": 894,
+      "end_frame": 896,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 30.0226,
+      "end_s": 30.089266666666667,
+      "start_frame": 897,
+      "end_frame": 898,
+      "reasons": [
+        "CURRENT_ROI_NOT_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "ROI_NOT_GEOMETRICALLY_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 30.089266666666667,
+      "end_s": 30.122677777777778,
+      "start_frame": 899,
+      "end_frame": 899,
+      "reasons": [
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE",
+        "ACHROMATIC_CHANGE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 30.122677777777778,
+      "end_s": 30.1901,
+      "start_frame": 900,
+      "end_frame": 901,
+      "reasons": [
+        "CURRENT_ROI_NOT_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "ROI_NOT_GEOMETRICALLY_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 30.1901,
+      "end_s": 30.42351111111111,
+      "start_frame": 902,
+      "end_frame": 908,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 30.42351111111111,
+      "end_s": 30.456766666666667,
+      "start_frame": 909,
+      "end_frame": 909,
+      "reasons": [
+        "ROI_NOT_GEOMETRICALLY_COVERED",
+        "NO_COLOR_EVIDENCE",
+        "CURRENT_ROI_NOT_COVERED"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "UNCERTAIN",
+      "start_s": 30.456766666666667,
+      "end_s": 30.82488888888889,
+      "start_frame": 910,
+      "end_frame": 920,
+      "reasons": [
+        "ACHROMATIC_CHANGE",
+        "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+        "NO_COLOR_EVIDENCE"
+      ]
+    },
+    {
+      "entity": "LED49",
+      "state": "INVALID_GEOMETRY",
+      "start_s": 30.82488888888889,
+      "end_s": 30.85861111111111,
+      "start_frame": 921,
+      "end_frame": 921,
+      "reasons": [
+        "Insufficient robust inlier support"
+      ]
+    }
+  ],
+  "state_counts": {
+    "OFF": 19,
+    "UNCERTAIN": 408,
+    "INVALID_GEOMETRY": 89,
+    "ON": 406
+  },
+  "temporal_ms": 25.1946,
+  "temporal_mean_ms": 0.02732603036876356,
+  "video": {
+    "path": "data\\VID_20261117_101549.mp4",
+    "width": 1080,
+    "height": 1920,
+    "coded_width": 1920,
+    "coded_height": 1080,
+    "rotation_degrees": -90,
+    "stream_start_pts": 6669,
+    "stream_time_base": "1/90000",
+    "container_duration_s": 30.892333,
+    "stream_start_s": 0.0741,
+    "fps": 29.91735412045034,
+    "frame_count": 922,
+    "duration_s": 30.818233333333332,
+    "backend": "PyAV",
+    "av": "19.0.2",
+    "codec": "h264",
+    "timestamps": "frame.pts * frame.time_base; FPS fallback explicitly estimated"
+  },
+  "off": {
+    "status": "READY",
+    "algorithm_version": "0.4.2",
+    "median_method": "masked_uint16_rank",
+    "candidates": [
+      {
+        "frame_index": 0,
+        "pts": 6669,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 74.1,
+        "timestamp_source": "pts",
+        "estimated_ms": 0.0,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.5660405709713054,
+          "max_inlier_error_px": 2.9941336641348726,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7"
+          ],
+          "anchor_coverage": 0.34096112435206416,
+          "matrix": [
+            [
+              -0.02740419251937201,
+              -2.1072592841830082,
+              3767.751523521781
+            ],
+            [
+              2.2017632731633583,
+              0.1466597006061726,
+              -415.7668359031647
+            ],
+            [
+              -6.457677145932501e-05,
+              0.00013665264890782514,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": true,
+        "rmse_px": 1.5660405709713054,
+        "blur_laplacian_var": 297.7005615234375,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9493592355431557
+        },
+        "roi_min": 0.9493592355431557,
+        "lighting_bgr": [
+          {
+            "gain": 1.0000000000000013,
+            "offset": 3.714540992874584e-16
+          },
+          {
+            "gain": 1.0000000000000007,
+            "offset": 8.214338787684854e-16
+          },
+          {
+            "gain": 0.9999999999999991,
+            "offset": -1.0079878044825887e-15
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.0,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.0,
+        "changed_pixels_near_edges": 0.0,
+        "edge_changed_fraction": 0.0,
+        "boundary_changed_fraction": 0.0,
+        "stable_fraction": 0.7305845213958816,
+        "changed_fraction_pcb": 0.0,
+        "score": 3.984870542443757
+      },
+      {
+        "frame_index": 3,
+        "pts": 15710,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 174.55555555555554,
+        "timestamp_source": "pts",
+        "estimated_ms": 100.27624728850324,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.6216718785275044,
+          "max_inlier_error_px": 2.9547595075123323,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "9"
+          ],
+          "anchor_coverage": 0.39546737060369286,
+          "matrix": [
+            [
+              -0.02033035983376727,
+              -2.1087157602397464,
+              3770.0489649280157
+            ],
+            [
+              2.210344177257881,
+              0.1463929743288984,
+              -417.55099335900235
+            ],
+            [
+              -5.9397223635989665e-05,
+              0.00013614246155797813,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": true,
+        "rmse_px": 1.6216718785275044,
+        "blur_laplacian_var": 294.2218322753906,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9493592355431557
+        },
+        "roi_min": 0.9493592355431557,
+        "lighting_bgr": [
+          {
+            "gain": 0.9886417455184561,
+            "offset": 0.32429368534667996
+          },
+          {
+            "gain": 0.997389979558998,
+            "offset": 0.11989376136624841
+          },
+          {
+            "gain": 0.9982564026937621,
+            "offset": -0.007066334718555081
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.0028018736521697044,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.0,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.010062382911331286,
+        "boundary_changed_fraction": 0.0060323020042809886,
+        "stable_fraction": 0.7215496888898449,
+        "changed_fraction_pcb": 0.0028018736521697044,
+        "score": 4.026353837113901
+      },
+      {
+        "frame_index": 6,
+        "pts": 24710,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 274.55555555555554,
+        "timestamp_source": "pts",
+        "estimated_ms": 200.55249457700648,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.353468191206132,
+          "max_inlier_error_px": 2.7389297428706385,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "5",
+            "6",
+            "8"
+          ],
+          "anchor_coverage": 0.2849496298932284,
+          "matrix": [
+            [
+              -0.021167755593276365,
+              -2.1220244418981364,
+              3796.9145407230385
+            ],
+            [
+              2.23347641296675,
+              0.15040885190966743,
+              -428.80682255804123
+            ],
+            [
+              -5.221757102146774e-05,
+              0.00014089393967853467,
+              0.9999999999999999
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": false,
+        "rmse_px": 1.353468191206132,
+        "blur_laplacian_var": 295.70660400390625,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9423962067828853
+        },
+        "roi_min": 0.9423962067828853,
+        "lighting_bgr": [
+          {
+            "gain": 0.9904231666380667,
+            "offset": 0.5134287055432485
+          },
+          {
+            "gain": 0.9941436672063336,
+            "offset": 0.30394815010010673
+          },
+          {
+            "gain": 0.998272547827723,
+            "offset": 0.04177701984562151
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.01950790496042326,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.0009141084326502912,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.0676886849124156,
+        "boundary_changed_fraction": 0.022263236820855924,
+        "stable_fraction": 0.7117996163514608,
+        "changed_fraction_pcb": 0.01950790496042326,
+        "score": 3.9453327444686557
+      },
+      {
+        "frame_index": 9,
+        "pts": 33710,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 374.55555555555554,
+        "timestamp_source": "pts",
+        "estimated_ms": 300.82874186550976,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.77190163075491,
+          "max_inlier_error_px": 2.961596201407796,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "5",
+            "6",
+            "8",
+            "9"
+          ],
+          "anchor_coverage": 0.3321916109344486,
+          "matrix": [
+            [
+              -0.026480631885113362,
+              -2.1178781878593456,
+              3787.9937579670636
+            ],
+            [
+              2.2207890759566964,
+              0.14855254824501882,
+              -425.03312270945713
+            ],
+            [
+              -5.7975575554639396e-05,
+              0.0001381697700436576,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": false,
+        "rmse_px": 1.77190163075491,
+        "blur_laplacian_var": 298.4855041503906,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9423962067828853
+        },
+        "roi_min": 0.9423962067828853,
+        "lighting_bgr": [
+          {
+            "gain": 0.9959617869828317,
+            "offset": 0.365821266365216
+          },
+          {
+            "gain": 0.9930100172715471,
+            "offset": 0.3901665390884064
+          },
+          {
+            "gain": 0.990734066508118,
+            "offset": 0.40667143873132844
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.019079522283716864,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.0012440528206622001,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.06776738371341122,
+        "boundary_changed_fraction": 0.014256175862444227,
+        "stable_fraction": 0.7184556753082824,
+        "changed_fraction_pcb": 0.019079522283716864,
+        "score": 3.906987336963569
+      },
+      {
+        "frame_index": 12,
+        "pts": 42793,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 475.47777777777776,
+        "timestamp_source": "pts",
+        "estimated_ms": 401.10498915401297,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.2312457280979654,
+          "max_inlier_error_px": 2.3605144718810194,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "5",
+            "7"
+          ],
+          "anchor_coverage": 0.32192262965418605,
+          "matrix": [
+            [
+              -0.021864374613755334,
+              -2.1173507681125434,
+              3777.582804911736
+            ],
+            [
+              2.2122177442556015,
+              0.14343460934553517,
+              -419.48652520174414
+            ],
+            [
+              -6.0852998958032925e-05,
+              0.00013365676701199752,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": true,
+        "rmse_px": 1.2312457280979654,
+        "blur_laplacian_var": 298.39599609375,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9493592355431557
+        },
+        "roi_min": 0.9493592355431557,
+        "lighting_bgr": [
+          {
+            "gain": 0.9976364335780964,
+            "offset": 0.3214306577167637
+          },
+          {
+            "gain": 0.9965894675388708,
+            "offset": 0.3445391436968112
+          },
+          {
+            "gain": 0.9922537167118294,
+            "offset": -0.07589690810225216
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.005026746429245197,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 2.4342597720315722e-05,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.018172617869007545,
+        "boundary_changed_fraction": 0.009603841536614645,
+        "stable_fraction": 0.7233889764546223,
+        "changed_fraction_pcb": 0.005026746429245197,
+        "score": 4.033912462885696
+      },
+      {
+        "frame_index": 15,
+        "pts": 51796,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 575.5111111111111,
+        "timestamp_source": "pts",
+        "estimated_ms": 501.38123644251624,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.2472788222215048,
+          "max_inlier_error_px": 2.5505826380418504,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "5",
+            "6",
+            "8"
+          ],
+          "anchor_coverage": 0.2318286770956256,
+          "matrix": [
+            [
+              -0.019089178615760805,
+              -2.1376652425220493,
+              3814.451097628585
+            ],
+            [
+              2.252984407864217,
+              0.15312425728112958,
+              -437.7932142458226
+            ],
+            [
+              -5.0340267508534966e-05,
+              0.00014258972299958716,
+              0.9999999999999999
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": false,
+        "rmse_px": 1.2472788222215048,
+        "blur_laplacian_var": 302.3130798339844,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9423962067828853
+        },
+        "roi_min": 0.9423962067828853,
+        "lighting_bgr": [
+          {
+            "gain": 0.9842580706030355,
+            "offset": 1.0217769886290597
+          },
+          {
+            "gain": 0.9860876691216859,
+            "offset": 0.874752795092294
+          },
+          {
+            "gain": 0.9858988045656331,
+            "offset": 0.12232995978176649
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.027840147253671423,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.0012456264231480232,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.09742892047978677,
+        "boundary_changed_fraction": 0.031055900621118012,
+        "stable_fraction": 0.714251711744591,
+        "changed_fraction_pcb": 0.027840147253671423,
+        "score": 3.9150059827530144
+      },
+      {
+        "frame_index": 18,
+        "pts": 60799,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 675.5444444444444,
+        "timestamp_source": "pts",
+        "estimated_ms": 601.6574837310195,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.6714251022916968,
+          "max_inlier_error_px": 2.9409818752578327,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "5",
+            "6",
+            "8",
+            "9"
+          ],
+          "anchor_coverage": 0.3238404534010932,
+          "matrix": [
+            [
+              -0.022347647696269474,
+              -2.127618688331151,
+              3794.918044382738
+            ],
+            [
+              2.2346044606355178,
+              0.1500680053552666,
+              -430.9604157806583
+            ],
+            [
+              -5.4295173563320747e-05,
+              0.00013925350432283576,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": false,
+        "rmse_px": 1.6714251022916968,
+        "blur_laplacian_var": 297.4579772949219,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9423962067828853
+        },
+        "roi_min": 0.9423962067828853,
+        "lighting_bgr": [
+          {
+            "gain": 0.9938979382801143,
+            "offset": 0.6355220302592982
+          },
+          {
+            "gain": 0.9908647125478578,
+            "offset": 0.6474834817123708
+          },
+          {
+            "gain": 0.997995570506878,
+            "offset": -0.3886536269466122
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.019727819390231036,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.001694147434266459,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.06992960844698635,
+        "boundary_changed_fraction": 0.023087218380548738,
+        "stable_fraction": 0.7178903210192189,
+        "changed_fraction_pcb": 0.019727819390231036,
+        "score": 3.919614066611723
+      },
+      {
+        "frame_index": 21,
+        "pts": 69868,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 776.311111111111,
+        "timestamp_source": "pts",
+        "estimated_ms": 701.9337310195227,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.6306354634105291,
+          "max_inlier_error_px": 2.6788532382598746,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "6",
+            "8"
+          ],
+          "anchor_coverage": 0.34775967263064034,
+          "matrix": [
+            [
+              -0.033205417033243624,
+              -2.119885916376035,
+              3784.1505031567326
+            ],
+            [
+              2.2178889921465554,
+              0.150129317936256,
+              -420.79869836905084
+            ],
+            [
+              -6.234489748425099e-05,
+              0.00013784226216370386,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": false,
+        "rmse_px": 1.6306354634105291,
+        "blur_laplacian_var": 296.2527770996094,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9423962067828853
+        },
+        "roi_min": 0.9423962067828853,
+        "lighting_bgr": [
+          {
+            "gain": 0.987917018399774,
+            "offset": 0.9936563406879586
+          },
+          {
+            "gain": 0.9901680077752896,
+            "offset": 0.7168628742452381
+          },
+          {
+            "gain": 1.0005041386683262,
+            "offset": -0.2810035161375609
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.022050904488673355,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.0025008062209836506,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.07940751128445593,
+        "boundary_changed_fraction": 0.021895620875824834,
+        "stable_fraction": 0.7223070697974407,
+        "changed_fraction_pcb": 0.022050904488673355,
+        "score": 3.9518979468582693
+      },
+      {
+        "frame_index": 24,
+        "pts": 78875,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 876.3888888888889,
+        "timestamp_source": "pts",
+        "estimated_ms": 802.2099783080259,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.402761765709628,
+          "max_inlier_error_px": 2.6837529103289173,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "anchor_coverage": 0.2659326909998146,
+          "matrix": [
+            [
+              -0.019723143171979412,
+              -2.1355955911824682,
+              3801.345223369806
+            ],
+            [
+              2.2469972882680724,
+              0.14944988695917238,
+              -424.2916412341085
+            ],
+            [
+              -4.801254980207289e-05,
+              0.00013615677764147169,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": false,
+        "rmse_px": 1.402761765709628,
+        "blur_laplacian_var": 284.0612487792969,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9423962067828853
+        },
+        "roi_min": 0.9423962067828853,
+        "lighting_bgr": [
+          {
+            "gain": 0.9957232078462814,
+            "offset": 0.693877325567802
+          },
+          {
+            "gain": 0.9902398889726545,
+            "offset": 0.5930485307044455
+          },
+          {
+            "gain": 0.9979291226627455,
+            "offset": 0.21778484461287048
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.029729562217217943,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.004648472202136231,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.10489867327598776,
+        "boundary_changed_fraction": 0.0313265306122449,
+        "stable_fraction": 0.7165878148048674,
+        "changed_fraction_pcb": 0.029729562217217943,
+        "score": 3.9160618450583935
+      },
+      {
+        "frame_index": 27,
+        "pts": 87882,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 976.4666666666667,
+        "timestamp_source": "pts",
+        "estimated_ms": 902.4862255965293,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.5302833068629909,
+          "max_inlier_error_px": 2.7816960613407993,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "5",
+            "7"
+          ],
+          "anchor_coverage": 0.32878042885977493,
+          "matrix": [
+            [
+              -0.021214358218616496,
+              -2.12501249482899,
+              3779.440489373733
+            ],
+            [
+              2.217698072356893,
+              0.1441006049085542,
+              -411.91344840035975
+            ],
+            [
+              -6.0364567771651316e-05,
+              0.0001331567822460391,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": false,
+        "rmse_px": 1.5302833068629909,
+        "blur_laplacian_var": 279.4720764160156,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9493592355431557
+        },
+        "roi_min": 0.9493592355431557,
+        "lighting_bgr": [
+          {
+            "gain": 0.9896047064715886,
+            "offset": 0.9512369727953295
+          },
+          {
+            "gain": 0.9868559671818639,
+            "offset": 0.7502604201803635
+          },
+          {
+            "gain": 0.9916942036011449,
+            "offset": 0.5586733399576651
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.00870856433444295,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.00013388428746173648,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.031125611745513867,
+        "boundary_changed_fraction": 0.014514896867838044,
+        "stable_fraction": 0.7202122674521212,
+        "changed_fraction_pcb": 0.00870856433444295,
+        "score": 3.978562271878123
+      },
+      {
+        "frame_index": 30,
+        "pts": 96916,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 1076.8444444444444,
+        "timestamp_source": "pts",
+        "estimated_ms": 1002.7624728850325,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.2770154433373766,
+          "max_inlier_error_px": 2.948321872287189,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "anchor_coverage": 0.3434122082165915,
+          "matrix": [
+            [
+              -0.0315847469051745,
+              -2.125593995108149,
+              3790.2656628013774
+            ],
+            [
+              2.226402143850431,
+              0.15098612498738118,
+              -415.2761952368232
+            ],
+            [
+              -6.0957931852498085e-05,
+              0.00013786340937430112,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": true,
+        "rmse_px": 1.2770154433373766,
+        "blur_laplacian_var": 286.6270751953125,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9423962067828853
+        },
+        "roi_min": 0.9423962067828853,
+        "lighting_bgr": [
+          {
+            "gain": 0.989485435247225,
+            "offset": 0.8398603340124876
+          },
+          {
+            "gain": 0.981436735864234,
+            "offset": 0.9869289454854242
+          },
+          {
+            "gain": 0.9896822147211382,
+            "offset": 0.45072009491713444
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.024673404443038206,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.004247111295003864,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.08792471649428651,
+        "boundary_changed_fraction": 0.020195960807838434,
+        "stable_fraction": 0.7193803355096229,
+        "changed_fraction_pcb": 0.024673404443038206,
+        "score": 4.017583210617282
+      },
+      {
+        "frame_index": 33,
+        "pts": 105950,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 1177.2222222222222,
+        "timestamp_source": "pts",
+        "estimated_ms": 1103.0387201735357,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.251197183151914,
+          "max_inlier_error_px": 2.3515721575759847,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "6",
+            "7"
+          ],
+          "anchor_coverage": 0.2455511039724138,
+          "matrix": [
+            [
+              -0.0596393603544622,
+              -2.112424305456067,
+              3770.397402137597
+            ],
+            [
+              2.176065059675685,
+              0.14768337438774834,
+              -394.94005328360976
+            ],
+            [
+              -8.256449495752748e-05,
+              0.00013353425569956245,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "KNOWN_LED_NOT_COVERED",
+        "selected": false,
+        "rmse_px": 1.251197183151914,
+        "blur_laplacian_var": 271.1108093261719,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.0
+        },
+        "roi_min": 0.0,
+        "lighting_bgr": [
+          {
+            "gain": 0.9838063474430814,
+            "offset": 1.268031129580793
+          },
+          {
+            "gain": 0.9795630319918296,
+            "offset": 1.1926901602202025
+          },
+          {
+            "gain": 0.9888171458796221,
+            "offset": 0.5594039065548648
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.021330370988906118,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.0014612907073839915,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.07440058251417278,
+        "boundary_changed_fraction": 0.021093590006143765,
+        "stable_fraction": 0.7133037098890612,
+        "changed_fraction_pcb": 0.021330370988906118
+      },
+      {
+        "frame_index": 36,
+        "pts": 114957,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 1277.3000000000002,
+        "timestamp_source": "pts",
+        "estimated_ms": 1203.314967462039,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.5235317589227693,
+          "max_inlier_error_px": 2.9581391755112314,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "6",
+            "8"
+          ],
+          "anchor_coverage": 0.3345645905775805,
+          "matrix": [
+            [
+              -0.03495458423212324,
+              -2.125582684275433,
+              3790.299098544623
+            ],
+            [
+              2.21811668810736,
+              0.15037954714918395,
+              -401.79187516343774
+            ],
+            [
+              -6.198147435706913e-05,
+              0.0001348983346282314,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "KNOWN_LED_NOT_COVERED",
+        "selected": false,
+        "rmse_px": 1.5235317589227693,
+        "blur_laplacian_var": 282.65185546875,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.0
+        },
+        "roi_min": 0.0,
+        "lighting_bgr": [
+          {
+            "gain": 0.9863228381325103,
+            "offset": 1.1608746628326814
+          },
+          {
+            "gain": 0.9783785323556061,
+            "offset": 1.1669439948814917
+          },
+          {
+            "gain": 0.9843432226572565,
+            "offset": 0.6522508569691269
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.02108082341282286,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.0019192894865587013,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.07281038105760274,
+        "boundary_changed_fraction": 0.027719613121946356,
+        "stable_fraction": 0.7104695359835418,
+        "changed_fraction_pcb": 0.02108082341282286
+      },
+      {
+        "frame_index": 39,
+        "pts": 123962,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 1377.3555555555556,
+        "timestamp_source": "pts",
+        "estimated_ms": 1303.5912147505423,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.4924433827243233,
+          "max_inlier_error_px": 2.7326870731112254,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "5"
+          ],
+          "anchor_coverage": 0.371932102715204,
+          "matrix": [
+            [
+              -0.02205028895102421,
+              -2.126025499972109,
+              3788.5977651418543
+            ],
+            [
+              2.2205444760067143,
+              0.1505674981950557,
+              -397.9046245279081
+            ],
+            [
+              -5.9011442881837033e-05,
+              0.00013541396270823743,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": true,
+        "rmse_px": 1.4924433827243233,
+        "blur_laplacian_var": 274.869873046875,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9423962067828853
+        },
+        "roi_min": 0.9423962067828853,
+        "lighting_bgr": [
+          {
+            "gain": 0.9875624370910471,
+            "offset": 0.824373386075102
+          },
+          {
+            "gain": 0.9762236800596479,
+            "offset": 1.0597139597143945
+          },
+          {
+            "gain": 0.984289446677092,
+            "offset": 0.5585309631125234
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.0075056748203663915,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.00022644052070273883,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.02696910162529023,
+        "boundary_changed_fraction": 0.010568945080995654,
+        "stable_fraction": 0.7216935541772753,
+        "changed_fraction_pcb": 0.0075056748203663915,
+        "score": 4.001826453634175
+      },
+      {
+        "frame_index": 42,
+        "pts": 133039,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 1478.2111111111112,
+        "timestamp_source": "pts",
+        "estimated_ms": 1403.8674620390454,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.3355847791633042,
+          "max_inlier_error_px": 2.348079223811033,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "5",
+            "6",
+            "8"
+          ],
+          "anchor_coverage": 0.2849496298932284,
+          "matrix": [
+            [
+              -0.01955400105104483,
+              -2.146155077232488,
+              3816.3326931481874
+            ],
+            [
+              2.2537878902467168,
+              0.1565029548119867,
+              -409.78687270334575
+            ],
+            [
+              -5.2059960027447225e-05,
+              0.0001410280686505775,
+              0.9999999999999999
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": false,
+        "rmse_px": 1.3355847791633042,
+        "blur_laplacian_var": 297.2303771972656,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9423962067828853
+        },
+        "roi_min": 0.9423962067828853,
+        "lighting_bgr": [
+          {
+            "gain": 0.9871070800495599,
+            "offset": 1.1927953577503523
+          },
+          {
+            "gain": 0.9743090021633021,
+            "offset": 1.0004419896951129
+          },
+          {
+            "gain": 0.9762967424941034,
+            "offset": 0.7633804202275589
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.024300049167953575,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.0012603616268360076,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.08491844538018489,
+        "boundary_changed_fraction": 0.026415964932518167,
+        "stable_fraction": 0.7138425101971566,
+        "changed_fraction_pcb": 0.024300049167953575,
+        "score": 3.9490631012904918
+      },
+      {
+        "frame_index": 45,
+        "pts": 142034,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 1578.1555555555556,
+        "timestamp_source": "pts",
+        "estimated_ms": 1504.1437093275488,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.44486109658686,
+          "max_inlier_error_px": 2.711744418869343,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "6",
+            "8"
+          ],
+          "anchor_coverage": 0.32877728104841336,
+          "matrix": [
+            [
+              -0.03746414787539638,
+              -2.1271624275822436,
+              3787.3291934998897
+            ],
+            [
+              2.213969269816501,
+              0.15097270795691967,
+              -385.4271633897885
+            ],
+            [
+              -6.322339494636327e-05,
+              0.00013387023890402836,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "KNOWN_LED_NOT_COVERED",
+        "selected": false,
+        "rmse_px": 1.44486109658686,
+        "blur_laplacian_var": 293.9091796875,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.0
+        },
+        "roi_min": 0.0,
+        "lighting_bgr": [
+          {
+            "gain": 0.9913487343626891,
+            "offset": 1.1188412585829666
+          },
+          {
+            "gain": 0.9738586845240196,
+            "offset": 1.288346516466333
+          },
+          {
+            "gain": 0.9820634428018893,
+            "offset": 0.7707564870097824
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.022376291983477934,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.002055682173660455,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.07789927545895008,
+        "boundary_changed_fraction": 0.03235205465688737,
+        "stable_fraction": 0.712753528814663,
+        "changed_fraction_pcb": 0.022376291983477934
+      },
+      {
+        "frame_index": 48,
+        "pts": 151039,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 1678.211111111111,
+        "timestamp_source": "pts",
+        "estimated_ms": 1604.4199566160519,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.286760075767229,
+          "max_inlier_error_px": 2.3152512922738864,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "6",
+            "7"
+          ],
+          "anchor_coverage": 0.2455511039724138,
+          "matrix": [
+            [
+              -0.06286165266479554,
+              -2.1116950919998514,
+              3768.6076868316395
+            ],
+            [
+              2.169030297943277,
+              0.15031806307750958,
+              -365.6044058748861
+            ],
+            [
+              -8.474087881932672e-05,
+              0.00013262992847093918,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "KNOWN_LED_NOT_COVERED",
+        "selected": false,
+        "rmse_px": 1.286760075767229,
+        "blur_laplacian_var": 288.72503662109375,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.0
+        },
+        "roi_min": 0.0,
+        "lighting_bgr": [
+          {
+            "gain": 0.9831061602194358,
+            "offset": 1.489622657721172
+          },
+          {
+            "gain": 0.9686941690937461,
+            "offset": 1.4597152052606999
+          },
+          {
+            "gain": 0.9708371202700615,
+            "offset": 1.2184404333088548
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.02619139926040797,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.0025423476082548015,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.09089732974539433,
+        "boundary_changed_fraction": 0.022629531026008603,
+        "stable_fraction": 0.7118573303113443,
+        "changed_fraction_pcb": 0.02619139926040797
+      },
+      {
+        "frame_index": 51,
+        "pts": 160126,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 1779.1777777777777,
+        "timestamp_source": "pts",
+        "estimated_ms": 1704.6962039045552,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.5770904533791137,
+          "max_inlier_error_px": 2.9037519112335164,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "7",
+            "8"
+          ],
+          "anchor_coverage": 0.3063994161851252,
+          "matrix": [
+            [
+              -0.011864220958027371,
+              -2.1320578073986827,
+              3789.286929575364
+            ],
+            [
+              2.233313259494545,
+              0.1552765073911365,
+              -379.3499990850834
+            ],
+            [
+              -5.633784533490125e-05,
+              0.00013503690343090138,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "KNOWN_LED_NOT_COVERED",
+        "selected": false,
+        "rmse_px": 1.5770904533791137,
+        "blur_laplacian_var": 306.0345153808594,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.0
+        },
+        "roi_min": 0.0,
+        "lighting_bgr": [
+          {
+            "gain": 0.9926821441183166,
+            "offset": 1.1256778188096568
+          },
+          {
+            "gain": 0.9714343424392672,
+            "offset": 1.3241032838992242
+          },
+          {
+            "gain": 0.9765879483288041,
+            "offset": 0.9506615450394068
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.013196756058068507,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 9.03411420510219e-05,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.04588397322830841,
+        "boundary_changed_fraction": 0.01484796094782874,
+        "stable_fraction": 0.7123885503026428,
+        "changed_fraction_pcb": 0.013196756058068507
+      },
+      {
+        "frame_index": 54,
+        "pts": 169121,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 1879.122222222222,
+        "timestamp_source": "pts",
+        "estimated_ms": 1804.9724511930585,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.3623069676255373,
+          "max_inlier_error_px": 2.7221777893836325,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "6",
+            "7"
+          ],
+          "anchor_coverage": 0.2513384135015809,
+          "matrix": [
+            [
+              -0.058497563953699296,
+              -2.117358513766286,
+              3773.256482001868
+            ],
+            [
+              2.18049979018947,
+              0.15350455975679142,
+              -363.6009978504844
+            ],
+            [
+              -8.18799629609066e-05,
+              0.0001335918115019551,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "KNOWN_LED_NOT_COVERED",
+        "selected": false,
+        "rmse_px": 1.3623069676255373,
+        "blur_laplacian_var": 298.4358825683594,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.0
+        },
+        "roi_min": 0.0,
+        "lighting_bgr": [
+          {
+            "gain": 0.9810710910755592,
+            "offset": 1.2501266370652935
+          },
+          {
+            "gain": 0.9657103340180517,
+            "offset": 1.4656932713166124
+          },
+          {
+            "gain": 0.9666193296649471,
+            "offset": 1.4829423140044236
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.02243596766065599,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 0.001796630222825968,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.07707747892412686,
+        "boundary_changed_fraction": 0.023064417801259906,
+        "stable_fraction": 0.708916690402635,
+        "changed_fraction_pcb": 0.02243596766065599
+      },
+      {
+        "frame_index": 57,
+        "pts": 178116,
+        "rotation_degrees": -90,
+        "time_base": "1/90000",
+        "timestamp_ms": 1979.0666666666668,
+        "timestamp_source": "pts",
+        "estimated_ms": 1905.2486984815616,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.5618139881513204,
+          "max_inlier_error_px": 2.997321792791418,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "5",
+            "7"
+          ],
+          "anchor_coverage": 0.329602956870891,
+          "matrix": [
+            [
+              -0.021591060273774176,
+              -2.1283990697764166,
+              3782.16299075893
+            ],
+            [
+              2.2189076565219423,
+              0.1514169317445564,
+              -369.237405210962
+            ],
+            [
+              -6.149642781464251e-05,
+              0.00013366359104076335,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "reason": "ELIGIBLE",
+        "selected": false,
+        "rmse_px": 1.5618139881513204,
+        "blur_laplacian_var": 291.9934387207031,
+        "glow_regions": 0,
+        "roi_coverage": {
+          "LED49": 0.9493592355431557
+        },
+        "roi_min": 0.9493592355431557,
+        "lighting_bgr": [
+          {
+            "gain": 0.9822553550541974,
+            "offset": 0.9678510859046502
+          },
+          {
+            "gain": 0.967619372698964,
+            "offset": 0.9649579802743691
+          },
+          {
+            "gain": 0.9651582308162346,
+            "offset": 1.368721187313516
+          }
+        ],
+        "extreme_lighting": false,
+        "changed_fraction": 0.0075279483450076375,
+        "stable_changed_fraction": 0.0,
+        "smooth_changed_fraction": 4.2599546010552516e-05,
+        "changed_pixels_near_edges": 1.0,
+        "edge_changed_fraction": 0.026999890865437085,
+        "boundary_changed_fraction": 0.009167303284950344,
+        "stable_fraction": 0.7211859713609338,
+        "changed_fraction_pcb": 0.0075279483450076375,
+        "score": 3.9739907299027166
+      }
+    ],
+    "video": {
+      "path": "data\\VID_20261117_101549.mp4",
+      "width": 1080,
+      "height": 1920,
+      "coded_width": 1920,
+      "coded_height": 1080,
+      "rotation_degrees": -90,
+      "stream_start_pts": 6669,
+      "stream_time_base": "1/90000",
+      "container_duration_s": 30.892333,
+      "stream_start_s": 0.0741,
+      "fps": 29.91735412045034,
+      "frame_count": 922,
+      "duration_s": 30.818233333333332,
+      "backend": "PyAV",
+      "av": "19.0.2",
+      "codec": "h264",
+      "timestamps": "frame.pts * frame.time_base; FPS fallback explicitly estimated"
+    },
+    "coverage": {
+      "known_leds": {
+        "LED49": 0.9423962067828853
+      },
+      "analysis_valid_fraction": 0.3416719858156028,
+      "pcb_fraction": 0.7320875467095129,
+      "pcb_method": "dark_silhouette_estimate",
+      "discover_unavailable_fraction": 0.289856941752224
+    },
+    "setup_ms": 12713.2393,
+    "source": "automatic_video_median",
+    "start_s": 0.0,
+    "duration_s": 2.0,
+    "decoded_frames": 59,
+    "retained_frames": 5,
+    "minimum_observations": 4,
+    "retained_image_bytes": 180480000,
+    "accepted": [
+      {
+        "frame_index": 0,
+        "timestamp_ms": 74.1,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.5660405709713054,
+          "max_inlier_error_px": 2.9941336641348726,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7"
+          ],
+          "anchor_coverage": 0.34096112435206416,
+          "matrix": [
+            [
+              -0.02740419251937201,
+              -2.1072592841830082,
+              3767.751523521781
+            ],
+            [
+              2.2017632731633583,
+              0.1466597006061726,
+              -415.7668359031647
+            ],
+            [
+              -6.457677145932501e-05,
+              0.00013665264890782514,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "score": 3.984870542443757
+      },
+      {
+        "frame_index": 3,
+        "timestamp_ms": 174.55555555555554,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.6216718785275044,
+          "max_inlier_error_px": 2.9547595075123323,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "7",
+            "9"
+          ],
+          "anchor_coverage": 0.39546737060369286,
+          "matrix": [
+            [
+              -0.02033035983376727,
+              -2.1087157602397464,
+              3770.0489649280157
+            ],
+            [
+              2.210344177257881,
+              0.1463929743288984,
+              -417.55099335900235
+            ],
+            [
+              -5.9397223635989665e-05,
+              0.00013614246155797813,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "score": 4.026353837113901
+      },
+      {
+        "frame_index": 12,
+        "timestamp_ms": 475.47777777777776,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.2312457280979654,
+          "max_inlier_error_px": 2.3605144718810194,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "5",
+            "7"
+          ],
+          "anchor_coverage": 0.32192262965418605,
+          "matrix": [
+            [
+              -0.021864374613755334,
+              -2.1173507681125434,
+              3777.582804911736
+            ],
+            [
+              2.2122177442556015,
+              0.14343460934553517,
+              -419.48652520174414
+            ],
+            [
+              -6.0852998958032925e-05,
+              0.00013365676701199752,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "score": 4.033912462885696
+      },
+      {
+        "frame_index": 30,
+        "timestamp_ms": 1076.8444444444444,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.2770154433373766,
+          "max_inlier_error_px": 2.948321872287189,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "inlier_ids": [
+            "1",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "anchor_coverage": 0.3434122082165915,
+          "matrix": [
+            [
+              -0.0315847469051745,
+              -2.125593995108149,
+              3790.2656628013774
+            ],
+            [
+              2.226402143850431,
+              0.15098612498738118,
+              -415.2761952368232
+            ],
+            [
+              -6.0957931852498085e-05,
+              0.00013786340937430112,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "score": 4.017583210617282
+      },
+      {
+        "frame_index": 39,
+        "timestamp_ms": 1377.3555555555556,
+        "registration": {
+          "status": "REGISTERED",
+          "reason": "Robust marker registration",
+          "reprojection_rmse_px": 1.4924433827243233,
+          "max_inlier_error_px": 2.7326870731112254,
+          "common_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "9"
+          ],
+          "inlier_ids": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "5"
+          ],
+          "anchor_coverage": 0.371932102715204,
+          "matrix": [
+            [
+              -0.02205028895102421,
+              -2.126025499972109,
+              3788.5977651418543
+            ],
+            [
+              2.2205444760067143,
+              0.1505674981950557,
+              -397.9046245279081
+            ],
+            [
+              -5.9011442881837033e-05,
+              0.00013541396270823743,
+              1.0
+            ]
+          ],
+          "anchor_hull": null
+        },
+        "score": 4.001826453634175
+      }
+    ],
+    "rejected": [
+      {
+        "frame": 33,
+        "reason": "KNOWN_LED_NOT_COVERED"
+      },
+      {
+        "frame": 36,
+        "reason": "KNOWN_LED_NOT_COVERED"
+      },
+      {
+        "frame": 45,
+        "reason": "KNOWN_LED_NOT_COVERED"
+      },
+      {
+        "frame": 48,
+        "reason": "KNOWN_LED_NOT_COVERED"
+      },
+      {
+        "frame": 51,
+        "reason": "KNOWN_LED_NOT_COVERED"
+      },
+      {
+        "frame": 54,
+        "reason": "KNOWN_LED_NOT_COVERED"
+      }
+    ],
+    "valid_fraction": 0.3522301640070922,
+    "max_rmse_px": 1.6216718785275044,
+    "max_error_px": 2.9941336641348726,
+    "marker_ids": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "9"
+    ],
+    "warning": "Operator must guarantee interval OFF; absence of optical evidence is not electrical proof"
+  },
+  "machine": {
+    "cpu": "Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz",
+    "logical_cpus": 16,
+    "ram_bytes": 68642263040,
+    "python": "3.12.3",
+    "opencv": "4.14.0",
+    "opencv_threads": 16,
+    "os": "Windows-10-10.0.19045-SP0"
+  },
+  "limitations": [
+    "Frame PTS endpoints are not physical light switching times",
+    "Continuity across unknown gaps is a hypothesis; duration may be censored",
+    "Unknown tracks have no automatic PCB LED ID",
+    "Optical evidence is not electrical proof"
+  ],
+  "off_setup_ms": 13235.8433,
+  "known_led_coordinates_used": true,
+  "processing_wall_s": 43.557335,
+  "cpu_seconds": 151.875,
+  "frame_count": 922,
+  "temporal_frame_ms": [
+    0.0416,
+    0.0285,
+    0.0296,
+    0.0194,
+    0.0189,
+    0.0178,
+    0.0187,
+    0.0174,
+    0.0172,
+    0.0153,
+    0.0172,
+    0.0188,
+    0.0167,
+    0.0157,
+    0.0155,
+    0.0173,
+    0.0156,
+    0.0148,
+    0.0147,
+    0.016,
+    0.0162,
+    0.0151,
+    0.0146,
+    0.0164,
+    0.0149,
+    0.0157,
+    0.0152,
+    0.016,
+    0.0142,
+    0.0141,
+    0.0161,
+    0.017,
+    0.0147,
+    0.0144,
+    0.0156,
+    0.0155,
+    0.015,
+    0.0137,
+    0.0156,
+    0.0161,
+    0.0141,
+    0.0149,
+    0.015,
+    0.0158,
+    0.0148,
+    0.0138,
+    0.0153,
+    0.0169,
+    0.0154,
+    0.0144,
+    0.0145,
+    0.0166,
+    0.0151,
+    0.0148,
+    0.0148,
+    0.0155,
+    0.0162,
+    0.0161,
+    0.0153,
+    0.02,
+    0.0168,
+    0.0161,
+    0.0157,
+    0.0208,
+    0.0153,
+    0.0149,
+    0.0147,
+    0.0167,
+    0.0154,
+    0.0149,
+    0.0145,
+    0.0158,
+    0.0144,
+    0.0139,
+    0.0144,
+    0.0175,
+    0.014,
+    0.0137,
+    0.0137,
+    0.0157,
+    0.0159,
+    0.0154,
+    0.0143,
+    0.0157,
+    0.0162,
+    0.0151,
+    0.0147,
+    0.0169,
+    0.019,
+    0.0157,
+    0.015,
+    0.0173,
+    0.0152,
+    0.0153,
+    0.0145,
+    0.0168,
+    0.0143,
+    0.0161,
+    0.0153,
+    0.0236,
+    0.0173,
+    0.0205,
+    0.0163,
+    0.0205,
+    0.0171,
+    0.0164,
+    0.0163,
+    0.0186,
+    0.0167,
+    0.0173,
+    0.0186,
+    0.0182,
+    0.0176,
+    0.0181,
+    0.0207,
+    0.0187,
+    0.0191,
+    0.0188,
+    0.0172,
+    0.0214,
+    0.0257,
+    0.0171,
+    0.0238,
+    0.0214,
+    0.1005,
+    0.025,
+    0.0227,
+    0.0166,
+    0.0237,
+    0.0243,
+    0.0231,
+    0.0234,
+    0.0235,
+    0.0255,
+    0.0236,
+    0.0239,
+    0.0238,
+    0.0262,
+    0.0247,
+    0.0245,
+    0.0274,
+    0.0262,
+    0.0266,
+    0.0261,
+    0.0169,
+    0.0292,
+    0.0275,
+    0.0279,
+    0.03,
+    0.0291,
+    0.0284,
+    0.0311,
+    0.0291,
+    0.0292,
+    0.0288,
+    0.0352,
+    0.0312,
+    0.0321,
+    0.0309,
+    0.0184,
+    0.0338,
+    0.0328,
+    0.0154,
+    0.0356,
+    0.0337,
+    0.0331,
+    0.0332,
+    0.0351,
+    0.0336,
+    0.0681,
+    0.0399,
+    0.0381,
+    0.037,
+    0.0369,
+    0.0385,
+    0.0366,
+    0.0169,
+    0.0382,
+    0.0393,
+    0.0378,
+    0.038,
+    0.0165,
+    0.0409,
+    0.0384,
+    0.0383,
+    0.0396,
+    0.0437,
+    0.0405,
+    0.0402,
+    0.0401,
+    0.0448,
+    0.0419,
+    0.0411,
+    0.0441,
+    0.0418,
+    0.0426,
+    0.0422,
+    0.0448,
+    0.0434,
+    0.0165,
+    0.0452,
+    0.0178,
+    0.0459,
+    0.0453,
+    0.0466,
+    0.0469,
+    0.0462,
+    0.0454,
+    0.0478,
+    0.0463,
+    0.0459,
+    0.0467,
+    0.0491,
+    0.0478,
+    0.0473,
+    0.0481,
+    0.0506,
+    0.0484,
+    0.0166,
+    0.0499,
+    0.0552,
+    0.0502,
+    0.0507,
+    0.0526,
+    0.0519,
+    0.0539,
+    0.0522,
+    0.0183,
+    0.0565,
+    0.0538,
+    0.0526,
+    0.0552,
+    0.0169,
+    0.0546,
+    0.0537,
+    0.0558,
+    0.0165,
+    0.0556,
+    0.0564,
+    0.0538,
+    0.055,
+    0.0548,
+    0.058,
+    0.0584,
+    0.0587,
+    0.0569,
+    0.0185,
+    0.06,
+    0.0579,
+    0.0174,
+    0.0226,
+    0.5273,
+    0.0223,
+    0.0191,
+    0.0193,
+    0.0174,
+    0.0157,
+    0.0165,
+    0.0192,
+    0.0162,
+    0.0155,
+    0.0155,
+    0.0175,
+    0.0155,
+    0.0153,
+    0.0176,
+    0.0161,
+    0.0152,
+    0.0145,
+    0.0158,
+    0.0175,
+    0.0158,
+    0.0149,
+    0.017,
+    0.0151,
+    0.015,
+    0.0148,
+    0.0172,
+    0.0151,
+    0.0149,
+    0.015,
+    0.017,
+    0.0155,
+    0.0152,
+    0.0143,
+    0.0168,
+    0.0179,
+    0.0149,
+    0.0145,
+    0.0169,
+    0.0147,
+    0.0146,
+    0.0145,
+    0.0168,
+    0.0145,
+    0.0145,
+    0.0144,
+    0.0161,
+    0.0145,
+    0.0141,
+    0.014,
+    0.0164,
+    0.0144,
+    0.0143,
+    0.0141,
+    0.0163,
+    0.0145,
+    0.0144,
+    0.014,
+    0.0165,
+    0.0147,
+    0.0144,
+    0.0145,
+    0.0171,
+    0.0194,
+    0.0158,
+    0.0153,
+    0.0163,
+    0.0308,
+    0.0199,
+    0.0158,
+    0.0168,
+    0.0167,
+    0.0151,
+    0.0154,
+    0.0178,
+    0.015,
+    0.0146,
+    0.0145,
+    0.0166,
+    0.0305,
+    0.0167,
+    0.0156,
+    0.0173,
+    0.0152,
+    0.0147,
+    0.015,
+    0.0167,
+    0.0148,
+    0.0136,
+    0.0152,
+    0.0171,
+    0.0198,
+    0.0193,
+    0.0203,
+    0.0192,
+    0.0204,
+    0.0187,
+    0.0177,
+    0.0155,
+    0.0189,
+    0.0157,
+    0.0175,
+    0.0156,
+    0.0152,
+    0.0159,
+    0.018,
+    0.0171,
+    0.0177,
+    0.0173,
+    0.0197,
+    0.0187,
+    0.0183,
+    0.0205,
+    0.0162,
+    0.0208,
+    0.0195,
+    0.0221,
+    0.0202,
+    0.0203,
+    0.0203,
+    0.0219,
+    0.0225,
+    0.0238,
+    0.0237,
+    0.0222,
+    0.0164,
+    0.0232,
+    0.0245,
+    0.0228,
+    0.0158,
+    0.0249,
+    0.0263,
+    0.0242,
+    0.0156,
+    0.0245,
+    0.0271,
+    0.0256,
+    0.0255,
+    0.0274,
+    0.0264,
+    0.0265,
+    0.0164,
+    0.0309,
+    0.0283,
+    0.0281,
+    0.0276,
+    0.0306,
+    0.0287,
+    0.0288,
+    0.0311,
+    0.0302,
+    0.0298,
+    0.0303,
+    0.0335,
+    0.031,
+    0.031,
+    0.0316,
+    0.0166,
+    0.0354,
+    0.033,
+    0.0328,
+    0.0348,
+    0.0339,
+    0.0335,
+    0.0336,
+    0.0365,
+    0.035,
+    0.0345,
+    0.0369,
+    0.0167,
+    0.0396,
+    0.0362,
+    0.0389,
+    0.0369,
+    0.0371,
+    0.0368,
+    0.0399,
+    0.0381,
+    0.0384,
+    0.041,
+    0.0405,
+    0.0391,
+    0.0408,
+    0.0422,
+    0.0414,
+    0.0435,
+    0.0419,
+    0.0457,
+    0.0422,
+    0.042,
+    0.0422,
+    0.0457,
+    0.044,
+    0.0447,
+    0.0456,
+    0.0449,
+    0.0442,
+    0.0444,
+    0.048,
+    0.046,
+    0.0457,
+    0.0454,
+    0.048,
+    0.0461,
+    0.0482,
+    0.0498,
+    0.0479,
+    0.0485,
+    0.0484,
+    0.0512,
+    0.0494,
+    0.0493,
+    0.0536,
+    0.0586,
+    0.0517,
+    0.0518,
+    0.0563,
+    0.0528,
+    0.0522,
+    0.0523,
+    0.0552,
+    0.053,
+    0.053,
+    0.0537,
+    0.0555,
+    0.0546,
+    0.0172,
+    0.0577,
+    0.0545,
+    0.0545,
+    0.0551,
+    0.0575,
+    0.0555,
+    0.056,
+    0.0564,
+    0.0826,
+    0.0586,
+    0.0578,
+    0.0597,
+    0.0589,
+    0.0589,
+    0.059,
+    0.0635,
+    0.0599,
+    0.0596,
+    0.0603,
+    0.0622,
+    0.0633,
+    0.0616,
+    0.018,
+    0.0226,
+    0.5127,
+    0.0224,
+    0.0181,
+    0.0178,
+    0.0183,
+    0.0151,
+    0.0173,
+    0.0185,
+    0.0162,
+    0.0156,
+    0.0152,
+    0.0172,
+    0.0158,
+    0.0147,
+    0.016,
+    0.0173,
+    0.0157,
+    0.0154,
+    0.0172,
+    0.0148,
+    0.014,
+    0.0144,
+    0.0157,
+    0.0157,
+    0.0137,
+    0.0156,
+    0.0159,
+    0.0148,
+    0.0165,
+    0.0148,
+    0.0146,
+    0.0143,
+    0.0161,
+    0.0146,
+    0.0143,
+    0.0135,
+    0.0169,
+    0.015,
+    0.0142,
+    0.0146,
+    0.0169,
+    0.0149,
+    0.0146,
+    0.0145,
+    0.016,
+    0.0147,
+    0.0134,
+    0.0147,
+    0.0161,
+    0.0148,
+    0.0145,
+    0.0144,
+    0.0155,
+    0.0186,
+    0.0158,
+    0.0153,
+    0.0171,
+    0.0149,
+    0.0147,
+    0.015,
+    0.0163,
+    0.015,
+    0.0154,
+    0.0152,
+    0.017,
+    0.0148,
+    0.0147,
+    0.0145,
+    0.0165,
+    0.0149,
+    0.0148,
+    0.0148,
+    0.0165,
+    0.0147,
+    0.0146,
+    0.0144,
+    0.0164,
+    0.0164,
+    0.0144,
+    0.0163,
+    0.0152,
+    0.0169,
+    0.0145,
+    0.0151,
+    0.0155,
+    0.0148,
+    0.0147,
+    0.0162,
+    0.0144,
+    0.0143,
+    0.0144,
+    0.0167,
+    0.0149,
+    0.0148,
+    0.0143,
+    0.0161,
+    0.0153,
+    0.015,
+    0.0175,
+    0.017,
+    0.0155,
+    0.0157,
+    0.0159,
+    0.0152,
+    0.0188,
+    0.0162,
+    0.0163,
+    0.0185,
+    0.0177,
+    0.0172,
+    0.0178,
+    0.0199,
+    0.0343,
+    0.0317,
+    0.021,
+    0.0223,
+    0.0203,
+    0.0198,
+    0.0198,
+    0.0219,
+    0.021,
+    0.021,
+    0.0234,
+    0.0215,
+    0.0215,
+    0.0219,
+    0.0246,
+    0.0233,
+    0.0163,
+    0.0246,
+    0.0251,
+    0.0239,
+    0.0243,
+    0.0247,
+    0.0261,
+    0.0159,
+    0.0272,
+    0.0271,
+    0.026,
+    0.0263,
+    0.0267,
+    0.0171,
+    0.0197,
+    0.0322,
+    0.0282,
+    0.0298,
+    0.0319,
+    0.0296,
+    0.0288,
+    0.031,
+    0.0296,
+    0.0294,
+    0.0298,
+    0.0322,
+    0.0309,
+    0.0309,
+    0.033,
+    0.0324,
+    0.0322,
+    0.0326,
+    0.0344,
+    0.033,
+    0.0353,
+    0.0337,
+    0.0181,
+    0.0368,
+    0.0351,
+    0.0366,
+    0.0365,
+    0.0365,
+    0.0359,
+    0.0374,
+    0.0373,
+    0.0371,
+    0.0372,
+    0.0398,
+    0.0383,
+    0.0385,
+    0.0385,
+    0.0405,
+    0.04,
+    0.0188,
+    0.0445,
+    0.0405,
+    0.041,
+    0.0407,
+    0.0426,
+    0.0165,
+    0.0433,
+    0.0152,
+    0.0453,
+    0.0433,
+    0.0428,
+    0.0432,
+    0.0443,
+    0.044,
+    0.0166,
+    0.0457,
+    0.0465,
+    0.0171,
+    0.0457,
+    0.0485,
+    0.046,
+    0.0461,
+    0.0461,
+    0.0483,
+    0.0462,
+    0.0476,
+    0.0476,
+    0.0179,
+    0.0198,
+    0.0506,
+    0.049,
+    0.0505,
+    0.0193,
+    0.051,
+    0.0536,
+    0.0508,
+    0.05,
+    0.0164,
+    0.0534,
+    0.0524,
+    0.016,
+    0.0528,
+    0.0522,
+    0.017,
+    0.0536,
+    0.0526,
+    0.0528,
+    0.0544,
+    0.0158,
+    0.0538,
+    0.0536,
+    0.0537,
+    0.0585,
+    0.0557,
+    0.0546,
+    0.0184,
+    0.0568,
+    0.0557,
+    0.0569,
+    0.058,
+    0.059,
+    0.0567,
+    0.0569,
+    0.0602,
+    0.0577,
+    0.0578,
+    0.0178,
+    0.0231,
+    0.476,
+    0.0222,
+    0.0189,
+    0.0197,
+    0.017,
+    0.0165,
+    0.0271,
+    0.0206,
+    0.0161,
+    0.0157,
+    0.0153,
+    0.0157,
+    0.0157,
+    0.0149,
+    0.0147,
+    0.0169,
+    0.0154,
+    0.0149,
+    0.0149,
+    0.0164,
+    0.015,
+    0.0155,
+    0.0153,
+    0.0168,
+    0.0154,
+    0.0146,
+    0.0151,
+    0.0187,
+    0.0159,
+    0.0156,
+    0.0151,
+    0.0167,
+    0.015,
+    0.014,
+    0.0148,
+    0.0147,
+    0.0163,
+    0.015,
+    0.0147,
+    0.0146,
+    0.0169,
+    0.0146,
+    0.0363,
+    0.015,
+    0.0166,
+    0.0153,
+    0.0146,
+    0.0156,
+    0.0153,
+    0.0157,
+    0.0149,
+    0.015,
+    0.0168,
+    0.0148,
+    0.0167,
+    0.0174,
+    0.0169,
+    0.015,
+    0.0146,
+    0.0145,
+    0.0167,
+    0.0145,
+    0.0145,
+    0.0139,
+    0.0159,
+    0.0145,
+    0.016,
+    0.0139,
+    0.0159,
+    0.0145,
+    0.014,
+    0.0137,
+    0.0157,
+    0.0141,
+    0.014,
+    0.0155,
+    0.0143,
+    0.0146,
+    0.0139,
+    0.0166,
+    0.0153,
+    0.015,
+    0.0146,
+    0.0177,
+    0.0163,
+    0.0139,
+    0.0156,
+    0.0169,
+    0.0154,
+    0.0147,
+    0.0149,
+    0.0167,
+    0.0145,
+    0.0156,
+    0.0147,
+    0.0165,
+    0.0154,
+    0.0149,
+    0.015,
+    0.0165,
+    0.0147,
+    0.0141,
+    0.0154,
+    0.0159,
+    0.0162,
+    0.0146,
+    0.0158,
+    0.0171,
+    0.0145,
+    0.0164,
+    0.0144,
+    0.0175,
+    0.0174,
+    0.0157,
+    0.0151,
+    0.015,
+    0.0167,
+    0.015,
+    0.0153,
+    0.0144,
+    0.0165,
+    0.0147,
+    0.0146,
+    0.0139,
+    0.0168,
+    0.0147,
+    0.0148,
+    0.0146,
+    0.0163,
+    0.0152,
+    0.0137,
+    0.0139,
+    0.0154,
+    0.0158,
+    0.0154,
+    0.0154,
+    0.0175,
+    0.0153,
+    0.015,
+    0.0175,
+    0.0173,
+    0.0157,
+    0.0143,
+    0.0156,
+    0.017,
+    0.0146,
+    0.0161,
+    0.0145,
+    0.016,
+    0.0162,
+    0.0146,
+    0.016,
+    0.017,
+    0.0153,
+    0.0145,
+    0.0144,
+    0.0165,
+    0.0145,
+    0.016,
+    0.0151,
+    0.0168,
+    0.015,
+    0.0143,
+    0.0142,
+    0.016,
+    0.0149,
+    0.0144,
+    0.017,
+    0.0162,
+    0.0149
+  ],
+  "off_intervals": [
+    {
+      "entity": "LED49",
+      "start_s": 0.0741,
+      "end_s": 0.0741,
+      "start_frame": 0,
+      "end_frame": 0,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 0.17455555555555555,
+      "end_s": 0.2078888888888889,
+      "start_frame": 3,
+      "end_frame": 4,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 0.3412222222222222,
+      "end_s": 0.3412222222222222,
+      "start_frame": 8,
+      "end_frame": 8,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 0.6755444444444444,
+      "end_s": 0.6755444444444444,
+      "start_frame": 18,
+      "end_frame": 18,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 0.8431333333333333,
+      "end_s": 0.8431333333333333,
+      "start_frame": 23,
+      "end_frame": 23,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 0.9430555555555555,
+      "end_s": 0.9430555555555555,
+      "start_frame": 26,
+      "end_frame": 26,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 1.0097222222222222,
+      "end_s": 1.0097222222222222,
+      "start_frame": 28,
+      "end_frame": 28,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 1.3773555555555557,
+      "end_s": 1.3773555555555557,
+      "start_frame": 39,
+      "end_frame": 39,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 1.5116,
+      "end_s": 1.5116,
+      "start_frame": 43,
+      "end_frame": 43,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 1.8457333333333332,
+      "end_s": 1.8457333333333332,
+      "start_frame": 53,
+      "end_frame": 53,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 2.4138333333333333,
+      "end_s": 2.4138333333333333,
+      "start_frame": 70,
+      "end_frame": 70,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 2.4809555555555556,
+      "end_s": 2.4809555555555556,
+      "start_frame": 72,
+      "end_frame": 72,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 2.815211111111111,
+      "end_s": 2.815211111111111,
+      "start_frame": 82,
+      "end_frame": 82,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 3.2161222222222223,
+      "end_s": 3.2161222222222223,
+      "start_frame": 94,
+      "end_frame": 94,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 8.998322222222223,
+      "end_s": 8.998322222222223,
+      "start_frame": 267,
+      "end_frame": 267,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 17.25452222222222,
+      "end_s": 17.25452222222222,
+      "start_frame": 514,
+      "end_frame": 514,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 26.78012222222222,
+      "end_s": 26.78012222222222,
+      "start_frame": 799,
+      "end_frame": 799,
+      "state": "OFF"
+    },
+    {
+      "entity": "LED49",
+      "start_s": 28.251433333333335,
+      "end_s": 28.251433333333335,
+      "start_frame": 843,
+      "end_frame": 843,
+      "state": "OFF"
+    }
+  ],
+  "policy": "Unknown is preserved; short gaps keep a continuity hypothesis, never a confirmed OFF",
+  "peak_observed_rss_bytes": 302690304,
+  "total_wall_s": 56.8250389,
+  "wall_fps": 21.167502557261596,
+  "frame_stage_stats": {
+    "VIDEO_DECODE": {
+      "count": 922,
+      "mean_ms": 4.912337418655098,
+      "p50_ms": 4.8244,
+      "p95_ms": 5.435585,
+      "p99_ms": 6.204197999999998,
+      "max_ms": 37.4355,
+      "fps": 203.5690781749639
+    },
+    "ARUCO_DETECT": {
+      "count": 922,
+      "mean_ms": 19.720467570498915,
+      "p50_ms": 14.476949999999999,
+      "p95_ms": 33.357434999999995,
+      "p99_ms": 35.158077999999996,
+      "max_ms": 49.7558,
+      "fps": 50.708736820011445
+    },
+    "HOMOGRAPHY": {
+      "count": 922,
+      "mean_ms": 2.1867289587852494,
+      "p50_ms": 1.87865,
+      "p95_ms": 3.7772949999999987,
+      "p99_ms": 4.2639689999999995,
+      "max_ms": 4.6774,
+      "fps": 457.30404583634834
+    },
+    "IMAGE_RECTIFICATION": {
+      "count": 922,
+      "mean_ms": 3.6509364425162687,
+      "p50_ms": 3.2686,
+      "p95_ms": 6.42945,
+      "p99_ms": 7.399036999999995,
+      "max_ms": 9.9521,
+      "fps": 273.9023304691626
+    },
+    "BACKGROUND_COMPENSATION": {
+      "count": 922,
+      "mean_ms": 14.08273687635575,
+      "p50_ms": 13.229800000000001,
+      "p95_ms": 25.816864999999996,
+      "p99_ms": 27.310754,
+      "max_ms": 28.2992,
+      "fps": 71.00892452794122
+    },
+    "LED_DETECTION": {
+      "count": 922,
+      "mean_ms": 1.805972125813449,
+      "p50_ms": 1.70025,
+      "p95_ms": 3.126679999999997,
+      "p99_ms": 3.3801719999999995,
+      "max_ms": 3.7338,
+      "fps": 553.7184022425475
+    },
+    "COLOR_CLASSIFICATION": {
+      "count": 922,
+      "mean_ms": 0.30661876355748374,
+      "p50_ms": 0.00845,
+      "p95_ms": 0.712165,
+      "p99_ms": 1.1847659999999998,
+      "max_ms": 10.6836,
+      "fps": 3261.3790115050274
+    },
+    "EVENT_AGGREGATION": {
+      "count": 922,
+      "mean_ms": 0.05386529284164859,
+      "p50_ms": 0.0334,
+      "p95_ms": 0.1136,
+      "p99_ms": 0.1303329999999999,
+      "max_ms": 0.8893,
+      "fps": 18564.829916357587
+    },
+    "FRAME_TOTAL": {
+      "count": 922,
+      "mean_ms": 47.029442407809114,
+      "p50_ms": 40.2882,
+      "p95_ms": 73.75989,
+      "p99_ms": 78.63391399999999,
+      "max_ms": 81.9058,
+      "fps": 21.263275701392384
+    }
+  },
+  "temporal_reuse_source": "D:\\VScode\\Nozdrin_GitHub\\GS75_RGB_Research\\build\\vision\\video_events_v043\\known",
+  "opencv_rerun": false,
+  "performance_provenance": "OpenCV throughput/timing from source run; temporal reanalysis is measured separately",
+  "frame_state_counts": {
+    "OFF": 19,
+    "UNCERTAIN": 408,
+    "INVALID_GEOMETRY": 89,
+    "ON": 406
+  },
+  "temporal_reanalysis_wall_s": 0.0917058
+}

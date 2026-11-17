@@ -13,6 +13,7 @@ from .video_engine import VideoEngine,EventAggregator
 from .project_storage import atomic_json
 from .research_project import checkpoint
 from .image_registration import transform_points
+from .video_temporal import FrameTemporalAnalysis
 
 
 class MemorySampler:
@@ -35,7 +36,8 @@ def frame_signature(result):
 def run_variant(video,calibration,off,variant,cancel,limit=120,warmup=3,mode='KNOWN_LEDS',notify=lambda *args:None):
     engine=VideoEngine(calibration,off,variant,mode)
     reader=SequentialVideoReader();rows=[];aggregator=EventAggregator()
-    warm_count=0;decode_errors=[]
+    temporal=FrameTemporalAnalysis(calibration,off,mode)
+    warm_count=0;decode_errors=[];missing_temporal_pts=0
     try:
         meta=reader.open(video)
         for i in range(warmup):
@@ -54,6 +56,8 @@ def run_variant(video,calibration,off,variant,cancel,limit=120,warmup=3,mode='KN
                         with profile.stage('VIDEO_DECODE'):image,info=reader.frame(index)
                         result=engine.process(image)
                         aggregator.feed(result,info['timestamp_ms'],info['frame_index'])
+                        if info['timestamp_ms'] is not None:temporal.feed(result,info)
+                        else:missing_temporal_pts+=1
                 except StopIteration:break
                 except Exception as exc:
                     # A decoder/processing error stops this pass; no silent seeks or dropped frames.
@@ -91,7 +95,9 @@ def run_variant(video,calibration,off,variant,cancel,limit=120,warmup=3,mode='KN
         wall_fps=len(rows)*1e9/wall_ns if wall_ns else None,wall_seconds=wall_ns/1e9,
         cpu_core_percent=100*cpu_ns/wall_ns,cpu_machine_percent=100*cpu_ns/wall_ns/max(1,machine_info()['logical_cpus']),
         peak_observed_rss_bytes=memory.peak or None,ram_measurement='Sampled process RSS every 10 ms, includes GUI/model; not isolated allocator peak',
-        slowest_stage=slowest,budgets=budgets,events=aggregator.events())
+        slowest_stage=slowest,budgets=budgets,events=aggregator.events(),
+        temporal=dict(temporal.finish(),missing_pts_frames=missing_temporal_pts,
+            status='UNAVAILABLE_MISSING_PTS' if missing_temporal_pts else 'AVAILABLE'))
 
 
 def compare_quality(runs):

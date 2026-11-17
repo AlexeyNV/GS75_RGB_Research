@@ -1,0 +1,1669 @@
+[
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 0.0741,
+    "end_s": 0.14122222222222222,
+    "start_frame": 1,
+    "end_frame": 2,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 0.2078888888888889,
+    "end_s": 0.3078888888888889,
+    "start_frame": 5,
+    "end_frame": 7,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 0.3412222222222222,
+    "end_s": 0.6422,
+    "start_frame": 9,
+    "end_frame": 17,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 0.6755444444444444,
+    "end_s": 0.8097222222222222,
+    "start_frame": 19,
+    "end_frame": 22,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 0.8431333333333333,
+    "end_s": 0.9096444444444445,
+    "start_frame": 24,
+    "end_frame": 25,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 0.9430555555555555,
+    "end_s": 0.9764666666666667,
+    "start_frame": 27,
+    "end_frame": 27,
+    "reasons": [
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE",
+      "ACHROMATIC_CHANGE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 1.0097222222222222,
+    "end_s": 1.1772222222222222,
+    "start_frame": 29,
+    "end_frame": 33,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 1.1772222222222222,
+    "end_s": 1.2106333333333332,
+    "start_frame": 34,
+    "end_frame": 34,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 1.2106333333333332,
+    "end_s": 1.2440444444444445,
+    "start_frame": 35,
+    "end_frame": 35,
+    "reasons": [
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE",
+      "ACHROMATIC_CHANGE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 1.2440444444444445,
+    "end_s": 1.2773,
+    "start_frame": 36,
+    "end_frame": 36,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 1.2773,
+    "end_s": 1.3439555555555556,
+    "start_frame": 37,
+    "end_frame": 38,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 1.3773555555555557,
+    "end_s": 1.4782111111111111,
+    "start_frame": 40,
+    "end_frame": 42,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 1.5116,
+    "end_s": 1.5448777777777778,
+    "start_frame": 44,
+    "end_frame": 44,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 1.5448777777777778,
+    "end_s": 1.8124555555555555,
+    "start_frame": 45,
+    "end_frame": 52,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 1.8457333333333332,
+    "end_s": 1.8791222222222221,
+    "start_frame": 54,
+    "end_frame": 54,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 1.8791222222222221,
+    "end_s": 2.3468,
+    "start_frame": 55,
+    "end_frame": 68,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 2.3468,
+    "end_s": 2.3800444444444446,
+    "start_frame": 69,
+    "end_frame": 69,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 2.4138333333333333,
+    "end_s": 2.4476222222222224,
+    "start_frame": 71,
+    "end_frame": 71,
+    "reasons": [
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE",
+      "ACHROMATIC_CHANGE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 2.4809555555555556,
+    "end_s": 2.514288888888889,
+    "start_frame": 73,
+    "end_frame": 73,
+    "reasons": [
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE",
+      "ACHROMATIC_CHANGE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 2.514288888888889,
+    "end_s": 2.547622222222222,
+    "start_frame": 74,
+    "end_frame": 74,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 2.547622222222222,
+    "end_s": 2.5809555555555557,
+    "start_frame": 75,
+    "end_frame": 75,
+    "reasons": [
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE",
+      "ACHROMATIC_CHANGE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 2.5809555555555557,
+    "end_s": 2.614288888888889,
+    "start_frame": 76,
+    "end_frame": 76,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 2.614288888888889,
+    "end_s": 2.647622222222222,
+    "start_frame": 77,
+    "end_frame": 77,
+    "reasons": [
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE",
+      "ACHROMATIC_CHANGE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 2.647622222222222,
+    "end_s": 2.6809555555555558,
+    "start_frame": 78,
+    "end_frame": 78,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 2.6809555555555558,
+    "end_s": 2.7818666666666667,
+    "start_frame": 79,
+    "end_frame": 81,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 2.815211111111111,
+    "end_s": 3.1828666666666665,
+    "start_frame": 83,
+    "end_frame": 93,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 3.2161222222222223,
+    "end_s": 3.2493777777777777,
+    "start_frame": 95,
+    "end_frame": 95,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 3.2493777777777777,
+    "end_s": 3.3494555555555556,
+    "start_frame": 96,
+    "end_frame": 98,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 3.382711111111111,
+    "end_s": 3.416577777777778,
+    "start_frame": 100,
+    "end_frame": 100,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 3.4504444444444444,
+    "end_s": 3.4837,
+    "start_frame": 102,
+    "end_frame": 102,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 3.9846666666666666,
+    "end_s": 4.017944444444445,
+    "start_frame": 118,
+    "end_frame": 118,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 4.085066666666667,
+    "end_s": 4.118911111111111,
+    "start_frame": 121,
+    "end_frame": 121,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 4.285522222222222,
+    "end_s": 4.3188,
+    "start_frame": 127,
+    "end_frame": 127,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 4.8540222222222225,
+    "end_s": 4.887355555555556,
+    "start_frame": 144,
+    "end_frame": 144,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 5.355011111111111,
+    "end_s": 5.388355555555555,
+    "start_frame": 159,
+    "end_frame": 159,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 5.455777777777778,
+    "end_s": 5.489188888888889,
+    "start_frame": 162,
+    "end_frame": 162,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 5.923511111111111,
+    "end_s": 5.956755555555556,
+    "start_frame": 176,
+    "end_frame": 176,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 6.090544444444444,
+    "end_s": 6.124266666666666,
+    "start_frame": 181,
+    "end_frame": 181,
+    "reasons": [
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 6.691911111111111,
+    "end_s": 6.725311111111111,
+    "start_frame": 199,
+    "end_frame": 199,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 6.759044444444444,
+    "end_s": 6.792777777777777,
+    "start_frame": 201,
+    "end_frame": 201,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 7.327022222222222,
+    "end_s": 7.3604111111111115,
+    "start_frame": 218,
+    "end_frame": 218,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 7.628,
+    "end_s": 7.6614,
+    "start_frame": 227,
+    "end_frame": 227,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 7.795644444444444,
+    "end_s": 7.828911111111111,
+    "start_frame": 232,
+    "end_frame": 232,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 7.928977777777778,
+    "end_s": 7.962244444444444,
+    "start_frame": 236,
+    "end_frame": 236,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 8.263111111111112,
+    "end_s": 8.2964,
+    "start_frame": 246,
+    "end_frame": 246,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 8.363244444444444,
+    "end_s": 8.96498888888889,
+    "start_frame": 249,
+    "end_frame": 266,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 8.998322222222223,
+    "end_s": 10.602866666666667,
+    "start_frame": 268,
+    "end_frame": 315,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 10.602866666666667,
+    "end_s": 10.636188888888888,
+    "start_frame": 316,
+    "end_frame": 316,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 10.636188888888888,
+    "end_s": 10.736155555555555,
+    "start_frame": 317,
+    "end_frame": 319,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 10.736155555555555,
+    "end_s": 10.770011111111112,
+    "start_frame": 320,
+    "end_frame": 320,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 10.770011111111112,
+    "end_s": 11.338111111111111,
+    "start_frame": 321,
+    "end_frame": 337,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 11.338111111111111,
+    "end_s": 11.371377777777777,
+    "start_frame": 338,
+    "end_frame": 338,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 11.371377777777777,
+    "end_s": 11.739044444444444,
+    "start_frame": 339,
+    "end_frame": 349,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 12.2074,
+    "end_s": 12.2408,
+    "start_frame": 364,
+    "end_frame": 364,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 12.608311111111112,
+    "end_s": 12.64171111111111,
+    "start_frame": 376,
+    "end_frame": 376,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 12.741644444444445,
+    "end_s": 12.7755,
+    "start_frame": 380,
+    "end_frame": 380,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 12.87588888888889,
+    "end_s": 12.909277777777778,
+    "start_frame": 384,
+    "end_frame": 384,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 13.143533333333334,
+    "end_s": 13.176866666666667,
+    "start_frame": 392,
+    "end_frame": 392,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 13.677777777777777,
+    "end_s": 13.71111111111111,
+    "start_frame": 408,
+    "end_frame": 408,
+    "reasons": [
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 14.078622222222222,
+    "end_s": 14.112488888888889,
+    "start_frame": 420,
+    "end_frame": 420,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 15.98418888888889,
+    "end_s": 16.017522222222222,
+    "start_frame": 477,
+    "end_frame": 477,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 16.752766666666666,
+    "end_s": 16.887033333333335,
+    "start_frame": 500,
+    "end_frame": 503,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 16.887033333333335,
+    "end_s": 16.920277777777777,
+    "start_frame": 504,
+    "end_frame": 504,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 16.920277777777777,
+    "end_s": 16.953522222222222,
+    "start_frame": 505,
+    "end_frame": 505,
+    "reasons": [
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE",
+      "ACHROMATIC_CHANGE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 16.953522222222222,
+    "end_s": 16.986944444444443,
+    "start_frame": 506,
+    "end_frame": 506,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 16.986944444444443,
+    "end_s": 17.2211,
+    "start_frame": 507,
+    "end_frame": 513,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 17.25452222222222,
+    "end_s": 17.454977777777778,
+    "start_frame": 515,
+    "end_frame": 520,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.454977777777778,
+    "end_s": 17.488677777777777,
+    "start_frame": 521,
+    "end_frame": 521,
+    "reasons": [
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 17.488677777777777,
+    "end_s": 17.522111111111112,
+    "start_frame": 522,
+    "end_frame": 522,
+    "reasons": [
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE",
+      "ACHROMATIC_CHANGE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.522111111111112,
+    "end_s": 17.58877777777778,
+    "start_frame": 523,
+    "end_frame": 524,
+    "reasons": [
+      "CURRENT_ROI_NOT_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "ROI_NOT_GEOMETRICALLY_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 17.58877777777778,
+    "end_s": 17.62211111111111,
+    "start_frame": 525,
+    "end_frame": 525,
+    "reasons": [
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE",
+      "ACHROMATIC_CHANGE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.62211111111111,
+    "end_s": 17.655444444444445,
+    "start_frame": 526,
+    "end_frame": 526,
+    "reasons": [
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 17.655444444444445,
+    "end_s": 17.956355555555554,
+    "start_frame": 527,
+    "end_frame": 535,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.956355555555554,
+    "end_s": 17.98968888888889,
+    "start_frame": 536,
+    "end_frame": 536,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 17.98968888888889,
+    "end_s": 18.08968888888889,
+    "start_frame": 537,
+    "end_frame": 539,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 18.08968888888889,
+    "end_s": 18.12347777777778,
+    "start_frame": 540,
+    "end_frame": 540,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 18.12347777777778,
+    "end_s": 18.323933333333333,
+    "start_frame": 541,
+    "end_frame": 546,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 18.323933333333333,
+    "end_s": 18.357266666666668,
+    "start_frame": 547,
+    "end_frame": 547,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 18.357266666666668,
+    "end_s": 19.560866666666666,
+    "start_frame": 548,
+    "end_frame": 583,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 19.560866666666666,
+    "end_s": 19.594266666666666,
+    "start_frame": 584,
+    "end_frame": 584,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 19.594266666666666,
+    "end_s": 20.095111111111112,
+    "start_frame": 585,
+    "end_frame": 599,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 20.262766666666668,
+    "end_s": 20.29617777777778,
+    "start_frame": 605,
+    "end_frame": 605,
+    "reasons": [
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 21.09797777777778,
+    "end_s": 21.1317,
+    "start_frame": 630,
+    "end_frame": 630,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 21.332155555555556,
+    "end_s": 21.365555555555556,
+    "start_frame": 637,
+    "end_frame": 637,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 21.533077777777777,
+    "end_s": 21.599744444444443,
+    "start_frame": 643,
+    "end_frame": 644,
+    "reasons": [
+      "CURRENT_ROI_NOT_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "ROI_NOT_GEOMETRICALLY_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 22.301666666666666,
+    "end_s": 22.33491111111111,
+    "start_frame": 666,
+    "end_frame": 666,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 22.870077777777777,
+    "end_s": 22.903333333333332,
+    "start_frame": 683,
+    "end_frame": 683,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 23.07007777777778,
+    "end_s": 23.10348888888889,
+    "start_frame": 689,
+    "end_frame": 689,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 23.1372,
+    "end_s": 23.17091111111111,
+    "start_frame": 691,
+    "end_frame": 691,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 23.37106666666667,
+    "end_s": 23.404322222222223,
+    "start_frame": 698,
+    "end_frame": 698,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 23.471444444444444,
+    "end_s": 23.505311111111112,
+    "start_frame": 701,
+    "end_frame": 701,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 23.805677777777777,
+    "end_s": 23.8728,
+    "start_frame": 711,
+    "end_frame": 712,
+    "reasons": [
+      "CURRENT_ROI_NOT_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "ROI_NOT_GEOMETRICALLY_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 23.972733333333334,
+    "end_s": 24.006133333333334,
+    "start_frame": 716,
+    "end_frame": 716,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.13992222222222,
+    "end_s": 24.17377777777778,
+    "start_frame": 721,
+    "end_frame": 721,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.24031111111111,
+    "end_s": 24.273711111111112,
+    "start_frame": 724,
+    "end_frame": 724,
+    "reasons": [
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.34037777777778,
+    "end_s": 24.373644444444444,
+    "start_frame": 727,
+    "end_frame": 727,
+    "reasons": [
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.50791111111111,
+    "end_s": 24.5413,
+    "start_frame": 732,
+    "end_frame": 732,
+    "reasons": [
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.7413,
+    "end_s": 24.77457777777778,
+    "start_frame": 739,
+    "end_frame": 739,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 25.108933333333333,
+    "end_s": 25.51077777777778,
+    "start_frame": 750,
+    "end_frame": 761,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 25.51077777777778,
+    "end_s": 25.544044444444445,
+    "start_frame": 762,
+    "end_frame": 762,
+    "reasons": [
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 25.544044444444445,
+    "end_s": 25.84488888888889,
+    "start_frame": 763,
+    "end_frame": 771,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 25.84488888888889,
+    "end_s": 26.011533333333333,
+    "start_frame": 772,
+    "end_frame": 776,
+    "reasons": [
+      "CURRENT_ROI_NOT_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "ROI_NOT_GEOMETRICALLY_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 26.011533333333333,
+    "end_s": 26.24587777777778,
+    "start_frame": 777,
+    "end_frame": 783,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 26.24587777777778,
+    "end_s": 26.27921111111111,
+    "start_frame": 784,
+    "end_frame": 784,
+    "reasons": [
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 26.27921111111111,
+    "end_s": 26.74678888888889,
+    "start_frame": 785,
+    "end_frame": 798,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 26.78012222222222,
+    "end_s": 27.749544444444446,
+    "start_frame": 800,
+    "end_frame": 828,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 27.749544444444446,
+    "end_s": 27.78281111111111,
+    "start_frame": 829,
+    "end_frame": 829,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 27.78281111111111,
+    "end_s": 27.983855555555557,
+    "start_frame": 830,
+    "end_frame": 835,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 27.983855555555557,
+    "end_s": 28.017122222222223,
+    "start_frame": 836,
+    "end_frame": 836,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 28.017122222222223,
+    "end_s": 28.218033333333334,
+    "start_frame": 837,
+    "end_frame": 842,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 28.251433333333335,
+    "end_s": 28.519011111111112,
+    "start_frame": 844,
+    "end_frame": 851,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 28.519011111111112,
+    "end_s": 28.55228888888889,
+    "start_frame": 852,
+    "end_frame": 852,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 28.55228888888889,
+    "end_s": 28.618955555555555,
+    "start_frame": 853,
+    "end_frame": 854,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 28.618955555555555,
+    "end_s": 28.68562222222222,
+    "start_frame": 855,
+    "end_frame": 856,
+    "reasons": [
+      "CURRENT_ROI_NOT_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "ROI_NOT_GEOMETRICALLY_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 28.68562222222222,
+    "end_s": 28.785677777777778,
+    "start_frame": 857,
+    "end_frame": 859,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 28.785677777777778,
+    "end_s": 28.853144444444446,
+    "start_frame": 860,
+    "end_frame": 861,
+    "reasons": [
+      "CURRENT_ROI_NOT_COVERED",
+      "Insufficient robust inlier support",
+      "NO_COLOR_EVIDENCE",
+      "ROI_NOT_GEOMETRICALLY_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 28.853144444444446,
+    "end_s": 29.48788888888889,
+    "start_frame": 862,
+    "end_frame": 880,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 29.48788888888889,
+    "end_s": 29.52161111111111,
+    "start_frame": 881,
+    "end_frame": 881,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 29.52161111111111,
+    "end_s": 29.55501111111111,
+    "start_frame": 882,
+    "end_frame": 882,
+    "reasons": [
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE",
+      "ACHROMATIC_CHANGE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 29.55501111111111,
+    "end_s": 29.58841111111111,
+    "start_frame": 883,
+    "end_frame": 883,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 29.58841111111111,
+    "end_s": 29.889266666666668,
+    "start_frame": 884,
+    "end_frame": 892,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 29.889266666666668,
+    "end_s": 29.922522222222224,
+    "start_frame": 893,
+    "end_frame": 893,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 29.922522222222224,
+    "end_s": 30.0226,
+    "start_frame": 894,
+    "end_frame": 896,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 30.0226,
+    "end_s": 30.089266666666667,
+    "start_frame": 897,
+    "end_frame": 898,
+    "reasons": [
+      "CURRENT_ROI_NOT_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "ROI_NOT_GEOMETRICALLY_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 30.089266666666667,
+    "end_s": 30.122677777777778,
+    "start_frame": 899,
+    "end_frame": 899,
+    "reasons": [
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE",
+      "ACHROMATIC_CHANGE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 30.122677777777778,
+    "end_s": 30.1901,
+    "start_frame": 900,
+    "end_frame": 901,
+    "reasons": [
+      "CURRENT_ROI_NOT_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "ROI_NOT_GEOMETRICALLY_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 30.1901,
+    "end_s": 30.42351111111111,
+    "start_frame": 902,
+    "end_frame": 908,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 30.42351111111111,
+    "end_s": 30.456766666666667,
+    "start_frame": 909,
+    "end_frame": 909,
+    "reasons": [
+      "ROI_NOT_GEOMETRICALLY_COVERED",
+      "NO_COLOR_EVIDENCE",
+      "CURRENT_ROI_NOT_COVERED"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "UNCERTAIN",
+    "start_s": 30.456766666666667,
+    "end_s": 30.82488888888889,
+    "start_frame": 910,
+    "end_frame": 920,
+    "reasons": [
+      "ACHROMATIC_CHANGE",
+      "BRIGHT_CHANGE_WITHOUT_COLOR_EVIDENCE",
+      "NO_COLOR_EVIDENCE"
+    ]
+  },
+  {
+    "entity": "LED49",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 30.82488888888889,
+    "end_s": 30.85861111111111,
+    "start_frame": 921,
+    "end_frame": 921,
+    "reasons": [
+      "Insufficient robust inlier support"
+    ]
+  }
+]

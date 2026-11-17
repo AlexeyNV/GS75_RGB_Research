@@ -2,7 +2,7 @@
 from dataclasses import dataclass, asdict
 
 NAME = 'LED49_RGB_VIDEO_TEST'
-VERSION = '0.4.2'
+VERSION = '0.4.3'
 SINKS = {'RED': 32, 'GREEN': 33, 'BLUE': 34}
 EXPECTED_UA = {'RED': 1035, 'GREEN': 886, 'BLUE': 797}
 CONDITIONS = ('u13_open', 'r1_2700_ohm', 'original_rgb_board', 'power_accessible', 'operator_present')

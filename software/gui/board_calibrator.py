@@ -133,10 +133,10 @@ class Calibrator(QMainWindow):
     def toggle_add(self,checked):
         self.viewer.add_mode=checked; self.statusBar().showMessage('Click LED center; middle mouse pans' if checked else 'Select/drag LED; drag background to pan')
 
-    def add_at(self,x,y):
+    def add_at(self,x,y,suggest_id=True):
         if not self.document: return
         identifier=''
-        if self.autonumber.isChecked():
+        if suggest_id and self.autonumber.isChecked():
             identifier=f"LED{max([int(l['led_id'][3:]) for l in self.document.data['leds']]+[0])+1}"
         dialog=LEDDialog(x,y,identifier,self.last_key,self)
         while dialog.exec():

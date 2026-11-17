@@ -1,0 +1,186 @@
+{
+  "tracks": [
+    {
+      "track_id": "TRACK0001",
+      "led_id": null,
+      "key_name": null,
+      "x_ref_px": 580.8654942635105,
+      "y_ref_px": 1360.6467834311359,
+      "decision_source": "ALGORITHM",
+      "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+      "status": "CONFIRMED",
+      "observations": 406,
+      "start_pts": 3.382711111111111,
+      "end_pts": 25.108933333333333,
+      "spatial_median_deviation_px": 14.812655350304313,
+      "start_frame": 99,
+      "end_frame": 749,
+      "median_chroma": 78.2838134765625,
+      "median_brightness": 93.94385772588257,
+      "colors": [
+        "BLUE",
+        "GREEN",
+        "RED"
+      ],
+      "event_ids": [
+        "EV00001",
+        "EV00021",
+        "EV00022"
+      ]
+    },
+    {
+      "track_id": "TRACK0002",
+      "led_id": null,
+      "key_name": null,
+      "x_ref_px": 2480.9636363636364,
+      "y_ref_px": 561.6909090909091,
+      "decision_source": "ALGORITHM",
+      "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+      "status": "REJECTED",
+      "observations": 1,
+      "start_pts": 8.86498888888889,
+      "end_pts": 8.86498888888889,
+      "spatial_median_deviation_px": 0.0,
+      "start_frame": 263,
+      "end_frame": 263,
+      "median_chroma": 27.554546356201172,
+      "median_brightness": 44.81818181818182,
+      "colors": [
+        "MIXED"
+      ],
+      "event_ids": []
+    },
+    {
+      "track_id": "TRACK0003",
+      "led_id": null,
+      "key_name": null,
+      "x_ref_px": 722.883530814971,
+      "y_ref_px": 1377.811214235273,
+      "decision_source": "ALGORITHM",
+      "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+      "status": "CANDIDATE",
+      "observations": 46,
+      "start_pts": 11.772755555555555,
+      "end_pts": 16.65268888888889,
+      "spatial_median_deviation_px": 4.7570529078184745,
+      "start_frame": 350,
+      "end_frame": 496,
+      "median_chroma": 31.0267915725708,
+      "median_brightness": 32.070634193515545,
+      "colors": [
+        "GREEN"
+      ],
+      "event_ids": [
+        "EV00002",
+        "EV00003",
+        "EV00004",
+        "EV00006",
+        "EV00007",
+        "EV00011",
+        "EV00013",
+        "EV00015",
+        "EV00017",
+        "EV00018",
+        "EV00020"
+      ]
+    },
+    {
+      "track_id": "TRACK0004",
+      "led_id": null,
+      "key_name": null,
+      "x_ref_px": 747.9375,
+      "y_ref_px": 1379.0748031496064,
+      "decision_source": "ALGORITHM",
+      "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+      "status": "CANDIDATE",
+      "observations": 13,
+      "start_pts": 13.744444444444444,
+      "end_pts": 16.452233333333332,
+      "spatial_median_deviation_px": 2.708357288584305,
+      "start_frame": 409,
+      "end_frame": 490,
+      "median_chroma": 27.94140625,
+      "median_brightness": 31.013698630136986,
+      "colors": [
+        "GREEN"
+      ],
+      "event_ids": [
+        "EV00005",
+        "EV00008",
+        "EV00009",
+        "EV00010",
+        "EV00012",
+        "EV00014",
+        "EV00016",
+        "EV00019"
+      ]
+    },
+    {
+      "track_id": "TRACK0005",
+      "led_id": null,
+      "key_name": null,
+      "x_ref_px": 2294.6304347826085,
+      "y_ref_px": 770.0,
+      "decision_source": "ALGORITHM",
+      "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+      "status": "REJECTED",
+      "observations": 1,
+      "start_pts": 14.212866666666667,
+      "end_pts": 14.212866666666667,
+      "spatial_median_deviation_px": 0.0,
+      "start_frame": 423,
+      "end_frame": 423,
+      "median_chroma": 28.782608032226562,
+      "median_brightness": 45.47826086956522,
+      "colors": [
+        "MIXED"
+      ],
+      "event_ids": []
+    },
+    {
+      "track_id": "TRACK0006",
+      "led_id": null,
+      "key_name": null,
+      "x_ref_px": 1302.5,
+      "y_ref_px": 583.0,
+      "decision_source": "ALGORITHM",
+      "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+      "status": "REJECTED",
+      "observations": 1,
+      "start_pts": 18.925766666666668,
+      "end_pts": 18.925766666666668,
+      "spatial_median_deviation_px": 0.0,
+      "start_frame": 564,
+      "end_frame": 564,
+      "median_chroma": 28.75,
+      "median_brightness": 40.888888888888886,
+      "colors": [
+        "MIXED"
+      ],
+      "event_ids": []
+    },
+    {
+      "track_id": "TRACK0007",
+      "led_id": null,
+      "key_name": null,
+      "x_ref_px": 2094.8260869565215,
+      "y_ref_px": 778.0,
+      "decision_source": "ALGORITHM",
+      "interpretation": "Optical source hypothesis; silk-screen identity requires operator confirmation",
+      "status": "REJECTED",
+      "observations": 3,
+      "start_pts": 27.381877777777778,
+      "end_pts": 28.08378888888889,
+      "spatial_median_deviation_px": 0.2850241545897916,
+      "start_frame": 817,
+      "end_frame": 838,
+      "median_chroma": 32.314815521240234,
+      "median_brightness": 37.130434782608695,
+      "colors": [
+        "MIXED"
+      ],
+      "event_ids": []
+    }
+  ],
+  "requires_manual_PCB_ID": true
+}

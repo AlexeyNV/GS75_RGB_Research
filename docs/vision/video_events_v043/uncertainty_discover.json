@@ -1,0 +1,2315 @@
+[
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 3.382711111111111,
+    "end_s": 3.416577777777778,
+    "start_frame": 100,
+    "end_frame": 100,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 3.6837,
+    "end_s": 3.717088888888889,
+    "start_frame": 109,
+    "end_frame": 109,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 4.085066666666667,
+    "end_s": 4.118911111111111,
+    "start_frame": 121,
+    "end_frame": 121,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 4.419322222222222,
+    "end_s": 4.4530666666666665,
+    "start_frame": 131,
+    "end_frame": 131,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 4.887355555555556,
+    "end_s": 4.954022222222222,
+    "start_frame": 145,
+    "end_frame": 146,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 5.355011111111111,
+    "end_s": 5.388355555555555,
+    "start_frame": 159,
+    "end_frame": 159,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 5.923511111111111,
+    "end_s": 5.956755555555556,
+    "start_frame": 176,
+    "end_frame": 176,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 6.090544444444444,
+    "end_s": 6.124266666666666,
+    "start_frame": 181,
+    "end_frame": 181,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 6.691911111111111,
+    "end_s": 6.725311111111111,
+    "start_frame": 199,
+    "end_frame": 199,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 6.759044444444444,
+    "end_s": 6.8261666666666665,
+    "start_frame": 201,
+    "end_frame": 202,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 7.260466666666667,
+    "end_s": 7.293744444444444,
+    "start_frame": 216,
+    "end_frame": 216,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 7.327022222222222,
+    "end_s": 7.3604111111111115,
+    "start_frame": 218,
+    "end_frame": 218,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 7.461266666666667,
+    "end_s": 7.494666666666666,
+    "start_frame": 222,
+    "end_frame": 222,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 7.628,
+    "end_s": 7.6614,
+    "start_frame": 227,
+    "end_frame": 227,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 7.761788888888889,
+    "end_s": 7.828911111111111,
+    "start_frame": 231,
+    "end_frame": 232,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 7.928977777777778,
+    "end_s": 7.962244444444444,
+    "start_frame": 236,
+    "end_frame": 236,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 8.263111111111112,
+    "end_s": 8.2964,
+    "start_frame": 246,
+    "end_frame": 246,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 8.363244444444444,
+    "end_s": 11.739044444444444,
+    "start_frame": 249,
+    "end_frame": 349,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "UNCERTAIN",
+    "start_s": 8.86498888888889,
+    "end_s": 17.454977777777778,
+    "start_frame": 263,
+    "end_frame": 520,
+    "reasons": [
+      "AMBIGUOUS_COLOR",
+      "MULTICHANNEL_LIGHT",
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 11.839877777777778,
+    "end_s": 11.906544444444444,
+    "start_frame": 353,
+    "end_frame": 354,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 11.9398,
+    "end_s": 11.97321111111111,
+    "start_frame": 356,
+    "end_frame": 356,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 12.039877777777777,
+    "end_s": 12.2742,
+    "start_frame": 359,
+    "end_frame": 365,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 12.2074,
+    "end_s": 12.2408,
+    "start_frame": 364,
+    "end_frame": 364,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 12.374133333333333,
+    "end_s": 12.407533333333333,
+    "start_frame": 369,
+    "end_frame": 369,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 12.474977777777777,
+    "end_s": 12.508377777777778,
+    "start_frame": 372,
+    "end_frame": 372,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 12.575044444444444,
+    "end_s": 12.64171111111111,
+    "start_frame": 375,
+    "end_frame": 376,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 12.608311111111112,
+    "end_s": 12.64171111111111,
+    "start_frame": 376,
+    "end_frame": 376,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 12.67511111111111,
+    "end_s": 12.7755,
+    "start_frame": 378,
+    "end_frame": 380,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 12.741644444444445,
+    "end_s": 12.7755,
+    "start_frame": 380,
+    "end_frame": 380,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 12.809355555555555,
+    "end_s": 13.577777777777778,
+    "start_frame": 382,
+    "end_frame": 404,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 12.87588888888889,
+    "end_s": 12.909277777777778,
+    "start_frame": 384,
+    "end_frame": 384,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 13.143533333333334,
+    "end_s": 13.176866666666667,
+    "start_frame": 392,
+    "end_frame": 392,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 13.677777777777777,
+    "end_s": 13.71111111111111,
+    "start_frame": 408,
+    "end_frame": 408,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 13.744444444444444,
+    "end_s": 14.480444444444444,
+    "start_frame": 410,
+    "end_frame": 431,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 13.778244444444445,
+    "end_s": 14.179611111111111,
+    "start_frame": 411,
+    "end_frame": 422,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 14.078622222222222,
+    "end_s": 14.112488888888889,
+    "start_frame": 420,
+    "end_frame": 420,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "UNCERTAIN",
+    "start_s": 14.212866666666667,
+    "end_s": 17.454977777777778,
+    "start_frame": 423,
+    "end_frame": 520,
+    "reasons": [
+      "AMBIGUOUS_COLOR",
+      "MULTICHANNEL_LIGHT",
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 14.212866666666667,
+    "end_s": 14.413022222222223,
+    "start_frame": 424,
+    "end_frame": 429,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 14.480444444444444,
+    "end_s": 14.54728888888889,
+    "start_frame": 432,
+    "end_frame": 433,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 14.513866666666667,
+    "end_s": 14.613777777777777,
+    "start_frame": 433,
+    "end_frame": 435,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 14.6472,
+    "end_s": 14.814866666666667,
+    "start_frame": 437,
+    "end_frame": 441,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 14.713866666666666,
+    "end_s": 14.747111111111112,
+    "start_frame": 439,
+    "end_frame": 439,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 14.814866666666667,
+    "end_s": 14.84811111111111,
+    "start_frame": 442,
+    "end_frame": 442,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 14.84811111111111,
+    "end_s": 15.115233333333334,
+    "start_frame": 443,
+    "end_frame": 450,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 14.914777777777777,
+    "end_s": 14.9482,
+    "start_frame": 445,
+    "end_frame": 445,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 14.981444444444444,
+    "end_s": 15.182366666666667,
+    "start_frame": 447,
+    "end_frame": 452,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 15.249033333333333,
+    "end_s": 15.282366666666666,
+    "start_frame": 455,
+    "end_frame": 455,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 15.249033333333333,
+    "end_s": 15.449488888888888,
+    "start_frame": 455,
+    "end_frame": 460,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 15.3157,
+    "end_s": 15.483277777777777,
+    "start_frame": 457,
+    "end_frame": 461,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 15.483277777777777,
+    "end_s": 15.749944444444445,
+    "start_frame": 462,
+    "end_frame": 469,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 15.51661111111111,
+    "end_s": 15.783733333333334,
+    "start_frame": 463,
+    "end_frame": 470,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 15.783733333333334,
+    "end_s": 16.251755555555555,
+    "start_frame": 471,
+    "end_frame": 484,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 15.850855555555556,
+    "end_s": 16.017522222222222,
+    "start_frame": 473,
+    "end_frame": 477,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 15.98418888888889,
+    "end_s": 16.017522222222222,
+    "start_frame": 477,
+    "end_frame": 477,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 16.050855555555554,
+    "end_s": 16.11798888888889,
+    "start_frame": 479,
+    "end_frame": 480,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 16.151788888888888,
+    "end_s": 16.185111111111112,
+    "start_frame": 482,
+    "end_frame": 482,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 16.28507777777778,
+    "end_s": 16.3184,
+    "start_frame": 486,
+    "end_frame": 486,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 16.28507777777778,
+    "end_s": 16.3184,
+    "start_frame": 486,
+    "end_frame": 486,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 16.35172222222222,
+    "end_s": 16.619433333333333,
+    "start_frame": 488,
+    "end_frame": 495,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 16.35172222222222,
+    "end_s": 16.418366666666667,
+    "start_frame": 488,
+    "end_frame": 489,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 16.452233333333332,
+    "end_s": 17.454977777777778,
+    "start_frame": 491,
+    "end_frame": 520,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 16.65268888888889,
+    "end_s": 17.454977777777778,
+    "start_frame": 497,
+    "end_frame": 520,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 16.752766666666666,
+    "end_s": 17.454977777777778,
+    "start_frame": 500,
+    "end_frame": 520,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.454977777777778,
+    "end_s": 17.488677777777777,
+    "start_frame": 521,
+    "end_frame": 521,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.454977777777778,
+    "end_s": 17.488677777777777,
+    "start_frame": 521,
+    "end_frame": 521,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.454977777777778,
+    "end_s": 17.488677777777777,
+    "start_frame": 521,
+    "end_frame": 521,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.454977777777778,
+    "end_s": 17.488677777777777,
+    "start_frame": 521,
+    "end_frame": 521,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.454977777777778,
+    "end_s": 17.488677777777777,
+    "start_frame": 521,
+    "end_frame": 521,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 17.488677777777777,
+    "end_s": 17.62211111111111,
+    "start_frame": 522,
+    "end_frame": 525,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "UNCERTAIN",
+    "start_s": 17.488677777777777,
+    "end_s": 17.62211111111111,
+    "start_frame": 522,
+    "end_frame": 525,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 17.488677777777777,
+    "end_s": 17.62211111111111,
+    "start_frame": 522,
+    "end_frame": 525,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 17.488677777777777,
+    "end_s": 17.62211111111111,
+    "start_frame": 522,
+    "end_frame": 525,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "UNCERTAIN",
+    "start_s": 17.488677777777777,
+    "end_s": 17.62211111111111,
+    "start_frame": 522,
+    "end_frame": 525,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.62211111111111,
+    "end_s": 17.655444444444445,
+    "start_frame": 526,
+    "end_frame": 526,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.62211111111111,
+    "end_s": 17.655444444444445,
+    "start_frame": 526,
+    "end_frame": 526,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.62211111111111,
+    "end_s": 17.655444444444445,
+    "start_frame": 526,
+    "end_frame": 526,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.62211111111111,
+    "end_s": 17.655444444444445,
+    "start_frame": 526,
+    "end_frame": 526,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 17.62211111111111,
+    "end_s": 17.655444444444445,
+    "start_frame": 526,
+    "end_frame": 526,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 17.655444444444445,
+    "end_s": 20.095111111111112,
+    "start_frame": 527,
+    "end_frame": 599,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "UNCERTAIN",
+    "start_s": 17.655444444444445,
+    "end_s": 20.262766666666668,
+    "start_frame": 527,
+    "end_frame": 604,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 17.655444444444445,
+    "end_s": 20.262766666666668,
+    "start_frame": 527,
+    "end_frame": 604,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 17.655444444444445,
+    "end_s": 20.262766666666668,
+    "start_frame": 527,
+    "end_frame": 604,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "UNCERTAIN",
+    "start_s": 17.655444444444445,
+    "end_s": 20.262766666666668,
+    "start_frame": 527,
+    "end_frame": 604,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "UNCERTAIN",
+    "start_s": 18.925766666666668,
+    "end_s": 20.262766666666668,
+    "start_frame": 564,
+    "end_frame": 604,
+    "reasons": [
+      "AMBIGUOUS_COLOR",
+      "MULTICHANNEL_LIGHT",
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 20.262766666666668,
+    "end_s": 20.29617777777778,
+    "start_frame": 605,
+    "end_frame": 605,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 20.262766666666668,
+    "end_s": 20.29617777777778,
+    "start_frame": 605,
+    "end_frame": 605,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 20.262766666666668,
+    "end_s": 20.29617777777778,
+    "start_frame": 605,
+    "end_frame": 605,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 20.262766666666668,
+    "end_s": 20.29617777777778,
+    "start_frame": 605,
+    "end_frame": 605,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 20.262766666666668,
+    "end_s": 20.29617777777778,
+    "start_frame": 605,
+    "end_frame": 605,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 20.262766666666668,
+    "end_s": 20.29617777777778,
+    "start_frame": 605,
+    "end_frame": 605,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "UNCERTAIN",
+    "start_s": 20.29617777777778,
+    "end_s": 24.24031111111111,
+    "start_frame": 606,
+    "end_frame": 723,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 20.29617777777778,
+    "end_s": 24.24031111111111,
+    "start_frame": 606,
+    "end_frame": 723,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 20.29617777777778,
+    "end_s": 24.24031111111111,
+    "start_frame": 606,
+    "end_frame": 723,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "UNCERTAIN",
+    "start_s": 20.29617777777778,
+    "end_s": 24.24031111111111,
+    "start_frame": 606,
+    "end_frame": 723,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "UNCERTAIN",
+    "start_s": 20.29617777777778,
+    "end_s": 24.24031111111111,
+    "start_frame": 606,
+    "end_frame": 723,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 20.496933333333335,
+    "end_s": 20.530344444444445,
+    "start_frame": 612,
+    "end_frame": 612,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 21.165422222222222,
+    "end_s": 21.198822222222223,
+    "start_frame": 632,
+    "end_frame": 632,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 21.332155555555556,
+    "end_s": 21.365555555555556,
+    "start_frame": 637,
+    "end_frame": 637,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 21.533077777777777,
+    "end_s": 21.599744444444443,
+    "start_frame": 643,
+    "end_frame": 644,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 23.07007777777778,
+    "end_s": 23.10348888888889,
+    "start_frame": 689,
+    "end_frame": 689,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 23.1372,
+    "end_s": 23.17091111111111,
+    "start_frame": 691,
+    "end_frame": 691,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 23.37106666666667,
+    "end_s": 23.404322222222223,
+    "start_frame": 698,
+    "end_frame": 698,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 23.471444444444444,
+    "end_s": 23.505311111111112,
+    "start_frame": 701,
+    "end_frame": 701,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 23.8394,
+    "end_s": 23.8728,
+    "start_frame": 712,
+    "end_frame": 712,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 23.972733333333334,
+    "end_s": 24.006133333333334,
+    "start_frame": 716,
+    "end_frame": 716,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 24.13992222222222,
+    "end_s": 24.17377777777778,
+    "start_frame": 721,
+    "end_frame": 721,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.24031111111111,
+    "end_s": 24.273711111111112,
+    "start_frame": 724,
+    "end_frame": 724,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.24031111111111,
+    "end_s": 24.273711111111112,
+    "start_frame": 724,
+    "end_frame": 724,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.24031111111111,
+    "end_s": 24.273711111111112,
+    "start_frame": 724,
+    "end_frame": 724,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.24031111111111,
+    "end_s": 24.273711111111112,
+    "start_frame": 724,
+    "end_frame": 724,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.24031111111111,
+    "end_s": 24.273711111111112,
+    "start_frame": 724,
+    "end_frame": 724,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.24031111111111,
+    "end_s": 24.273711111111112,
+    "start_frame": 724,
+    "end_frame": 724,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "UNCERTAIN",
+    "start_s": 24.273711111111112,
+    "end_s": 24.34037777777778,
+    "start_frame": 725,
+    "end_frame": 726,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 24.273711111111112,
+    "end_s": 24.34037777777778,
+    "start_frame": 725,
+    "end_frame": 726,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 24.273711111111112,
+    "end_s": 24.34037777777778,
+    "start_frame": 725,
+    "end_frame": 726,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "UNCERTAIN",
+    "start_s": 24.273711111111112,
+    "end_s": 24.34037777777778,
+    "start_frame": 725,
+    "end_frame": 726,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "UNCERTAIN",
+    "start_s": 24.273711111111112,
+    "end_s": 24.34037777777778,
+    "start_frame": 725,
+    "end_frame": 726,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.34037777777778,
+    "end_s": 24.373644444444444,
+    "start_frame": 727,
+    "end_frame": 727,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.34037777777778,
+    "end_s": 24.373644444444444,
+    "start_frame": 727,
+    "end_frame": 727,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.34037777777778,
+    "end_s": 24.373644444444444,
+    "start_frame": 727,
+    "end_frame": 727,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.34037777777778,
+    "end_s": 24.373644444444444,
+    "start_frame": 727,
+    "end_frame": 727,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.34037777777778,
+    "end_s": 24.373644444444444,
+    "start_frame": 727,
+    "end_frame": 727,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.34037777777778,
+    "end_s": 24.373644444444444,
+    "start_frame": 727,
+    "end_frame": 727,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "UNCERTAIN",
+    "start_s": 24.373644444444444,
+    "end_s": 24.50791111111111,
+    "start_frame": 728,
+    "end_frame": 731,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 24.373644444444444,
+    "end_s": 24.50791111111111,
+    "start_frame": 728,
+    "end_frame": 731,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 24.373644444444444,
+    "end_s": 24.50791111111111,
+    "start_frame": 728,
+    "end_frame": 731,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "UNCERTAIN",
+    "start_s": 24.373644444444444,
+    "end_s": 24.50791111111111,
+    "start_frame": 728,
+    "end_frame": 731,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "UNCERTAIN",
+    "start_s": 24.373644444444444,
+    "end_s": 24.50791111111111,
+    "start_frame": 728,
+    "end_frame": 731,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.50791111111111,
+    "end_s": 24.5413,
+    "start_frame": 732,
+    "end_frame": 732,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.50791111111111,
+    "end_s": 24.5413,
+    "start_frame": 732,
+    "end_frame": 732,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.50791111111111,
+    "end_s": 24.5413,
+    "start_frame": 732,
+    "end_frame": 732,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.50791111111111,
+    "end_s": 24.5413,
+    "start_frame": 732,
+    "end_frame": 732,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.50791111111111,
+    "end_s": 24.5413,
+    "start_frame": 732,
+    "end_frame": 732,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 24.50791111111111,
+    "end_s": 24.5413,
+    "start_frame": 732,
+    "end_frame": 732,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "UNCERTAIN",
+    "start_s": 24.5413,
+    "end_s": 25.51077777777778,
+    "start_frame": 733,
+    "end_frame": 761,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 24.5413,
+    "end_s": 25.51077777777778,
+    "start_frame": 733,
+    "end_frame": 761,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 24.5413,
+    "end_s": 25.51077777777778,
+    "start_frame": 733,
+    "end_frame": 761,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "UNCERTAIN",
+    "start_s": 24.5413,
+    "end_s": 25.51077777777778,
+    "start_frame": 733,
+    "end_frame": 761,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "UNCERTAIN",
+    "start_s": 24.5413,
+    "end_s": 25.51077777777778,
+    "start_frame": 733,
+    "end_frame": 761,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 24.7413,
+    "end_s": 24.77457777777778,
+    "start_frame": 739,
+    "end_frame": 739,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 25.108933333333333,
+    "end_s": 25.51077777777778,
+    "start_frame": 750,
+    "end_frame": 761,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 25.51077777777778,
+    "end_s": 25.544044444444445,
+    "start_frame": 762,
+    "end_frame": 762,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 25.51077777777778,
+    "end_s": 25.544044444444445,
+    "start_frame": 762,
+    "end_frame": 762,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 25.51077777777778,
+    "end_s": 25.544044444444445,
+    "start_frame": 762,
+    "end_frame": 762,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 25.51077777777778,
+    "end_s": 25.544044444444445,
+    "start_frame": 762,
+    "end_frame": 762,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 25.51077777777778,
+    "end_s": 25.544044444444445,
+    "start_frame": 762,
+    "end_frame": 762,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 25.51077777777778,
+    "end_s": 25.544044444444445,
+    "start_frame": 762,
+    "end_frame": 762,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 25.544044444444445,
+    "end_s": 26.24587777777778,
+    "start_frame": 763,
+    "end_frame": 783,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "UNCERTAIN",
+    "start_s": 25.544044444444445,
+    "end_s": 26.24587777777778,
+    "start_frame": 763,
+    "end_frame": 783,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 25.544044444444445,
+    "end_s": 26.24587777777778,
+    "start_frame": 763,
+    "end_frame": 783,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 25.544044444444445,
+    "end_s": 26.24587777777778,
+    "start_frame": 763,
+    "end_frame": 783,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "UNCERTAIN",
+    "start_s": 25.544044444444445,
+    "end_s": 26.24587777777778,
+    "start_frame": 763,
+    "end_frame": 783,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "UNCERTAIN",
+    "start_s": 25.544044444444445,
+    "end_s": 26.24587777777778,
+    "start_frame": 763,
+    "end_frame": 783,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 26.24587777777778,
+    "end_s": 26.27921111111111,
+    "start_frame": 784,
+    "end_frame": 784,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 26.24587777777778,
+    "end_s": 26.27921111111111,
+    "start_frame": 784,
+    "end_frame": 784,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 26.24587777777778,
+    "end_s": 26.27921111111111,
+    "start_frame": 784,
+    "end_frame": 784,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 26.24587777777778,
+    "end_s": 26.27921111111111,
+    "start_frame": 784,
+    "end_frame": 784,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 26.24587777777778,
+    "end_s": 26.27921111111111,
+    "start_frame": 784,
+    "end_frame": 784,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 26.24587777777778,
+    "end_s": 26.27921111111111,
+    "start_frame": 784,
+    "end_frame": 784,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 26.27921111111111,
+    "end_s": 28.819411111111112,
+    "start_frame": 785,
+    "end_frame": 860,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "UNCERTAIN",
+    "start_s": 26.27921111111111,
+    "end_s": 28.819411111111112,
+    "start_frame": 785,
+    "end_frame": 860,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 26.27921111111111,
+    "end_s": 28.819411111111112,
+    "start_frame": 785,
+    "end_frame": 860,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 26.27921111111111,
+    "end_s": 28.819411111111112,
+    "start_frame": 785,
+    "end_frame": 860,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "UNCERTAIN",
+    "start_s": 26.27921111111111,
+    "end_s": 28.819411111111112,
+    "start_frame": 785,
+    "end_frame": 860,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "UNCERTAIN",
+    "start_s": 26.27921111111111,
+    "end_s": 28.819411111111112,
+    "start_frame": 785,
+    "end_frame": 860,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0007",
+    "state": "UNCERTAIN",
+    "start_s": 27.381877777777778,
+    "end_s": 28.819411111111112,
+    "start_frame": 817,
+    "end_frame": 860,
+    "reasons": [
+      "AMBIGUOUS_COLOR",
+      "MULTICHANNEL_LIGHT",
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 28.819411111111112,
+    "end_s": 28.853144444444446,
+    "start_frame": 861,
+    "end_frame": 861,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 28.819411111111112,
+    "end_s": 28.853144444444446,
+    "start_frame": 861,
+    "end_frame": 861,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 28.819411111111112,
+    "end_s": 28.853144444444446,
+    "start_frame": 861,
+    "end_frame": 861,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 28.819411111111112,
+    "end_s": 28.853144444444446,
+    "start_frame": 861,
+    "end_frame": 861,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 28.819411111111112,
+    "end_s": 28.853144444444446,
+    "start_frame": 861,
+    "end_frame": 861,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 28.819411111111112,
+    "end_s": 28.853144444444446,
+    "start_frame": 861,
+    "end_frame": 861,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0007",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 28.819411111111112,
+    "end_s": 28.853144444444446,
+    "start_frame": 861,
+    "end_frame": 861,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "UNCERTAIN",
+    "start_s": 28.853144444444446,
+    "end_s": 30.82488888888889,
+    "start_frame": 862,
+    "end_frame": 920,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "UNCERTAIN",
+    "start_s": 28.853144444444446,
+    "end_s": 30.82488888888889,
+    "start_frame": 862,
+    "end_frame": 920,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "UNCERTAIN",
+    "start_s": 28.853144444444446,
+    "end_s": 30.82488888888889,
+    "start_frame": 862,
+    "end_frame": 920,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "UNCERTAIN",
+    "start_s": 28.853144444444446,
+    "end_s": 30.82488888888889,
+    "start_frame": 862,
+    "end_frame": 920,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "UNCERTAIN",
+    "start_s": 28.853144444444446,
+    "end_s": 30.82488888888889,
+    "start_frame": 862,
+    "end_frame": 920,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "UNCERTAIN",
+    "start_s": 28.853144444444446,
+    "end_s": 30.82488888888889,
+    "start_frame": 862,
+    "end_frame": 920,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0007",
+    "state": "UNCERTAIN",
+    "start_s": 28.853144444444446,
+    "end_s": 30.82488888888889,
+    "start_frame": 862,
+    "end_frame": 920,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED"
+    ]
+  },
+  {
+    "entity": "TRACK0001",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 30.82488888888889,
+    "end_s": 30.85861111111111,
+    "start_frame": 921,
+    "end_frame": 921,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0002",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 30.82488888888889,
+    "end_s": 30.85861111111111,
+    "start_frame": 921,
+    "end_frame": 921,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0003",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 30.82488888888889,
+    "end_s": 30.85861111111111,
+    "start_frame": 921,
+    "end_frame": 921,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0004",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 30.82488888888889,
+    "end_s": 30.85861111111111,
+    "start_frame": 921,
+    "end_frame": 921,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0005",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 30.82488888888889,
+    "end_s": 30.85861111111111,
+    "start_frame": 921,
+    "end_frame": 921,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0006",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 30.82488888888889,
+    "end_s": 30.85861111111111,
+    "start_frame": 921,
+    "end_frame": 921,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  },
+  {
+    "entity": "TRACK0007",
+    "state": "INVALID_GEOMETRY",
+    "start_s": 30.82488888888889,
+    "end_s": 30.85861111111111,
+    "start_frame": 921,
+    "end_frame": 921,
+    "reasons": [
+      "NO_CANDIDATE_DOES_NOT_PROVE_OFF",
+      "ROI_NOT_REMEASURED",
+      "Insufficient robust inlier support"
+    ]
+  }
+]

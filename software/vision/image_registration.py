@@ -27,7 +27,8 @@ class Registration:
     def summary(self):
         return dict(status=self.status,reason=self.reason,reprojection_rmse_px=self.error_px,
                     max_inlier_error_px=self.max_error_px,common_ids=self.common_ids,inlier_ids=self.inlier_ids,
-                    anchor_coverage=self.coverage,matrix=self.matrix.tolist() if self.matrix is not None else None)
+                    anchor_coverage=self.coverage,matrix=self.matrix.tolist() if self.matrix is not None else None,
+                    anchor_hull=self.anchor_hull.tolist() if getattr(self,'anchor_hull',None) is not None else None)
 
 
 @timed('HOMOGRAPHY')
