@@ -1,0 +1,24 @@
+{
+  "simulation": true,
+  "synthetic_video": true,
+  "backend": "windows",
+  "errors": [],
+  "qt_timer_ticks": 360,
+  "session": "build\\vision_v044\\gui_216ccced\\sessions\\2026-11-18_120118_LED49_RGB_bf42779ebbfa",
+  "report": "build\\vision_v044\\gui_216ccced\\results\\vision\\sessions\\video_events_2cd0142919ed4b698135bc1cc0a6b5de",
+  "tables": "build\\vision_v044\\gui_216ccced\\results\\vision\\sessions\\video_events_2cd0142919ed4b698135bc1cc0a6b5de\\correspondence_497ef42f153b4135ade34d723b8b0e53",
+  "processed_frames": 270,
+  "optical_events": 4,
+  "alignment": "ESTIMATED_NOT_HARDWARE_SYNC",
+  "mapping_rows": 4,
+  "final_preview": {
+    "simulation": true,
+    "synthetic_video": true,
+    "backend": "windows",
+    "errors": [],
+    "selected_frame": 228,
+    "requested_frame": 228,
+    "roi_layer": "ROI",
+    "tables": "build\\vision_v044\\gui_216ccced\\results\\vision\\sessions\\video_events_2cd0142919ed4b698135bc1cc0a6b5de\\correspondence_ba9074143052481998398d49125f9c22"
+  }
+}

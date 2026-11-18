@@ -20,14 +20,17 @@ def save_session(path, data):
 
 
 class Journal:
-    def __init__(self, root, stages, port, conditions, clock_ns=time.monotonic_ns):
+    def __init__(self, root, stages, port, conditions, clock_ns=time.monotonic_ns,
+                 scenario_name=NAME, config=None, project_binding=None, simulation=False):
         self.clock_ns = clock_ns
         self.start_ns = clock_ns()
         self.path = Path(root) / (datetime.now(timezone.utc).strftime('%Y-%m-%d_%H%M%S') + '_LED49_RGB_' + uuid.uuid4().hex[:12])
         self.path.mkdir(parents=True, exist_ok=False)
         self.data = dict(schema_version=1, application='GS75 RGB Vision', app_version=VERSION,
             session_id=self.path.name, utc_started=utc_now(), monotonic_origin_ns=self.start_ns,
-            port=port, scenario=NAME, planned=planned(stages), actual=[], measurements=[],
+            port=port, scenario=scenario_name, scenario_config=config or {}, simulation=simulation,
+            project_binding=project_binding, analysis_profile='Short Pulse / Experimental' if scenario_name.endswith('SHORT_PULSE_TEST') else 'Reliable / Long Pulse',
+            planned=planned(stages), actual=[], measurements=[],
             conditions=conditions, safety_check='OPERATOR_CONFIRMED_PHYSICAL_CONDITIONS',
             status='RUNNING', off_confirmed=False, diagnostics=None, video=None,
             synchronization=dict(status='UNALIGNED', offset_ms=None, uncertainty_ms=None,
@@ -50,12 +53,13 @@ class Journal:
 
     def save(self):
         save_session(self.path, self.data)
-        columns = ['color', 'source', 'sink', 'command', 'id', 'duration_ms', 'current_avg_ua',
-            'current_max_ua', 'samples', 'elapsed_ms', 'reason', 'fault', 'status', 'ack_ns', 'done_ns', 'warning']
+        columns = ['stage_index', 'role', 'color', 'source', 'sink', 'command', 'id', 'duration_ms', 'current_avg_ua',
+            'current_max_ua', 'samples', 'elapsed_ms', 'reason', 'fault', 'status', 'tx_ns', 'ack_ns', 'done_ns', 'off_confirmed', 'warning']
         with (self.path / 'measurements.csv').open('w', encoding='utf-8', newline='') as stream:
             writer = csv.DictWriter(stream, fieldnames=columns, extrasaction='ignore')
             writer.writeheader(); writer.writerows(self.data['measurements'])
-        lines = [f"# {NAME} — {self.data['status']}", '', f"Session: {self.data['session_id']}",
+        lines = [f"# {self.data['scenario']} — {self.data['status']}", '', f"Session: {self.data['session_id']}",
+            f"SIMULATION: {self.data['simulation']} (not a physical experiment when true)",
             f"UTC: {self.data['utc_started']}; app {VERSION}; port {self.data['port']}",
             f"FW: {(self.data.get('diagnostics') or {}).get('info', {}).get('FW', 'unknown')}",
             f"OFF confirmed by protocol: {self.data['off_confirmed']}",

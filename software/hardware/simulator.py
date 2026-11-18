@@ -9,6 +9,7 @@ class VirtualClock:
 
 
 class SimulatedCDC:
+    simulation = True
     def __init__(self, clock=None, failure=None, hook=None):
         self.clock = clock or VirtualClock()
         self.failure, self.hook = failure, hook

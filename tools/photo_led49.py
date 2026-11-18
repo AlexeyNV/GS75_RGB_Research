@@ -16,11 +16,13 @@ class PhotoError(RuntimeError):
 
 
 class PhotoSession:
-    def __init__(self, transport, log=None, clock=time.monotonic, progress=print):
+    def __init__(self, transport, log=None, clock=time.monotonic, progress=print, monitor_interval=.25):
         self.transport, self.log, self.clock, self.progress = transport, log, clock, progress
         self.events = []
         self.ack = self.done = None
         self.off_confirmed = False
+        if not .01 <= monitor_interval <= .5: raise ValueError('Invalid monitoring interval')
+        self.monitor_interval = monitor_interval
 
     def record(self, direction, text):
         event = dict(utc=datetime.now(timezone.utc).isoformat(), monotonic_s=self.clock(), direction=direction, text=text)
@@ -119,13 +121,13 @@ class PhotoSession:
                 raise PhotoError('ACK mismatch')
             integer(self.ack, 'ID')
             started = self.clock(); deadline = started + duration_ms/1000 + 1
-            next_current = started + .25
+            next_current = started + self.monitor_interval
             while self.done is None:
                 if self.clock() >= deadline:
                     raise PhotoError('Missing DONE')
                 if self.clock() >= next_current:
                     self.progress(f"Remaining approximately {max(0, duration_ms/1000-(self.clock()-started)):.1f} s")
-                    self.query('CURRENT', 'OK RAW='); next_current = self.clock() + .5
+                    self.query('CURRENT', 'OK RAW='); next_current = self.clock() + self.monitor_interval
                     adc = fields(self.query('ADCSTATUS', 'OK ADCSTATUS '))
                     if (integer(adc, 'VALID') != 1 or integer(adc, 'HAS_SAMPLE') != 1
                             or integer(adc, 'AGE_MS') > 5 or integer(adc, 'ERRORS') != 0 or integer(adc, 'OVR_COUNT') != 0):

@@ -7,6 +7,13 @@ import re
 
 def align_session(events,session_path):
     path=Path(session_path);session=json.loads(path.read_text(encoding='utf-8'))
+    if session.get('scenario')=='LED49_SHORT_PULSE_TEST':
+        from software.hardware.electrical_operations import load_operations
+        from .experiment_mapping import align_operations
+        _,operations=load_operations(path)
+        result=align_operations(events,operations)
+        result.update(source_session=str(path.resolve()),session_id=session.get('session_id'))
+        return result
     origin=session['monotonic_origin_ns'];commands=[]
     log=path.parent/'events.jsonl'
     tx=[json.loads(line) for line in log.read_text(encoding='utf-8').splitlines()] if log.is_file() else []

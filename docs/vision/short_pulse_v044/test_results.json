@@ -1,0 +1,23 @@
+{
+  "version": "0.4.4",
+  "validated_date": "2026-11-18",
+  "baseline": "cf00ccb",
+  "python_tests": 163,
+  "python_seconds": 186.257,
+  "python_status": "PASS",
+  "c_tests": 2,
+  "c_seconds": 0.21,
+  "c_status": "PASS",
+  "previous_python_tests": 145,
+  "added_python_tests": 18,
+  "preserved_original_files": 1239,
+  "changed_original_files": [],
+  "physical_hardware_used": false,
+  "real_serial_port_opened": false,
+  "firmware_changed": false,
+  "new_experiment_evidence": "SIMULATED_CDC_AND_SYNTHETIC_OPTICAL_PTS_MP4_ONLY",
+  "logs_sha256": {
+    "python-tests.log": "64fa2100200d9329005b5d7f618731fd2a00deb154d00f1db1371351c2182662",
+    "c-tests.log": "55de75d9785bc3355f8bd969c7abdcd67fc841e7fba1ccf802f04f1ddbc5fa2a"
+  }
+}

@@ -1,5 +1,13 @@
 # Полуавтоматический электрический probe для FW 0.1.1
 
+Подготовка RGB Vision v0.4.4: read-only адаптер
+`software/hardware/electrical_operations.py::operations_from_probe` переводит
+записи PAIR в общий контракт электрических операций, сохраняя токовые
+кандидаты, UTC и неизвестные monotonic anchors как null. Схема поддерживает
+one-to-many optical tracks и ручной PCB ID; [формат](vision/electrical_optical_format.md).
+Адаптер не запускает probe/ARM/PAIR. Старые UTC не дают синхронизации с видео.
+Массовое исследование настоящей платы этим сканером ещё не выполнено.
+
 `tools/rgb_probe.py` запускается отдельной командой оператора. Подключение
 устройства и обычная serial_console не запускают сканирование. FW не меняется.
 

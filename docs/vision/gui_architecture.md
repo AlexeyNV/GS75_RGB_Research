@@ -1,5 +1,12 @@
 # RGB Vision v0.3 — устройство приложения
 
+Дополнение v0.4.4: прежние Experiment/ExperimentWorker исполняют два bounded
+PHOTO preset; ExperimentPane связывает проект/видео с VideoAnalysisControls.
+После оптического pipeline experiment_mapping.py создаёт immutable CSV bundle,
+ExperimentTables показывает его из окна временной шкалы. Электрический адаптер
+не зависит от OpenCV/serial; matcher не имеет доступа к исполнительным командам.
+[Рабочий процесс](short_pulse_experiment.md) · [Форматы](electrical_optical_format.md).
+
 Дополнение v0.4.3: video_analysis_controls.py запускает общий C_HYBRID и
 FrameTemporalAnalysis в существующем Qt worker. video_event_results.py и
 event_timeline.py показывают события, UNKNOWN, PTS-плеер, ROI и отдельную

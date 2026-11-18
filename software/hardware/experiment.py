@@ -3,7 +3,7 @@ import threading
 import time
 from tools.photo_led49 import PhotoSession, PhotoError, fields, integer
 from .journal import Journal, utc_now
-from .scenario import CONDITIONS, EXPECTED_UA, SINKS, scenario
+from .scenario import CONDITIONS, EXPECTED_UA, SINKS, NAME, scenario, validate_scenario
 
 
 class Aborted(PhotoError):
@@ -13,7 +13,7 @@ class Aborted(PhotoError):
 class Experiment(PhotoSession):
     def __init__(self, transport, port, root, clock_ns=time.monotonic_ns, notify=lambda value: None, abort=None):
         self.clock_ns = clock_ns
-        super().__init__(transport, clock=lambda: clock_ns()/1e9, progress=lambda _: None)
+        super().__init__(transport, clock=lambda: clock_ns()/1e9, progress=lambda _: None, monitor_interval=.02)
         self.port, self.root, self.notify = port, root, notify
         self.abort = abort or threading.Event()
         self.journal = None
@@ -33,16 +33,19 @@ class Experiment(PhotoSession):
         self.events.append(event)
         if self.journal and self.recording:
             self.journal.event(direction, text)
+            if self.measurement is not None and direction == 'TX' and text == self.measurement['command']:
+                self.measurement['tx_ns'] = event['monotonic_ns']
             if self.measurement is not None and direction == 'RX':
                 data = fields(text)
                 if text.startswith('ACK '):
                     self.measurement.update(ack=text, ack_ns=event['monotonic_ns'], id=integer(data, 'ID'))
+                    self.journal.save()
                 elif text.startswith('DONE '):
                     self.measurement.update(done=text, done_ns=event['monotonic_ns'])
                     for key in ('CURRENT_AVG_UA', 'CURRENT_MAX_UA', 'SAMPLES', 'ELAPSED_MS', 'REASON', 'FAULT'):
                         if key in data:
                             self.measurement[key.lower()] = data[key] if key in ('REASON', 'FAULT') else integer(data, key)
-                self.journal.save()
+                    self.journal.save()
         self.notify(dict(event=event))
 
     def send(self, command):
@@ -137,15 +140,15 @@ class Experiment(PhotoSession):
                 next_check = self.clock_ns() + 500_000_000
             self.receive(min(.02, max(0, (deadline-self.clock_ns())/1e9)))
 
-    def run_sequence(self, stages=None, conditions=None):
+    def run_sequence(self, stages=None, conditions=None, scenario_name=NAME, scenario_config=None, project_binding=None):
         self.stages = stages or scenario()
         # Accept only the preset structure and bounded controls, never arbitrary pins/colors.
-        validated = scenario(self.stages[0].duration_ms, self.stages[1].duration_ms,
-                             self.stages[2].duration_ms, self.stages[-1].duration_ms)
+        validated = validate_scenario(self.stages, scenario_name, scenario_config)
         if list(self.stages) != validated or not conditions or any(conditions.get(key) is not True for key in CONDITIONS):
             raise ValueError('Invalid scenario or missing physical operator confirmation')
         self.ack = self.done = None
-        self.journal = Journal(self.root, self.stages, self.port, conditions, self.clock_ns)
+        self.journal = Journal(self.root, self.stages, self.port, conditions, self.clock_ns,
+            scenario_name, scenario_config, project_binding, getattr(self.transport, 'simulation', False))
         self.recording = True
         result = self.journal.data
         try:
@@ -153,7 +156,7 @@ class Experiment(PhotoSession):
             self.journal.save()
             for index, stage in enumerate(self.stages, 1):
                 self.checkpoint()
-                self.phase = dict(index=index, color=stage.color, duration_ms=stage.duration_ms,
+                self.phase = dict(index=index, color=stage.color, duration_ms=stage.duration_ms, role=stage.role,
                     start_ns=self.clock_ns(), start_utc=utc_now(), status='RUNNING')
                 result['actual'].append(self.phase)
                 self.journal.event('STAGE', 'BEGIN', **self.phase)
@@ -162,7 +165,7 @@ class Experiment(PhotoSession):
                     self.off_stage(stage)
                 else:
                     self.ack = self.done = None
-                    self.measurement = dict(color=stage.color, source=14, sink=SINKS[stage.color],
+                    self.measurement = dict(stage_index=index, role=stage.role, color=stage.color, source=14, sink=SINKS[stage.color],
                         duration_ms=stage.duration_ms, command=f'PHOTO LED49 {stage.color} {stage.duration_ms}', status='RUNNING')
                     result['measurements'].append(self.measurement)
                     self.journal.save()
@@ -175,18 +178,20 @@ class Experiment(PhotoSession):
                     if warning:
                         self.journal.event('WARNING', warning)
                         self.notify(dict(warning=warning))
-                    self.measurement.update(status='COMPLETED', warning=warning)
                     if not self.safe_off():
                         raise PhotoError('OFF/EN unconfirmed; physically remove power')
                     if self.last_status.get('FAULT') != 'NONE':
                         raise PhotoError('FAULT after PHOTO; no automatic recovery')
+                    self.validate_adc(fields(self.query('ADCSTATUS', 'OK ADCSTATUS ')))
+                    self.query('CURRENT', 'OK RAW=')
+                    self.measurement.update(status='COMPLETED', warning=warning, off_confirmed=True)
                     self.measurement = None
                 self.phase.update(end_ns=self.clock_ns(), end_utc=utc_now(), status='COMPLETED')
                 self.phase['host_elapsed_ms'] = (self.phase['end_ns']-self.phase['start_ns'])/1e6
                 self.journal.event('STAGE', 'END', **self.phase)
                 self.journal.save()
             self.checkpoint()
-            result.update(status='COMPLETED', reason='All seven stages completed')
+            result.update(status='COMPLETED', reason=f'All {len(self.stages)} stages completed')
         except BaseException as exc:
             result.update(status='ABORTED' if isinstance(exc, (Aborted, KeyboardInterrupt)) else 'FAILED',
                           reason=type(exc).__name__ + ': ' + str(exc))

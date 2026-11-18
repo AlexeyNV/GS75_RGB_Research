@@ -1,0 +1,758 @@
+{
+  "schema_version": 1,
+  "application": "GS75 RGB Vision",
+  "app_version": "0.4.4",
+  "session_id": "2026-11-18_120617_LED49_RGB_1e99f938170a",
+  "utc_started": "2026-11-18T12:06:17.377103+00:00",
+  "monotonic_origin_ns": 0,
+  "port": "SIMULATED",
+  "scenario": "LED49_SHORT_PULSE_TEST",
+  "scenario_config": {},
+  "simulation": true,
+  "project_binding": null,
+  "analysis_profile": "Short Pulse / Experimental",
+  "planned": [
+    {
+      "index": 1,
+      "color": "OFF",
+      "duration_ms": 5000,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 0,
+      "planned_end_ms": 5000
+    },
+    {
+      "index": 2,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 5000,
+      "planned_end_ms": 5100
+    },
+    {
+      "index": 3,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 5100,
+      "planned_end_ms": 5800
+    },
+    {
+      "index": 4,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 5800,
+      "planned_end_ms": 5900
+    },
+    {
+      "index": 5,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 5900,
+      "planned_end_ms": 6600
+    },
+    {
+      "index": 6,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 6600,
+      "planned_end_ms": 6700
+    },
+    {
+      "index": 7,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 6700,
+      "planned_end_ms": 7400
+    },
+    {
+      "index": 8,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 7400,
+      "planned_end_ms": 7500
+    },
+    {
+      "index": 9,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 7500,
+      "planned_end_ms": 8200
+    },
+    {
+      "index": 10,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 8200,
+      "planned_end_ms": 8300
+    },
+    {
+      "index": 11,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 8300,
+      "planned_end_ms": 9000
+    },
+    {
+      "index": 12,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 9000,
+      "planned_end_ms": 9100
+    },
+    {
+      "index": 13,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 9100,
+      "planned_end_ms": 9800
+    },
+    {
+      "index": 14,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 9800,
+      "planned_end_ms": 9900
+    },
+    {
+      "index": 15,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 9900,
+      "planned_end_ms": 10600
+    },
+    {
+      "index": 16,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 10600,
+      "planned_end_ms": 10700
+    },
+    {
+      "index": 17,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 10700,
+      "planned_end_ms": 11400
+    },
+    {
+      "index": 18,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 11400,
+      "planned_end_ms": 11500
+    },
+    {
+      "index": 19,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 11500,
+      "planned_end_ms": 12200
+    },
+    {
+      "index": 20,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 12200,
+      "planned_end_ms": 12300
+    },
+    {
+      "index": 21,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 12300,
+      "planned_end_ms": 13000
+    },
+    {
+      "index": 22,
+      "color": "RED",
+      "duration_ms": 200,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 13000,
+      "planned_end_ms": 13200
+    },
+    {
+      "index": 23,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 13200,
+      "planned_end_ms": 13900
+    },
+    {
+      "index": 24,
+      "color": "RED",
+      "duration_ms": 200,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 13900,
+      "planned_end_ms": 14100
+    },
+    {
+      "index": 25,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 14100,
+      "planned_end_ms": 14800
+    },
+    {
+      "index": 26,
+      "color": "RED",
+      "duration_ms": 200,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 14800,
+      "planned_end_ms": 15000
+    },
+    {
+      "index": 27,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 15000,
+      "planned_end_ms": 15700
+    },
+    {
+      "index": 28,
+      "color": "RED",
+      "duration_ms": 200,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 15700,
+      "planned_end_ms": 15900
+    },
+    {
+      "index": 29,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 15900,
+      "planned_end_ms": 16600
+    },
+    {
+      "index": 30,
+      "color": "RED",
+      "duration_ms": 200,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 16600,
+      "planned_end_ms": 16800
+    },
+    {
+      "index": 31,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 16800,
+      "planned_end_ms": 17500
+    },
+    {
+      "index": 32,
+      "color": "RED",
+      "duration_ms": 200,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 17500,
+      "planned_end_ms": 17700
+    },
+    {
+      "index": 33,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 17700,
+      "planned_end_ms": 18400
+    },
+    {
+      "index": 34,
+      "color": "RED",
+      "duration_ms": 200,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 18400,
+      "planned_end_ms": 18600
+    },
+    {
+      "index": 35,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 18600,
+      "planned_end_ms": 19300
+    },
+    {
+      "index": 36,
+      "color": "RED",
+      "duration_ms": 200,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 19300,
+      "planned_end_ms": 19500
+    },
+    {
+      "index": 37,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 19500,
+      "planned_end_ms": 20200
+    },
+    {
+      "index": 38,
+      "color": "RED",
+      "duration_ms": 200,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 20200,
+      "planned_end_ms": 20400
+    },
+    {
+      "index": 39,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 20400,
+      "planned_end_ms": 21100
+    },
+    {
+      "index": 40,
+      "color": "RED",
+      "duration_ms": 200,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 21100,
+      "planned_end_ms": 21300
+    },
+    {
+      "index": 41,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 21300,
+      "planned_end_ms": 22000
+    },
+    {
+      "index": 42,
+      "color": "RED",
+      "duration_ms": 300,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 22000,
+      "planned_end_ms": 22300
+    },
+    {
+      "index": 43,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 22300,
+      "planned_end_ms": 23000
+    },
+    {
+      "index": 44,
+      "color": "RED",
+      "duration_ms": 300,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 23000,
+      "planned_end_ms": 23300
+    },
+    {
+      "index": 45,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 23300,
+      "planned_end_ms": 24000
+    },
+    {
+      "index": 46,
+      "color": "RED",
+      "duration_ms": 300,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 24000,
+      "planned_end_ms": 24300
+    },
+    {
+      "index": 47,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 24300,
+      "planned_end_ms": 25000
+    },
+    {
+      "index": 48,
+      "color": "RED",
+      "duration_ms": 300,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 25000,
+      "planned_end_ms": 25300
+    },
+    {
+      "index": 49,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 25300,
+      "planned_end_ms": 26000
+    },
+    {
+      "index": 50,
+      "color": "RED",
+      "duration_ms": 300,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 26000,
+      "planned_end_ms": 26300
+    },
+    {
+      "index": 51,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 26300,
+      "planned_end_ms": 27000
+    },
+    {
+      "index": 52,
+      "color": "RED",
+      "duration_ms": 300,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 27000,
+      "planned_end_ms": 27300
+    },
+    {
+      "index": 53,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 27300,
+      "planned_end_ms": 28000
+    },
+    {
+      "index": 54,
+      "color": "RED",
+      "duration_ms": 300,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 28000,
+      "planned_end_ms": 28300
+    },
+    {
+      "index": 55,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 28300,
+      "planned_end_ms": 29000
+    },
+    {
+      "index": 56,
+      "color": "RED",
+      "duration_ms": 300,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 29000,
+      "planned_end_ms": 29300
+    },
+    {
+      "index": 57,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 29300,
+      "planned_end_ms": 30000
+    },
+    {
+      "index": 58,
+      "color": "RED",
+      "duration_ms": 300,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 30000,
+      "planned_end_ms": 30300
+    },
+    {
+      "index": 59,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 30300,
+      "planned_end_ms": 31000
+    },
+    {
+      "index": 60,
+      "color": "RED",
+      "duration_ms": 300,
+      "role": "SHORT_PULSE",
+      "planned_start_ms": 31000,
+      "planned_end_ms": 31300
+    },
+    {
+      "index": 61,
+      "color": "OFF",
+      "duration_ms": 5000,
+      "role": "EXPERIMENT",
+      "planned_start_ms": 31300,
+      "planned_end_ms": 36300
+    }
+  ],
+  "actual": [
+    {
+      "index": 1,
+      "color": "OFF",
+      "duration_ms": 5000,
+      "role": "EXPERIMENT",
+      "start_ns": 16000000,
+      "start_utc": "2026-11-18T12:06:17.389063+00:00",
+      "status": "COMPLETED",
+      "off_confirmed_ns": 20000000,
+      "end_ns": 5020000000,
+      "end_utc": "2026-11-18T12:06:17.404995+00:00",
+      "host_elapsed_ms": 5004.0
+    },
+    {
+      "index": 2,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "start_ns": 5020000000,
+      "start_utc": "2026-11-18T12:06:17.410981+00:00",
+      "status": "COMPLETED",
+      "end_ns": 5166000000,
+      "end_utc": "2026-11-18T12:06:17.433918+00:00",
+      "host_elapsed_ms": 146.0
+    },
+    {
+      "index": 3,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "start_ns": 5166000000,
+      "start_utc": "2026-11-18T12:06:17.437936+00:00",
+      "status": "COMPLETED",
+      "off_confirmed_ns": 5170000000,
+      "end_ns": 5870000000,
+      "end_utc": "2026-11-18T12:06:17.442895+00:00",
+      "host_elapsed_ms": 704.0
+    },
+    {
+      "index": 4,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "start_ns": 5870000000,
+      "start_utc": "2026-11-18T12:06:17.448878+00:00",
+      "status": "COMPLETED",
+      "end_ns": 6016000000,
+      "end_utc": "2026-11-18T12:06:17.470821+00:00",
+      "host_elapsed_ms": 146.0
+    },
+    {
+      "index": 5,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "start_ns": 6016000000,
+      "start_utc": "2026-11-18T12:06:17.475808+00:00",
+      "status": "COMPLETED",
+      "off_confirmed_ns": 6020000000,
+      "end_ns": 6720000000,
+      "end_utc": "2026-11-18T12:06:17.479796+00:00",
+      "host_elapsed_ms": 704.0
+    },
+    {
+      "index": 6,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "start_ns": 6720000000,
+      "start_utc": "2026-11-18T12:06:17.484782+00:00",
+      "status": "COMPLETED",
+      "end_ns": 6866000000,
+      "end_utc": "2026-11-18T12:06:17.509716+00:00",
+      "host_elapsed_ms": 146.0
+    },
+    {
+      "index": 7,
+      "color": "OFF",
+      "duration_ms": 700,
+      "role": "EXPERIMENT",
+      "start_ns": 6866000000,
+      "start_utc": "2026-11-18T12:06:17.513705+00:00",
+      "status": "COMPLETED",
+      "off_confirmed_ns": 6870000000,
+      "end_ns": 7570000000,
+      "end_utc": "2026-11-18T12:06:17.517694+00:00",
+      "host_elapsed_ms": 704.0
+    },
+    {
+      "index": 8,
+      "color": "RED",
+      "duration_ms": 100,
+      "role": "SHORT_PULSE",
+      "start_ns": 7570000000,
+      "start_utc": "2026-11-18T12:06:17.522681+00:00",
+      "status": "ABORTED",
+      "end_ns": 7618000000,
+      "end_utc": "2026-11-18T12:06:17.539636+00:00",
+      "host_elapsed_ms": 48.0
+    }
+  ],
+  "measurements": [
+    {
+      "stage_index": 2,
+      "role": "SHORT_PULSE",
+      "color": "RED",
+      "source": 14,
+      "sink": 32,
+      "duration_ms": 100,
+      "command": "PHOTO LED49 RED 100",
+      "status": "COMPLETED",
+      "tx_ns": 5038000000,
+      "ack": "ACK ID=1 MODE=PHOTO LED=49 COLOR=RED SRC=14 SNK=32 DURATION_MS=100",
+      "ack_ns": 5040000000,
+      "id": 1,
+      "done": "DONE ID=1 STATE=OFF CURRENT_AVG_UA=1035 CURRENT_MAX_UA=1085 SAMPLES=99 FAULT=NONE REASON=TIMEOUT MODE=PHOTO LED=49 COLOR=RED ELAPSED_MS=100",
+      "done_ns": 5156000000,
+      "current_avg_ua": 1035,
+      "current_max_ua": 1085,
+      "samples": 99,
+      "elapsed_ms": 100,
+      "reason": "TIMEOUT",
+      "fault": "NONE",
+      "warning": "",
+      "off_confirmed": true
+    },
+    {
+      "stage_index": 4,
+      "role": "SHORT_PULSE",
+      "color": "RED",
+      "source": 14,
+      "sink": 32,
+      "duration_ms": 100,
+      "command": "PHOTO LED49 RED 100",
+      "status": "COMPLETED",
+      "tx_ns": 5888000000,
+      "ack": "ACK ID=2 MODE=PHOTO LED=49 COLOR=RED SRC=14 SNK=32 DURATION_MS=100",
+      "ack_ns": 5890000000,
+      "id": 2,
+      "done": "DONE ID=2 STATE=OFF CURRENT_AVG_UA=1035 CURRENT_MAX_UA=1085 SAMPLES=99 FAULT=NONE REASON=TIMEOUT MODE=PHOTO LED=49 COLOR=RED ELAPSED_MS=100",
+      "done_ns": 6006000000,
+      "current_avg_ua": 1035,
+      "current_max_ua": 1085,
+      "samples": 99,
+      "elapsed_ms": 100,
+      "reason": "TIMEOUT",
+      "fault": "NONE",
+      "warning": "",
+      "off_confirmed": true
+    },
+    {
+      "stage_index": 6,
+      "role": "SHORT_PULSE",
+      "color": "RED",
+      "source": 14,
+      "sink": 32,
+      "duration_ms": 100,
+      "command": "PHOTO LED49 RED 100",
+      "status": "COMPLETED",
+      "tx_ns": 6738000000,
+      "ack": "ACK ID=3 MODE=PHOTO LED=49 COLOR=RED SRC=14 SNK=32 DURATION_MS=100",
+      "ack_ns": 6740000000,
+      "id": 3,
+      "done": "DONE ID=3 STATE=OFF CURRENT_AVG_UA=1035 CURRENT_MAX_UA=1085 SAMPLES=99 FAULT=NONE REASON=TIMEOUT MODE=PHOTO LED=49 COLOR=RED ELAPSED_MS=100",
+      "done_ns": 6856000000,
+      "current_avg_ua": 1035,
+      "current_max_ua": 1085,
+      "samples": 99,
+      "elapsed_ms": 100,
+      "reason": "TIMEOUT",
+      "fault": "NONE",
+      "warning": "",
+      "off_confirmed": true
+    },
+    {
+      "stage_index": 8,
+      "role": "SHORT_PULSE",
+      "color": "RED",
+      "source": 14,
+      "sink": 32,
+      "duration_ms": 100,
+      "command": "PHOTO LED49 RED 100",
+      "status": "ABORTED",
+      "tx_ns": 7588000000,
+      "ack": "ACK ID=4 MODE=PHOTO LED=49 COLOR=RED SRC=14 SNK=32 DURATION_MS=100",
+      "ack_ns": 7590000000,
+      "id": 4,
+      "done": "DONE ID=4 STATE=OFF CURRENT_AVG_UA=1035 CURRENT_MAX_UA=1085 SAMPLES=99 FAULT=NONE REASON=OFF MODE=PHOTO LED=49 COLOR=RED ELAPSED_MS=26",
+      "done_ns": 7616000000,
+      "current_avg_ua": 1035,
+      "current_max_ua": 1085,
+      "samples": 99,
+      "elapsed_ms": 26,
+      "reason": "OFF",
+      "fault": "NONE"
+    }
+  ],
+  "conditions": {
+    "u13_open": true,
+    "r1_2700_ohm": true,
+    "original_rgb_board": true,
+    "power_accessible": true,
+    "operator_present": true
+  },
+  "safety_check": "OPERATOR_CONFIRMED_PHYSICAL_CONDITIONS",
+  "status": "ABORTED",
+  "off_confirmed": true,
+  "diagnostics": {
+    "info": {
+      "FW": "0.1.2",
+      "MCU": "STM32F411RET6",
+      "CAPABILITIES": "PHOTO_LED49"
+    },
+    "status": {
+      "STATE": "DISARMED",
+      "SRC": "14",
+      "SNK": "32",
+      "SRC_EN": "0",
+      "SNK_EN": "0",
+      "REMAIN_MS": "0",
+      "FAULT": "NONE",
+      "MODE": "NONE"
+    },
+    "adc": {
+      "VALID": "1",
+      "HAS_SAMPLE": "1",
+      "AGE_MS": "0",
+      "ERRORS": "0",
+      "OVR_COUNT": "0"
+    },
+    "selftest": "PASS"
+  },
+  "video": null,
+  "synchronization": {
+    "status": "UNALIGNED",
+    "offset_ms": null,
+    "uncertainty_ms": null,
+    "optical_transitions": [],
+    "anchors": [
+      "RED",
+      "GREEN",
+      "BLUE"
+    ],
+    "warning": "USB TX/ACK/DONE are host observations, not optical edges. PC/phone UTC alone cannot align video."
+  },
+  "limitations": [
+    "IWDG_DISABLED; MCU hang may require physical power removal",
+    "OFF/STATUS confirms reported EN, not measured physical EN",
+    "New GUI has not yet been accepted on real hardware"
+  ],
+  "reason": "Aborted: Operator OFF",
+  "utc_finished": "2026-11-18T12:06:17.540633+00:00",
+  "finished_ns": 7622000000
+}

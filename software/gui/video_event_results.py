@@ -10,11 +10,13 @@ from PySide6.QtWidgets import (QDialog,QVBoxLayout,QHBoxLayout,QLabel,QPushButto
     QTableWidget,QTableWidgetItem,QSlider,QFileDialog,QInputDialog,QSplitter,QPlainTextEdit)
 from .image_viewer import ImageViewer
 from .event_timeline import EventTimeline
+from .experiment_tables import ExperimentTables
 from software.vision.video_source import VideoReader
 from software.vision.project_storage import read_image,atomic_json,image_hash
 from software.vision.video_event_replay import replay_layer
 from software.vision.video_event_export import load_decisions,save_decision
 from software.vision.event_alignment import align_session
+from software.vision.experiment_mapping import link_analysis
 from software.vision.image_registration import transform_points
 
 
@@ -25,24 +27,27 @@ class VideoEventResults(QDialog):
         self.calibration=json.loads((self.path/'calibration_snapshot.json').read_text(encoding='utf-8'))
         self.frames=[json.loads(line) for line in (self.path/'frame_results.jsonl').read_text(encoding='utf-8').splitlines()][:self.report['processed_frames']]
         self.events=self.report['events'];self.tracks=self.report.get('unknown_tracks',[])
-        self.decoder=VideoReader();self.video_path=Path(self.report['source']);self.current_index=0;self.pending=None
+        self.decoder=VideoReader();self.video_path=Path(self.report['source']);self.current_index=0;self.requested_index=0;self.pending=None
         if (self.path/'media_link.json').is_file():self.video_path=Path(json.loads((self.path/'media_link.json').read_text(encoding='utf-8'))['path'])
         self.off_image=self.off_mask=None;self.position=None;self.target=None;self.playing=False
+        self.correspondence=None;self.correspondence_path=None;self.table_windows=[]
+        self.load_correspondence()
         self.setWindowTitle('RGB Vision — события видео / независимые наблюдения');self.resize(1400,1020)
         layout=QVBoxLayout(self)
         self.summary=QLabel(f"{self.report['status']} | кадров {self.report['processed_frames']} | подтверждено "
             f"{sum(e['status']=='CONFIRMED' for e in self.events)} | интервалов неопределённости {len(self.report.get('uncertainty_intervals',[]))}. {self.report.get('error','')}")
         self.summary.setWordWrap(True);layout.addWidget(self.summary)
+        self.timeline=EventTimeline();self.timeline.set_report(self.report);self.timeline.seek.connect(self.seek_pts);layout.addWidget(self.timeline)
         row=QHBoxLayout()
         for title,callback in [('▶ / ❚❚',self.play_pause),('ROI крупнее',self.zoom_roi),('Экспорт отчёта',self.export),
-            ('Связать session.json',self.link_session),('Найти перемещённое видео',self.relink_video)]:
+            ('Связать session.json',self.link_session),('Таблицы соответствий',self.show_tables),
+            ('Обновить соответствия',self.refresh_correspondence),('Найти перемещённое видео',self.relink_video)]:
             button=QPushButton(title);button.clicked.connect(callback);row.addWidget(button)
         self.layers=QComboBox();self.layers.addItems(['Original','Geometry','Registered','Coverage','Difference','ROI'])
-        self.layers.currentTextChanged.connect(lambda _:self.request_frame(self.current_index));row.addWidget(self.layers);layout.addLayout(row)
+        self.layers.currentTextChanged.connect(lambda _:self.request_frame(self.requested_index));row.addWidget(self.layers);layout.addLayout(row)
         self.viewer=ImageViewer();layout.addWidget(self.viewer,1)
         self.slider=QSlider(Qt.Horizontal);self.slider.setRange(0,max(0,len(self.frames)-1));self.slider.sliderReleased.connect(lambda:self.request_frame(self.slider.value()));layout.addWidget(self.slider)
         self.frame_info=QLabel('PTS кадров сохранены; длительность события — наблюдаемый span, не точный физический импульс.');layout.addWidget(self.frame_info)
-        self.timeline=EventTimeline();self.timeline.set_report(self.report);self.timeline.seek.connect(self.seek_pts);layout.addWidget(self.timeline)
         self.filter=QComboBox();self.filter.addItems(['CONFIRMED','Все','CANDIDATE','REJECTED']);self.filter.currentTextChanged.connect(self.refresh_tables);layout.addWidget(self.filter)
         tables=QSplitter(Qt.Horizontal)
         self.event_table=QTableWidget(0,9);self.event_table.setHorizontalHeaderLabels(['Источник','Цвет','Start PTS','End PTS','Span, с','Алгоритм','Оператор','Уверенность','Флаги'])
@@ -58,8 +63,9 @@ class VideoEventResults(QDialog):
             button=QPushButton(title);button.clicked.connect(callback);row.addWidget(button)
         layout.addLayout(row)
         self.details=QPlainTextEdit('Штриховка — UNKNOWN; тёмно-серый OFF — только надёжные OFF-наблюдения. Track ID не является PCB LED ID.')
-        self.details.setReadOnly(True);self.details.setMaximumHeight(80);layout.addWidget(self.details)
+        self.details.setReadOnly(True);self.details.setMaximumHeight(115);layout.addWidget(self.details)
         self.timer=QTimer(self);self.timer.setSingleShot(True);self.timer.timeout.connect(self.advance)
+        if self.correspondence:self.filter.setCurrentText('Все')
         self.refresh_tables()
         if self.frames and self.report['status']=='COMPLETED':QTimer.singleShot(0,lambda:self.request_frame(0))
 
@@ -80,7 +86,7 @@ class VideoEventResults(QDialog):
     def select_event(self,row,column=0):
         if not 0<=row<len(self.shown_events):return
         event=self.shown_events[row];self.target=event['event_id'];self.position=(event['x_ref_px'],event['y_ref_px'])
-        self.details.setPlainText(json.dumps(event,ensure_ascii=False));self.playing=False;self.timer.stop();self.request_frame(event['start_frame'])
+        self.details.setPlainText(self.event_details(event));self.playing=False;self.timer.stop();self.request_frame(event['start_frame'])
 
     def select_track(self,row,column=0):
         if not 0<=row<len(self.tracks):return
@@ -90,6 +96,7 @@ class VideoEventResults(QDialog):
     def request_frame(self,index):
         if self.closing or not self.frames:return
         index=max(0,min(len(self.frames)-1,int(index)))
+        self.requested_index=index
         if self.owner.active_job:
             self.pending=index;QTimer.singleShot(20,self.drain);return
         if not self.video_path.is_file():self.frame_info.setText('Видео не найдено. Выберите «Найти перемещённое видео».');return
@@ -150,14 +157,15 @@ class VideoEventResults(QDialog):
     def review(self,decision):
         if self.target is None:self.owner.error('Выберите событие или трек');return
         note,ok=QInputDialog.getText(self,'Решение оператора','Комментарий (не изменяет автоматический результат)')
-        if ok:save_decision(self.path,self.target,decision,note);self.refresh_tables()
+        if ok:
+            save_decision(self.path,self.target,decision,note);self.refresh_tables();self.refresh_correspondence()
 
     def identify(self):
         if self.target not in {t['track_id'] for t in self.tracks}:self.owner.error('Выберите неизвестный оптический трек');return
         value,ok=QInputDialog.getText(self,'PCB ID — только вручную','Введите LED ID по проверенной шелкографии, например LED<number>')
         if not ok:return
         if not re.fullmatch(r'LED\d+',value.strip()):self.owner.error('Нужен LED ID по шелкографии, без автоматического номера трека');return
-        save_decision(self.path,self.target,'ACCEPTED','PCB identity explicitly entered by operator',value.strip());self.refresh_tables()
+        save_decision(self.path,self.target,'ACCEPTED','PCB identity explicitly entered by operator',value.strip());self.refresh_tables();self.refresh_correspondence()
 
     def add_to_map(self):
         if self.position is None or self.target not in {t['track_id'] for t in self.tracks}:self.owner.error('Выберите оптический трек');return
@@ -173,9 +181,44 @@ class VideoEventResults(QDialog):
         path,_=QFileDialog.getOpenFileName(self,'Журнал независимого эксперимента','','Session (session.json)')
         if not path:return
         def work(cancel,progress):
-            result=align_session(self.events,path);atomic_json(self.path/'alignment.json',result);return result
-        def done(value):self.details.setPlainText(f"{value['status']}; offset={value['offset_s']}; uncertainty={value['uncertainty_s']}. Это не аппаратная синхронизация.")
+            return link_analysis(self.path,path)
+        def done(value):
+            self.load_correspondence();a=value['alignment']
+            self.details.setPlainText(f"{a['status']}; offset={a['offset_s']}; uncertainty={a['uncertainty_s']}. Это не аппаратная синхронизация. Таблицы соответствий готовы.")
         self.owner.start_job(work,done)
+
+    def load_correspondence(self):
+        link=self.path/'correspondence_link.json'
+        if link.is_file():
+            self.correspondence_path=self.path/json.loads(link.read_text(encoding='utf-8'))['directory']
+            self.correspondence=json.loads((self.correspondence_path/'experiment_mapping.json').read_text(encoding='utf-8'))
+
+    def event_details(self,event):
+        lines=[f"ОПТИКА: {event['entity']} {event['color']}; PTS {event['start_pts']:.6f}–{event['end_pts']:.6f}; "
+               f"{event['status']}; confidence={event['confidence']:.3f}; coverage={event.get('coverage')}; "
+               f"позиция=({event.get('x_ref_px')}, {event.get('y_ref_px')}) reference px"]
+        matches=[r for r in (self.correspondence or {}).get('mapping',[]) if r['optical_event_id']==event['event_id']]
+        for r in matches:
+            lines.append(f"STM32: PHOTO/PAIR ID={r['operation_id']}; KP{r['source_kp']}→KP{r['sink_kp']}; "
+                f"запрос/elapsed={r['requested_duration_ms']}/{r['measured_duration_ms']} мс; "
+                f"AVG/MAX={r['current_avg_ua']}/{r['current_max_ua']} мкА; FAULT={r['fault']}; {r['electrical_status']}")
+            lines.append(f"СВЯЗЬ: {r['mapping_status']}; {r['alignment_confidence']}; envelope ±{r['alignment_uncertainty_s']} с; "
+                'аппаратной синхронизации нет')
+        if not matches:lines.append('STM32: однозначная операция не сопоставлена; ток и SOURCE/SINK неизвестны.')
+        return '\n'.join(lines)
+
+    def refresh_correspondence(self):
+        link=self.path/'correspondence_link.json'
+        if not link.is_file():return
+        session=json.loads(link.read_text(encoding='utf-8'))['session']
+        def done(value):
+            self.load_correspondence();self.details.setPlainText('Создан новый снимок таблиц; прежние таблицы и автоматические события сохранены.')
+        self.owner.start_job(lambda cancel,progress:link_analysis(self.path,session),done)
+
+    def show_tables(self):
+        self.load_correspondence()
+        if not self.correspondence_path:self.owner.error('Сначала свяжите журнал эксперимента или запустите «Анализировать эксперимент».');return
+        window=ExperimentTables(self,self.correspondence_path);self.table_windows.append(window);window.show()
 
     def relink_video(self):
         path,_=QFileDialog.getOpenFileName(self,'Найти исходное видео','','Video (*.mp4 *.mov *.avi)')
@@ -196,4 +239,5 @@ class VideoEventResults(QDialog):
         self.playing=False;self.timer.stop();self.closing=True
         if self.loading and self.owner.active_job:
             self.owner.cancel_job();event.ignore();QTimer.singleShot(30,self.close);return
+        for window in self.table_windows:window.close()
         self.decoder.close();self.off_image=self.off_mask=None;self.viewer.scene().clear();self.closed=True;event.accept()

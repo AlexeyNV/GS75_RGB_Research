@@ -41,7 +41,7 @@ class VideoAnalysisControls(QWidget):
         buttons=QDialogButtonBox(QDialogButtonBox.Ok|QDialogButtonBox.Cancel);buttons.accepted.connect(dialog.accept);buttons.rejected.connect(dialog.reject);form.addRow(buttons)
         if dialog.exec()==QDialog.Accepted:self.settings=TemporalSettings(profile=self.profile.currentText(),**{k:v.value() for k,v in controls.items()})
 
-    def analyze(self):
+    def analyze(self,checked=False,session_path=None):
         if not self.owner.guard():return
         if not self.owner.video_path:self.owner.error('Сначала откройте MP4 во вкладке «Видео»');return
         if self.owner.calibrator.document and self.owner.calibrator.document.dirty:self.owner.error('Сначала сохраните карту');return
@@ -55,20 +55,30 @@ class VideoAnalysisControls(QWidget):
         def work(cancel,progress):
             import json
             data=project.checked_calibration()
+            report=None
             for entry in reversed(history):
                 source=project.resolve(entry['report'])
                 if entry['status']!='COMPLETED' or not (source/'events.json').is_file():continue
                 previous=json.loads((source/'events.json').read_text(encoding='utf-8'))
                 off=previous.get('off') or {}
                 if previous['mode']==mode and previous['calibration_version']==data['calibration_version'] and off.get('start_s')==start and off.get('duration_s')==duration and previous['source_sha256']==image_hash(video):
-                    return reaggregate_video(source,output,settings,cancel,progress,video=video)
-            return analyze_video(video,data,output,mode,settings,start,duration,cancel,progress)
+                    report=reaggregate_video(source,output,settings,cancel,progress,video=video);break
+            if report is None:report=analyze_video(video,data,output,mode,settings,start,duration,cancel,progress)
+            if session_path and report['status']=='COMPLETED':
+                from software.vision.experiment_mapping import link_analysis
+                from software.vision.project_storage import atomic_json
+                try:link_analysis(output,session_path)
+                except Exception as exc:
+                    atomic_json(output/'correspondence_error.json',dict(session=str(session_path),error=str(exc)))
+                    report['correspondence_error']=str(exc)
+            return report
         def done(report):
             self.running=False;self.run.setEnabled(True)
             self.status.setText(f"{report['status']}; кадров {report['processed_frames']}; событий "
-                f"{sum(e['status']=='CONFIRMED' for e in report['events'])}. {report.get('error','')}")
+                f"{sum(e['status']=='CONFIRMED' for e in report['events'])}. {report.get('error','')} {report.get('correspondence_error','')}")
             project.data.setdefault('video_analyses',[]).append(dict(id=uuid.uuid4().hex,name=Path(video).name+' / '+mode,
-                report=project.relative(output),status=report['status'],calibration_version=report['calibration_version']))
+                report=project.relative(output),status=report['status'],calibration_version=report['calibration_version'],
+                experiment_session=project.relative(session_path) if session_path else None))
             project.save();self.refresh_history();self.open_results(output)
         if not self.owner.start_job(work,done):self.running=False;self.run.setEnabled(True)
 
