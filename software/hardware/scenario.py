@@ -3,7 +3,7 @@ from dataclasses import dataclass, asdict
 import random
 
 NAME = 'LED49_RGB_VIDEO_TEST'
-VERSION = '0.4.4'
+VERSION = '0.4.5'
 SHORT_NAME = 'LED49_SHORT_PULSE_TEST'
 SINKS = {'RED': 32, 'GREEN': 33, 'BLUE': 34}
 EXPECTED_UA = {'RED': 1035, 'GREEN': 886, 'BLUE': 797}

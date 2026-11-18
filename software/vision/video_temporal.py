@@ -6,6 +6,7 @@ from .optical_tracks import OpticalTracker
 from .off_background import without_markers
 from .off_diagnostics import roi_coverage
 from .frame_profile import timed
+from .observation_diagnostics import categories,uncertainty_statistics
 
 
 class FrameTemporalAnalysis:
@@ -17,6 +18,7 @@ class FrameTemporalAnalysis:
         self.frame_count=0;self.state_counts=Counter();self.elapsed_ns=0;self.samples_ms=[]
         self.frame_state_counts=Counter()
         self.off_intervals=[];self.off_tail={}
+        self.observations=[]
 
     @timed('EVENT_AGGREGATION')
     def feed(self,result,info):
@@ -30,6 +32,7 @@ class FrameTemporalAnalysis:
         states={row['state'] for row in observations}
         self.frame_state_counts[next(state for state in ('ON','UNCERTAIN','INVALID_GEOMETRY','NO_COVERAGE','OFF') if state in states)]+=1
         for row in observations:
+            row['uncertainty_categories']=categories(row,geometry);self.observations.append(row)
             self.state_counts[row['state']]+=1
             if row['state']=='OFF':
                 tail=self.off_tail.get(row['entity'])
@@ -54,4 +57,5 @@ class FrameTemporalAnalysis:
             temporal_ms=self.elapsed_ns/1e6,temporal_mean_ms=self.elapsed_ns/1e6/max(1,self.frame_count),
             temporal_frame_ms=self.samples_ms,
             off_intervals=self.off_intervals,
+            uncertainty_statistics=uncertainty_statistics(self.observations,events,self.detector.uncertainty),
             policy='Unknown is preserved; short gaps keep a continuity hypothesis, never a confirmed OFF')

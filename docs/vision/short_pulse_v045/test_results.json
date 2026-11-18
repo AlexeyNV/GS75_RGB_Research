@@ -1,0 +1,21 @@
+{
+  "version": "0.4.5",
+  "date": "2026-11-18",
+  "baseline": "5799a53",
+  "python_tests": 179,
+  "python_seconds": 189.804,
+  "python_status": "PASS",
+  "c_tests": 2,
+  "c_status": "PASS",
+  "c_seconds": 0.19,
+  "preserved_original_files": 1596,
+  "changed_original_files": [],
+  "firmware_changed": false,
+  "real_serial_opened": false,
+  "real_video_pts_checked": true,
+  "opencv_rerun": false,
+  "logs_sha256": {
+    "python-tests.log": "56436c73d565786799f91ffe91af147d9cb58ea7d1eeff409b1f4effc2d7e80a",
+    "c-tests.log": "4a22d3427d149f1a9efa436697210e3016db090cd9e88f37741a26c82a8afebd"
+  }
+}

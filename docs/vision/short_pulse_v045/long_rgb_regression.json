@@ -1,0 +1,31 @@
+{
+  "frames": 922,
+  "events": [
+    {
+      "status": "CONFIRMED",
+      "color": "RED",
+      "start_pts": 3.382711111111111,
+      "end_pts": 8.363244444444444,
+      "duration_s": 4.980533333333333
+    },
+    {
+      "status": "CONFIRMED",
+      "color": "GREEN",
+      "start_pts": 11.772755555555555,
+      "end_pts": 16.752766666666666,
+      "duration_s": 4.980011111111111
+    },
+    {
+      "status": "CONFIRMED",
+      "color": "BLUE",
+      "start_pts": 20.128977777777777,
+      "end_pts": 25.108933333333333,
+      "duration_s": 4.979955555555556
+    }
+  ],
+  "identical_confirmed_events": true,
+  "opencv_rerun": false,
+  "algorithm_version": "0.4.5",
+  "source_sha256": "c4299a0a6d59bedf046726f042fc7c5cf518e8239db50791538e3776a231ef9e",
+  "status": "COMPLETED"
+}

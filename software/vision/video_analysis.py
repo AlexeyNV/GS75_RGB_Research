@@ -20,7 +20,12 @@ from .event_alignment import align_session
 
 
 OBSERVATION_FIELDS=['frame_index','pts','time_base','pts_s','entity','led_id','key_name','state','raw_state','color',
-    'x_ref_px','y_ref_px','brightness','chroma','area_px','confidence','registration','rmse_px','coverage','off_coverage','reasons']
+    'x_ref_px','y_ref_px','brightness','chroma','area_px','confidence','registration','rmse_px','coverage','off_coverage','reasons',
+    'color_evidence_rgb','uncertainty_categories']
+
+
+def observation_csv(row):
+    return {key:json.dumps(value,ensure_ascii=False) if isinstance(value,(list,dict)) else value for key,value in row.items()}
 
 
 def analyze_video(video,calibration,output,mode='KNOWN_LEDS',settings=None,start_s=0.,duration_s=2.,
@@ -29,7 +34,7 @@ def analyze_video(video,calibration,output,mode='KNOWN_LEDS',settings=None,start
     if mode=='KNOWN_LEDS' and not calibration['leds']:raise ValueError('KNOWN_LEDS needs a marked LED map')
     cancel=cancel or threading.Event();settings=settings or TemporalSettings();output=Path(output)
     output.mkdir(parents=True,exist_ok=False)
-    report=dict(schema_version=1,algorithm_version=VERSION,status='RUNNING',source=str(Path(video).resolve()),
+    report=dict(schema_version=1,analysis_id=output.name,algorithm_version=VERSION,status='RUNNING',source=str(Path(video).resolve()),
         source_sha256=image_hash(video),calibration_version=calibration['calibration_version'],settings=asdict(settings),mode=mode,
         processed_frames=0,events=[],unknown_tracks=[],uncertainty_intervals=[],state_counts={},
         temporal_ms=0.,temporal_mean_ms=0.,video=None,off=None,machine=machine_info(),
@@ -68,7 +73,7 @@ def analyze_video(video,calibration,output,mode='KNOWN_LEDS',settings=None,start
                 except StopIteration:break
                 # Disk IO is outside the measured OpenCV/temporal section.
                 raw.write(json.dumps(dict(**info,result=result),ensure_ascii=False)+'\n');raw.flush()
-                for row in normalized:writer.writerow(dict(row,reasons=json.dumps(row['reasons'],ensure_ascii=False)))
+                for row in normalized:writer.writerow(observation_csv(row))
                 observations.flush();timings.append(dict(frame_index=index,**profile.milliseconds()))
                 index+=1;report['processed_frames']=index
                 if index%5==0:
@@ -128,7 +133,8 @@ def reaggregate_video(source,output,settings=None,cancel=None,notify=lambda *arg
     shutil.copytree(source/'off_model',output/'off_model')
     off=SimpleNamespace(mask=read_image(output/'off_model/valid_mask.png')[:,:,0])
     temporal=FrameTemporalAnalysis(calibration,off,report['mode'],settings)
-    report.update(status='RUNNING',settings=asdict(settings),algorithm_version=VERSION,temporal_reuse_source=str(source.resolve()),
+    report.update(status='RUNNING',analysis_id=output.name,settings=asdict(settings),algorithm_version=VERSION,temporal_reuse_source=str(source.resolve()),
+        raw_sha256=image_hash(source/'frame_results.jsonl'),source_analysis_sha256=image_hash(source/'events.json'),
         processed_frames=0,opencv_rerun=False,
         performance_provenance='OpenCV throughput/timing from source run; temporal reanalysis is measured separately')
     started=time.perf_counter_ns()
@@ -137,7 +143,7 @@ def reaggregate_video(source,output,settings=None,cancel=None,notify=lambda *arg
             writer=csv.DictWriter(csv_stream,fieldnames=OBSERVATION_FIELDS,extrasaction='ignore');writer.writeheader()
             for line in stream:
                 checkpoint(cancel);frame=json.loads(line)
-                for row in temporal.feed(frame['result'],frame):writer.writerow(dict(row,reasons=json.dumps(row['reasons'],ensure_ascii=False)))
+                for row in temporal.feed(frame['result'],frame):writer.writerow(observation_csv(row))
                 report['processed_frames']+=1
                 if report['processed_frames']%20==0:notify(report['processed_frames'],report['video']['frame_count'],dict(name='TEMPORAL_REUSE',state='no_OpenCV'))
         report['status']='COMPLETED'

@@ -62,7 +62,7 @@ class EmbeddedCalibrator(Calibrator):
 
 class VisionWindow(QMainWindow):
     def __init__(self,remember=True):
-        ensure_fonts();super().__init__();self.setWindowTitle('GS75 RGB Vision v0.4.4');self.resize(1500,980)
+        ensure_fonts();super().__init__();self.setWindowTitle('GS75 RGB Vision v0.4.5');self.resize(1500,980)
         self.project=None;self.active_job=None;self.job_callback=None;self.pool=QThreadPool(self);self.pool.setMaxThreadCount(1)
         self.remember=remember;self.preferences=QSettings('GS75_RGB_Research','RGBVision')
         self.decoder=VideoReader();self.video_path=None;self.video_image=None;self.frame_info=None

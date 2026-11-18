@@ -3,7 +3,7 @@ from dataclasses import dataclass,asdict
 import math
 from statistics import median,mean
 
-VERSION='0.4.3'
+VERSION='0.4.5'
 UNKNOWN={'UNCERTAIN','INVALID_GEOMETRY','NO_COVERAGE'}
 COLORS={'RED','GREEN','BLUE'}
 
@@ -19,15 +19,16 @@ class TemporalSettings:
     min_brightness: float=45.
     min_color_confidence: float=.55
     spatial_radius_px: float=40.
+    min_consecutive_good_samples: int=1
     def __post_init__(self):
         values=[self.min_on_s,self.min_off_s,self.max_gap_s,self.min_chroma,self.min_brightness,self.spatial_radius_px]
-        if not all(math.isfinite(x) and x>=0 for x in values) or self.max_gap_s<=0 or self.min_samples<1 or not 0<=self.min_color_confidence<=1:
+        if not all(math.isfinite(x) and x>=0 for x in values) or self.max_gap_s<=0 or self.min_samples<1 or self.min_consecutive_good_samples<1 or not 0<=self.min_color_confidence<=1:
             raise ValueError('Invalid temporal settings')
 
 
 def profile_settings(short=False,**overrides):
-    base=dict(profile='Short Pulse / Experimental',min_on_s=.02,min_off_s=.012,max_gap_s=.05,
-              min_samples=2,min_chroma=30.,min_brightness=35.) if short else {}
+    base=dict(profile='Short Pulse / Experimental',min_on_s=.02,min_off_s=.012,max_gap_s=.09,
+              min_samples=2,min_chroma=30.,min_brightness=35.,min_consecutive_good_samples=2) if short else {}
     return TemporalSettings(**{**base,**overrides})
 
 
@@ -75,7 +76,16 @@ class TemporalDetector:
 
     def _confirm(self,segment):
         points=segment['points'];good=[p for p in points if self._good(p)]
-        segment['confirmed']=len(good)>=self.settings.min_samples and points[-1]['pts_s']-points[0]['pts_s']+1e-9>=self.settings.min_on_s
+        consecutive=maximum=0;previous=None
+        for point in points:
+            if self._good(point):
+                consecutive=consecutive+1 if previous and self._good(previous) and point['frame_index']==previous['frame_index']+1 else 1
+                maximum=max(maximum,consecutive)
+            else:consecutive=0
+            previous=point
+        segment['max_consecutive_good']=maximum
+        segment['confirmed']=(len(good)>=self.settings.min_samples and maximum>=self.settings.min_consecutive_good_samples
+            and points[-1]['pts_s']-points[0]['pts_s']+1e-9>=self.settings.min_on_s)
 
     def _close(self,segment,next_observation,reason):
         if segment is None:return
@@ -87,6 +97,7 @@ class TemporalDetector:
         if len(p)<3:flags.add('DURATION_UNRESOLVED_AT_FRAME_CADENCE')
         status='CONFIRMED' if segment['confirmed'] else ('CANDIDATE' if len(p)>=self.settings.min_samples or self.settings.profile.startswith('Short') else 'REJECTED')
         if not segment['confirmed']:flags.add('INSUFFICIENT_PERSISTENCE_OR_SIGNAL_QUALITY')
+        if segment['max_consecutive_good']<self.settings.min_consecutive_good_samples:flags.add('NO_CONSECUTIVE_GOOD_PAIR')
         duration=last['pts_s']-first['pts_s']
         # Observation endpoints, never fictitious subframe timestamps.
         signal_start=[previous['pts_s'] if previous else None,first['pts_s']]
@@ -99,6 +110,14 @@ class TemporalDetector:
         gap_s=sum(max(0,g['end_s']-g['start_s']) for g in segment['gaps'])
         observability=max(0.,1-gap_s/max(duration,.001))
         confidence=mean(x['confidence']*x['coverage'] for x in p)*observability
+        fragments=[]
+        for point in p:
+            if fragments and point['frame_index']==fragments[-1]['end_frame']+1:
+                tail=fragments[-1];tail.update(end_frame=point['frame_index'],end_pts=point['pts_s'])
+                tail['observations']+=1;tail['good_observations']+=int(self._good(point))
+            else:fragments.append(dict(fragment_id=f"EV{len(self.completed)+1:05d}:F{len(fragments)+1:02d}",
+                start_frame=point['frame_index'],end_frame=point['frame_index'],start_pts=point['pts_s'],end_pts=point['pts_s'],
+                observations=1,good_observations=int(self._good(point))))
         event=dict(event_id=f'EV{len(self.completed)+1:05d}',entity=first['entity'],led_id=first['led_id'],key_name=first['key_name'],
             color=segment['color'],start_pts=first['pts_s'],end_pts=last['pts_s'],duration_s=duration,
             start_frame=first['frame_index'],end_frame=last['frame_index'],status=status,confidence=confidence,
@@ -106,6 +125,8 @@ class TemporalDetector:
             x_ref_px=median([x['x_ref_px'] for x in p if x['x_ref_px'] is not None]),
             y_ref_px=median([x['y_ref_px'] for x in p if x['y_ref_px'] is not None]),
             observations=len(p),good_observations=sum(self._good(x) for x in p),
+            max_consecutive_good_observations=segment['max_consecutive_good'],observation_fragments=fragments,
+            positive_frame_indices=[x['frame_index'] for x in p],
             signal_start_interval_s=signal_start,signal_end_interval_s=signal_end,
             physical_start_interval_s=physical_start,physical_end_interval_s=physical_end,
             duration_confirmed=duration_confirmed,duration_interval_s=duration_bounds,

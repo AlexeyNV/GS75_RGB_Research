@@ -32,10 +32,12 @@ class VideoAnalysisControls(QWidget):
         for key,title,maximum in [('min_on_s','Подтверждение ON, с',10.),('min_off_s','Гистерезис потери цвета, с',10.),
                 ('max_gap_s','Максимальный UNKNOWN-разрыв, с',10.),('min_samples','Минимум наблюдений',100),
                 ('min_chroma','Цветной сигнал',255.),('min_brightness','Яркость нового сигнала',255.),
-                ('min_color_confidence','Уверенность цвета',1.),('spatial_radius_px','DISCOVER: радиус, ref px',500.)]:
-            control=QSpinBox() if key=='min_samples' else QDoubleSpinBox()
-            control.setRange(1 if key=='min_samples' else (.001 if key=='max_gap_s' else 0),maximum)
-            if key!='min_samples':control.setDecimals(3)
+                ('min_color_confidence','Уверенность цвета',1.),('spatial_radius_px','DISCOVER: радиус, ref px',500.),
+                ('min_consecutive_good_samples','Хороших наблюдений подряд',100)]:
+            integer=key in ('min_samples','min_consecutive_good_samples')
+            control=QSpinBox() if integer else QDoubleSpinBox()
+            control.setRange(1 if integer else (.001 if key=='max_gap_s' else 0),maximum)
+            if not integer:control.setDecimals(3)
             control.setValue(values[key]);form.addRow(title,control);controls[key]=control
         info=QLabel('Надёжный OFF всегда разделяет события. Короткие UNKNOWN-разрывы сохраняются в отчёте.');info.setWordWrap(True);form.addRow(info)
         buttons=QDialogButtonBox(QDialogButtonBox.Ok|QDialogButtonBox.Cancel);buttons.accepted.connect(dialog.accept);buttons.rejected.connect(dialog.reject);form.addRow(buttons)

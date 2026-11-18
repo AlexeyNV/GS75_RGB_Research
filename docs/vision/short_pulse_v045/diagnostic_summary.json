@@ -1,0 +1,3277 @@
+{
+  "analysis_id": "independent_optical",
+  "algorithm_version": "0.4.5",
+  "settings": {
+    "profile": "Short Pulse / Experimental",
+    "min_on_s": 0.02,
+    "min_off_s": 0.012,
+    "max_gap_s": 0.09,
+    "min_samples": 2,
+    "min_chroma": 30.0,
+    "min_brightness": 35.0,
+    "min_color_confidence": 0.55,
+    "spatial_radius_px": 40.0,
+    "min_consecutive_good_samples": 2
+  },
+  "video_sha256": "28cb85fb99c0bdb745956581862c9f94e867c72bcbd84d4e5ce97ad7c5554ebf",
+  "raw_sha256": "cb1698f230007e1d23984483bf416a217be6925a812443e8e49c2d83a496528f",
+  "processed_frames": 1418,
+  "optical_event_counts": {
+    "CONFIRMED": 29,
+    "CANDIDATE": 1
+  },
+  "matched_operations": 30,
+  "unobservable_operations": 0,
+  "reliable_off_frames": 190,
+  "reliable_off_intervals": 161,
+  "unknown_frames": {
+    "unique_unknown_frames": 1059,
+    "by_reason": {
+      "ARUCO_LOSS": {
+        "frames": 0,
+        "entity_frame_observations": 0,
+        "intervals": 0
+      },
+      "BAD_HOMOGRAPHY": {
+        "frames": 5,
+        "entity_frame_observations": 5,
+        "intervals": 5
+      },
+      "ROI_COVERAGE": {
+        "frames": 132,
+        "entity_frame_observations": 132,
+        "intervals": 113
+      },
+      "LOW_COLOR_SIGNAL": {
+        "frames": 922,
+        "entity_frame_observations": 922,
+        "intervals": 237
+      },
+      "AMBIGUOUS_COLOR": {
+        "frames": 0,
+        "entity_frame_observations": 0,
+        "intervals": 0
+      },
+      "TEMPORAL_CONTINUITY": {
+        "frames": 7,
+        "entity_frame_observations": 7,
+        "intervals": 7
+      },
+      "OTHER": {
+        "frames": 0,
+        "entity_frame_observations": 0,
+        "intervals": 0
+      }
+    },
+    "counting": "Frames unique across entities; intervals contiguous frame-index runs per entity/reason; categories may overlap"
+  },
+  "uncertainty_intervals": 354,
+  "extra_optical_events": [],
+  "alignment": {
+    "schema_version": 1,
+    "status": "ESTIMATED_NOT_HARDWARE_SYNC",
+    "offset_s": 1.8366000000000007,
+    "uncertainty_s": 0.10639135715405126,
+    "relation": "host_monotonic_relative_s = video_PTS_s + offset_s",
+    "warning": "Empirical post-hoc association, not hardware synchronization. USB ACK/DONE and optical frame PTS are distinct observations; exposure/rolling shutter and physical edge latency are not bounded.",
+    "confidence": "UNIQUE_SEQUENCE",
+    "drift_s_per_s": null,
+    "drift_status": "NOT_FITTED_NO_INDEPENDENT_DRIFT_CALIBRATION",
+    "candidates": [
+      {
+        "matched_operations": 27,
+        "marker_anchors": 0,
+        "pairs": [
+          {
+            "operation_key": "OP0001",
+            "command_id": 1,
+            "event_id": "EV00001"
+          },
+          {
+            "operation_key": "OP0002",
+            "command_id": 2,
+            "event_id": "EV00002"
+          },
+          {
+            "operation_key": "OP0003",
+            "command_id": 3,
+            "event_id": "EV00003"
+          },
+          {
+            "operation_key": "OP0005",
+            "command_id": 5,
+            "event_id": "EV00005"
+          },
+          {
+            "operation_key": "OP0006",
+            "command_id": 6,
+            "event_id": "EV00006"
+          },
+          {
+            "operation_key": "OP0007",
+            "command_id": 7,
+            "event_id": "EV00007"
+          },
+          {
+            "operation_key": "OP0008",
+            "command_id": 8,
+            "event_id": "EV00008"
+          },
+          {
+            "operation_key": "OP0009",
+            "command_id": 9,
+            "event_id": "EV00009"
+          },
+          {
+            "operation_key": "OP0010",
+            "command_id": 10,
+            "event_id": "EV00010"
+          },
+          {
+            "operation_key": "OP0011",
+            "command_id": 11,
+            "event_id": "EV00011"
+          },
+          {
+            "operation_key": "OP0013",
+            "command_id": 13,
+            "event_id": "EV00013"
+          },
+          {
+            "operation_key": "OP0015",
+            "command_id": 15,
+            "event_id": "EV00015"
+          },
+          {
+            "operation_key": "OP0016",
+            "command_id": 16,
+            "event_id": "EV00016"
+          },
+          {
+            "operation_key": "OP0017",
+            "command_id": 17,
+            "event_id": "EV00017"
+          },
+          {
+            "operation_key": "OP0018",
+            "command_id": 18,
+            "event_id": "EV00018"
+          },
+          {
+            "operation_key": "OP0019",
+            "command_id": 19,
+            "event_id": "EV00019"
+          },
+          {
+            "operation_key": "OP0020",
+            "command_id": 20,
+            "event_id": "EV00020"
+          },
+          {
+            "operation_key": "OP0021",
+            "command_id": 21,
+            "event_id": "EV00021"
+          },
+          {
+            "operation_key": "OP0022",
+            "command_id": 22,
+            "event_id": "EV00022"
+          },
+          {
+            "operation_key": "OP0023",
+            "command_id": 23,
+            "event_id": "EV00023"
+          },
+          {
+            "operation_key": "OP0024",
+            "command_id": 24,
+            "event_id": "EV00024"
+          },
+          {
+            "operation_key": "OP0025",
+            "command_id": 25,
+            "event_id": "EV00025"
+          },
+          {
+            "operation_key": "OP0026",
+            "command_id": 26,
+            "event_id": "EV00026"
+          },
+          {
+            "operation_key": "OP0027",
+            "command_id": 27,
+            "event_id": "EV00027"
+          },
+          {
+            "operation_key": "OP0028",
+            "command_id": 28,
+            "event_id": "EV00028"
+          },
+          {
+            "operation_key": "OP0029",
+            "command_id": 29,
+            "event_id": "EV00029"
+          },
+          {
+            "operation_key": "OP0030",
+            "command_id": 30,
+            "event_id": "EV00030"
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "operation_key": "OP0001",
+        "command_id": 1,
+        "event_id": "EV00001",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0002",
+        "command_id": 2,
+        "event_id": "EV00002",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0003",
+        "command_id": 3,
+        "event_id": "EV00003",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0004",
+        "command_id": 4,
+        "event_id": "EV00004",
+        "association_source": "ALGORITHM",
+        "association_kind": "PARTIAL_OPTICAL_EVIDENCE"
+      },
+      {
+        "operation_key": "OP0005",
+        "command_id": 5,
+        "event_id": "EV00005",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0006",
+        "command_id": 6,
+        "event_id": "EV00006",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0007",
+        "command_id": 7,
+        "event_id": "EV00007",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0008",
+        "command_id": 8,
+        "event_id": "EV00008",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0009",
+        "command_id": 9,
+        "event_id": "EV00009",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0010",
+        "command_id": 10,
+        "event_id": "EV00010",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0011",
+        "command_id": 11,
+        "event_id": "EV00011",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0012",
+        "command_id": 12,
+        "event_id": "EV00012",
+        "association_source": "ALGORITHM",
+        "association_kind": "PARTIAL_OPTICAL_EVIDENCE"
+      },
+      {
+        "operation_key": "OP0013",
+        "command_id": 13,
+        "event_id": "EV00013",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0014",
+        "command_id": 14,
+        "event_id": "EV00014",
+        "association_source": "ALGORITHM",
+        "association_kind": "PARTIAL_OPTICAL_EVIDENCE"
+      },
+      {
+        "operation_key": "OP0015",
+        "command_id": 15,
+        "event_id": "EV00015",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0016",
+        "command_id": 16,
+        "event_id": "EV00016",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0017",
+        "command_id": 17,
+        "event_id": "EV00017",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0018",
+        "command_id": 18,
+        "event_id": "EV00018",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0019",
+        "command_id": 19,
+        "event_id": "EV00019",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0020",
+        "command_id": 20,
+        "event_id": "EV00020",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0021",
+        "command_id": 21,
+        "event_id": "EV00021",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0022",
+        "command_id": 22,
+        "event_id": "EV00022",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0023",
+        "command_id": 23,
+        "event_id": "EV00023",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0024",
+        "command_id": 24,
+        "event_id": "EV00024",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0025",
+        "command_id": 25,
+        "event_id": "EV00025",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0026",
+        "command_id": 26,
+        "event_id": "EV00026",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0027",
+        "command_id": 27,
+        "event_id": "EV00027",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0028",
+        "command_id": 28,
+        "event_id": "EV00028",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0029",
+        "command_id": 29,
+        "event_id": "EV00029",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0030",
+        "command_id": 30,
+        "event_id": "EV00030",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      }
+    ],
+    "ambiguous_associations": [],
+    "anchor_policy": "CONFIRMED span-compatible events only; partial evidence never calibrates the clock",
+    "uncertainty_kind": "observed_residual_plus_frame_cadence_plus_USB_bracket_not_physical_bound",
+    "residual_offsets_s": [
+      -0.009144444444445288,
+      -0.04096666666666682,
+      -0.019633333333334058,
+      0.0006444444444451136,
+      0.004566666666665498,
+      -0.008855555555555839,
+      -0.004844444444445983,
+      0.0,
+      0.001755555555554622,
+      -0.011555555555554875,
+      -0.024900000000002365,
+      -0.0012555555555557874,
+      -0.005122222222222916,
+      0.008366666666663747,
+      -0.01654444444444536,
+      -0.006033333333334667,
+      0.0057444444444421094,
+      0.0004999999999988347,
+      0.0036999999999984823,
+      0.0061888888888894655,
+      0.010877777777782427,
+      -0.017855555555552627,
+      3.333333333088717e-05,
+      0.004333333333331524,
+      -0.01297777777777398,
+      0.006711111111105339,
+      0.011355555555557117
+    ],
+    "video_minus_host_tx_s": -1.8101666666666674,
+    "tx_offset_relation": "video_ON_PTS_s = host_TX_relative_s + video_minus_host_tx_s; empirical frame observation, not physical onset",
+    "source_session": "D:\\VScode\\Nozdrin_GitHub\\GS75_RGB_Research\\results\\video_experiments\\2026-11-18_133313_LED49_RGB_0c4ca511de05\\session.json",
+    "session_id": "2026-11-18_133313_LED49_RGB_0c4ca511de05"
+  },
+  "operations": [
+    {
+      "operation_id": 1,
+      "operation_key": "OP0001",
+      "duration_ms": 100,
+      "host_tx_s": 5.391,
+      "host_ack_s": 5.407,
+      "host_done_s": 5.5,
+      "video_tx_estimate_s": 3.5543999999999993,
+      "video_ack_estimate_s": 3.5703999999999994,
+      "video_done_estimate_s": 3.6633999999999993,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1032,
+      "current_max_ua": 1048,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00001"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00001",
+          "observed_span_ms": 66.84444444444404,
+          "span_error_ms": 33.155555555555964,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00001"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00001:F01",
+          "start_frame": 105,
+          "end_frame": 107,
+          "start_pts": 3.5795444444444446,
+          "end_pts": 3.6463888888888887,
+          "observations": 3,
+          "good_observations": 3
+        }
+      ],
+      "positive_frame_indices": [
+        105,
+        106,
+        107
+      ],
+      "first_on_pts": 3.5795444444444446,
+      "last_on_pts": 3.6463888888888887,
+      "confidence": [
+        0.9066973799574939
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "LONG_OBSERVABILITY_LOSS",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF"
+      ],
+      "temporal_end_reasons": [
+        "LONG_OBSERVABILITY_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "INVALID_GEOMETRY": 2,
+        "UNCERTAIN": 3,
+        "ON": 3,
+        "OFF": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 2,
+      "operation_key": "OP0002",
+      "duration_ms": 100,
+      "host_tx_s": 6.563,
+      "host_ack_s": 6.578,
+      "host_done_s": 6.657,
+      "video_tx_estimate_s": 4.726399999999999,
+      "video_ack_estimate_s": 4.7414,
+      "video_done_estimate_s": 4.820399999999999,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00002"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00002",
+          "observed_span_ms": 33.78888888888909,
+          "span_error_ms": 66.21111111111091,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00002"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00002:F01",
+          "start_frame": 141,
+          "end_frame": 142,
+          "start_pts": 4.782366666666666,
+          "end_pts": 4.8161555555555555,
+          "observations": 2,
+          "good_observations": 2
+        }
+      ],
+      "positive_frame_indices": [
+        141,
+        142
+      ],
+      "first_on_pts": 4.782366666666666,
+      "last_on_pts": 4.8161555555555555,
+      "confidence": [
+        0.9173978669152434
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "DURATION_UNRESOLVED_AT_FRAME_CADENCE",
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 6,
+        "INVALID_GEOMETRY": 1,
+        "ON": 2
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 3,
+      "operation_key": "OP0003",
+      "duration_ms": 100,
+      "host_tx_s": 7.688,
+      "host_ack_s": 7.703,
+      "host_done_s": 7.813,
+      "video_tx_estimate_s": 5.851399999999999,
+      "video_ack_estimate_s": 5.8664,
+      "video_done_estimate_s": 5.976399999999999,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1040,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00003"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00003",
+          "observed_span_ms": 66.66666666666643,
+          "span_error_ms": 33.33333333333358,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00003"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00003:F01",
+          "start_frame": 174,
+          "end_frame": 176,
+          "start_pts": 5.886033333333334,
+          "end_pts": 5.9527,
+          "observations": 3,
+          "good_observations": 3
+        }
+      ],
+      "positive_frame_indices": [
+        174,
+        175,
+        176
+      ],
+      "first_on_pts": 5.886033333333334,
+      "last_on_pts": 5.9527,
+      "confidence": [
+        0.9037955965408359
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 7,
+        "ON": 3
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 4,
+      "operation_key": "OP0004",
+      "duration_ms": 100,
+      "host_tx_s": 8.86,
+      "host_ack_s": 8.875,
+      "host_done_s": 8.969,
+      "video_tx_estimate_s": 7.023399999999999,
+      "video_ack_estimate_s": 7.038399999999999,
+      "video_done_estimate_s": 7.132399999999999,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1048,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00004",
+        "EV00005"
+      ],
+      "before_event_statuses": [
+        "CANDIDATE",
+        "CANDIDATE"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00004",
+          "observed_span_ms": 0.0,
+          "span_error_ms": 100.0,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        },
+        {
+          "event_id": "EV00005",
+          "observed_span_ms": 0.0,
+          "span_error_ms": 100.0,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        }
+      ],
+      "before_matched": false,
+      "before_matcher_statuses": [
+        "UNOBSERVABLE"
+      ],
+      "event_ids": [
+        "EV00004"
+      ],
+      "event_statuses": [
+        "CANDIDATE"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00004:F01",
+          "start_frame": 209,
+          "end_frame": 209,
+          "start_pts": 7.055366666666667,
+          "end_pts": 7.055366666666667,
+          "observations": 1,
+          "good_observations": 1
+        },
+        {
+          "fragment_id": "EV00004:F02",
+          "start_frame": 211,
+          "end_frame": 211,
+          "start_pts": 7.122166666666667,
+          "end_pts": 7.122166666666667,
+          "observations": 1,
+          "good_observations": 1
+        }
+      ],
+      "positive_frame_indices": [
+        209,
+        211
+      ],
+      "first_on_pts": 7.055366666666667,
+      "last_on_pts": 7.122166666666667,
+      "confidence": [
+        0.4511933251113981
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "DURATION_UNRESOLVED_AT_FRAME_CADENCE",
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+        "INSUFFICIENT_PERSISTENCE_OR_SIGNAL_QUALITY",
+        "NO_CONSECUTIVE_GOOD_PAIR",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [
+        {
+          "start_s": 7.088766666666666,
+          "end_s": 7.122166666666667,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        }
+      ],
+      "matcher_kinds": [
+        "PARTIAL_OPTICAL_EVIDENCE"
+      ],
+      "matcher_statuses": [
+        "CANDIDATE"
+      ],
+      "frame_states_in_expanded_window": {
+        "OFF": 1,
+        "INVALID_GEOMETRY": 2,
+        "UNCERTAIN": 5,
+        "ON": 2
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 5,
+      "operation_key": "OP0005",
+      "duration_ms": 100,
+      "host_tx_s": 10.032,
+      "host_ack_s": 10.063,
+      "host_done_s": 10.141,
+      "video_tx_estimate_s": 8.1954,
+      "video_ack_estimate_s": 8.2264,
+      "video_done_estimate_s": 8.3044,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1048,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00006"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00006",
+          "observed_span_ms": 66.6666666666682,
+          "span_error_ms": 33.3333333333318,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00005"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00005:F01",
+          "start_frame": 244,
+          "end_frame": 246,
+          "start_pts": 8.225755555555555,
+          "end_pts": 8.292422222222223,
+          "observations": 3,
+          "good_observations": 3
+        }
+      ],
+      "positive_frame_indices": [
+        244,
+        245,
+        246
+      ],
+      "first_on_pts": 8.225755555555555,
+      "last_on_pts": 8.292422222222223,
+      "confidence": [
+        0.9021635010979743
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "INVALID_GEOMETRY": 3,
+        "UNCERTAIN": 4,
+        "ON": 3
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 6,
+      "operation_key": "OP0006",
+      "duration_ms": 100,
+      "host_tx_s": 11.172,
+      "host_ack_s": 11.203,
+      "host_done_s": 11.297,
+      "video_tx_estimate_s": 9.3354,
+      "video_ack_estimate_s": 9.366399999999999,
+      "video_done_estimate_s": 9.4604,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1048,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00007"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00007",
+          "observed_span_ms": 33.333333333333215,
+          "span_error_ms": 66.66666666666679,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00006"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00006:F01",
+          "start_frame": 278,
+          "end_frame": 279,
+          "start_pts": 9.361833333333333,
+          "end_pts": 9.395166666666666,
+          "observations": 2,
+          "good_observations": 2
+        }
+      ],
+      "positive_frame_indices": [
+        278,
+        279
+      ],
+      "first_on_pts": 9.361833333333333,
+      "last_on_pts": 9.395166666666666,
+      "confidence": [
+        0.9016517920775792
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "DURATION_UNRESOLVED_AT_FRAME_CADENCE",
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 4,
+        "OFF": 2,
+        "ON": 2,
+        "INVALID_GEOMETRY": 2
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 7,
+      "operation_key": "OP0007",
+      "duration_ms": 100,
+      "host_tx_s": 12.344,
+      "host_ack_s": 12.36,
+      "host_done_s": 12.438,
+      "video_tx_estimate_s": 10.507399999999999,
+      "video_ack_estimate_s": 10.523399999999999,
+      "video_done_estimate_s": 10.6014,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1034,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00008"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00008",
+          "observed_span_ms": 66.48888888888926,
+          "span_error_ms": 33.51111111111074,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00007"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00007:F01",
+          "start_frame": 313,
+          "end_frame": 315,
+          "start_pts": 10.532255555555555,
+          "end_pts": 10.598744444444444,
+          "observations": 3,
+          "good_observations": 3
+        }
+      ],
+      "positive_frame_indices": [
+        313,
+        314,
+        315
+      ],
+      "first_on_pts": 10.532255555555555,
+      "last_on_pts": 10.598744444444444,
+      "confidence": [
+        0.9104615216180577
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 6,
+        "ON": 3
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 8,
+      "operation_key": "OP0008",
+      "duration_ms": 100,
+      "host_tx_s": 13.469,
+      "host_ack_s": 13.5,
+      "host_done_s": 13.594,
+      "video_tx_estimate_s": 11.632399999999999,
+      "video_ack_estimate_s": 11.6634,
+      "video_done_estimate_s": 11.757399999999999,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00009"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00009",
+          "observed_span_ms": 66.66666666666643,
+          "span_error_ms": 33.33333333333358,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00008"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00008:F01",
+          "start_frame": 347,
+          "end_frame": 349,
+          "start_pts": 11.668244444444445,
+          "end_pts": 11.734911111111112,
+          "observations": 3,
+          "good_observations": 3
+        }
+      ],
+      "positive_frame_indices": [
+        347,
+        348,
+        349
+      ],
+      "first_on_pts": 11.668244444444445,
+      "last_on_pts": 11.734911111111112,
+      "confidence": [
+        0.895725810381418
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 6,
+        "OFF": 1,
+        "ON": 3
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 9,
+      "operation_key": "OP0009",
+      "duration_ms": 100,
+      "host_tx_s": 14.625,
+      "host_ack_s": 14.641,
+      "host_done_s": 14.735,
+      "video_tx_estimate_s": 12.7884,
+      "video_ack_estimate_s": 12.8044,
+      "video_done_estimate_s": 12.898399999999999,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00010"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00010",
+          "observed_span_ms": 67.42222222222338,
+          "span_error_ms": 32.577777777776625,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00009"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00009:F01",
+          "start_frame": 381,
+          "end_frame": 383,
+          "start_pts": 12.8044,
+          "end_pts": 12.871822222222223,
+          "observations": 3,
+          "good_observations": 3
+        }
+      ],
+      "positive_frame_indices": [
+        381,
+        382,
+        383
+      ],
+      "first_on_pts": 12.8044,
+      "last_on_pts": 12.871822222222223,
+      "confidence": [
+        0.8973699270914024
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "INVALID_GEOMETRY": 1,
+        "OFF": 1,
+        "UNCERTAIN": 4,
+        "ON": 3
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 10,
+      "operation_key": "OP0010",
+      "duration_ms": 100,
+      "host_tx_s": 15.782,
+      "host_ack_s": 15.813,
+      "host_done_s": 15.907,
+      "video_tx_estimate_s": 13.9454,
+      "video_ack_estimate_s": 13.9764,
+      "video_done_estimate_s": 14.0704,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1048,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00011"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00011",
+          "observed_span_ms": 33.42222222222091,
+          "span_error_ms": 66.57777777777909,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00010"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00010:F01",
+          "start_frame": 416,
+          "end_frame": 417,
+          "start_pts": 13.974644444444445,
+          "end_pts": 14.008066666666666,
+          "observations": 2,
+          "good_observations": 2
+        }
+      ],
+      "positive_frame_indices": [
+        416,
+        417
+      ],
+      "first_on_pts": 13.974644444444445,
+      "last_on_pts": 14.008066666666666,
+      "confidence": [
+        0.9163883670720523
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "DURATION_UNRESOLVED_AT_FRAME_CADENCE",
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 6,
+        "OFF": 2,
+        "ON": 2,
+        "INVALID_GEOMETRY": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 11,
+      "operation_key": "OP0011",
+      "duration_ms": 200,
+      "host_tx_s": 16.938,
+      "host_ack_s": 16.969,
+      "host_done_s": 17.157,
+      "video_tx_estimate_s": 15.101399999999998,
+      "video_ack_estimate_s": 15.1324,
+      "video_done_estimate_s": 15.3204,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00012"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00012",
+          "observed_span_ms": 167.65555555555522,
+          "span_error_ms": 32.34444444444479,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00011"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00011:F01",
+          "start_frame": 451,
+          "end_frame": 456,
+          "start_pts": 15.143955555555555,
+          "end_pts": 15.31161111111111,
+          "observations": 6,
+          "good_observations": 6
+        }
+      ],
+      "positive_frame_indices": [
+        451,
+        452,
+        453,
+        454,
+        455,
+        456
+      ],
+      "first_on_pts": 15.143955555555555,
+      "last_on_pts": 15.31161111111111,
+      "confidence": [
+        0.9111281024285302
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "LONG_OBSERVABILITY_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "LONG_OBSERVABILITY_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 4,
+        "OFF": 2,
+        "ON": 6,
+        "INVALID_GEOMETRY": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 12,
+      "operation_key": "OP0012",
+      "duration_ms": 200,
+      "host_tx_s": 18.25,
+      "host_ack_s": 18.282,
+      "host_done_s": 18.485,
+      "video_tx_estimate_s": 16.4134,
+      "video_ack_estimate_s": 16.4454,
+      "video_done_estimate_s": 16.6484,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1048,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00013",
+        "EV00014"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED",
+        "CANDIDATE"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00013",
+          "observed_span_ms": 33.24444444444552,
+          "span_error_ms": 166.75555555555448,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        },
+        {
+          "event_id": "EV00014",
+          "observed_span_ms": 0.0,
+          "span_error_ms": 200.0,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        }
+      ],
+      "before_matched": false,
+      "before_matcher_statuses": [
+        "UNOBSERVABLE"
+      ],
+      "event_ids": [
+        "EV00012"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00012:F01",
+          "start_frame": 490,
+          "end_frame": 491,
+          "start_pts": 16.447688888888887,
+          "end_pts": 16.480933333333333,
+          "observations": 2,
+          "good_observations": 2
+        },
+        {
+          "fragment_id": "EV00012:F02",
+          "start_frame": 493,
+          "end_frame": 493,
+          "start_pts": 16.54861111111111,
+          "end_pts": 16.54861111111111,
+          "observations": 1,
+          "good_observations": 1
+        }
+      ],
+      "positive_frame_indices": [
+        490,
+        491,
+        493
+      ],
+      "first_on_pts": 16.447688888888887,
+      "last_on_pts": 16.54861111111111,
+      "confidence": [
+        0.5936612748466772
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+        "LONG_OBSERVABILITY_LOSS",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF"
+      ],
+      "temporal_end_reasons": [
+        "LONG_OBSERVABILITY_LOSS"
+      ],
+      "unknown_gaps": [
+        {
+          "start_s": 16.51482222222222,
+          "end_s": 16.54861111111111,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        }
+      ],
+      "matcher_kinds": [
+        "PARTIAL_OPTICAL_EVIDENCE"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "INVALID_GEOMETRY": 4,
+        "OFF": 1,
+        "UNCERTAIN": 6,
+        "ON": 3
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 13,
+      "operation_key": "OP0013",
+      "duration_ms": 200,
+      "host_tx_s": 19.532,
+      "host_ack_s": 19.563,
+      "host_done_s": 19.75,
+      "video_tx_estimate_s": 17.6954,
+      "video_ack_estimate_s": 17.726399999999998,
+      "video_done_estimate_s": 17.9134,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1064,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00015",
+        "EV00016"
+      ],
+      "before_event_statuses": [
+        "CANDIDATE",
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00015",
+          "observed_span_ms": 0.0,
+          "span_error_ms": 200.0,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        },
+        {
+          "event_id": "EV00016",
+          "observed_span_ms": 67.73333333333653,
+          "span_error_ms": 132.26666666666347,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        }
+      ],
+      "before_matched": false,
+      "before_matcher_statuses": [
+        "UNOBSERVABLE"
+      ],
+      "event_ids": [
+        "EV00013"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00013:F01",
+          "start_frame": 529,
+          "end_frame": 529,
+          "start_pts": 17.7513,
+          "end_pts": 17.7513,
+          "observations": 1,
+          "good_observations": 1
+        },
+        {
+          "fragment_id": "EV00013:F02",
+          "start_frame": 531,
+          "end_frame": 533,
+          "start_pts": 17.817944444444443,
+          "end_pts": 17.88567777777778,
+          "observations": 3,
+          "good_observations": 3
+        }
+      ],
+      "positive_frame_indices": [
+        529,
+        531,
+        532,
+        533
+      ],
+      "first_on_pts": 17.7513,
+      "last_on_pts": 17.88567777777778,
+      "confidence": [
+        0.6804309062667684
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [
+        {
+          "start_s": 17.78462222222222,
+          "end_s": 17.817944444444443,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        }
+      ],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 5,
+        "INVALID_GEOMETRY": 3,
+        "OFF": 1,
+        "ON": 4
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 14,
+      "operation_key": "OP0014",
+      "duration_ms": 200,
+      "host_tx_s": 20.844,
+      "host_ack_s": 20.86,
+      "host_done_s": 21.047,
+      "video_tx_estimate_s": 19.0074,
+      "video_ack_estimate_s": 19.0234,
+      "video_done_estimate_s": 19.2104,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00017"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00017",
+          "observed_span_ms": 100.3777777777799,
+          "span_error_ms": 99.62222222222012,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        }
+      ],
+      "before_matched": false,
+      "before_matcher_statuses": [
+        "UNOBSERVABLE"
+      ],
+      "event_ids": [
+        "EV00014"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00014:F01",
+          "start_frame": 569,
+          "end_frame": 572,
+          "start_pts": 19.08841111111111,
+          "end_pts": 19.18878888888889,
+          "observations": 4,
+          "good_observations": 4
+        }
+      ],
+      "positive_frame_indices": [
+        569,
+        570,
+        571,
+        572
+      ],
+      "first_on_pts": 19.08841111111111,
+      "last_on_pts": 19.18878888888889,
+      "confidence": [
+        0.8991179632435726
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "PARTIAL_OPTICAL_EVIDENCE"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 3,
+        "OFF": 2,
+        "INVALID_GEOMETRY": 3,
+        "ON": 4
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 15,
+      "operation_key": "OP0015",
+      "duration_ms": 200,
+      "host_tx_s": 22.078,
+      "host_ack_s": 22.094,
+      "host_done_s": 22.297,
+      "video_tx_estimate_s": 20.2414,
+      "video_ack_estimate_s": 20.2574,
+      "video_done_estimate_s": 20.4604,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1034,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00018"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00018",
+          "observed_span_ms": 166.73333333333318,
+          "span_error_ms": 33.266666666666836,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00015"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00015:F01",
+          "start_frame": 604,
+          "end_frame": 609,
+          "start_pts": 20.258655555555556,
+          "end_pts": 20.42538888888889,
+          "observations": 6,
+          "good_observations": 6
+        }
+      ],
+      "positive_frame_indices": [
+        604,
+        605,
+        606,
+        607,
+        608,
+        609
+      ],
+      "first_on_pts": 20.258655555555556,
+      "last_on_pts": 20.42538888888889,
+      "confidence": [
+        0.9065243353285493
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 5,
+        "ON": 6,
+        "INVALID_GEOMETRY": 1,
+        "OFF": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 16,
+      "operation_key": "OP0016",
+      "duration_ms": 200,
+      "host_tx_s": 23.328,
+      "host_ack_s": 23.36,
+      "host_done_s": 23.547,
+      "video_tx_estimate_s": 21.4914,
+      "video_ack_estimate_s": 21.5234,
+      "video_done_estimate_s": 21.7104,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00019",
+        "EV00020"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED",
+        "CANDIDATE"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00019",
+          "observed_span_ms": 100.51111111111055,
+          "span_error_ms": 99.48888888888946,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        },
+        {
+          "event_id": "EV00020",
+          "observed_span_ms": 0.0,
+          "span_error_ms": 200.0,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        }
+      ],
+      "before_matched": false,
+      "before_matcher_statuses": [
+        "UNOBSERVABLE"
+      ],
+      "event_ids": [
+        "EV00016"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00016:F01",
+          "start_frame": 642,
+          "end_frame": 645,
+          "start_pts": 21.52852222222222,
+          "end_pts": 21.629033333333332,
+          "observations": 4,
+          "good_observations": 4
+        },
+        {
+          "fragment_id": "EV00016:F02",
+          "start_frame": 647,
+          "end_frame": 647,
+          "start_pts": 21.695566666666668,
+          "end_pts": 21.695566666666668,
+          "observations": 1,
+          "good_observations": 1
+        }
+      ],
+      "positive_frame_indices": [
+        642,
+        643,
+        644,
+        645,
+        647
+      ],
+      "first_on_pts": 21.52852222222222,
+      "last_on_pts": 21.695566666666668,
+      "confidence": [
+        0.7232613915886589
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [
+        {
+          "start_s": 21.6623,
+          "end_s": 21.695566666666668,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        }
+      ],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "OFF": 1,
+        "UNCERTAIN": 6,
+        "ON": 5,
+        "INVALID_GEOMETRY": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 17,
+      "operation_key": "OP0017",
+      "duration_ms": 200,
+      "host_tx_s": 24.578,
+      "host_ack_s": 24.61,
+      "host_done_s": 24.813,
+      "video_tx_estimate_s": 22.7414,
+      "video_ack_estimate_s": 22.7734,
+      "video_done_estimate_s": 22.976399999999998,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1064,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00021"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00021",
+          "observed_span_ms": 200.91111111111104,
+          "span_error_ms": 0.9111111111110293,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00017"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00017:F01",
+          "start_frame": 679,
+          "end_frame": 685,
+          "start_pts": 22.765033333333335,
+          "end_pts": 22.965944444444446,
+          "observations": 7,
+          "good_observations": 7
+        }
+      ],
+      "positive_frame_indices": [
+        679,
+        680,
+        681,
+        682,
+        683,
+        684,
+        685
+      ],
+      "first_on_pts": 22.765033333333335,
+      "last_on_pts": 22.965944444444446,
+      "confidence": [
+        0.9056643648275846
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF"
+      ],
+      "temporal_end_reasons": [
+        "CONFIRMED_OFF"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 5,
+        "ON": 7,
+        "OFF": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 18,
+      "operation_key": "OP0018",
+      "duration_ms": 200,
+      "host_tx_s": 25.907,
+      "host_ack_s": 25.922,
+      "host_done_s": 26.11,
+      "video_tx_estimate_s": 24.0704,
+      "video_ack_estimate_s": 24.0854,
+      "video_done_estimate_s": 24.2734,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1048,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00022",
+        "EV00023"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED",
+        "CANDIDATE"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00022",
+          "observed_span_ms": 100.53333333333114,
+          "span_error_ms": 99.46666666666887,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        },
+        {
+          "event_id": "EV00023",
+          "observed_span_ms": 0.0,
+          "span_error_ms": 200.0,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        }
+      ],
+      "before_matched": false,
+      "before_matcher_statuses": [
+        "UNOBSERVABLE"
+      ],
+      "event_ids": [
+        "EV00018"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00018:F01",
+          "start_frame": 719,
+          "end_frame": 722,
+          "start_pts": 24.101944444444445,
+          "end_pts": 24.202477777777776,
+          "observations": 4,
+          "good_observations": 4
+        },
+        {
+          "fragment_id": "EV00018:F02",
+          "start_frame": 724,
+          "end_frame": 724,
+          "start_pts": 24.26961111111111,
+          "end_pts": 24.26961111111111,
+          "observations": 1,
+          "good_observations": 1
+        }
+      ],
+      "positive_frame_indices": [
+        719,
+        720,
+        721,
+        722,
+        724
+      ],
+      "first_on_pts": 24.101944444444445,
+      "last_on_pts": 24.26961111111111,
+      "confidence": [
+        0.7305463473712304
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [
+        {
+          "start_s": 24.23618888888889,
+          "end_s": 24.26961111111111,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        }
+      ],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 7,
+        "ON": 5,
+        "INVALID_GEOMETRY": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 19,
+      "operation_key": "OP0019",
+      "duration_ms": 200,
+      "host_tx_s": 27.188,
+      "host_ack_s": 27.203,
+      "host_done_s": 27.391,
+      "video_tx_estimate_s": 25.351399999999998,
+      "video_ack_estimate_s": 25.3664,
+      "video_done_estimate_s": 25.554399999999998,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1034,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00024"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00024",
+          "observed_span_ms": 167.04444444444277,
+          "span_error_ms": 32.95555555555724,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00019"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00019:F01",
+          "start_frame": 757,
+          "end_frame": 762,
+          "start_pts": 25.372433333333333,
+          "end_pts": 25.539477777777776,
+          "observations": 6,
+          "good_observations": 6
+        }
+      ],
+      "positive_frame_indices": [
+        757,
+        758,
+        759,
+        760,
+        761,
+        762
+      ],
+      "first_on_pts": 25.372433333333333,
+      "last_on_pts": 25.539477777777776,
+      "confidence": [
+        0.8931314025001015
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 5,
+        "OFF": 1,
+        "ON": 6
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 20,
+      "operation_key": "OP0020",
+      "duration_ms": 200,
+      "host_tx_s": 28.453,
+      "host_ack_s": 28.485,
+      "host_done_s": 28.672,
+      "video_tx_estimate_s": 26.6164,
+      "video_ack_estimate_s": 26.6484,
+      "video_done_estimate_s": 26.8354,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00025"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00025",
+          "observed_span_ms": 166.6666666666643,
+          "span_error_ms": 33.333333333335716,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00020"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00020:F01",
+          "start_frame": 795,
+          "end_frame": 800,
+          "start_pts": 26.642655555555557,
+          "end_pts": 26.80932222222222,
+          "observations": 6,
+          "good_observations": 6
+        }
+      ],
+      "positive_frame_indices": [
+        795,
+        796,
+        797,
+        798,
+        799,
+        800
+      ],
+      "first_on_pts": 26.642655555555557,
+      "last_on_pts": 26.80932222222222,
+      "confidence": [
+        0.9028301812902486
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 4,
+        "OFF": 1,
+        "ON": 6,
+        "INVALID_GEOMETRY": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 21,
+      "operation_key": "OP0021",
+      "duration_ms": 300,
+      "host_tx_s": 29.735,
+      "host_ack_s": 29.75,
+      "host_done_s": 30.047,
+      "video_tx_estimate_s": 27.8984,
+      "video_ack_estimate_s": 27.9134,
+      "video_done_estimate_s": 28.2104,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1034,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00026"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00026",
+          "observed_span_ms": 300.52222222222014,
+          "span_error_ms": 0.5222222222201478,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00021"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00021:F01",
+          "start_frame": 833,
+          "end_frame": 842,
+          "start_pts": 27.9129,
+          "end_pts": 28.21342222222222,
+          "observations": 10,
+          "good_observations": 10
+        }
+      ],
+      "positive_frame_indices": [
+        833,
+        834,
+        835,
+        836,
+        837,
+        838,
+        839,
+        840,
+        841,
+        842
+      ],
+      "first_on_pts": 27.9129,
+      "last_on_pts": 28.21342222222222,
+      "confidence": [
+        0.9028873579943948
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 5,
+        "ON": 10,
+        "OFF": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 22,
+      "operation_key": "OP0022",
+      "duration_ms": 300,
+      "host_tx_s": 31.125,
+      "host_ack_s": 31.157,
+      "host_done_s": 31.438,
+      "video_tx_estimate_s": 29.2884,
+      "video_ack_estimate_s": 29.3204,
+      "video_done_estimate_s": 29.601399999999998,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00027",
+        "EV00028"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED",
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00027",
+          "observed_span_ms": 133.33333333333286,
+          "span_error_ms": 166.66666666666714,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        },
+        {
+          "event_id": "EV00028",
+          "observed_span_ms": 67.73333333333298,
+          "span_error_ms": 232.26666666666702,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        }
+      ],
+      "before_matched": false,
+      "before_matcher_statuses": [
+        "UNOBSERVABLE"
+      ],
+      "event_ids": [
+        "EV00022"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00022:F01",
+          "start_frame": 875,
+          "end_frame": 879,
+          "start_pts": 29.3167,
+          "end_pts": 29.450033333333334,
+          "observations": 5,
+          "good_observations": 5
+        },
+        {
+          "fragment_id": "EV00022:F02",
+          "start_frame": 881,
+          "end_frame": 883,
+          "start_pts": 29.516544444444445,
+          "end_pts": 29.58427777777778,
+          "observations": 3,
+          "good_observations": 3
+        }
+      ],
+      "positive_frame_indices": [
+        875,
+        876,
+        877,
+        878,
+        879,
+        881,
+        882,
+        883
+      ],
+      "first_on_pts": 29.3167,
+      "last_on_pts": 29.58427777777778,
+      "confidence": [
+        0.7943200227512653
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [
+        {
+          "start_s": 29.48328888888889,
+          "end_s": 29.516544444444445,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        }
+      ],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 6,
+        "ON": 8,
+        "INVALID_GEOMETRY": 2
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 23,
+      "operation_key": "OP0023",
+      "duration_ms": 300,
+      "host_tx_s": 32.532,
+      "host_ack_s": 32.563,
+      "host_done_s": 32.86,
+      "video_tx_estimate_s": 30.695399999999996,
+      "video_ack_estimate_s": 30.7264,
+      "video_done_estimate_s": 31.0234,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1048,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00029"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00029",
+          "observed_span_ms": 267.57777777777744,
+          "span_error_ms": 32.422222222222516,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00023"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00023:F01",
+          "start_frame": 917,
+          "end_frame": 925,
+          "start_pts": 30.720211111111112,
+          "end_pts": 30.98778888888889,
+          "observations": 9,
+          "good_observations": 9
+        }
+      ],
+      "positive_frame_indices": [
+        917,
+        918,
+        919,
+        920,
+        921,
+        922,
+        923,
+        924,
+        925
+      ],
+      "first_on_pts": 30.720211111111112,
+      "last_on_pts": 30.98778888888889,
+      "confidence": [
+        0.9023864322761358
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF"
+      ],
+      "temporal_end_reasons": [
+        "CONFIRMED_OFF"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 6,
+        "ON": 9,
+        "OFF": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 24,
+      "operation_key": "OP0024",
+      "duration_ms": 300,
+      "host_tx_s": 33.907,
+      "host_ack_s": 33.938,
+      "host_done_s": 34.235,
+      "video_tx_estimate_s": 32.07039999999999,
+      "video_ack_estimate_s": 32.1014,
+      "video_done_estimate_s": 32.398399999999995,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00030"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00030",
+          "observed_span_ms": 267.65555555555665,
+          "span_error_ms": 32.34444444444334,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00024"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00024:F01",
+          "start_frame": 958,
+          "end_frame": 966,
+          "start_pts": 32.09052222222222,
+          "end_pts": 32.358177777777776,
+          "observations": 9,
+          "good_observations": 9
+        }
+      ],
+      "positive_frame_indices": [
+        958,
+        959,
+        960,
+        961,
+        962,
+        963,
+        964,
+        965,
+        966
+      ],
+      "first_on_pts": 32.09052222222222,
+      "last_on_pts": 32.358177777777776,
+      "confidence": [
+        0.9091409124888191
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [],
+      "temporal_end_reasons": [
+        "CONFIRMED_OFF"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 4,
+        "INVALID_GEOMETRY": 1,
+        "OFF": 2,
+        "ON": 9
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 25,
+      "operation_key": "OP0025",
+      "duration_ms": 300,
+      "host_tx_s": 35.297,
+      "host_ack_s": 35.313,
+      "host_done_s": 35.61,
+      "video_tx_estimate_s": 33.46039999999999,
+      "video_ack_estimate_s": 33.4764,
+      "video_done_estimate_s": 33.773399999999995,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1034,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00031"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00031",
+          "observed_span_ms": 267.577777777781,
+          "span_error_ms": 32.42222222221896,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00025"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00025:F01",
+          "start_frame": 1000,
+          "end_frame": 1008,
+          "start_pts": 33.494255555555554,
+          "end_pts": 33.761833333333335,
+          "observations": 9,
+          "good_observations": 9
+        }
+      ],
+      "positive_frame_indices": [
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008
+      ],
+      "first_on_pts": 33.494255555555554,
+      "last_on_pts": 33.761833333333335,
+      "confidence": [
+        0.9017099956837453
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 6,
+        "ON": 9,
+        "INVALID_GEOMETRY": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 26,
+      "operation_key": "OP0026",
+      "duration_ms": 300,
+      "host_tx_s": 36.703,
+      "host_ack_s": 36.735,
+      "host_done_s": 37.032,
+      "video_tx_estimate_s": 34.8664,
+      "video_ack_estimate_s": 34.898399999999995,
+      "video_done_estimate_s": 35.19539999999999,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1034,
+      "current_max_ua": 1064,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00032"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00032",
+          "observed_span_ms": 267.1222222222198,
+          "span_error_ms": 32.87777777778017,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00026"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00026:F01",
+          "start_frame": 1042,
+          "end_frame": 1050,
+          "start_pts": 34.89836666666667,
+          "end_pts": 35.16548888888889,
+          "observations": 9,
+          "good_observations": 9
+        }
+      ],
+      "positive_frame_indices": [
+        1042,
+        1043,
+        1044,
+        1045,
+        1046,
+        1047,
+        1048,
+        1049,
+        1050
+      ],
+      "first_on_pts": 34.89836666666667,
+      "last_on_pts": 35.16548888888889,
+      "confidence": [
+        0.9083652480292174
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 8,
+        "ON": 9
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 27,
+      "operation_key": "OP0027",
+      "duration_ms": 300,
+      "host_tx_s": 38.094,
+      "host_ack_s": 38.11,
+      "host_done_s": 38.422,
+      "video_tx_estimate_s": 36.257400000000004,
+      "video_ack_estimate_s": 36.273399999999995,
+      "video_done_estimate_s": 36.58539999999999,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1064,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00033",
+        "EV00034"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED",
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00033",
+          "observed_span_ms": 33.40000000000032,
+          "span_error_ms": 266.5999999999997,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        },
+        {
+          "event_id": "EV00034",
+          "observed_span_ms": 200.45555555555694,
+          "span_error_ms": 99.54444444444304,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": false
+        }
+      ],
+      "before_matched": false,
+      "before_matcher_statuses": [
+        "UNOBSERVABLE"
+      ],
+      "event_ids": [
+        "EV00027"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00027:F01",
+          "start_frame": 1083,
+          "end_frame": 1084,
+          "start_pts": 36.26906666666667,
+          "end_pts": 36.30246666666667,
+          "observations": 2,
+          "good_observations": 2
+        },
+        {
+          "fragment_id": "EV00027:F02",
+          "start_frame": 1086,
+          "end_frame": 1092,
+          "start_pts": 36.36913333333333,
+          "end_pts": 36.56958888888889,
+          "observations": 7,
+          "good_observations": 7
+        }
+      ],
+      "positive_frame_indices": [
+        1083,
+        1084,
+        1086,
+        1087,
+        1088,
+        1089,
+        1090,
+        1091,
+        1092
+      ],
+      "first_on_pts": 36.26906666666667,
+      "last_on_pts": 36.56958888888889,
+      "confidence": [
+        0.808484614476811
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF"
+      ],
+      "temporal_end_reasons": [
+        "CONFIRMED_OFF"
+      ],
+      "unknown_gaps": [
+        {
+          "start_s": 36.33586666666667,
+          "end_s": 36.36913333333333,
+          "reason": "SHORT_OBSERVABILITY_LOSS"
+        }
+      ],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "INVALID_GEOMETRY": 2,
+        "UNCERTAIN": 4,
+        "ON": 9,
+        "OFF": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 28,
+      "operation_key": "OP0028",
+      "duration_ms": 300,
+      "host_tx_s": 39.532,
+      "host_ack_s": 39.563,
+      "host_done_s": 39.86,
+      "video_tx_estimate_s": 37.69539999999999,
+      "video_ack_estimate_s": 37.7264,
+      "video_done_estimate_s": 38.023399999999995,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1033,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00035"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00035",
+          "observed_span_ms": 267.6000000000016,
+          "span_error_ms": 32.39999999999837,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00028"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00028:F01",
+          "start_frame": 1127,
+          "end_frame": 1135,
+          "start_pts": 37.739377777777776,
+          "end_pts": 38.00697777777778,
+          "observations": 9,
+          "good_observations": 9
+        }
+      ],
+      "positive_frame_indices": [
+        1127,
+        1128,
+        1129,
+        1130,
+        1131,
+        1132,
+        1133,
+        1134,
+        1135
+      ],
+      "first_on_pts": 37.739377777777776,
+      "last_on_pts": 38.00697777777778,
+      "confidence": [
+        0.9057447463385699
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [],
+      "temporal_end_reasons": [
+        "CONFIRMED_OFF"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 5,
+        "OFF": 2,
+        "ON": 9
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 29,
+      "operation_key": "OP0029",
+      "duration_ms": 300,
+      "host_tx_s": 40.938,
+      "host_ack_s": 40.953,
+      "host_done_s": 41.235,
+      "video_tx_estimate_s": 39.1014,
+      "video_ack_estimate_s": 39.1164,
+      "video_done_estimate_s": 39.398399999999995,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1034,
+      "current_max_ua": 1056,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00036"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00036",
+          "observed_span_ms": 267.6666666666563,
+          "span_error_ms": 32.3333333333437,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00029"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00029:F01",
+          "start_frame": 1168,
+          "end_frame": 1176,
+          "start_pts": 39.1096888888889,
+          "end_pts": 39.37735555555555,
+          "observations": 9,
+          "good_observations": 9
+        }
+      ],
+      "positive_frame_indices": [
+        1168,
+        1169,
+        1170,
+        1171,
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
+      ],
+      "first_on_pts": 39.1096888888889,
+      "last_on_pts": 39.37735555555555,
+      "confidence": [
+        0.9029189817174372
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 4,
+        "OFF": 1,
+        "ON": 9,
+        "INVALID_GEOMETRY": 1
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    },
+    {
+      "operation_id": 30,
+      "operation_key": "OP0030",
+      "duration_ms": 300,
+      "host_tx_s": 42.297,
+      "host_ack_s": 42.328,
+      "host_done_s": 42.61,
+      "video_tx_estimate_s": 40.46039999999999,
+      "video_ack_estimate_s": 40.4914,
+      "video_done_estimate_s": 40.773399999999995,
+      "alignment_envelope_s": 0.10639135715405126,
+      "current_avg_ua": 1034,
+      "current_max_ua": 1064,
+      "electrical_status": "COMPLETED",
+      "before_event_ids": [
+        "EV00037"
+      ],
+      "before_event_statuses": [
+        "CONFIRMED"
+      ],
+      "before_fragment_checks": [
+        {
+          "event_id": "EV00037",
+          "observed_span_ms": 300.9888888888881,
+          "span_error_ms": 0.9888888888880953,
+          "old_span_tolerance_ms": 83.56172621846106,
+          "old_span_compatible": true
+        }
+      ],
+      "before_matched": true,
+      "before_matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "event_ids": [
+        "EV00030"
+      ],
+      "event_statuses": [
+        "CONFIRMED"
+      ],
+      "fragments": [
+        {
+          "fragment_id": "EV00030:F01",
+          "start_frame": 1209,
+          "end_frame": 1218,
+          "start_pts": 40.480044444444445,
+          "end_pts": 40.78103333333333,
+          "observations": 10,
+          "good_observations": 10
+        }
+      ],
+      "positive_frame_indices": [
+        1209,
+        1210,
+        1211,
+        1212,
+        1213,
+        1214,
+        1215,
+        1216,
+        1217,
+        1218
+      ],
+      "first_on_pts": 40.480044444444445,
+      "last_on_pts": 40.78103333333333,
+      "confidence": [
+        0.9142160313238865
+      ],
+      "duration_confirmed": [
+        false
+      ],
+      "uncertainty_flags": [
+        "END_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "START_NOT_BOUNDED_BY_CONFIRMED_OFF",
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "temporal_end_reasons": [
+        "UNCERTAIN_COLOR_SIGNAL_LOSS"
+      ],
+      "unknown_gaps": [],
+      "matcher_kinds": [
+        "CLOCK_ANCHOR"
+      ],
+      "matcher_statuses": [
+        "CONFIRMED"
+      ],
+      "frame_states_in_expanded_window": {
+        "UNCERTAIN": 5,
+        "ON": 10
+      },
+      "reason": "Algorithm association; operator confirmation pending"
+    }
+  ],
+  "note": "Expanded windows are diagnostic USB/video projections, not physical light boundaries; cache replay does not rerun OpenCV"
+}

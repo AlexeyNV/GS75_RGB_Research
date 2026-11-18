@@ -1,0 +1,36 @@
+[
+  {
+    "run": "video_events_a4613f83b4f740b48f297b48ed6d514e",
+    "profile": "Short Pulse / Experimental",
+    "algorithm": "0.4.3",
+    "event_counts": {
+      "CONFIRMED": 31,
+      "CANDIDATE": 6
+    },
+    "raw_sha256": "cb1698f230007e1d23984483bf416a217be6925a812443e8e49c2d83a496528f",
+    "csv_validation": {
+      "valid": true,
+      "legacy_without_signature": true,
+      "expected_counts": {
+        "CONFIRMED": 31,
+        "CANDIDATE": 6
+      },
+      "csv_counts": {
+        "CONFIRMED": 31,
+        "CANDIDATE": 6
+      },
+      "reason": ""
+    }
+  },
+  {
+    "run": "video_events_c7cbfbbc4a1c4a5f9694ca5b6b881c4c",
+    "profile": "Reliable / Long Pulse",
+    "algorithm": "0.4.3",
+    "event_counts": {
+      "CANDIDATE": 6,
+      "REJECTED": 4,
+      "CONFIRMED": 20
+    },
+    "raw_sha256": "cb1698f230007e1d23984483bf416a217be6925a812443e8e49c2d83a496528f"
+  }
+]

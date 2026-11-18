@@ -1,0 +1,516 @@
+{
+  "before_counts": {
+    "CONFIRMED": 31,
+    "CANDIDATE": 6
+  },
+  "after_counts": {
+    "CONFIRMED": 29,
+    "CANDIDATE": 1
+  },
+  "before_matched": 22,
+  "after_matched": 30,
+  "boundary_residuals": {
+    "start_residual_s": {
+      "n": 30,
+      "min_ms": -11.355555555553565,
+      "q25_ms": -4.174999999995599,
+      "median_ms": 1.772222222221842,
+      "q75_ms": 12.622222222221868,
+      "p95_ms": 33.736666666667766,
+      "max_ms": 65.01111111111157,
+      "mean_ms": 6.639259259260581
+    },
+    "end_residual_s": {
+      "n": 30,
+      "min_ms": -96.78888888888793,
+      "q25_ms": -37.98888888888996,
+      "median_ms": -28.16111111110864,
+      "q75_ms": -17.03055555555366,
+      "p95_ms": -5.4511111111061545,
+      "max_ms": 0.022222222220591448,
+      "mean_ms": -30.617037037035153
+    }
+  },
+  "hardware": [
+    {
+      "duration_ms": 100,
+      "count": 10,
+      "completed": 10,
+      "current_avg_mean_ua": 1033,
+      "current_avg_min_ua": 1032,
+      "current_avg_max_ua": 1034,
+      "samples_min": 99,
+      "samples_max": 99
+    },
+    {
+      "duration_ms": 200,
+      "count": 10,
+      "completed": 10,
+      "current_avg_mean_ua": 1033.2,
+      "current_avg_min_ua": 1033,
+      "current_avg_max_ua": 1034,
+      "samples_min": 199,
+      "samples_max": 199
+    },
+    {
+      "duration_ms": 300,
+      "count": 10,
+      "completed": 10,
+      "current_avg_mean_ua": 1033.5,
+      "current_avg_min_ua": 1033,
+      "current_avg_max_ua": 1034,
+      "samples_min": 299,
+      "samples_max": 299
+    }
+  ],
+  "off_frames": 190,
+  "off_intervals": 161,
+  "uncertainty_statistics": {
+    "unique_unknown_frames": 1059,
+    "by_reason": {
+      "ARUCO_LOSS": {
+        "frames": 0,
+        "entity_frame_observations": 0,
+        "intervals": 0
+      },
+      "BAD_HOMOGRAPHY": {
+        "frames": 5,
+        "entity_frame_observations": 5,
+        "intervals": 5
+      },
+      "ROI_COVERAGE": {
+        "frames": 132,
+        "entity_frame_observations": 132,
+        "intervals": 113
+      },
+      "LOW_COLOR_SIGNAL": {
+        "frames": 922,
+        "entity_frame_observations": 922,
+        "intervals": 237
+      },
+      "AMBIGUOUS_COLOR": {
+        "frames": 0,
+        "entity_frame_observations": 0,
+        "intervals": 0
+      },
+      "TEMPORAL_CONTINUITY": {
+        "frames": 7,
+        "entity_frame_observations": 7,
+        "intervals": 7
+      },
+      "OTHER": {
+        "frames": 0,
+        "entity_frame_observations": 0,
+        "intervals": 0
+      }
+    },
+    "counting": "Frames unique across entities; intervals contiguous frame-index runs per entity/reason; categories may overlap"
+  },
+  "before_uncertainty_intervals": 354,
+  "after_uncertainty_intervals": 354,
+  "alignment": {
+    "schema_version": 1,
+    "status": "ESTIMATED_NOT_HARDWARE_SYNC",
+    "offset_s": 1.8366000000000007,
+    "uncertainty_s": 0.10639135715405126,
+    "relation": "host_monotonic_relative_s = video_PTS_s + offset_s",
+    "warning": "Empirical post-hoc association, not hardware synchronization. USB ACK/DONE and optical frame PTS are distinct observations; exposure/rolling shutter and physical edge latency are not bounded.",
+    "confidence": "UNIQUE_SEQUENCE",
+    "drift_s_per_s": null,
+    "drift_status": "NOT_FITTED_NO_INDEPENDENT_DRIFT_CALIBRATION",
+    "candidates": [
+      {
+        "matched_operations": 27,
+        "marker_anchors": 0,
+        "pairs": [
+          {
+            "operation_key": "OP0001",
+            "command_id": 1,
+            "event_id": "EV00001"
+          },
+          {
+            "operation_key": "OP0002",
+            "command_id": 2,
+            "event_id": "EV00002"
+          },
+          {
+            "operation_key": "OP0003",
+            "command_id": 3,
+            "event_id": "EV00003"
+          },
+          {
+            "operation_key": "OP0005",
+            "command_id": 5,
+            "event_id": "EV00005"
+          },
+          {
+            "operation_key": "OP0006",
+            "command_id": 6,
+            "event_id": "EV00006"
+          },
+          {
+            "operation_key": "OP0007",
+            "command_id": 7,
+            "event_id": "EV00007"
+          },
+          {
+            "operation_key": "OP0008",
+            "command_id": 8,
+            "event_id": "EV00008"
+          },
+          {
+            "operation_key": "OP0009",
+            "command_id": 9,
+            "event_id": "EV00009"
+          },
+          {
+            "operation_key": "OP0010",
+            "command_id": 10,
+            "event_id": "EV00010"
+          },
+          {
+            "operation_key": "OP0011",
+            "command_id": 11,
+            "event_id": "EV00011"
+          },
+          {
+            "operation_key": "OP0013",
+            "command_id": 13,
+            "event_id": "EV00013"
+          },
+          {
+            "operation_key": "OP0015",
+            "command_id": 15,
+            "event_id": "EV00015"
+          },
+          {
+            "operation_key": "OP0016",
+            "command_id": 16,
+            "event_id": "EV00016"
+          },
+          {
+            "operation_key": "OP0017",
+            "command_id": 17,
+            "event_id": "EV00017"
+          },
+          {
+            "operation_key": "OP0018",
+            "command_id": 18,
+            "event_id": "EV00018"
+          },
+          {
+            "operation_key": "OP0019",
+            "command_id": 19,
+            "event_id": "EV00019"
+          },
+          {
+            "operation_key": "OP0020",
+            "command_id": 20,
+            "event_id": "EV00020"
+          },
+          {
+            "operation_key": "OP0021",
+            "command_id": 21,
+            "event_id": "EV00021"
+          },
+          {
+            "operation_key": "OP0022",
+            "command_id": 22,
+            "event_id": "EV00022"
+          },
+          {
+            "operation_key": "OP0023",
+            "command_id": 23,
+            "event_id": "EV00023"
+          },
+          {
+            "operation_key": "OP0024",
+            "command_id": 24,
+            "event_id": "EV00024"
+          },
+          {
+            "operation_key": "OP0025",
+            "command_id": 25,
+            "event_id": "EV00025"
+          },
+          {
+            "operation_key": "OP0026",
+            "command_id": 26,
+            "event_id": "EV00026"
+          },
+          {
+            "operation_key": "OP0027",
+            "command_id": 27,
+            "event_id": "EV00027"
+          },
+          {
+            "operation_key": "OP0028",
+            "command_id": 28,
+            "event_id": "EV00028"
+          },
+          {
+            "operation_key": "OP0029",
+            "command_id": 29,
+            "event_id": "EV00029"
+          },
+          {
+            "operation_key": "OP0030",
+            "command_id": 30,
+            "event_id": "EV00030"
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "operation_key": "OP0001",
+        "command_id": 1,
+        "event_id": "EV00001",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0002",
+        "command_id": 2,
+        "event_id": "EV00002",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0003",
+        "command_id": 3,
+        "event_id": "EV00003",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0004",
+        "command_id": 4,
+        "event_id": "EV00004",
+        "association_source": "ALGORITHM",
+        "association_kind": "PARTIAL_OPTICAL_EVIDENCE"
+      },
+      {
+        "operation_key": "OP0005",
+        "command_id": 5,
+        "event_id": "EV00005",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0006",
+        "command_id": 6,
+        "event_id": "EV00006",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0007",
+        "command_id": 7,
+        "event_id": "EV00007",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0008",
+        "command_id": 8,
+        "event_id": "EV00008",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0009",
+        "command_id": 9,
+        "event_id": "EV00009",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0010",
+        "command_id": 10,
+        "event_id": "EV00010",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0011",
+        "command_id": 11,
+        "event_id": "EV00011",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0012",
+        "command_id": 12,
+        "event_id": "EV00012",
+        "association_source": "ALGORITHM",
+        "association_kind": "PARTIAL_OPTICAL_EVIDENCE"
+      },
+      {
+        "operation_key": "OP0013",
+        "command_id": 13,
+        "event_id": "EV00013",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0014",
+        "command_id": 14,
+        "event_id": "EV00014",
+        "association_source": "ALGORITHM",
+        "association_kind": "PARTIAL_OPTICAL_EVIDENCE"
+      },
+      {
+        "operation_key": "OP0015",
+        "command_id": 15,
+        "event_id": "EV00015",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0016",
+        "command_id": 16,
+        "event_id": "EV00016",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0017",
+        "command_id": 17,
+        "event_id": "EV00017",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0018",
+        "command_id": 18,
+        "event_id": "EV00018",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0019",
+        "command_id": 19,
+        "event_id": "EV00019",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0020",
+        "command_id": 20,
+        "event_id": "EV00020",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0021",
+        "command_id": 21,
+        "event_id": "EV00021",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0022",
+        "command_id": 22,
+        "event_id": "EV00022",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0023",
+        "command_id": 23,
+        "event_id": "EV00023",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0024",
+        "command_id": 24,
+        "event_id": "EV00024",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0025",
+        "command_id": 25,
+        "event_id": "EV00025",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0026",
+        "command_id": 26,
+        "event_id": "EV00026",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0027",
+        "command_id": 27,
+        "event_id": "EV00027",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0028",
+        "command_id": 28,
+        "event_id": "EV00028",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0029",
+        "command_id": 29,
+        "event_id": "EV00029",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      },
+      {
+        "operation_key": "OP0030",
+        "command_id": 30,
+        "event_id": "EV00030",
+        "association_source": "ALGORITHM",
+        "association_kind": "CLOCK_ANCHOR"
+      }
+    ],
+    "ambiguous_associations": [],
+    "anchor_policy": "CONFIRMED span-compatible events only; partial evidence never calibrates the clock",
+    "uncertainty_kind": "observed_residual_plus_frame_cadence_plus_USB_bracket_not_physical_bound",
+    "residual_offsets_s": [
+      -0.009144444444445288,
+      -0.04096666666666682,
+      -0.019633333333334058,
+      0.0006444444444451136,
+      0.004566666666665498,
+      -0.008855555555555839,
+      -0.004844444444445983,
+      0.0,
+      0.001755555555554622,
+      -0.011555555555554875,
+      -0.024900000000002365,
+      -0.0012555555555557874,
+      -0.005122222222222916,
+      0.008366666666663747,
+      -0.01654444444444536,
+      -0.006033333333334667,
+      0.0057444444444421094,
+      0.0004999999999988347,
+      0.0036999999999984823,
+      0.0061888888888894655,
+      0.010877777777782427,
+      -0.017855555555552627,
+      3.333333333088717e-05,
+      0.004333333333331524,
+      -0.01297777777777398,
+      0.006711111111105339,
+      0.011355555555557117
+    ],
+    "video_minus_host_tx_s": -1.8101666666666674,
+    "tx_offset_relation": "video_ON_PTS_s = host_TX_relative_s + video_minus_host_tx_s; empirical frame observation, not physical onset",
+    "source_session": "D:\\VScode\\Nozdrin_GitHub\\GS75_RGB_Research\\results\\video_experiments\\2026-11-18_133313_LED49_RGB_0c4ca511de05\\session.json",
+    "session_id": "2026-11-18_133313_LED49_RGB_0c4ca511de05"
+  },
+  "positive_observations": 169,
+  "confirmed_off_event_endings": 5,
+  "every_duration_censored": true
+}

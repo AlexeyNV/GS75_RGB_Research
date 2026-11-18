@@ -1,5 +1,12 @@
 # RGB Vision v0.3 — устройство приложения
 
+Дополнение v0.4.5: отдельные PTS-дорожки и frame zoom в event_timeline.py,
+выбор операции/показ фрагментов и ROI-причин в video_event_results.py.
+experiment_mapping.py разделяет опоры часов и вторичные связи; manifest/signature
+защищают от смешения CSV разных run. observation_diagnostics.py считает причины
+недостоверности, experiment_diagnostics.py строит операционный и покадровый
+аудит без CV/serial. [Реальная приёмка](short_pulse_v045/report.md).
+
 Дополнение v0.4.4: прежние Experiment/ExperimentWorker исполняют два bounded
 PHOTO preset; ExperimentPane связывает проект/видео с VideoAnalysisControls.
 После оптического pipeline experiment_mapping.py создаёт immutable CSV bundle,

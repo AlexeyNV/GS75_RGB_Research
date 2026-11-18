@@ -1,0 +1,52 @@
+{
+  "real_video": true,
+  "hardware_commands_sent": false,
+  "backend": "windows",
+  "errors": [],
+  "qt_timer_ticks": 64,
+  "run_id": "independent_optical",
+  "event_counts": {
+    "CONFIRMED": 29,
+    "CANDIDATE": 1
+  },
+  "processed_frames": 1418,
+  "operation_04": {
+    "frame": 209,
+    "expected": 209,
+    "details": "STM32 ID=4 KP14→KP32; запрос/elapsed=100/100 мс; AVG/MAX=1033/1048 мкА; COMPLETED\nОПТИКА EV00004: CANDIDATE; PTS 7.055367–7.122167; фрагментов 2; confidence=0.451; DURATION_UNRESOLVED_AT_FRAME_CADENCE, END_NOT_BOUNDED_BY_CONFIRMED_OFF, HYPOTHESIS_BRIDGES_UNKNOWN_OBSERVATIONS, INSUFFICIENT_PERSISTENCE_OR_SIGNAL_QUALITY, NO_CONSECUTIVE_GOOD_PAIR, START_NOT_BOUNDED_BY_CONFIRMED_OFF, UNCERTAIN_COLOR_SIGNAL_LOSS\nEV00004:F01: кадры 209–209, PTS 7.055367–7.055367\nEV00004:F02: кадры 211–211, PTS 7.122167–7.122167\nСобытия/фрагменты не доказывают непрерывное свечение через UNKNOWN. Электрическая дорожка — USB/video оценка.\nКадр 210: H=REGISTERED, ROI=0.0; ROI_NOT_GEOMETRICALLY_COVERED",
+    "view": [
+      6.918399999999999,
+      7.258399999999999
+    ]
+  },
+  "operation_14_frame": 569,
+  "expected_14_frame": 569,
+  "csv_manifest": {
+    "analysis_id": "independent_optical",
+    "analysis_signature": "349941d6b947dfc1e7b73910e0bf7462c40fd3bd06c7e2badc3f33ae788d7edc",
+    "algorithm_version": "0.4.5",
+    "settings": {
+      "profile": "Short Pulse / Experimental",
+      "min_on_s": 0.02,
+      "min_off_s": 0.012,
+      "max_gap_s": 0.09,
+      "min_samples": 2,
+      "min_chroma": 30.0,
+      "min_brightness": 35.0,
+      "min_color_confidence": 0.55,
+      "spatial_radius_px": 40.0,
+      "min_consecutive_good_samples": 2
+    },
+    "all_event_counts": {
+      "CONFIRMED": 29,
+      "CANDIDATE": 1
+    },
+    "display_filter": "Все",
+    "latest_correspondence": "correspondence_8a9c1550224544218c6fbb241187fbf1",
+    "note": "Optical CSV exports all automatic events; GUI display filter does not alter export"
+  },
+  "invalid_roi_frame_210": "Кадр 210; analysis PTS=7.088767 с; геометрия REGISTERED.  ROI=0.0; local=INVALID_GEOMETRY; chroma=0.0; confidence=0.0. ROI_NOT_GEOMETRICALLY_COVERED",
+  "cdc_worker_ever_connected": false,
+  "selected_bundle": "correspondence_8a9c1550224544218c6fbb241187fbf1",
+  "export": "build\\vision_v045\\gui_26b902f8\\export"
+}

@@ -1,0 +1,18 @@
+{
+  "decoded_frames": 1418,
+  "raw_frames": 1418,
+  "all_pts_equal": true,
+  "pts_mismatches": [],
+  "video_sha256": "28cb85fb99c0bdb745956581862c9f94e867c72bcbd84d4e5ce97ad7c5554ebf",
+  "cache_video_sha256": "28cb85fb99c0bdb745956581862c9f94e867c72bcbd84d4e5ce97ad7c5554ebf",
+  "video_hash_equal": true,
+  "metadata": {
+    "container_duration_s": 47.465811,
+    "fps": 29.918003290933477,
+    "stream_frames": 1418,
+    "codec": "h264"
+  },
+  "elapsed_decode_only_s": 2.4109370000005583,
+  "opencv_aruco_led_rerun": false,
+  "raw_modes_identical": true
+}
